@@ -20,7 +20,7 @@ title: 最近の記事
 {{ post.content }}
 
 ---
-<div class="fb-like" data-href="{{ BASE_PATH }}{{ post.url }}" data-send="true" data-width="450" data-show-faces="true"></div>
+<div class="fb-like" data-href="http://tsucchi.github.com/{{ post.url }}" data-send="true" data-width="450" data-show-faces="true"></div>
 
 {% endfor %}
 
