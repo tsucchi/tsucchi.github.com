@@ -4,7 +4,7 @@ title: 最近の記事
 ---
 {% include JB/setup %}
 
-{% for post in site.posts limit 20 %}
+{% for post in site.posts limit :20 %}
 
 
 <h1>{{ post.date | date: "%Y-%m-%d"  }} <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></h1>
