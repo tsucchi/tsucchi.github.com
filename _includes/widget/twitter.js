@@ -3,7 +3,7 @@ version: 2,
 type: 'profile',
 rpp: 4,
 interval: 30000,
-width: 250,
+width: 125,
 height: 300,
 theme: {
 shell: {
