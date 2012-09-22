@@ -19,9 +19,7 @@ title: Kappa の飼い方(Kappa という ORM の話) その2 インストール
 
 [Kappa](https://github.com/tsucchi/p5-Kappa) という ORM の話。今日はインストール編です
 
-## 目次
-- [その1 開発の背景のお話](/kappa/2012/09/15/kappa_background)
-- [その2 インストールとかのお話](/kappa/2012/09/17/kappa_install)
+{% include kappa_template/mokuji %}
 
 ## インストール
 ### インストールの前提
