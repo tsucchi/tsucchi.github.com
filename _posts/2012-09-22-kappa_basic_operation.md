@@ -56,7 +56,7 @@ DBI のデータベースハンドラ($dbh)を作成して、それを第1引数
 insert メソッドは INSERT 文を実行します。
 
 {% highlight perl %}
-$db->insert('detective, { id => 1, name => 'シャーロック・シェリンフォード'});
+$db->insert('detective', { id => 1, name => 'シャーロック・シェリンフォード'});
 {% endhighlight %}
 
 第1引数はテーブル名、第2引数は hashref で、値を指定します。この例だと、
@@ -72,7 +72,7 @@ INSERT INTO detective (id, name) VALUES(1, 'シャーロック・シェリンフ
 update メソッドは UPDATE 文を実行します。
 
 {% highlight perl %}
-$db->update('detective, { name => '譲崎　ネロ' }, { id => 1 }); #主役交代(?!)
+$db->update('detective', { name => '譲崎　ネロ' }, { id => 1 }); #主役交代(?!)
 {% endhighlight %}
 
 第1引数はテーブル名、第2引数は hashref で、UPDATE する値を指定します。第3引数も hashref でこれは UPDATE に使うキーです。
@@ -88,7 +88,7 @@ UPDATE detective SET name = '譲崎　ネロ' WHERE id = 1;
 主役が変わっちゃうと困るので戻しておきましょう。
 
 {% highlight perl %}
-$db->update('detective, {  name => 'シャーロック・シェリンフォード' }, { id => 1 });
+$db->update('detective', {  name => 'シャーロック・シェリンフォード' }, { id => 1 });
 {% endhighlight %}
 
 
