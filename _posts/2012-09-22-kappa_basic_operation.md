@@ -82,7 +82,7 @@ $db->update('detective, { name => '譲崎　ネロ' }, { id => 1 }); #主役交�
 UPDATE detective SET name = '譲崎　ネロ' WHERE id = 1;
 {% endhighlight %}
 
-と等価です。もっというと、[SQL::Maker](http://search.cpan.org/dist/SQL-Maker/)というモジュールの、select メソッドで生成される SQL 
+と等価です。もっというと、[SQL::Maker](http://search.cpan.org/dist/SQL-Maker/)というモジュールの、update メソッドで生成される SQL 
 の実行結果と等価です。戻り値はありません。
 
 主役が変わっちゃうと困るので戻しておきましょう。
