@@ -28,3 +28,9 @@ title: YAPC::Asia 2012 発表資料「Perl と SQL のいろいろ」
 
 毎年マサカリが飛んできて、YAPC マジ怖いですw。
 来年あたりは、「一般人だと思った？残念、逸般人でした！」って感じで、サクッとマサカリ投げ返したいですね！
+
+## 補足
+Data::Section::Simple (というか \_\_DATA\_\_ ファイルハンドルが mod\_perl では使えない、とスライドにありますが、
+厳密には、mod\_perl ではなく、Apache::Registry/PerlRun などの、いわゆる「速いCGI」としての mod\_perl 環境の制限らしいです。
+(と、[mod\_perl の神から、お告げがありました](https://twitter.com/mod_perl_info/status/253419203976118273) )
+試したことないのですが、素の mod\_perl のハンドラだと使えるらしいです。
