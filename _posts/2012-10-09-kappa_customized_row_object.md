@@ -92,7 +92,7 @@ Row オブジェクトの命名規則は、たとえばプロジェクト名が 
 では実際に Row オブジェクトのカスタマイズをします。プロジェクト名は仮に MilkyHolms としておきましょうか。detective テーブルの Row オブジェクト
 を拡張します。
 
-ファイル名でいうと、lib/MilkyHolms/DB/Row/detective.pm。 モジュール名でいうと、MilkyHolms::DB::Row::detective となります。お気に入りの開発ツール
+ファイル名でいうと、lib/MilkyHolms/DB/Row/detective.pm。 パッケージ名でいうと、MilkyHolms::DB::Row::detective となります。お気に入りの開発ツール
 (僕は emacs を使っています)で、ファイルを開きましょう。
 
 Kappa は FK とかをみて、つながっているテーブルのデータを引っ張る機能とかが**ありません**。(まあ今回の例では FK 張ってませんが)
