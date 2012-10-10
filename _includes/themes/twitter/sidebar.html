@@ -39,7 +39,7 @@
 	  {% for post in site.posts limit :10 %}
 	  <li><span>{{ post.date | date: "%Y-%m-%d" }}</span> : <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></li>
 	  {% endfor %}
-	  <li><a href="{{ BASE_PATH }}archive.html">...more</a></li>
+	  <li><a href="/archive.html">...more</a></li>
 	</ul>
   </div>
   <div class="tags">
