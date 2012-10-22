@@ -15,7 +15,7 @@ title: mod_perl 環境でも Data::Section::Simple 使えるかも
 
 と、いうことを[YAPC のトーク](http://yapcasia.org/2012/talk/show/863251ce-d870-11e1-924a-0d4e6aeab6a4)で、ちょっと触れたら、
 
-[@mod_perl information](https://twitter.com/mod_perl_info/status/253426068847984640)
+[@mod_perl_info](https://twitter.com/mod_perl_info/status/253426068847984640)
     あ、どうすればRegistry/PerlRun環境下で__DATA__が使えるかといった話は @tsucchi さんの先日のYAPCでのスライド http://www.slideshare.net/tsucchi/perlsql/32 … から触発されました。 https://twitter.com/mod_perl_info/status/253424577147973634 … 
 
 とか、
