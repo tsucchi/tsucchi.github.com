@@ -35,8 +35,8 @@ Registry/PerlRun 環境って、パッケージとか、ファイルパスとか
 軽く実験した感じだと、ちゃんと動いた。
 
 {% highlight perl %}
-package MilkyHolms::DB::Table::detective;
-use parent qw(MilkyHolms::DB::Table);
+package MilkyHolmes::DB::Table::detective;
+use parent qw(MilkyHolmes::DB::Table);
 use strict;
 use warnings;
 use Data::Section::Simple;

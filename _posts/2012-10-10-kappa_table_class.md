@@ -42,7 +42,7 @@ CREATE TABLE toys (
 
 {% highlight perl %}
 use Kappa;
-my $db = Kappa->new($dbh, { row_namespace => 'MilkyHolms::DB::Row' });
+my $db = Kappa->new($dbh, { row_namespace => 'MilkyHolmes::DB::Row' });
 $db->insert('toys', { id => 1, name => 'サイコキネシス' });
 $db->insert('toys', { id => 2, name => 'ダイレクトハック' });
 $db->insert('toys', { id => 3, name => 'トライアセンド' });
@@ -85,16 +85,16 @@ $model->update({ toys_id => undef }, { id => 1 });# トイズがなくなって�
 ため、そのようになっています。
 
 ## カスタマイズ方法
-ではテーブルクラスのカスタマイズをします。プロジェクトは前回同様 MilkyHolms を使います。detective テーブルをカスタマイズ
+ではテーブルクラスのカスタマイズをします。プロジェクトは前回同様 MilkyHolmes を使います。detective テーブルをカスタマイズ
 します。
 
-ファイル名でいうと、lib/MilkyHolms/DB/Table/detective.pm。 パッケージ名でいうと、MilkyHolms::DB::Table::detective となります。
+ファイル名でいうと、lib/MilkyHolmes/DB/Table/detective.pm。 パッケージ名でいうと、MilkyHolmes::DB::Table::detective となります。
 
 前回と似てますが、detective.id を引数にとって、toys.name (トイズの名前)を返す、toys\_name\_from\_detective\_id という
 メソッドをつけてみましょう。
 
 {% highlight perl %}
-package MilkyHolms::DB::Table::detective;
+package MilkyHolmes::DB::Table::detective;
 use parent qw(Kappa);
 use strict;
 use warnings;
@@ -125,12 +125,12 @@ use Kappa;
 # コンストラクタで table_namespace を指定
 #
 my $db = Kappa->new($dbh, { 
-    row_namespace   => 'MilkyHolms::DB::Row',   #これは前回していしたやつ
-	table_namespace => 'MilkyHolms::DB::Table', #テーブルクラスの定義場所を指定
+    row_namespace   => 'MilkyHolmes::DB::Row',   #これは前回していしたやつ
+	table_namespace => 'MilkyHolmes::DB::Table', #テーブルクラスの定義場所を指定
 });
 {% endhighlight %}
 
-こうすることで、テーブルクラスの定義が 「MilkyHolms::DB::Table::テーブル名」 にあることが Kappa さんに伝わります。
+こうすることで、テーブルクラスの定義が 「MilkyHolmes::DB::Table::テーブル名」 にあることが Kappa さんに伝わります。
 これにより、カスタマイズしたメソッドが呼べるようになります。
 
 {% highlight perl %}
@@ -147,12 +147,12 @@ Row オブジェクトの場合と同じように、Kappa は テーブルクラ
 + Kappa (基本機能)
 
 の順に検索します。ですので、共通処理は table_namespace におきます。今回の例だと、
-MilkyHolms::DB::Table(ファイル名だと lib/MilkyHolms/DB/Table.pm )におきます。
+MilkyHolmes::DB::Table(ファイル名だと lib/MilkyHolmes/DB/Table.pm )におきます。
 
 たとえば、insert したあとに、id を返す insert\_and\_last\_insert\_id を実装してみます。
 
 {% highlight perl %}
-package MilkyHolms::DB::Table;
+package MilkyHolmes::DB::Table;
 use parent qw(Kappa);
 use strict;
 use warnings;
@@ -170,22 +170,22 @@ sub insert_and_last_insert_id {
 カスタマイズしたテーブルクラス(detective テーブルのもの)からも使えるように、親クラスを変更しておきます。
 
 {% highlight perl %}
-package MilkyHolms::DB::Table::detective;
-use parent qw(MilkyHolms::DB::Table); #親クラスを変更
+package MilkyHolmes::DB::Table::detective;
+use parent qw(MilkyHolmes::DB::Table); #親クラスを変更
 # ...以降は前と同じ
 {% endhighlight %}
 
 
 ただし、table_namespace に定義した場合、Kappa のインスタンスからは利用できないので、かなり微妙です。
-ですので、共通機能は、もう一つ上の、「プロジェクト名::DB」に置くことの方が多いです。(この例では MilkyHolms::DB)。
+ですので、共通機能は、もう一つ上の、「プロジェクト名::DB」に置くことの方が多いです。(この例では MilkyHolmes::DB)。
 
 {% highlight perl %}
-package MilkyHolms::DB;
+package MilkyHolmes::DB;
 use parent qw(Kappa);
 use strict;
 use warnings;
 
-# MilkyHolms::DB::Table から移動
+# MilkyHolmes::DB::Table から移動
 sub insert_and_last_insert_id {
     my ($self, @args) = @_;
     $self->insert(@args);
@@ -199,8 +199,8 @@ sub insert_and_last_insert_id {
 で、table_namespace のほうは、この拡張したクラスを継承するようにします。こんな感じ。
 
 {% highlight perl %}
-package MilkyHolms::DB::Table;
-use parent qw(MilkyHolms::DB);# 親クラス変更
+package MilkyHolmes::DB::Table;
+use parent qw(MilkyHolmes::DB);# 親クラス変更
 use strict;
 use warnings;
 
@@ -211,11 +211,11 @@ use warnings;
 で、インスタンス化する対象を Kappa のインスタンスではなく、「プロジェクト名::DB」のインスタンスにします。
 
 {% highlight perl %}
-use MilkyHolms::DB;
+use MilkyHolmes::DB;
 # 前は Kappa を new してたところ
-my $db = MilkyHolms::DB->new($dbh, { 
-    row_namespace   => 'MilkyHolms::DB::Row', #これは前回していしたやつ
-	table_namespace => 'MilkyHolms::DB::Table',#テーブルクラスの定義場所を指定
+my $db = MilkyHolmes::DB->new($dbh, { 
+    row_namespace   => 'MilkyHolmes::DB::Row', #これは前回していしたやつ
+	table_namespace => 'MilkyHolmes::DB::Table',#テーブルクラスの定義場所を指定
 });
 {% endhighlight %}
 
@@ -223,15 +223,15 @@ my $db = MilkyHolms::DB->new($dbh, {
 おすすめです。
 
 {% highlight perl %}
-package MilkyHolms::DB;
+package MilkyHolmes::DB;
 use parent qw(Kappa);
 use strict;
 use warnings;
 
 sub new {
     my ($class, $dbh, $option_href) = @_;
-	$option_href->{row_namespace}   = 'MilkyHolms::DB::Row';
-	$option_href->{table_namespace} = 'MilkyHolms::DB::Table';
+	$option_href->{row_namespace}   = 'MilkyHolmes::DB::Row';
+	$option_href->{table_namespace} = 'MilkyHolmes::DB::Table';
 	my $self = $class->SUPER::new($dbh, $option_href);
 	bless $self, $class;
 }
@@ -243,9 +243,9 @@ sub new {
 こうすると、先ほどの呼び出しは、
 
 {% highlight perl %}
-use MilkyHolms::DB;
+use MilkyHolmes::DB;
 # 前は Kappa を new してたところ
-my $db = MilkyHolms::DB->new($dbh);
+my $db = MilkyHolmes::DB->new($dbh);
 {% endhighlight %}
 
 とシンプルに書けるようになります。
@@ -267,7 +267,7 @@ DB設計の時点でミスるとダメかもしれませんが、基本的には
 ## サンプル
 
 今回も[動作するサンプル](https://github.com/tsucchi/Kappa-Example/zipball/2012-10-10-kappa_table_class)を作成しました。
-bin ディレクトリの customized\_table\_class.pl が今回のサンプルです。lib/MilkyHolms/ 配下も実装してありますので、確認してみてください。
+bin ディレクトリの customized\_table\_class.pl が今回のサンプルです。lib/MilkyHolmes/ 配下も実装してありますので、確認してみてください。
 
 ## まとめ
 今回はテーブルクラスと、そのカスタマイズ方法を解説しました。これで伝わってるのかだいぶ微妙なのですが、

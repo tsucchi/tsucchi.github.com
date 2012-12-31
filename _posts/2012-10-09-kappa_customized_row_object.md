@@ -89,10 +89,10 @@ Row オブジェクトの命名規則は、たとえばプロジェクト名が 
 よいのではないか、と思います。命名規則は、いつかまた解説すると思います。
 
 ## カスタマイズ方法
-では実際に Row オブジェクトのカスタマイズをします。プロジェクト名は仮に MilkyHolms としておきましょうか。detective テーブルの Row オブジェクト
+では実際に Row オブジェクトのカスタマイズをします。プロジェクト名は仮に MilkyHolmes としておきましょうか。detective テーブルの Row オブジェクト
 を拡張します。
 
-ファイル名でいうと、lib/MilkyHolms/DB/Row/detective.pm。 パッケージ名でいうと、MilkyHolms::DB::Row::detective となります。お気に入りの開発ツール
+ファイル名でいうと、lib/MilkyHolmes/DB/Row/detective.pm。 パッケージ名でいうと、MilkyHolmes::DB::Row::detective となります。お気に入りの開発ツール
 (僕は emacs を使っています)で、ファイルを開きましょう。
 
 Kappa は FK とかをみて、つながっているテーブルのデータを引っ張る機能とかが**ありません**。(まあ今回の例では FK 張ってませんが)
@@ -100,7 +100,7 @@ Kappa は FK とかをみて、つながっているテーブルのデータを�
 toys_name というメソッドを付けてみましょう。
 
 {% highlight perl %}
-package MilkyHolms::DB::Row::detective;
+package MilkyHolmes::DB::Row::detective;
 use parent qw(Kappa::Row);
 use strict;
 use warnings;
@@ -128,10 +128,10 @@ use Kappa;
 # 
 # コンストラクタで row_namespace を指定
 #
-my $db = Kappa->new($dbh, { row_namespace => 'MilkyHolms::DB::Row' });
+my $db = Kappa->new($dbh, { row_namespace => 'MilkyHolmes::DB::Row' });
 {% endhighlight %}
 
-こうすることで、Row オブジェクトの定義が 「MilkyHolms::DB::Row::テーブル名」 にあることが Kappa さんに伝わります。
+こうすることで、Row オブジェクトの定義が 「MilkyHolmes::DB::Row::テーブル名」 にあることが Kappa さんに伝わります。
 
 ## 共通の Row オブジェクト
 テーブルに依存せず、すべての Row オブジェクトに共通の処理を定義したい場合もあるかと思います。
@@ -142,12 +142,12 @@ Kappa は Row オブジェクトの定義を、
 + Kappa::Row (基本機能)
 
 の順に検索します。ですので、共通処理は row_namespace におきます。今回の例だと、
-MilkyHolms::DB::Row(ファイル名だと lib/MilkyHolms/DB/Row.pm )におきます。たとえば CSVの出力ができるような
+MilkyHolmes::DB::Row(ファイル名だと lib/MilkyHolmes/DB/Row.pm )におきます。たとえば CSVの出力ができるような
 csv\_output というメソッドを付けてみましょう。
 
 
 {% highlight perl %}
-package MilkyHolms::DB::Row;
+package MilkyHolmes::DB::Row;
 use parent qw(Kappa::Row);
 use strict;
 use warnings;
@@ -165,15 +165,15 @@ sub csv_output {
 カスタマイズした Row オブジェクト(detective テーブルのもの)からも使えるように、親クラスを変更しておきます。
 
 {% highlight perl %}
-package MilkyHolms::DB::Row::detective;
-use parent qw(MilkyHolms::DB::Row); #親クラスを変更
+package MilkyHolmes::DB::Row::detective;
+use parent qw(MilkyHolmes::DB::Row); #親クラスを変更
 # ...以降は前と同じ
 {% endhighlight %}
 
 ## サンプル
 
 [動作するサンプル](https://github.com/tsucchi/Kappa-Example/zipball/2012-10-09-kappa_customized_row_object)を作成しました。
-bin ディレクトリの customized\_row\_object.pl が今回のサンプルです。lib/MilkyHolms/Row 配下も実装してありますので、確認してみてください。
+bin ディレクトリの customized\_row\_object.pl が今回のサンプルです。lib/MilkyHolmes/Row 配下も実装してありますので、確認してみてください。
 
 ## まとめ
 今回は Row オブジェクトのカスタマイズ方法について解説しました。次回はテーブルクラスの拡張方法について解説します。
