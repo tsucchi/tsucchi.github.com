@@ -172,7 +172,7 @@ use parent qw(MilkyHolmes::DB::Row); #親クラスを変更
 
 ## サンプル
 
-[動作するサンプル](https://github.com/tsucchi/Kappa-Example/zipball/2012-10-09-kappa_customized_row_object)を作成しました。
+[動作するサンプル](https://github.com/tsucchi/Kappa-Example/zipball/2012-10-09-kappa_customized_row_object-rev02)を作成しました。
 bin ディレクトリの customized\_row\_object.pl が今回のサンプルです。lib/MilkyHolmes/Row 配下も実装してありますので、確認してみてください。
 
 ## まとめ

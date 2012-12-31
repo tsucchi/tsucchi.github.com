@@ -266,7 +266,7 @@ DB設計の時点でミスるとダメかもしれませんが、基本的には
 
 ## サンプル
 
-今回も[動作するサンプル](https://github.com/tsucchi/Kappa-Example/zipball/2012-10-10-kappa_table_class)を作成しました。
+今回も[動作するサンプル](https://github.com/tsucchi/Kappa-Example/zipball/2012-10-10-kappa_table_class-rev02)を作成しました。
 bin ディレクトリの customized\_table\_class.pl が今回のサンプルです。lib/MilkyHolmes/ 配下も実装してありますので、確認してみてください。
 
 ## まとめ
