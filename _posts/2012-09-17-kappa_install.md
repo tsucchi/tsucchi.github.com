@@ -30,14 +30,14 @@ DBMS(Oracle とか MySQL とか PostgreSQLとか)がインストールされて�
 
 Ubuntu で MySQL なら libmysqlclient-dev ってやつを入れるらしいです。(ほかの OS や DBMS についてはググってね)
 
-{% highlight tcsh %}
+{% highlight console %}
 $ sudo apt-get install libmysqlclient-dev
 {% endhighlight %}
 
 で、DBD を入れます。(DBD::Oracle/mysql/pg など)
 
 MySQL なら
-{% highlight tcsh %}
+{% highlight console %}
 $ cpanm DBI DBD::mysql
 {% endhighlight %}
 
@@ -46,13 +46,13 @@ $ cpanm DBI DBD::mysql
 
 ちゃんとしたやり方もあるかもしれませんが、めんどいので --force つけて入れます。
 
-{% highlight tcshell %}
+{% highlight console %}
 $ cpanm --force DBD::mysql
 {% endhighlight %}
 
 SQLite ならこんな感じ。(クライアント無くてもたしか大丈夫だったと思う)
 
-{% highlight tcsh %}
+{% highlight console %}
 $ cpanm DBI DBD::SQLite
 {% endhighlight %}
 
@@ -117,7 +117,7 @@ github からインストールできる様な猛者なら、こんな説明い�
 
 で、/tmp とか /var/tmp とかホームディレクトリのどっかに置いてから、
 
-{% highlight tcsh %}
+{% highlight console %}
 $ tar zxvf Kappa-バージョン番号.tar.gz
 $ cd Kappa-バージョン番号
 $ cpanm --install-deps .
