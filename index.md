@@ -19,7 +19,7 @@ title: 最近の記事
 
 {{ post.content }}
 
----
+<hr>
 
 <div class="fb-like" data-href="http://tsucchi.github.com/{{ post.url }}" data-send="true" data-width="450" data-show-faces="true"></div>
 
