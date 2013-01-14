@@ -1,0 +1,3393 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+	<meta property="og:title" content="tsucchi の日記 2nd season" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="http://tsucchi.github.com/" />
+	<meta property="og:image" content="" />
+	<meta property="og:site_name" content="tsucchi の日記 2nd season" />
+	<meta property="fb:admins" content="699059896" />
+    <title>最近の記事 - tsucchi の日記 2nd season</title>
+    
+    <meta name="author" content="tsucchi">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le styles -->
+    <link href="/assets/themes/twitter/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/themes/twitter/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
+    <link href="/assets/themes/twitter/css/syntax.css" rel="stylesheet" type="text/css" media="screen">
+	<style type="text/css">
+      .sidebar {
+        padding: 0 5px;
+      }
+	  div.content > h1 {
+	    border-left: 15px solid #5279E7;
+	    margin-top: 9px;
+	    margin-bottom: 9px;
+  	    padding-left: 9px;
+	  }
+	  div.content > h2 {
+	    border-left: 12px solid #5279E7;
+	    margin-top: 8px;
+	    margin-bottom: 8px;
+  	    padding-left: 8px;
+	  }
+	  div.content > h3 {
+	    border-left: 10px solid #5279E7;
+	    margin-top: 5px;
+	    margin-bottom: 5px;
+  	    padding-left: 5px;
+	  }
+	  div.sidebar_box {
+        background-color: #F5F5F5;
+	  }
+    </style>
+    <!-- Le fav and touch icons -->
+  <!-- Update these with your own images
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+  -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="http://tsucchi.github.com/feed.xml">
+  </head>
+
+  <body>
+	<div id="fb-root"></div>
+	<script>(function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = "//connect.facebook.net/ja_JP/all.js#xfbml=1";
+	  fjs.parentNode.insertBefore(js, fjs);
+	  }(document, 'script', 'facebook-jssdk'));</script>
+
+	<div class="row">
+	  <div class="span1">
+		&nbsp;
+	  </div>
+	  <div class="span8">
+		<div class="page-title">
+		  <h1><a href="/">tsucchi の日記 2nd season</a></h1>
+		</div>
+		<br>
+		<br>
+		<div class="page-header">
+		  <h1></h1>
+		  <h1>最近の記事</h1> 
+		</div>
+	  </div>
+	  <div class="span3">
+		&nbsp;
+	  </div>
+	</div>
+	<div class="row">
+	  <div class="span1">
+		&nbsp;
+	  </div>
+	  <div class="span8">
+		<div class="content">
+          
+
+
+<h1>2013-01-14 <a href="/hpc/2013/01/14/supercomputer">スパコンの話。あるいは、僕がちょっとだけ触れたスーパーコンピュータの世界</a></h1>
+
+
+
+
+<div class="pull-right">
+
+
+
+
+  
+     
+        <a href="/tags.html#スパコン-ref"><span class="label label-info">スパコン <span>1</span></span></a>
+    
+  
+
+
+
+</div>
+
+
+<br>
+
+
+
+
+<p><a href="http://satoshi.blogs.com/life/2013/01/kei.html">スパコン「京」に関する素朴な疑問</a>とかいう、大変ひどい記事があったので、ちょっと昔の事思い出しながら書いてみようと思う。</p>
+
+
+
+
+<p>まず、自分のスタンスを書いときますが、京については、「悪くは無いと思うけど、お金は高すぎだよな」と思ってます。</p>
+
+
+
+
+<ul>
+<li><a href="http://d.hatena.ne.jp/tsucchi1022/20091128/1259416601">京速計算機とか長崎のアレとかに思うこと</a></li>
+</ul>
+
+
+
+
+<p>その上で、素人(僕も素人に毛の生えた程度なので、対して変わらないけど)がろくすっぽ調査もしないで、適当な事書くのもまあ勝手といえば勝手だけど、記事書いたら100ブクマとか付くような人は、「もうちょい注意してよ」、って思う。</p>
+
+
+
+
+<p>さて、まーいろいろひどいんだけど、特にひどいのはこの3点かな。</p>
+
+
+
+
+<ul>
+<li><p>専用のスパコンに投資するより、GPGPUを搭載した汎用サーバーをクラウドに大量においてサービスとして提供し、ニーズに応じて台数を増やしていった方がはるかに安いし柔軟性があるのではないか？</p></li>
+<li><p>京を使えば６時間で出来ると言っても、その時間を確保するのに６ヶ月かかるんだったらアマゾンからGPGPU付きのサーバーを１０００台借りて数日間走らせた方が手っ取り早くないか？</p></li>
+<li><p>日本のIT業界の将来を考えれば、スパコンで１位を取ることよりも、世界市場でアマゾンのAWSとまっこうから戦えるサービスを提供できる日本企業が存在しないことを問題視すべきではないか？</p></li>
+</ul>
+
+
+
+
+<p>まず、1点めですが、スパコンの計算って、モノにもよるかもしれないけど、基本的にクラウドサービスでできるもんじゃありません。たとえば、スイッチを複数台またぐだけで性能出ないことがある、とかそのくらいシビアな事もあります(そういうケース実際に見た)。クライドサービスで、ネットワークのトポロジまでカスタマイズできれば大丈夫でしょうけど、それってもはやクラウドサービスじゃねえよな。</p>
+
+
+
+
+<p>あと、GPGPUとか、アクセラレータの類を使う場合ですが、大抵それ用にコードを書き換えないと性能が出ないらしいです。アレ系は、普通の CPU と癖がかなり違うので、得意な処理と不得意な処理があるため、らしいです(または、そもそもアクセラレータに処理を振るために専用の SDK 使わなきゃだめだったり）。僕が生きている間くらいには、この辺意識しなくてもコンパイラが最適化してくれるようになるかもしれませんが、現状は無理らしいです。京は普通の並列計算機だから、わりとそのままプログラム使えるんじゃないかな。逆にアクセラレータ積んでるやつのほうが、シミュレーションの再利用とか難しいんじゃないかな、と思います。</p>
+
+
+
+
+<p>2点め。スパコンの計算って、数日間走らせるようなものじゃありません。計算する時は、taskset とか numactl つかって、CPU をプロセスに張り付けて、メモリも目一杯つかって走らせたりします。サーバの状態が「CPU が 100% 張り付いて、メモリ使用率も 100% 」って、業務系や Web 系の人たち何て呼びます？そう、「障害」です。まあ実際は計算できてるから障害じゃないけど、HPC 以外のエンジニアであれば、避けなきゃいけないような使い方します。なので、数百台〜1000台とかで、そういう使い方すると、結構な確率で壊れたり、途中で失敗したりします。計算に数日かかるようなやつだと、完走率どのくらいかなー？何回走らせればできるかなー？怖いなー、と思います。数日走らなきゃ終わらせられない場合もあるでしょうけど、基本的には数時間で終わらせたいんじゃないかなー。</p>
+
+
+
+
+<p>3点め。TOP500 の上位は大体、軍事系とかの国策でやっているものです。国として、米国や中国に勝たなくていいんなら、いいんじゃない？僕はダメだと思うけど。あと、AWS は今回 TOP500 の 102位なので、HPC用のやつ全力でそのくらいなのでしょう。普通に京とか TSUBAME とか貸してもらった方がいいんじゃないかな。</p>
+
+
+
+
+<p>あと、長崎のアレは、前に記事かいたので、再掲しておこう。</p>
+
+
+
+
+<ul>
+<li><a href="http://d.hatena.ne.jp/tsucchi1022/20091127/1259335066">長崎のアレについて</a></li>
+</ul>
+
+
+
+
+<p>「安価」っていってるけど、これ多分 HW 代だけですので、そこのところ注意しないとね、という話。</p>
+
+
+
+
+<p>と、まあこの世界から離れてずいぶん経つし、専門家でもないので、間違いもあるかもしれませんが、こんな感じで。</p>
+
+
+<hr />
+
+<div class="fb-like" data-href="http://tsucchi.github.com//hpc/2013/01/14/supercomputer" data-send="true" data-width="450" data-show-faces="true"></div>
+
+
+<p><a href="https://twitter.com/share" class="twitter-share-button" data-url="http://tsucchi.github.com/hpc/2013/01/14/supercomputer" data-via="tsucchi" data-lang="ja">ツイート</a></p>
+
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+
+
+
+<h1>2013-01-06 <a href="/cpan/2013/01/06/sql_executor">SQL::Executor 0.14 をリリースしました。もしくは ORM とか関連モジュールはこれでいいんじゃね？という話。</a></h1>
+
+
+
+
+<div class="pull-right">
+
+
+
+
+  
+     
+        <a href="/tags.html#perl-ref"><span class="label label-info">perl <span>15</span></span></a>
+     
+        <a href="/tags.html#cpan-ref"><span class="label label-info">cpan <span>1</span></span></a>
+     
+        <a href="/tags.html#db-ref"><span class="label label-info">db <span>10</span></span></a>
+    
+  
+
+
+
+</div>
+
+
+<br>
+
+
+
+
+<p>表記のとおり、<a href="http://search.cpan.org/~tsucchi/SQL-Executor-0.14/lib/SQL/Executor.pm">SQL::Executor 0.14</a>をリリースしました。</p>
+
+
+
+
+<p>今回、connect() という DBI っぽいコンストラクタを付けました。んで、connect 経由でインスタンス作ると、内部で<a href="http://search.cpan.org/dist/DBIx-Handler/">DBIx::Handler</a>を生成して、コネクション管理をしてもらったり、コレを使ったトランザクション管理ができるようになります。</p>
+
+
+
+
+<p>ちょい前に、<a href="https://github.com/tsucchi/p5-DBIx-Decorator">こんなん</a>書いてみたりして、dbh をいい感じに拡張できたらいい感じになるんじゃね？と思ってたのですが、めんどい割には得るものが少なそうで、今現在、DBIx::Handler っていう良いものがあるんだから、そっち使った方が幸せかな、という結論に至りました。</p>
+
+
+
+
+<p>まだ、コレ使ったコネクション/トランザクション管理への移行は済ませてないので、バグあるかもです。月曜以降ちょいちょい試してみたいと思います。</p>
+
+
+
+
+<p>先走って試しちゃってバグ見つけたりしたら、cpan RT or github issue or @tsucchi あたりで連絡いただければ、と思います。</p>
+
+
+<hr />
+
+<div class="fb-like" data-href="http://tsucchi.github.com//cpan/2013/01/06/sql_executor" data-send="true" data-width="450" data-show-faces="true"></div>
+
+
+<p><a href="https://twitter.com/share" class="twitter-share-button" data-url="http://tsucchi.github.com/cpan/2013/01/06/sql_executor" data-via="tsucchi" data-lang="ja">ツイート</a></p>
+
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+
+
+
+<h1>2013-01-04 <a href="/misc/2013/01/04/newyear">あけましておめでとうございます</a></h1>
+
+
+
+
+<div class="pull-right">
+
+
+
+
+  
+     
+        <a href="/tags.html#雑談-ref"><span class="label label-info">雑談 <span>12</span></span></a>
+    
+  
+
+
+
+</div>
+
+
+<br>
+
+
+
+
+<p>あけましておめでとうございます。</p>
+
+
+
+
+<p>さてさて、<a href="/misc/2012/12/31/matome">昨年大晦日にも書きました</a>が、いい年したおっさんなのに、17歳くらいの若者ばりの悩みを抱える今日この頃であります。その倍くらい生きてるんだけどねー。。。</p>
+
+
+
+
+<ul>
+<li><a href="/misc/2012/10/06/zatsudan_after_yapc/">最近何となく考えてたこととか</a></li>
+<li><a href="/misc/2012/10/22/age_plus_plus">年齢++</a></li>
+<li><a href="/milkyholms/2012/12/14/izsm">ミルキィホームズ ライブ in 武道館の、橘田いずみさんの話</a></li>
+</ul>
+
+
+
+
+<br>
+
+
+
+
+<br>
+
+
+
+
+<br>
+
+
+
+
+<p>まー、今日はちょい酔っ払ってるし、いい加減ぶっちゃけた方が楽なのかなー、とも思うので差し障り無い程度にちゃんと書こうかな。</p>
+
+
+
+
+<hr />
+
+
+
+
+<p>昨年後半くらいから、</p>
+
+
+
+
+<p>家庭で問題発生 -> ストレス(※) -> 仕事うまくいかない -> ストレス -> ※に戻る</p>
+
+
+
+
+<p>というネガティブフィードバックが発生しました。</p>
+
+
+
+
+<p>Kent Beckの<a href="http://www.amazon.co.jp/gp/product/4894717115/ref=as_li_qf_sp_asin_tl?ie=UTF8&tag=tsucchisblog-22&linkCode=as2&camp=247&creative=1211&creativeASIN=4894717115">テスト駆動開発入門</a><img src="http://www.assoc-amazon.jp/e/ir?t=tsucchisblog-22&l=as2&o=9&a=4894717115" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />によると、ネガティブフィードバックを解消するには、</p>
+
+
+
+
+<ul>
+<li>新しい要素の追加</li>
+<li>既存の要素の置き換え</li>
+<li>矢印の変更</li>
+</ul>
+
+
+
+
+<p>のいずれかの方法で対処するのだそうです。</p>
+
+
+
+
+<p>で、昨年11月末〜12月始くらいは、「新しい要素の追加」、具体的にはミルキィなんとか、その辺駆使して何とかしてたんですよね。ですが、12月始くらいに落ち着くと思ってた仕事まわりが、落ち着くどころか負荷がさらに増えてしまって、お腹痛いし眠れないし、「あーこのままだと死んじゃうかも」とか思ったので、別の手(「矢印の変更」かな？)を打って、一応無事に年末年始を迎えることができました、というのが、前に「思い出したくない」と書いた昨年後半の主な出来事でした。(これじゃ分からんよね。でもこれ以上細かく書くのは、だいぶ恥ずかしいし、いろんな人に迷惑かかるかもだから、もうこれ以上は無理。)</p>
+
+
+
+
+<hr />
+
+
+
+
+<p>さてさて、新年だから、昨年の反省を踏まえて抱負的なものを書くのかな？</p>
+
+
+
+
+<p>えーっと、昨年の反省どころか、色々発生しまくった昨年後半の問題を解決しきっていないので、その辺なんとかしないといけません。その上で、中2だか高2だかみたいな、「オレは何者で、何ができるのだろう？」みたいな、冒頭に挙げた悩みも解消していかなきゃいけません。</p>
+
+
+
+
+<p>んで、最近つぶやいたり、多分ここにもちょっと書いたりしていますが、僕はわりとマジで、「僕の技術を通じて世の中を幸せにしたい」と考えているし、願っています。最初にこのことに気づいたときは結構恥ずかしかったりもしたのだけど、今は何回か書いちゃったこともあり、多分実際に口に出して公言してもそんなに恥ずかしくないんじゃないかなー、と思っていたりします。(ヘタレなので、まだ人に直接話したことは無い。)</p>
+
+
+
+
+<p>で、そんないろんな事を踏まえて、「まだ見つけてないものとか、これから見つけなきゃいけないものが色々あるのではないか」と昨年末頃考えておりました。</p>
+
+
+
+
+<p>そしたら、今年初めに、奇しくもこんなのが。</p>
+
+
+
+
+<p><img src="/assets/20130104.jpg"></p>
+
+
+
+
+<p>つーわけで、僕も色んなものを「探す」一年としなくてはいけないのかなー、と思っています。</p>
+
+
+
+
+<iframe src="http://rcm-jp.amazon.co.jp/e/cm?t=tsucchisblog-22&o=9&p=8&l=as1&asins=4894717115&ref=qf_sp_asin_til&fc1=000000&IS2=1&lt1=_blank&m=amazon&lc1=0000FF&bc1=000000&bg1=FFFFFF&f=ifr" style="width:120px;height:240px;" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"></iframe>
+
+
+<hr />
+
+<div class="fb-like" data-href="http://tsucchi.github.com//misc/2013/01/04/newyear" data-send="true" data-width="450" data-show-faces="true"></div>
+
+
+<p><a href="https://twitter.com/share" class="twitter-share-button" data-url="http://tsucchi.github.com/misc/2013/01/04/newyear" data-via="tsucchi" data-lang="ja">ツイート</a></p>
+
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+
+
+
+<h1>2012-12-31 <a href="/misc/2012/12/31/matome">2012年の振り返り</a></h1>
+
+
+
+
+<div class="pull-right">
+
+
+
+
+  
+     
+        <a href="/tags.html#雑談-ref"><span class="label label-info">雑談 <span>12</span></span></a>
+    
+  
+
+
+
+</div>
+
+
+<br>
+
+
+
+
+<h3>1月〜3月ごろ</h3>
+
+
+
+
+<p>ORM 使いたくなって、Teng 試したりしてたらしい。あんま記事書いてないから良く分かんないや。。。</p>
+
+
+
+
+<ul>
+<li><a href="http://d.hatena.ne.jp/tsucchi1022/20120217/1329490205">Teng の Row オブジェクトをテストする</a></li>
+<li><a href="http://d.hatena.ne.jp/tsucchi1022/20120303/1330730457">Teng の不具合をみつけて直してもらったのと、機能追加してもらった話 </a></li>
+</ul>
+
+
+
+
+<h3>4月〜6月ごろ</h3>
+
+
+
+
+<p>GW中に、<a href="http://search.cpan.org/dist/SQL-Executor/">SQL::Executor</a>ってモジュールを書いた。多分 ORM を自作する覚悟をしていたのかな。で、6月から自作してるみたいだ。なんか DB まわりで色々考えたり悩んでたりしてたみたい。</p>
+
+
+
+
+<ul>
+<li><a href="http://d.hatena.ne.jp/tsucchi1022/20120403/1333405710">DBのスキーマ変更をテストする </a></li>
+<li><a href="http://d.hatena.ne.jp/tsucchi1022/20120422/1335081999">Webエンジニアのための データベース技術[実践]入門</a></li>
+<li><a href="http://d.hatena.ne.jp/tsucchi1022/20120514/1337015637">最近のお仕事の話とか、ORM のはなしとか</a></li>
+<li><a href="http://d.hatena.ne.jp/tsucchi1022/20120518/1337356297">主キーが決まらないとき</a></li>
+<li><a href="http://d.hatena.ne.jp/tsucchi1022/20120525/1337957432">ORM とかテーブルデータゲートウェイとか、その周辺の話</a></li>
+<li><a href="http://d.hatena.ne.jp/tsucchi1022/20120604/1338780295">Kappa という ORM を書いてみた話</a></li>
+<li><a href="http://d.hatena.ne.jp/tsucchi1022/20120630/1341035071">SQL::Executor 0.11 をリリースしました </a></li>
+</ul>
+
+
+
+
+<p>この頃、超忙しかったはずなのだが、結構記事書いてるなー。で、超忙しかったので見事に腰痛を再発させ現在に至る。</p>
+
+
+
+
+<h3>7月〜9月ごろ</h3>
+
+
+
+
+<p>メインの blog をはてダから、github pages に移した。それから YAPC の準備したり、発表したり。今年も発表できて良かったです。あとは、<a href="http://milky-holmes-anime.com/">ミルキィホームズ</a>の再放送を偶然視聴し、ハマってみたり。</p>
+
+
+
+
+<ul>
+<li><a href="http://tsucchi.github.com/blog/2012/07/14/github-pages">gibhub pages + jekyll で blog 作ってみました</a></li>
+<li><a href="http://tsucchi.github.com/blog/2012/07/14/github-pages2">gibhub pages + jekyll で blog 作ってみましたの続き</a></li>
+<li><a href="http://tsucchi.github.com/kappa/2012/09/15/kappa_background">Kappa の飼い方(Kappa という ORM の話) その1 開発の背景のお話</a></li>
+<li><a href="http://tsucchi.github.com/event/2012/09/23/gameshow_majimena_hanashi">東京ゲームショウに行ってきた(もう少し真面目な？話)</a></li>
+<li><a href="http://tsucchi.github.com/yapcasia/2012/09/28/yapc_day1">YAPC::Asia 2012 初日でした</a></li>
+<li><a href="http://tsucchi.github.com/yapcasia/2012/09/29/yapc_happyou">YAPC::Asia 2012 発表資料「Perl と SQL のいろいろ」</a></li>
+<li><a href="http://tsucchi.github.com/yapcasia/2012/09/30/yapc_day2">昨日はYAPC::Asia 2012 2日め(最終日)でした。</a></li>
+</ul>
+
+
+
+
+<h3>10月〜12月</h3>
+
+
+
+
+<p>YAPC 後にいろいろフィードバックがあって、mod_perl 配下で __DATA__ セクションを使うために色々試してみたりした。今ではプロダクトコードでも使っているのだけど、Kappa さん本体にフィードバックしてないので、早めにやらないと。他にも ORM とかその周辺機能についてアレコレ考えたりしてたけど、あんま記事書いてないなー。このへんも自分なりの結論は出たので、早めに書かないと。</p>
+
+
+
+
+<ul>
+<li><a href="http://tsucchi.github.com/mod_perl/2012/10/19/mod_perl_and_data_section">mod_perl 環境でも Data::Section::Simple 使えるかも</a></li>
+</ul>
+
+
+
+
+<p>11月以降は思い出したくないですね。。。</p>
+
+
+
+
+<h3>その他</h3>
+
+
+
+
+<p>前も書いたのですが、今年で 34になりましたので、来年で定年(笑)なワケです。そんな中で、お仕事って何だろう？僕の夢って何だろ？みたいなことに、ガラにもなく悩んでたりする今日この頃です。</p>
+
+
+
+
+<ul>
+<li><a href="http://tsucchi.github.com/misc/2012/10/06/zatsudan_after_yapc/">最近何となく考えてたこととか</a></li>
+<li><a href="http://tsucchi.github.com/misc/2012/10/22/age_plus_plus">年齢++</a></li>
+<li><a href="http://tsucchi.github.com/milkyholms/2012/12/14/izsm">ミルキィホームズ ライブ in 武道館の、橘田いずみさんの話</a></li>
+</ul>
+
+
+
+
+<p>来年が良い年になるように、精進しないといけないですねー。</p>
+
+
+<hr />
+
+<div class="fb-like" data-href="http://tsucchi.github.com//misc/2012/12/31/matome" data-send="true" data-width="450" data-show-faces="true"></div>
+
+
+<p><a href="https://twitter.com/share" class="twitter-share-button" data-url="http://tsucchi.github.com/misc/2012/12/31/matome" data-via="tsucchi" data-lang="ja">ツイート</a></p>
+
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+
+
+
+<h1>2012-12-23 <a href="/music/2012/12/23/music">変調された音とそうでない音と</a></h1>
+
+
+
+
+<div class="pull-right">
+
+
+
+
+  
+     
+        <a href="/tags.html#音楽-ref"><span class="label label-info">音楽 <span>1</span></span></a>
+     
+        <a href="/tags.html#雑談-ref"><span class="label label-info">雑談 <span>12</span></span></a>
+    
+  
+
+
+
+</div>
+
+
+<br>
+
+
+
+
+<p>ちょっと前、<a href="http://anond.hatelabo.jp/20100920233848">初音ミクと見せかけの魔法</a> というすごい記事を見た。</p>
+
+
+
+
+<p>ピアノの発明が音楽の歴史を変えたこと、初音ミクの出現が同じように音楽の歴史を変えつつあること、が書いてある。音楽やってる人なら、きっと興味深く読めると思うし、そうじゃない人も読んでほしいくらい良記事なので、読んでみてほしい。ってか僕は感動して危うく会社で泣くところだった。(一応20年くらい音楽やってたからね。最近ご無沙汰だけどさ)</p>
+
+
+
+
+<p>で、僕も初音ミクすごいと思うし、アレつかって曲作ったり既存の歌歌ってみたりさせてる人達すごいと思うんですよ。僕はエンジニアで音楽の素養もあるけど、ミク作れないし、ミク使って何か作るのも多分できないからね。</p>
+
+
+
+
+<p>でもね、だけどね。。。</p>
+
+
+
+
+<p>昨日、ヒャダインの<a href="http://www.amazon.co.jp/gp/product/B0098KQFMK/ref=as_li_qf_sp_asin_tl?ie=UTF8&tag=tsucchisblog-22&linkCode=as2&camp=247&creative=1211&creativeASIN=B0098KQFMK">20112012</a><img src="http://www.assoc-amazon.jp/e/ir?t=tsucchisblog-22&l=as2&o=9&a=B0098KQFMK" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />借りてきて、<a href="http://www.nicovideo.jp/watch/sm19447455">「ヒャダインとももクロのじょーじょーゆーじょー」</a>聞いてたら、「あ、こっちの方がいいなー」って思ったのね。(オリジナル版は、ヒャダイン本人が変調した女声を使ってる。)</p>
+
+
+
+
+<p>で、前もこういうのあったなー、と思ったら、<a href="http://www.nicovideo.jp/watch/1350358455">みもりん(三森すずこ)のストロボラスト</a>だ。こっちの<a href="http://www.nicovideo.jp/watch/nm13359285">原曲</a>はミクのやつで、ラストで逆再生とか訳分かんないことやってるけど、それが合ってるというすごい曲なんだよね。</p>
+
+
+
+
+<p>でも歌はミクより、みもりんの方がいいなー、と僕は思うのです。</p>
+
+
+
+
+<p>いや、繰り返しになるけど、ミクすごいと思いますよ。アレ、半分人工音だけど、気持ち悪さ無いもんね。声に<a href="http://ja.wikipedia.org/wiki/%E4%B8%8D%E6%B0%97%E5%91%B3%E3%81%AE%E8%B0%B7">不気味の谷</a>があるのかどうか、分からないけど、あったとしても多分もう谷を越えていると思いますもん。</p>
+
+
+
+
+<p>ただ、現時点では、まだ生身の声の方が、ボーカロイドよりもちょっと上なのかなー、と思っただけの話です。</p>
+
+
+
+
+<p>でもこれってそんなに悲観したことじゃなくて、いつかもっとテクノロジーが進化したら、生身の歌声と区別つかないような、そういうのが作れる日が多分来るし、そんな風に技術を通じて世の中を少しずつハッピーにしていくのが我々技術者の使命ですからね。</p>
+
+
+
+
+<p>一番最初に挙げた記事にも似たような事書いてあるのだけど、例えば僕が何か曲作ったとして、それを歌の上手な女の子に歌ってほしくても、普通の人はそんなアテ無いじゃないですか。でも、初音ミクならそれができる。で、技術がもっと進歩したら、人の声とまったく区別がつかないような、そういうのができるかもしれない。</p>
+
+
+
+
+<p>そうなったとき、音楽が、世界がどういう風に変わるのか、見てみたいなー、と思ったのでした。</p>
+
+
+
+
+<br>
+
+
+
+
+<br>
+
+
+
+
+<br>
+
+
+
+
+<iframe src="http://rcm-jp.amazon.co.jp/e/cm?t=tsucchisblog-22&o=9&p=8&l=as1&asins=B0098KQFMK&ref=qf_sp_asin_til&fc1=000000&IS2=1&lt1=_blank&m=amazon&lc1=0000FF&bc1=000000&bg1=FFFFFF&f=ifr" style="width:120px;height:240px;" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"></iframe>
+
+
+<hr />
+
+<div class="fb-like" data-href="http://tsucchi.github.com//music/2012/12/23/music" data-send="true" data-width="450" data-show-faces="true"></div>
+
+
+<p><a href="https://twitter.com/share" class="twitter-share-button" data-url="http://tsucchi.github.com/music/2012/12/23/music" data-via="tsucchi" data-lang="ja">ツイート</a></p>
+
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+
+
+
+<h1>2012-12-14 <a href="/milkyholms/2012/12/14/izsm">ミルキィホームズ ライブ in 武道館の、橘田いずみさんの話</a></h1>
+
+
+
+
+<div class="pull-right">
+
+
+
+
+  
+     
+        <a href="/tags.html#ミルキィホームズ-ref"><span class="label label-info">ミルキィホームズ <span>1</span></span></a>
+     
+        <a href="/tags.html#雑談-ref"><span class="label label-info">雑談 <span>12</span></span></a>
+    
+  
+
+
+
+</div>
+
+
+<br>
+
+
+
+
+<p>ミルキィホームズの、武道館ライブ。</p>
+
+
+
+
+<iframe src="http://rcm-jp.amazon.co.jp/e/cm?t=tsucchisblog-22&o=9&p=8&l=as1&asins=B009AYB44I&ref=qf_sp_asin_til&fc1=000000&IS2=1&lt1=_blank&m=amazon&lc1=0000FF&bc1=000000&bg1=FFFFFF&f=ifr" style="width:120px;height:240px;" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"></iframe>
+
+
+
+
+<p>本当に素晴らしいライブで、「楽しそうだなー、いいなー、行きたかったなー」と思う(僕は今年の夏のアニメ再放送でハマった新参者なので、当時はミルキィの存在すら知らなかった)のですが、その中で、アンコール MC の 4 人のコメントが本当に素晴らしいです。「声優になりたいな、なれるかな？」「ミルキィホームズという作品とメンバーに出会えてよかった」という、同じ内容の話なのですが、それぞれ4人が自分の言葉で話すとみんな違う魅力的な話になるから不思議なものです。</p>
+
+
+
+
+<p>で、特に橘田いずみさんのコメントが特に素晴らしかったので、頑張って文字起こししてみたので、読んでいただければさいわいです。(一部口語を文章体に変えてます)</p>
+
+
+
+
+<pre><code>私は声優を目指したのが、大学を卒業してからで、それまでずっと、「声優になりたい」とか言ってても、まわりは、「あっそうか」みたいな感じだったんです。でもやっぱり諦めきれなくて、そこから養成所に入って、色々やって、いまここに立てているわけですが、その頃に「なりたい自分とならなきゃいけない自分は違うんだよ」とか良く言われていて、でも今「なりたい自分」でいられるこの空間がすごい幸せなんだな、って思います。多分、「なりたい自分でいれる所に立ててる人」ってそんなにいないかな、って思うので、このミルキィホームズという作品に出会えたことが私の人生で本当に大きいことで、これがなかったら私、こんなハイテンションな人間じゃなかったんじゃないかな、って思うくらい素の自分が出せた初めての場所だったんじゃないかって気がします。ほんと「でっかい子供」ってメンバーからもいつも言われるくらい、一番年上なのにいつもダメダメで、(佐々木)未来が一番しっかりしていたりする逆転なこのユニットなんですけど、(でも、)だから3人じゃなかったら私ここまで頑張れなかったのかな、って思うこともあったりするので、本当に皆さんと、そして本当にミルキィホームズを愛してくれて、橘田いずみを好きになってくれた皆さんに本当に感謝します、ありがとうございます。
+</code></pre>
+
+
+
+
+<p>いず様(橘田さんの愛称ね)は、普段はぶっ飛んでいて、百合好きだし、まあ正直<a href="http://dic.nicovideo.jp/a/%E6%AE%8B%E5%BF%B5%E3%81%AA%E7%BE%8E%E4%BA%BA">「残念な美人」</a>って感じなのですが、なんというか、最近僕自身が「自分の夢って何だろーな」って考えることが多くて、結構悩んでたので、</p>
+
+
+
+
+<pre><code>「なりたい自分とならなきゃいけない自分は違うんだよ」とか良く言われていて、でも今「なりたい自分」でいられるこの空間がすごい幸せなんだな、って思います。
+</code></pre>
+
+
+
+
+<p>のくだりで危うく泣きそうになったのでした。そうだよね、「なりたい自分」でありたいよね、そうだったら幸せだよね。</p>
+
+
+
+
+<p>さてさて、最後までこの与太話を読んでくれた方がどのくらいいるか、分からないですが、ちょっとでもミルキィホームズに興味を持ってくれたなら、今年の年末年始に特番やら1期全話再放送とか、いろいろあるみたいなので、見てみるといいんじゃないかな、と思います。アニメ1期はとくにヤバいので、おすすめです。(萌えアニメじゃないよ、ギャグアニメだよ！)</p>
+
+
+
+
+<p><a href="http://milky-holmes-anime.com/news/alt_one-two.html">年末年始のTVアニメ「探偵オペラ ミルキィホームズ」放送情報！</a></p>
+
+
+<hr />
+
+<div class="fb-like" data-href="http://tsucchi.github.com//milkyholms/2012/12/14/izsm" data-send="true" data-width="450" data-show-faces="true"></div>
+
+
+<p><a href="https://twitter.com/share" class="twitter-share-button" data-url="http://tsucchi.github.com/milkyholms/2012/12/14/izsm" data-via="tsucchi" data-lang="ja">ツイート</a></p>
+
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+
+
+
+<h1>2012-12-07 <a href="/anime/2012/12/07/kurobas">脅迫に屈するのはダメだと思うんだ</a></h1>
+
+
+
+
+<div class="pull-right">
+
+
+
+
+  
+     
+        <a href="/tags.html#アニメ-ref"><span class="label label-info">アニメ <span>1</span></span></a>
+     
+        <a href="/tags.html#雑談-ref"><span class="label label-info">雑談 <span>12</span></span></a>
+    
+  
+
+
+
+</div>
+
+
+<br>
+
+
+
+
+<p>まあ自分は、コミケも黒バスもどうでもいいし、政治的な話はあんましないようにしてるんですが、</p>
+
+
+
+
+<p><a href="http://www.comiket.co.jp/info-a/C83/C83Notice1.html">コミックマーケット８３における『黒子のバスケ』サークル・頒布物対応に関する緊急のお知らせ</a></p>
+
+
+
+
+<pre><code>しかしながら、11月21日に他主催による『黒子のバスケ』オンリー同人誌即売会の中止、11月22日に「ジャンプフェスタ」における『黒子のバスケ』関連イベントの中止が発表される事態を受けて、会場より、犯人が捕まるまでコミケットの開催を見合わせるか、あるいは、『黒子のバスケ』サークルに参加を見合わせてもらった上で開催するよう、1996年からの会場利用においても、前例のない非常に強い要請を受けることになりました。また、警察からも、『黒子のバスケ』サークルの参加見合わせとコミックマーケット８３における『黒子のバスケ』の同人誌・グッズ等の頒布を中止するよう、非常に強い要請を受けております。
+</code></pre>
+
+
+
+
+<p>「何やってんだ、ダメダメ警察！」(CV:徳井青空)とか茶化してもいいんだけど、やっぱコレまずいよ。
+警察が要請しちゃダメだと思うんだ。SAT でも自衛隊でも何でも投入してでも開催して、あわよくば犯人捕まえないと。(投入する戦力はイベントの重要度によるけど、コミケは数十万単位の動員があるから、そのくらいやってもいいと思うんだ。)</p>
+
+
+
+
+<p>警察の中の人たちは、これが文化の危機だって、ちゃんと認識してるんだろうか。僕は黒バスはどうでもいいし、
+コミケも別にどうでもいいけど、たとえばミルキィホームズで同じことされたら、って思ったらすごく怖くなった。</p>
+
+
+
+
+<p>ガンダムで、エヴァンゲリオンで、まどか☆マギカで、同じことされて、本当に脅迫に屈して自粛するの？</p>
+
+
+
+
+<p>今、衆議院の選挙運動してるけど、候補者が脅迫されたらどうすんの？</p>
+
+
+
+
+<p>脅迫は全力で叩き潰さないと、「オレが気に入らないものは、脅迫して潰す」ってのが正当化されちゃう世の中になっちゃうよ。それはまずいよ。</p>
+
+
+
+
+<p><a href="http://ja.wikipedia.org/wiki/%E5%BD%BC%E3%82%89%E3%81%8C%E6%9C%80%E5%88%9D%E5%85%B1%E7%94%A3%E4%B8%BB%E7%BE%A9%E8%80%85%E3%82%92%E6%94%BB%E6%92%83%E3%81%97%E3%81%9F%E3%81%A8%E3%81%8D">彼らが最初共産主義者を攻撃したとき</a></p>
+
+
+
+
+<pre><code>ナチ党が共産主義を攻撃したとき、私は自分が多少不安だったが、共産主義者でなかったから何もしなかった。ついでナチ党は社会主義者を攻撃した。私は前よりも不安だったが、社会主義者ではなかったから何もしなかった。ついで学校が、新聞が、ユダヤ人等々が攻撃された。私はずっと不安だったが、まだ何もしなかった。ナチ党はついに教会を攻撃した。私は牧師だったから行動した―しかし、それは遅すぎた。
+</code></pre>
+
+
+<hr />
+
+<div class="fb-like" data-href="http://tsucchi.github.com//anime/2012/12/07/kurobas" data-send="true" data-width="450" data-show-faces="true"></div>
+
+
+<p><a href="https://twitter.com/share" class="twitter-share-button" data-url="http://tsucchi.github.com/anime/2012/12/07/kurobas" data-via="tsucchi" data-lang="ja">ツイート</a></p>
+
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+
+
+
+<h1>2012-11-20 <a href="/misc/2012/11/20/zatsudan">近況あるいは、奇跡も、魔法も、あるんだよって話</a></h1>
+
+
+
+
+<div class="pull-right">
+
+
+
+
+  
+     
+        <a href="/tags.html#雑談-ref"><span class="label label-info">雑談 <span>12</span></span></a>
+    
+  
+
+
+
+</div>
+
+
+<br>
+
+
+
+
+<p>相変わらず、コード書かない日々を送っております。
+まあどういう状況にいるかは、超勘のいい人なら分かるかもしれないし、説明する気もあんまりないし、って感じですかね。</p>
+
+
+
+
+<p>さて、僕は、(冗談ではなくマジで)、プログラマは現代の魔法使いだと思っています。</p>
+
+
+
+
+<p>だって普通の人が何日もかけてやる仕事を一瞬で終わらせたり、世界中のつぶやきからミルキィホームズ関連の発言だけかき集めたりとか、
+(暇ができたらそういう bot つくろうかなー、ってちょっと思ってる)、そういうことできるわけですから。</p>
+
+
+
+
+<p>その上で、僕は、「僕の魔法で少しでも世の中を良くしたい」って、結構マジに思っていたりします。</p>
+
+
+
+
+<p>なので、魔法を封じられてる現状はかなり辛いです。それから、ウチの会社は僕の魔法を必要としてるのか、そうじゃないのか、
+その辺も悩みだったり。わがままは承知の上なのだけど、「僕の」魔法じゃなきゃ嫌なんですよ。もうちょっと年取ったら若いもんに
+任せたりするようになるのかもしれませんが。</p>
+
+
+
+
+<p>と、言うわけで、結構滅入っているのです。あー、早く終わんないかなー。。。</p>
+
+
+<hr />
+
+<div class="fb-like" data-href="http://tsucchi.github.com//misc/2012/11/20/zatsudan" data-send="true" data-width="450" data-show-faces="true"></div>
+
+
+<p><a href="https://twitter.com/share" class="twitter-share-button" data-url="http://tsucchi.github.com/misc/2012/11/20/zatsudan" data-via="tsucchi" data-lang="ja">ツイート</a></p>
+
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+
+
+
+<h1>2012-11-17 <a href="/misc/2012/11/17/zatsudan">近況あるいは、こんなの絶対おかしいよ、という話</a></h1>
+
+
+
+
+<div class="pull-right">
+
+
+
+
+  
+     
+        <a href="/tags.html#雑談-ref"><span class="label label-info">雑談 <span>12</span></span></a>
+    
+  
+
+
+
+</div>
+
+
+<br>
+
+
+
+
+<p>ここ2週間くらい、コード書いてないです。DB も触ってないし、仕様検討とかアーキテクチャやってるわけでもないです。</p>
+
+
+
+
+<p>全然何も生産してないです。でも超忙しいんです。
+ってかオレが離脱してる関係で、うちのチームの生産力がめっちゃ下がってるんだけどいいのかな？
+別にいいんだよね？
+(普段は DB とバックエンドの Web-API をオイラ一人で面倒見てるから、まあそんなもんだよね)</p>
+
+
+
+
+<p>油断してると、ちょっとウツっぽくなってるので気をつけないといかんなー。</p>
+
+
+<hr />
+
+<div class="fb-like" data-href="http://tsucchi.github.com//misc/2012/11/17/zatsudan" data-send="true" data-width="450" data-show-faces="true"></div>
+
+
+<p><a href="https://twitter.com/share" class="twitter-share-button" data-url="http://tsucchi.github.com/misc/2012/11/17/zatsudan" data-via="tsucchi" data-lang="ja">ツイート</a></p>
+
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+
+
+
+<h1>2012-11-09 <a href="/excel/2012/11/09/excel_grayscale_print">Excel でグレースケールの印刷プレビューをする</a></h1>
+
+
+
+
+<div class="pull-right">
+
+
+
+
+  
+     
+        <a href="/tags.html#excel-ref"><span class="label label-info">excel <span>1</span></span></a>
+     
+        <a href="/tags.html#印刷-ref"><span class="label label-info">印刷 <span>1</span></span></a>
+    
+  
+
+
+
+</div>
+
+
+<br>
+
+
+
+
+<p><a href="http://twilog.org/tsucchi/date-121108">このへんの一連の tweet</a>を見てた人は見なくてもいい話かも。</p>
+
+
+
+
+<p>表題のことを <a href="http://twitter.com/tsucchi/status/266415319785033728">twitter でつぶやいた</a>んだけど、全然反響なくて、どうしよー、とか思ってたら
+結構あっさり自己解決したのでメモ。</p>
+
+
+
+
+<p>なんかググってみると、白黒とグレースケールを混同してるひどい話(Excel の白黒って、グレースケールじゃなくて、ほんとに白と黒だけなんですよ。。。オートシェイプが真っ白になっちゃうw)や、「Word から PDF 変換したときにオートシェイプの色がカラーのままになってしまう、Excel だと大丈夫だけど。。。」って、それ Excel でも発生するんですが、それどうすればすればええねん？？？オレもこまってるんだけど。。。</p>
+
+
+
+
+<p>みたいな話などなど、全然役に立たない話ばっかりで orz な思いをしました。</p>
+
+
+
+
+<p>MS 純正の Document Image Writer という仮想プリンタがあります(何するとインストールされるのか、よく分からないのですが)。こいつに印刷を食わせると、
+白黒の tif イメージファイルが出力されます。ただ、最高で 300dpi までしか出せないので、実際の印刷(レーザープリンタだと最低で 600dpi くらい
+らしいです)と比べると、明らかにクォリティが低い物体が出力されてしまいます。</p>
+
+
+
+
+<p>ですが、この Document Image Writer をプリンタに選んだ状態で、印刷プレビューすると、ちゃんとグレースケールのプレビューを見ることができます。
+これだと、出力時の微妙な解像度(max 300dpi)ではなく、普通の印刷プレビューの解像度で見ることができます。</p>
+
+
+
+
+<p>と、いうわけで、Document Image Writer を選んで普通に印刷プレビューをするのが正解っぽいです。</p>
+
+
+
+
+<p>なお、僕が使ってるのは Excel 2003 なので、新しいバージョンだと違うかも、です。</p>
+
+
+<hr />
+
+<div class="fb-like" data-href="http://tsucchi.github.com//excel/2012/11/09/excel_grayscale_print" data-send="true" data-width="450" data-show-faces="true"></div>
+
+
+<p><a href="https://twitter.com/share" class="twitter-share-button" data-url="http://tsucchi.github.com/excel/2012/11/09/excel_grayscale_print" data-via="tsucchi" data-lang="ja">ツイート</a></p>
+
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+
+
+
+<h1>2012-10-23 <a href="/kappa/2012/10/23/kappa_misc">Kappa の飼い方(Kappa という ORM の話) その8 雑多な話</a></h1>
+
+
+
+
+<div class="pull-right">
+
+
+
+
+  
+     
+        <a href="/tags.html#perl-ref"><span class="label label-info">perl <span>15</span></span></a>
+     
+        <a href="/tags.html#db-ref"><span class="label label-info">db <span>10</span></span></a>
+     
+        <a href="/tags.html#orm-ref"><span class="label label-info">orm <span>8</span></span></a>
+     
+        <a href="/tags.html#kappa-ref"><span class="label label-info">kappa <span>8</span></span></a>
+    
+  
+
+
+
+</div>
+
+
+<br>
+
+
+
+
+<p>こんばんはこんばんは。YAPC が終わって、そろそろ1ヶ月になるんですね。。。
+YAPC の直前くらいに書き始めた本連載も今回が最終回です。</p>
+
+
+
+
+<p>僕が作っている<a href="https://github.com/tsucchi/p5-Kappa">Kappa</a> という ORM の話。
+今日は雑多な話です。スピリチュアルです。コードもありません。</p>
+
+
+
+
+<h2>目次</h2>
+
+
+
+
+<ul>
+<li><a href="/kappa/2012/09/15/kappa_background">その1 開発の背景のお話</a></li>
+<li><a href="/kappa/2012/09/17/kappa_install">その2 インストールとかのお話</a></li>
+<li><a href="/kappa/2012/09/22/kappa_basic_operation">その3 基本操作</a></li>
+<li><a href="/kappa/2012/09/25/kappa_select_and_rowobject">その4 select 系いろいろ</a></li>
+<li><a href="/kappa/2012/10/02/kappa_row_object">その5 Row オブジェクトの基本</a></li>
+<li><a href="/kappa/2012/10/09/kappa_customized_row_object">その6 Row オブジェクトのカスタマイズ</a></li>
+<li><a href="/kappa/2012/10/10/kappa_table_class">その7 テーブルクラスとそのカスタマイズ</a></li>
+<li><a href="/kappa/2012/10/23/kappa_misc">その8 雑多な話</a></li>
+</ul>
+
+
+
+
+<h2>設計思想みたいな話</h2>
+
+
+
+
+<p>僕はアプリケーションというものは、当該業務を写す鏡のようなものである、と考えています。</p>
+
+
+
+
+<p>運用がぐちゃぐちゃな部分はアプリもぐちゃぐちゃになって、「あちゃー」という思いをすることもあるし、逆に、
+アプリ作ってみて、「この業務はこういう風になってたのか」と感心することもあります。</p>
+
+
+
+
+<p><a href="/kappa/2012/09/15/kappa_background">その1</a>で紹介したいくつかの僕の blog 記事でさんざんストアドプロシージャを
+dis っているのは、ストアドの記述力だと、よほど上手に組まないと、「業務を写す鏡」までたどり着かず、
+似たようなロジックなのに共通化できないとか、そもそもただのループ回すにも一苦労とか、項目追加するだけなのに、
+書き換えるところ多すぎとか、そういうことに何度も直面してきたからです。</p>
+
+
+
+
+<p>Kappa では、ロジックはすべてテーブルクラス(と Row オブジェクト)に置かれることになります。テーブルクラスでロジックを
+作り込めば作り込むほど、全体のモデルが賢くなるように出来ています。(もちろん、ちゃんとクラス階層を作らないとダメですよ)</p>
+
+
+
+
+<h2>機能の話</h2>
+
+
+
+
+<p>基本的に、Kappa 本体では、テーブルクラスと Row オブジェクトの処理以外はしないつもりです。(最近カスタマイズ可能なイテレータを
+付けたのですが、これをどうしようか、かなり悩んでいます。将来消しちゃうかもしれません。)</p>
+
+
+
+
+<p>トランザクション管理とか、コネクション管理とか、その辺は ORM で持つ方がいいかな、という気もしなくもないのですが、
+DBI の上に一枚なにかかぶせて、なんとかするのを今検討しています。</p>
+
+
+
+
+<p><a href="/db/2012/10/04/dbix_decorator">DBIx::Decorator ってのを書いてみたら、色々ダメさ加減が分かった話</a></p>
+
+
+
+
+<p>まだ成果は出ていないんですけどね。。。</p>
+
+
+
+
+<p>今、プロジェクトの親クラス(今まで説明してきた例でいうと、MilkyHolmes::DB とか MilkyHolmes::DB::Table)あたりに置いてる物体で、
+汎用っぽいものが見えてくれば、将来コアに追加されるかもしれませんが、今の所、そういうものは見えていません。</p>
+
+
+
+
+<h2>プラグイン</h2>
+
+
+
+
+<p>基本的に、プラグイン機能は考えていません。プロジェクトの親クラスにメソッド置けば十分ではないか、と考えています。先行者の Teng も
+プラグインあんまり出回ってませんしね。。。</p>
+
+
+
+
+<p>(SQL::Maker を内部で使っているので、)SQL::Maker のプラグインでいい感じのものが増えてきたら、
+SQL::Maker のプラグインを簡単に組み込める機能とか付けるかもしれません。</p>
+
+
+
+
+<h2>スキーマ定義の話</h2>
+
+
+
+
+<p>もともとスキーマレスで使えることを志向しているので、スキーマクラスとか無いのですが、テーブルクラスにスキーマ上の PK とかを
+定義するときは、正規の方法を提供してあげるほうがいいのかな、とかちょっと思っています。(今、僕のプロジェクトで ::DB::Table に置いてる
+シンタックスはひどすぎるので、別のものを考えてみるつもりです)。これができると、INSERT して SELECT して Row オブジェクト返したりとかできる
+ようになるので、ちょっとだけ嬉しいかな、と思っています。</p>
+
+
+
+
+<h2>今後の話</h2>
+
+
+
+
+<p>今のところ、機能的にはあんまり困っていません。が、別のプロジェクトで使ってみると、バグが見つかったり、欲しい機能が出てきたりするので、
+いろいろな所で使ってみようと思っています。</p>
+
+
+
+
+<p>あと、内部で、SQL 実行エンジンとして使っている SQL::Executor というモジュール(これも僕が作ったやつ)が出すエラーメッセージがひどすぎるので、
+それは改善したいな、と思っています。</p>
+
+
+
+
+<h2>互換性の話</h2>
+
+
+
+
+<p>今、ふつうに業務で使っているので、激しく非互換にすることは無いとは思いますが、自分の中ではまだまだベータ版だよなー、と思っています。
+なので、非互換な変更が将来入るかもしれません。</p>
+
+
+
+
+<h2>CPAN にあげる？</h2>
+
+
+
+
+<p>将来、設計がだいぶ安定して、使ってる人が出てきたりしたら CPAN に上げるかもしれませんが、今のところそのつもりは無いです。</p>
+
+
+
+
+<h2>まとめ</h2>
+
+
+
+
+<p>今回は雑談なので、まとめ、といいつつ、まとめるような話はありません。連載は今回でおしまいにするつもりですが、今後も何か機能追加やバグフィックス
+などあれば、随時記事は書いていきたいと思います。</p>
+
+
+
+
+<p>Kappa に関して、なにかリクエストや疑問や文句などあれば、twitter(@tsucchi) とかこのブログのコメント欄(使ったこと無いから使えるか分らんけど)とか、
+はてブとか、その辺で連絡してみてください。要望とかバグなどあれば、@tsucchi か github issue(日本語でいいです。ってか日本語のがいいです)まで。</p>
+
+
+
+
+<p>ではでは。</p>
+
+
+<hr />
+
+<div class="fb-like" data-href="http://tsucchi.github.com//kappa/2012/10/23/kappa_misc" data-send="true" data-width="450" data-show-faces="true"></div>
+
+
+<p><a href="https://twitter.com/share" class="twitter-share-button" data-url="http://tsucchi.github.com/kappa/2012/10/23/kappa_misc" data-via="tsucchi" data-lang="ja">ツイート</a></p>
+
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+
+
+
+<h1>2012-10-22 <a href="/misc/2012/10/22/age_plus_plus">年齢++</a></h1>
+
+
+
+
+<div class="pull-right">
+
+
+
+
+  
+     
+        <a href="/tags.html#雑談-ref"><span class="label label-info">雑談 <span>12</span></span></a>
+    
+  
+
+
+
+</div>
+
+
+<br>
+
+
+
+
+<p>まあ前にも書いたけど、来年で定年(笑)をむかえるわけです。</p>
+
+
+
+
+<p>「(笑)」とか書いてるけど、まあこのくらいの年になると、ぶっちゃけあんま笑えないわけです。</p>
+
+
+
+
+<p>最後(?)だから、沢山コード書いて、その上で身の振り方を考えていけばいいのかなー、と思っております。</p>
+
+
+<hr />
+
+<div class="fb-like" data-href="http://tsucchi.github.com//misc/2012/10/22/age_plus_plus" data-send="true" data-width="450" data-show-faces="true"></div>
+
+
+<p><a href="https://twitter.com/share" class="twitter-share-button" data-url="http://tsucchi.github.com/misc/2012/10/22/age_plus_plus" data-via="tsucchi" data-lang="ja">ツイート</a></p>
+
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+
+
+
+<h1>2012-10-19 <a href="/mod_perl/2012/10/19/mod_perl_and_data_section">mod_perl 環境でも Data::Section::Simple 使えるかも</a></h1>
+
+
+
+
+<div class="pull-right">
+
+
+
+
+  
+     
+        <a href="/tags.html#mod_perl-ref"><span class="label label-info">mod_perl <span>1</span></span></a>
+     
+        <a href="/tags.html#perl-ref"><span class="label label-info">perl <span>15</span></span></a>
+    
+  
+
+
+
+</div>
+
+
+<br>
+
+
+
+
+<p>※まだ結論出きっていないので、間違いあるかもです。おかしなところあれば、ご指摘いただければ幸いです。</p>
+
+
+
+
+<p>一般に、Apache::Registry/PerlRun などの、「速い CGI 環境」としての mod_perl 環境(うー、この言い回しめんどくさいけど、使わざるを得ない)
+では、__DATA__ ファイルハンドルが使えません。</p>
+
+
+
+
+<p>なので、Data::Section::Simple とかの、__DATA__ を読むモジュールも使えません。</p>
+
+
+
+
+<p>と、いうことを<a href="http://yapcasia.org/2012/talk/show/863251ce-d870-11e1-924a-0d4e6aeab6a4">YAPC のトーク</a>で、ちょっと触れたら、</p>
+
+
+
+
+<p><a href="https://twitter.com/mod_perl_info/status/253426068847984640">@mod_perl_info</a></p>
+
+
+
+
+<pre><code>あ、どうすればRegistry/PerlRun環境下で__DATA__が使えるかといった話は @tsucchi さんの先日のYAPCでのスライド http://www.slideshare.net/tsucchi/perlsql/32 … から触発されました。 https://twitter.com/mod_perl_info/status/253424577147973634 … 
+</code></pre>
+
+
+
+
+<p>とか、</p>
+
+
+
+
+<p><a href="https://twitter.com/aloelight/status/253526345777311744">@aloelight</a></p>
+
+
+
+
+<pre><code>.@tsucchi @xtetsuji ModPerl::Registryしか試してませんが，DATAを読み込めるようにしました．お暇な時にお試しください &gt; p5-apache2-data-section-simple GitHub http://bit.ly/SF5WYg  
+</code></pre>
+
+
+
+
+<p>とか、そんな話が出てきまして、僕のユースケースだと、<a href="https://github.com/ysasaki/p5-apache2-data-section-simple">あろえさんのやつ</a>で大体いけそうなだけど、今度はテストコードで困るなぁ、とか思ったりしました。</p>
+
+
+
+
+<p>で、じゃあ $ENV{MOD_PERL}とか見て、素の Data::Section::Simple つかうやつと、あろえさんの Apache2::Data::Section::Simple を切り替える物体とか作るかなー、とか思って、コードとかドキュメントとか読んでたら、Data::Section::Simple って、OO のインターフェース持ってて、パッケージ名を渡せるみたいなんですよね。</p>
+
+
+
+
+<p>Registry/PerlRun 環境って、パッケージとか、ファイルパスとかがいつもと違うから、色々おかしくなるんだけど、Data::Section::Simple のコードをみる限り、OO I/F を使えば、その辺の問題がクリアできそうに思えました。</p>
+
+
+
+
+<p>で、僕が使いたいポイントは、ORM のモデルクラス(正確にいうと、自作 ORM の Kappa のテーブルクラス)なので、基本的にパッケージ名は ref $self すれば取れます。(main パッケージじゃないので、__PACKAGE__ で取っても大丈夫そうだけど、ちょっと自信ない)。</p>
+
+
+
+
+<p>あとは、ここで取ったパッケージ名を渡したときに、__DATA__ が読めてくれれば良いので、↓みたいな簡単なモデルと、テストプログラムを書いて、
+軽く実験した感じだと、ちゃんと動いた。</p>
+
+
+
+
+<div class="highlight"><pre><code class="perl"><span class="nb">package</span> <span class="nn">MilkyHolmes::DB::Table::</span><span class="n">detective</span><span class="p">;</span>
+<span class="k">use</span> <span class="n">parent</span> <span class="sx">qw(MilkyHolmes::DB::Table)</span><span class="p">;</span>
+<span class="k">use</span> <span class="n">strict</span><span class="p">;</span>
+<span class="k">use</span> <span class="n">warnings</span><span class="p">;</span>
+<span class="k">use</span> <span class="nn">Data::Section::</span><span class="n">Simple</span><span class="p">;</span>
+
+<span class="k">sub </span><span class="nf">test_data_section_simple</span> <span class="p">{</span>
+    <span class="k">my</span> <span class="p">(</span><span class="nv">$self</span><span class="p">)</span> <span class="o">=</span> <span class="nv">@_</span><span class="p">;</span>
+    <span class="k">my</span> <span class="nv">$pkg</span> <span class="o">=</span> <span class="nb">ref</span> <span class="nv">$self</span><span class="p">;</span>
+    <span class="k">my</span> <span class="nv">$ds</span> <span class="o">=</span> <span class="nn">Data::Section::</span><span class="n">Simple</span><span class="o">-&gt;</span><span class="k">new</span><span class="p">(</span><span class="nv">$pkg</span><span class="p">);</span>
+    <span class="k">my</span> <span class="nv">$value</span> <span class="o">=</span> <span class="nv">$ds</span><span class="o">-&gt;</span><span class="n">get_data_section</span><span class="p">(</span><span class="s">&#39;test_sql&#39;</span><span class="p">);</span>
+    <span class="k">print</span> <span class="nv">$value</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="mi">1</span><span class="p">;</span>
+
+<span class="bp">__DATA__</span>
+
+<span class="nv">@@</span> <span class="nv">test_sql</span>
+<span class="n">SELECT</span> <span class="o">*</span>
+  <span class="n">FROM</span> <span class="n">detective</span>
+  <span class="n">WHERE</span> <span class="n">id</span> <span class="o">=</span> <span class="p">:</span><span class="n">id</span>
+<span class="p">;</span>
+</code></pre>
+</div>
+
+
+
+
+<p>一応何度か F5 連打しても動いていたので、多分キャッシュされた状態でもちゃんと動くと思う。週明けにがっつり実験してみようと思っています。</p>
+
+
+
+
+<h3>(10/22 追記)</h3>
+
+
+
+
+<p>結局がっつりやってないのですが、コンパイル済みの状態(かどうかは、見た目じゃわかんないから、コンパイル済み、と思われる状態)で動いた(もう一回実験してみた)ので、多分大丈夫でしょう！</p>
+
+
+
+
+<h2>結論</h2>
+
+
+
+
+<p>まだ自信ないけど、「mod_perl 環境では、__DATA__が使えない」というのはかなり不正確な言い方で、「ある種の制限があるよ」くらいが妥当な気がしてきました。</p>
+
+
+
+
+<ul>
+<li>少なくとも、mod_perl の制限ではなく、Registry/PerlRun の制限らしい</li>
+<li>パッケージ名がうまく解決できていないとうまくいかないけど、そこをクリアすれば何とかなるっぽい</li>
+<li>素の __DATA__ を読むのは多分しんどい。Data::Section::Simple の読み方ならいける</li>
+</ul>
+
+
+
+
+<p>ってな感じの結論なんですが、やっぱり自信ないので、識者の方フォローしていただけると嬉しいです</p>
+
+
+<hr />
+
+<div class="fb-like" data-href="http://tsucchi.github.com//mod_perl/2012/10/19/mod_perl_and_data_section" data-send="true" data-width="450" data-show-faces="true"></div>
+
+
+<p><a href="https://twitter.com/share" class="twitter-share-button" data-url="http://tsucchi.github.com/mod_perl/2012/10/19/mod_perl_and_data_section" data-via="tsucchi" data-lang="ja">ツイート</a></p>
+
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+
+
+
+<h1>2012-10-10 <a href="/kappa/2012/10/10/kappa_table_class">Kappa の飼い方(Kappa という ORM の話) その7 テーブルクラスとそのカスタマイズ</a></h1>
+
+
+
+
+<div class="pull-right">
+
+
+
+
+  
+     
+        <a href="/tags.html#perl-ref"><span class="label label-info">perl <span>15</span></span></a>
+     
+        <a href="/tags.html#db-ref"><span class="label label-info">db <span>10</span></span></a>
+     
+        <a href="/tags.html#orm-ref"><span class="label label-info">orm <span>8</span></span></a>
+     
+        <a href="/tags.html#kappa-ref"><span class="label label-info">kappa <span>8</span></span></a>
+    
+  
+
+
+
+</div>
+
+
+<br>
+
+
+
+
+<p>こんばんはこんばんは。YAPC も(ry もういいか。ずいぶん経つもんね。</p>
+
+
+
+
+<p><a href="https://github.com/tsucchi/p5-Kappa">Kappa</a> という ORM の話。
+今日はテーブルクラスとそのカスタマイズ方法についてです。</p>
+
+
+
+
+<h2>目次</h2>
+
+
+
+
+<ul>
+<li><a href="/kappa/2012/09/15/kappa_background">その1 開発の背景のお話</a></li>
+<li><a href="/kappa/2012/09/17/kappa_install">その2 インストールとかのお話</a></li>
+<li><a href="/kappa/2012/09/22/kappa_basic_operation">その3 基本操作</a></li>
+<li><a href="/kappa/2012/09/25/kappa_select_and_rowobject">その4 select 系いろいろ</a></li>
+<li><a href="/kappa/2012/10/02/kappa_row_object">その5 Row オブジェクトの基本</a></li>
+<li><a href="/kappa/2012/10/09/kappa_customized_row_object">その6 Row オブジェクトのカスタマイズ</a></li>
+<li><a href="/kappa/2012/10/10/kappa_table_class">その7 テーブルクラスとそのカスタマイズ</a></li>
+<li><a href="/kappa/2012/10/23/kappa_misc">その8 雑多な話</a></li>
+</ul>
+
+
+
+
+<h2>事前準備</h2>
+
+
+
+
+<p>前回と同じものを使います。</p>
+
+
+
+
+<div class="highlight"><pre><code class="perl"><span class="k">use</span> <span class="n">DBI</span><span class="p">;</span>
+<span class="k">my</span> <span class="nv">$dbh</span> <span class="o">=</span> <span class="n">DBI</span><span class="o">-&gt;</span><span class="nb">connect</span><span class="p">(</span><span class="s">&quot;dbi:SQLite:dbname=:memory:&quot;</span><span class="p">,</span><span class="s">&#39;&#39;</span><span class="p">,</span><span class="s">&#39;&#39;</span><span class="p">);</span>
+<span class="nv">$dbh</span><span class="o">-&gt;</span><span class="k">do</span><span class="p">(</span><span class="s">&quot;</span>
+<span class="s">CREATE TABLE detective (</span>
+<span class="s">  id      INT PRIMARY KEY,</span>
+<span class="s">  toys_id INT, /* toys.id */</span>
+<span class="s">  name    TEXT</span>
+<span class="s">);</span>
+<span class="s">&quot;</span><span class="p">);</span>
+
+<span class="nv">$dbh</span><span class="o">-&gt;</span><span class="k">do</span><span class="p">(</span><span class="s">&quot;</span>
+<span class="s">CREATE TABLE toys (</span>
+<span class="s">  id    INT PRIMARY KEY,</span>
+<span class="s">  name  TEXT</span>
+<span class="s">);</span>
+<span class="s">&quot;</span><span class="p">);</span>
+</code></pre>
+</div>
+
+
+
+
+<p>スキーマは分かりますよね？ detective.toys_id = toys.id で結合します。(前回と同じ)</p>
+
+
+
+
+<p>メモリ上にテーブルを作っているため、前回入れた人もデータを入れる必要があります。</p>
+
+
+
+
+<div class="highlight"><pre><code class="perl"><span class="k">use</span> <span class="n">Kappa</span><span class="p">;</span>
+<span class="k">my</span> <span class="nv">$db</span> <span class="o">=</span> <span class="n">Kappa</span><span class="o">-&gt;</span><span class="k">new</span><span class="p">(</span><span class="nv">$dbh</span><span class="p">,</span> <span class="p">{</span> <span class="n">row_namespace</span> <span class="o">=&gt;</span> <span class="s">&#39;MilkyHolmes::DB::Row&#39;</span> <span class="p">});</span>
+<span class="nv">$db</span><span class="o">-&gt;</span><span class="n">insert</span><span class="p">(</span><span class="s">&#39;toys&#39;</span><span class="p">,</span> <span class="p">{</span> <span class="n">id</span> <span class="o">=&gt;</span> <span class="mi">1</span><span class="p">,</span> <span class="n">name</span> <span class="o">=&gt;</span> <span class="s">&#39;サイコキネシス&#39;</span> <span class="p">});</span>
+<span class="nv">$db</span><span class="o">-&gt;</span><span class="n">insert</span><span class="p">(</span><span class="s">&#39;toys&#39;</span><span class="p">,</span> <span class="p">{</span> <span class="n">id</span> <span class="o">=&gt;</span> <span class="mi">2</span><span class="p">,</span> <span class="n">name</span> <span class="o">=&gt;</span> <span class="s">&#39;ダイレクトハック&#39;</span> <span class="p">});</span>
+<span class="nv">$db</span><span class="o">-&gt;</span><span class="n">insert</span><span class="p">(</span><span class="s">&#39;toys&#39;</span><span class="p">,</span> <span class="p">{</span> <span class="n">id</span> <span class="o">=&gt;</span> <span class="mi">3</span><span class="p">,</span> <span class="n">name</span> <span class="o">=&gt;</span> <span class="s">&#39;トライアセンド&#39;</span> <span class="p">});</span>
+<span class="nv">$db</span><span class="o">-&gt;</span><span class="n">insert</span><span class="p">(</span><span class="s">&#39;toys&#39;</span><span class="p">,</span> <span class="p">{</span> <span class="n">id</span> <span class="o">=&gt;</span> <span class="mi">4</span><span class="p">,</span> <span class="n">name</span> <span class="o">=&gt;</span> <span class="s">&#39;ハイパーセンシティブ&#39;</span> <span class="p">});</span>
+
+<span class="nv">$db</span><span class="o">-&gt;</span><span class="n">insert</span><span class="p">(</span><span class="s">&#39;detective&#39;</span><span class="p">,</span> <span class="p">{</span> <span class="n">id</span> <span class="o">=&gt;</span> <span class="mi">1</span><span class="p">,</span> <span class="n">toys_id</span> <span class="o">=&gt;</span> <span class="mi">1</span><span class="p">,</span> <span class="n">name</span> <span class="o">=&gt;</span> <span class="s">&#39;シャーロック・シェリンフォード&#39;</span> <span class="p">});</span>
+<span class="nv">$db</span><span class="o">-&gt;</span><span class="n">insert</span><span class="p">(</span><span class="s">&#39;detective&#39;</span><span class="p">,</span> <span class="p">{</span> <span class="n">id</span> <span class="o">=&gt;</span> <span class="mi">2</span><span class="p">,</span> <span class="n">toys_id</span> <span class="o">=&gt;</span> <span class="mi">2</span><span class="p">,</span> <span class="n">name</span> <span class="o">=&gt;</span> <span class="s">&#39;譲崎　ネロ&#39;</span> <span class="p">});</span>
+<span class="nv">$db</span><span class="o">-&gt;</span><span class="n">insert</span><span class="p">(</span><span class="s">&#39;detective&#39;</span><span class="p">,</span> <span class="p">{</span> <span class="n">id</span> <span class="o">=&gt;</span> <span class="mi">3</span><span class="p">,</span> <span class="n">toys_id</span> <span class="o">=&gt;</span> <span class="mi">3</span><span class="p">,</span> <span class="n">name</span> <span class="o">=&gt;</span> <span class="s">&#39;エルキュール・バートン&#39;</span> <span class="p">});</span>
+<span class="nv">$db</span><span class="o">-&gt;</span><span class="n">insert</span><span class="p">(</span><span class="s">&#39;detective&#39;</span><span class="p">,</span> <span class="p">{</span> <span class="n">id</span> <span class="o">=&gt;</span> <span class="mi">4</span><span class="p">,</span> <span class="n">toys_id</span> <span class="o">=&gt;</span> <span class="mi">4</span><span class="p">,</span> <span class="n">name</span> <span class="o">=&gt;</span> <span class="s">&#39;コーデリア・グラウカ&#39;</span> <span class="p">});</span>
+
+<span class="c1"># ここより後ろに試したいコードを書きます</span>
+</code></pre>
+</div>
+
+
+
+
+<h2>テーブルクラスって何？</h2>
+
+
+
+
+<p>Kappa には model() というメソッドがあります。これを呼ぶと、テーブルクラスのインスタンスが返ります。</p>
+
+
+
+
+<div class="highlight"><pre><code class="perl"><span class="k">use</span> <span class="n">Kappa</span><span class="p">;</span>
+<span class="k">my</span> <span class="nv">$db</span> <span class="o">=</span> <span class="n">Kappa</span><span class="o">-&gt;</span><span class="k">new</span><span class="p">(</span><span class="nv">$dbh</span><span class="p">);</span>
+<span class="k">my</span> <span class="nv">$model_detective</span> <span class="o">=</span> <span class="nv">$db</span><span class="o">-&gt;</span><span class="n">model</span><span class="p">(</span><span class="s">&#39;detective&#39;</span><span class="p">);</span><span class="c1">#detective テーブルのテーブルクラスのインスタンスが返る</span>
+</code></pre>
+</div>
+
+
+
+
+<p>テーブルクラスはデフォルトのインスタンス(ここでは $db)とほとんど同じですが、自分自身のテーブル名を知っているため、
+select/insert/update などの各メソッドを使う際に、テーブル名を省略できるようになります。</p>
+
+
+
+
+<div class="highlight"><pre><code class="perl"><span class="k">my</span> <span class="nv">$db</span> <span class="o">=</span> <span class="n">Kappa</span><span class="o">-&gt;</span><span class="k">new</span><span class="p">(</span><span class="nv">$dbh</span><span class="p">);</span>
+<span class="k">my</span> <span class="nv">$model</span> <span class="o">=</span> <span class="nv">$db</span><span class="o">-&gt;</span><span class="n">model</span><span class="p">(</span><span class="s">&#39;detective&#39;</span><span class="p">);</span>
+<span class="k">my</span> <span class="nv">$row</span> <span class="o">=</span> <span class="nv">$model</span><span class="o">-&gt;</span><span class="nb">select</span><span class="p">({</span> <span class="n">id</span> <span class="o">=&gt;</span> <span class="mi">1</span> <span class="p">});</span>
+<span class="nv">$model</span><span class="o">-&gt;</span><span class="n">update</span><span class="p">({</span> <span class="n">toys_id</span> <span class="o">=&gt;</span> <span class="nb">undef</span> <span class="p">},</span> <span class="p">{</span> <span class="n">id</span> <span class="o">=&gt;</span> <span class="mi">1</span> <span class="p">});</span><span class="c1"># トイズがなくなってダメダメにw</span>
+<span class="c1"># ...</span>
+</code></pre>
+</div>
+
+
+
+
+<p>また、テーブルごとにカスタマイズしたメソッドを持てるようになります。</p>
+
+
+
+
+<p>あと、以前 Row オブジェクトの説明で、Row オブジェクトの db() は Kappa のインスタンスと大体同じ、と説明しましたが、
+厳密には、この model() メソッドで取り出したインスタンスと同じです。Row オブジェクトは(たいてい)テーブル名を知っている
+ため、そのようになっています。</p>
+
+
+
+
+<h2>カスタマイズ方法</h2>
+
+
+
+
+<p>ではテーブルクラスのカスタマイズをします。プロジェクトは前回同様 MilkyHolmes を使います。detective テーブルをカスタマイズ
+します。</p>
+
+
+
+
+<p>ファイル名でいうと、lib/MilkyHolmes/DB/Table/detective.pm。 パッケージ名でいうと、MilkyHolmes::DB::Table::detective となります。</p>
+
+
+
+
+<p>前回と似てますが、detective.id を引数にとって、toys.name (トイズの名前)を返す、toys_name_from_detective_id という
+メソッドをつけてみましょう。</p>
+
+
+
+
+<div class="highlight"><pre><code class="perl"><span class="nb">package</span> <span class="nn">MilkyHolmes::DB::Table::</span><span class="n">detective</span><span class="p">;</span>
+<span class="k">use</span> <span class="n">parent</span> <span class="sx">qw(Kappa)</span><span class="p">;</span>
+<span class="k">use</span> <span class="n">strict</span><span class="p">;</span>
+<span class="k">use</span> <span class="n">warnings</span><span class="p">;</span>
+
+<span class="k">sub </span><span class="nf">toys_name_from_detective_id</span> <span class="p">{</span>
+    <span class="k">my</span><span class="p">(</span><span class="nv">$self</span><span class="p">,</span> <span class="nv">$id</span><span class="p">)</span> <span class="o">=</span> <span class="nv">@_</span><span class="p">;</span>
+    <span class="c1">#detective テーブルはテーブル名を省略できる。</span>
+    <span class="k">my</span> <span class="nv">$row</span> <span class="o">=</span> <span class="nv">$self</span><span class="o">-&gt;</span><span class="n">select_row</span><span class="p">({</span> <span class="n">id</span> <span class="o">=&gt;</span> <span class="nv">$id</span> <span class="p">});</span>
+    <span class="k">return</span> <span class="s">&#39;&#39;</span> <span class="k">if</span> <span class="p">(</span> <span class="o">!</span><span class="nb">defined</span> <span class="nv">$row</span> <span class="p">);</span>
+    <span class="k">return</span> <span class="nv">$row</span><span class="o">-&gt;</span><span class="n">toys_name</span><span class="p">;</span><span class="c1"># 前回作った toys_name を呼ぶ</span>
+<span class="p">}</span>
+
+<span class="mi">1</span><span class="p">;</span>
+</code></pre>
+</div>
+
+
+
+
+<p>テーブルクラス内では、拡張しているテーブル自身(今回の例では detective)を省略することができます。
+つまりテーブルクラス定義内の $self は Kappa のインスタンスではなく、$db->model('テーブル名') したものに
+なります。</p>
+
+
+
+
+<h2>カスタマイズしたテーブルクラスの使い方</h2>
+
+
+
+
+<p>Row オブジェクトの場合と同様、このままでは、定義したテーブルクラスを使うことができません。
+Kappa に テーブルクラスの定義がどこに置いてあるかを教えてあげる
+必要があります。Kappa の new にオプションとして table_namespace というオプションをわたします。</p>
+
+
+
+
+<div class="highlight"><pre><code class="perl"><span class="k">use</span> <span class="n">Kappa</span><span class="p">;</span>
+<span class="c1"># </span>
+<span class="c1"># コンストラクタで table_namespace を指定</span>
+<span class="c1">#</span>
+<span class="k">my</span> <span class="nv">$db</span> <span class="o">=</span> <span class="n">Kappa</span><span class="o">-&gt;</span><span class="k">new</span><span class="p">(</span><span class="nv">$dbh</span><span class="p">,</span> <span class="p">{</span> 
+    <span class="n">row_namespace</span>   <span class="o">=&gt;</span> <span class="s">&#39;MilkyHolmes::DB::Row&#39;</span><span class="p">,</span>   <span class="c1">#これは前回していしたやつ</span>
+    <span class="n">table_namespace</span> <span class="o">=&gt;</span> <span class="s">&#39;MilkyHolmes::DB::Table&#39;</span><span class="p">,</span> <span class="c1">#テーブルクラスの定義場所を指定</span>
+<span class="p">});</span>
+</code></pre>
+</div>
+
+
+
+
+<p>こうすることで、テーブルクラスの定義が 「MilkyHolmes::DB::Table::テーブル名」 にあることが Kappa さんに伝わります。
+これにより、カスタマイズしたメソッドが呼べるようになります。</p>
+
+
+
+
+<div class="highlight"><pre><code class="perl"><span class="k">my</span> <span class="nv">$model</span> <span class="o">=</span> <span class="nv">$db</span><span class="o">-&gt;</span><span class="n">model</span><span class="p">(</span><span class="s">&#39;detective&#39;</span><span class="p">);</span>
+<span class="nv">$model</span><span class="o">-&gt;</span><span class="n">toys_name_from_detective_id</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span> <span class="c1"># =&gt; &#39;サイコキネシス&#39;</span>
+</code></pre>
+</div>
+
+
+
+
+<h2>共通のメソッドをテーブルクラスに定義したい</h2>
+
+
+
+
+<p>テーブルに依存せず、すべてのテーブルクラスに共通の処理を定義したい場合もあるかと思います。
+Row オブジェクトの場合と同じように、Kappa は テーブルクラスの定義を、</p>
+
+
+
+
+<ul>
+<li>「table_namespace::テーブル名」 で定義された、テーブル名単位のもの</li>
+<li>table_namespace</li>
+<li>Kappa (基本機能)</li>
+</ul>
+
+
+
+
+<p>の順に検索します。ですので、共通処理は table_namespace におきます。今回の例だと、
+MilkyHolmes::DB::Table(ファイル名だと lib/MilkyHolmes/DB/Table.pm )におきます。</p>
+
+
+
+
+<p>たとえば、insert したあとに、id を返す insert_and_last_insert_id を実装してみます。</p>
+
+
+
+
+<div class="highlight"><pre><code class="perl"><span class="nb">package</span> <span class="nn">MilkyHolmes::DB::</span><span class="n">Table</span><span class="p">;</span>
+<span class="k">use</span> <span class="n">parent</span> <span class="sx">qw(Kappa)</span><span class="p">;</span>
+<span class="k">use</span> <span class="n">strict</span><span class="p">;</span>
+<span class="k">use</span> <span class="n">warnings</span><span class="p">;</span>
+
+<span class="k">sub </span><span class="nf">insert_and_last_insert_id</span> <span class="p">{</span>
+    <span class="k">my</span> <span class="p">(</span><span class="nv">$self</span><span class="p">,</span> <span class="nv">@args</span><span class="p">)</span> <span class="o">=</span> <span class="nv">@_</span><span class="p">;</span>
+    <span class="nv">$self</span><span class="o">-&gt;</span><span class="n">insert</span><span class="p">(</span><span class="nv">@args</span><span class="p">);</span>
+    <span class="c1">#移植性がないのが微妙ですね。。。laset_insert_id 使っても微妙だし。。。</span>
+    <span class="k">return</span> <span class="nv">$self</span><span class="o">-&gt;</span><span class="n">dbh</span><span class="o">-&gt;</span><span class="n">sqlite_last_insert_rowid</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="mi">1</span><span class="p">;</span>
+</code></pre>
+</div>
+
+
+
+
+<p>カスタマイズしたテーブルクラス(detective テーブルのもの)からも使えるように、親クラスを変更しておきます。</p>
+
+
+
+
+<div class="highlight"><pre><code class="perl"><span class="nb">package</span> <span class="nn">MilkyHolmes::DB::Table::</span><span class="n">detective</span><span class="p">;</span>
+<span class="k">use</span> <span class="n">parent</span> <span class="sx">qw(MilkyHolmes::DB::Table)</span><span class="p">;</span> <span class="c1">#親クラスを変更</span>
+<span class="c1"># ...以降は前と同じ</span>
+</code></pre>
+</div>
+
+
+
+
+<p>ただし、table_namespace に定義した場合、Kappa のインスタンスからは利用できないので、かなり微妙です。
+ですので、共通機能は、もう一つ上の、「プロジェクト名::DB」に置くことの方が多いです。(この例では MilkyHolmes::DB)。</p>
+
+
+
+
+<div class="highlight"><pre><code class="perl"><span class="nb">package</span> <span class="nn">MilkyHolmes::</span><span class="n">DB</span><span class="p">;</span>
+<span class="k">use</span> <span class="n">parent</span> <span class="sx">qw(Kappa)</span><span class="p">;</span>
+<span class="k">use</span> <span class="n">strict</span><span class="p">;</span>
+<span class="k">use</span> <span class="n">warnings</span><span class="p">;</span>
+
+<span class="c1"># MilkyHolmes::DB::Table から移動</span>
+<span class="k">sub </span><span class="nf">insert_and_last_insert_id</span> <span class="p">{</span>
+    <span class="k">my</span> <span class="p">(</span><span class="nv">$self</span><span class="p">,</span> <span class="nv">@args</span><span class="p">)</span> <span class="o">=</span> <span class="nv">@_</span><span class="p">;</span>
+    <span class="nv">$self</span><span class="o">-&gt;</span><span class="n">insert</span><span class="p">(</span><span class="nv">@args</span><span class="p">);</span>
+    <span class="c1">#移植性がないのが微妙ですね。。。laset_insert_id 使っても微妙だし。。。</span>
+    <span class="k">return</span> <span class="nv">$self</span><span class="o">-&gt;</span><span class="n">dbh</span><span class="o">-&gt;</span><span class="n">sqlite_last_insert_rowid</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="mi">1</span><span class="p">;</span>
+</code></pre>
+</div>
+
+
+
+
+<p>で、table_namespace のほうは、この拡張したクラスを継承するようにします。こんな感じ。</p>
+
+
+
+
+<div class="highlight"><pre><code class="perl"><span class="nb">package</span> <span class="nn">MilkyHolmes::DB::</span><span class="n">Table</span><span class="p">;</span>
+<span class="k">use</span> <span class="n">parent</span> <span class="sx">qw(MilkyHolmes::DB)</span><span class="p">;</span><span class="c1"># 親クラス変更</span>
+<span class="k">use</span> <span class="n">strict</span><span class="p">;</span>
+<span class="k">use</span> <span class="n">warnings</span><span class="p">;</span>
+
+<span class="mi">1</span><span class="p">;</span>
+</code></pre>
+</div>
+
+
+
+
+<p>で、インスタンス化する対象を Kappa のインスタンスではなく、「プロジェクト名::DB」のインスタンスにします。</p>
+
+
+
+
+<div class="highlight"><pre><code class="perl"><span class="k">use</span> <span class="nn">MilkyHolmes::</span><span class="n">DB</span><span class="p">;</span>
+<span class="c1"># 前は Kappa を new してたところ</span>
+<span class="k">my</span> <span class="nv">$db</span> <span class="o">=</span> <span class="nn">MilkyHolmes::</span><span class="n">DB</span><span class="o">-&gt;</span><span class="k">new</span><span class="p">(</span><span class="nv">$dbh</span><span class="p">,</span> <span class="p">{</span> 
+    <span class="n">row_namespace</span>   <span class="o">=&gt;</span> <span class="s">&#39;MilkyHolmes::DB::Row&#39;</span><span class="p">,</span> <span class="c1">#これは前回していしたやつ</span>
+    <span class="n">table_namespace</span> <span class="o">=&gt;</span> <span class="s">&#39;MilkyHolmes::DB::Table&#39;</span><span class="p">,</span><span class="c1">#テーブルクラスの定義場所を指定</span>
+<span class="p">});</span>
+</code></pre>
+</div>
+
+
+
+
+<p>また、都度 row_namespace や table_namespace を指定するのはだるいので、コンストラクタをオーバーライドするのが
+おすすめです。</p>
+
+
+
+
+<div class="highlight"><pre><code class="perl"><span class="nb">package</span> <span class="nn">MilkyHolmes::</span><span class="n">DB</span><span class="p">;</span>
+<span class="k">use</span> <span class="n">parent</span> <span class="sx">qw(Kappa)</span><span class="p">;</span>
+<span class="k">use</span> <span class="n">strict</span><span class="p">;</span>
+<span class="k">use</span> <span class="n">warnings</span><span class="p">;</span>
+
+<span class="k">sub </span><span class="nf">new</span> <span class="p">{</span>
+    <span class="k">my</span> <span class="p">(</span><span class="nv">$class</span><span class="p">,</span> <span class="nv">$dbh</span><span class="p">,</span> <span class="nv">$option_href</span><span class="p">)</span> <span class="o">=</span> <span class="nv">@_</span><span class="p">;</span>
+    <span class="nv">$option_href</span><span class="o">-&gt;</span><span class="p">{</span><span class="n">row_namespace</span><span class="p">}</span>   <span class="o">=</span> <span class="s">&#39;MilkyHolmes::DB::Row&#39;</span><span class="p">;</span>
+    <span class="nv">$option_href</span><span class="o">-&gt;</span><span class="p">{</span><span class="n">table_namespace</span><span class="p">}</span> <span class="o">=</span> <span class="s">&#39;MilkyHolmes::DB::Table&#39;</span><span class="p">;</span>
+    <span class="k">my</span> <span class="nv">$self</span> <span class="o">=</span> <span class="nv">$class</span><span class="o">-&gt;</span><span class="nn">SUPER::</span><span class="n">new</span><span class="p">(</span><span class="nv">$dbh</span><span class="p">,</span> <span class="nv">$option_href</span><span class="p">);</span>
+    <span class="nb">bless</span> <span class="nv">$self</span><span class="p">,</span> <span class="nv">$class</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1"># ...</span>
+<span class="mi">1</span><span class="p">;</span>
+</code></pre>
+</div>
+
+
+
+
+<p>こうすると、先ほどの呼び出しは、</p>
+
+
+
+
+<div class="highlight"><pre><code class="perl"><span class="k">use</span> <span class="nn">MilkyHolmes::</span><span class="n">DB</span><span class="p">;</span>
+<span class="c1"># 前は Kappa を new してたところ</span>
+<span class="k">my</span> <span class="nv">$db</span> <span class="o">=</span> <span class="nn">MilkyHolmes::</span><span class="n">DB</span><span class="o">-&gt;</span><span class="k">new</span><span class="p">(</span><span class="nv">$dbh</span><span class="p">);</span>
+</code></pre>
+</div>
+
+
+
+
+<p>とシンプルに書けるようになります。</p>
+
+
+
+
+<h2>なぜテーブルクラスが重要か</h2>
+
+
+
+
+<p>テーブルクラス内では、自分自身のテーブル名を省略できる、というのが最大のポイントです。</p>
+
+
+
+
+<p>テーブル名が省略されていない呼び出しを見つけると、「あれ？この部分はメソッドに切り出して、
+省略できるように他のクラスに移動した方がいいんじゃないかな？」と思うようになります。
+(そして、その移動したメソッドは他のクラスからも再利用できるかもしれない、ってか出来ることが多い)</p>
+
+
+
+
+<p>DB設計の時点でミスるとダメかもしれませんが、基本的には、テーブル名を省略できるように書いていくだけで、
+ある程度キレイな API が作れるようになっています。(Row オブジェクトを上手に作っても多分実現できるのですが、
+テーブルクラスでやるほうがずっと簡単です。)</p>
+
+
+
+
+<p>ですので、Kappa においては、Row オブジェクトよりもテーブルクラスのほうが重要な訳です。</p>
+
+
+
+
+<h2>サンプル</h2>
+
+
+
+
+<p>今回も<a href="https://github.com/tsucchi/Kappa-Example/zipball/2012-10-10-kappa_table_class-rev02">動作するサンプル</a>を作成しました。
+bin ディレクトリの customized_table_class.pl が今回のサンプルです。lib/MilkyHolmes/ 配下も実装してありますので、確認してみてください。</p>
+
+
+
+
+<h2>まとめ</h2>
+
+
+
+
+<p>今回はテーブルクラスと、そのカスタマイズ方法を解説しました。これで伝わってるのかだいぶ微妙なのですが、
+もうちょっと書いていこうと思います。次回は雑多な話をしようかな。多分最終回です。</p>
+
+
+
+
+<p>なにかリクエストや疑問や文句などあれば、twitter(@tsucchi) とかこのブログのコメント欄(使ったこと無いから使えるか分らんけど)とか、はてブとか、
+その辺で連絡してみてください。Kappa 自体の要望とかバグなどあれば、@tsucchi か github issue(日本語でいいです。ってか日本語のがいいです)まで。</p>
+
+
+
+
+<p>ではでは。また次回。</p>
+
+
+<hr />
+
+<div class="fb-like" data-href="http://tsucchi.github.com//kappa/2012/10/10/kappa_table_class" data-send="true" data-width="450" data-show-faces="true"></div>
+
+
+<p><a href="https://twitter.com/share" class="twitter-share-button" data-url="http://tsucchi.github.com/kappa/2012/10/10/kappa_table_class" data-via="tsucchi" data-lang="ja">ツイート</a></p>
+
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+
+
+
+<h1>2012-10-09 <a href="/kappa/2012/10/09/kappa_customized_row_object">Kappa の飼い方(Kappa という ORM の話) その6 Row オブジェクトのカスタマイズ</a></h1>
+
+
+
+
+<div class="pull-right">
+
+
+
+
+  
+     
+        <a href="/tags.html#perl-ref"><span class="label label-info">perl <span>15</span></span></a>
+     
+        <a href="/tags.html#db-ref"><span class="label label-info">db <span>10</span></span></a>
+     
+        <a href="/tags.html#orm-ref"><span class="label label-info">orm <span>8</span></span></a>
+     
+        <a href="/tags.html#kappa-ref"><span class="label label-info">kappa <span>8</span></span></a>
+    
+  
+
+
+
+</div>
+
+
+<br>
+
+
+
+
+<p>こんばんはこんばんは。</p>
+
+
+
+
+<p><a href="http://yapcasia.org/2012/">YAPC::Asia</a>も無事に終了しましたねー。</p>
+
+
+
+
+<p>さて、YAPC でお話させていただいた、 <a href="http://yapcasia.org/2012/talk/show/863251ce-d870-11e1-924a-0d4e6aeab6a4">Perl と SQL のいろいろ</a>
+は公式サイトにプレゼン資料・動画ともどもアップされております！見たかったけど見逃した方はチェックすべし！(自分は恥ずかしくて動画みてないけどな！)</p>
+
+
+
+
+<p>(※ここまでテンプレ)</p>
+
+
+
+
+<p><a href="https://github.com/tsucchi/p5-Kappa">Kappa</a> という ORM の話。今日は Row オブジェクトのカスタマイズについてです。</p>
+
+
+
+
+<h2>目次</h2>
+
+
+
+
+<ul>
+<li><a href="/kappa/2012/09/15/kappa_background">その1 開発の背景のお話</a></li>
+<li><a href="/kappa/2012/09/17/kappa_install">その2 インストールとかのお話</a></li>
+<li><a href="/kappa/2012/09/22/kappa_basic_operation">その3 基本操作</a></li>
+<li><a href="/kappa/2012/09/25/kappa_select_and_rowobject">その4 select 系いろいろ</a></li>
+<li><a href="/kappa/2012/10/02/kappa_row_object">その5 Row オブジェクトの基本</a></li>
+<li><a href="/kappa/2012/10/09/kappa_customized_row_object">その6 Row オブジェクトのカスタマイズ</a></li>
+<li><a href="/kappa/2012/10/10/kappa_table_class">その7 テーブルクラスとそのカスタマイズ</a></li>
+<li><a href="/kappa/2012/10/23/kappa_misc">その8 雑多な話</a></li>
+</ul>
+
+
+
+
+<h2>事前準備</h2>
+
+
+
+
+<p>テーブルを作っておきましょう。そういえば、SQLite には memory というエンジンがあります。(ファイル名を「:memory:」とする。)
+終了時にデータが勝手に消えてくれるので、テストとかお試し用ならこっちのほうがいいかもしれませんね。</p>
+
+
+
+
+<p>今回は2テーブル作ります。なお、設定上、1探偵1トイズという制限は無いと思われる(複数持っても良いと思われる)
+のですが、説明が面倒くさくなるので細かいことは気にしないで。</p>
+
+
+
+
+<p>あ、ちなみに、トイズっていうのは、探偵(または怪盗)が持っているある種の超能力のことです。今回は名称のみデータとして持つことにします。</p>
+
+
+
+
+<div class="highlight"><pre><code class="perl"><span class="k">use</span> <span class="n">DBI</span><span class="p">;</span>
+<span class="k">my</span> <span class="nv">$dbh</span> <span class="o">=</span> <span class="n">DBI</span><span class="o">-&gt;</span><span class="nb">connect</span><span class="p">(</span><span class="s">&quot;dbi:SQLite:dbname=:memory:&quot;</span><span class="p">,</span><span class="s">&#39;&#39;</span><span class="p">,</span><span class="s">&#39;&#39;</span><span class="p">);</span>
+<span class="nv">$dbh</span><span class="o">-&gt;</span><span class="k">do</span><span class="p">(</span><span class="s">&quot;</span>
+<span class="s">CREATE TABLE detective (</span>
+<span class="s">  id      INT PRIMARY KEY,</span>
+<span class="s">  toys_id INT, /* toys.id */</span>
+<span class="s">  name    TEXT</span>
+<span class="s">);</span>
+<span class="s">&quot;</span><span class="p">);</span>
+
+<span class="nv">$dbh</span><span class="o">-&gt;</span><span class="k">do</span><span class="p">(</span><span class="s">&quot;</span>
+<span class="s">CREATE TABLE toys (</span>
+<span class="s">  id    INT PRIMARY KEY,</span>
+<span class="s">  name  TEXT</span>
+<span class="s">);</span>
+<span class="s">&quot;</span><span class="p">);</span>
+</code></pre>
+</div>
+
+
+
+
+<p>スキーマは分かりますよね？ detective.toys_id = toys.id で結合します。</p>
+
+
+
+
+<p>データも入れましょう。今回からテーブル構造変わった上、メモリ上にテーブルを作っているため、
+前回入れた人もデータを入れる必要があります。</p>
+
+
+
+
+<div class="highlight"><pre><code class="perl"><span class="k">use</span> <span class="n">Kappa</span><span class="p">;</span>
+<span class="k">my</span> <span class="nv">$db</span> <span class="o">=</span> <span class="n">Kappa</span><span class="o">-&gt;</span><span class="k">new</span><span class="p">(</span><span class="nv">$dbh</span><span class="p">);</span>
+<span class="nv">$db</span><span class="o">-&gt;</span><span class="n">insert</span><span class="p">(</span><span class="s">&#39;toys&#39;</span><span class="p">,</span> <span class="p">{</span> <span class="n">id</span> <span class="o">=&gt;</span> <span class="mi">1</span><span class="p">,</span> <span class="n">name</span> <span class="o">=&gt;</span> <span class="s">&#39;サイコキネシス&#39;</span> <span class="p">});</span>
+<span class="nv">$db</span><span class="o">-&gt;</span><span class="n">insert</span><span class="p">(</span><span class="s">&#39;toys&#39;</span><span class="p">,</span> <span class="p">{</span> <span class="n">id</span> <span class="o">=&gt;</span> <span class="mi">2</span><span class="p">,</span> <span class="n">name</span> <span class="o">=&gt;</span> <span class="s">&#39;ダイレクトハック&#39;</span> <span class="p">});</span>
+<span class="nv">$db</span><span class="o">-&gt;</span><span class="n">insert</span><span class="p">(</span><span class="s">&#39;toys&#39;</span><span class="p">,</span> <span class="p">{</span> <span class="n">id</span> <span class="o">=&gt;</span> <span class="mi">3</span><span class="p">,</span> <span class="n">name</span> <span class="o">=&gt;</span> <span class="s">&#39;トライアセンド&#39;</span> <span class="p">});</span>
+<span class="nv">$db</span><span class="o">-&gt;</span><span class="n">insert</span><span class="p">(</span><span class="s">&#39;toys&#39;</span><span class="p">,</span> <span class="p">{</span> <span class="n">id</span> <span class="o">=&gt;</span> <span class="mi">4</span><span class="p">,</span> <span class="n">name</span> <span class="o">=&gt;</span> <span class="s">&#39;ハイパーセンシティブ&#39;</span> <span class="p">});</span>
+
+<span class="nv">$db</span><span class="o">-&gt;</span><span class="n">insert</span><span class="p">(</span><span class="s">&#39;detective&#39;</span><span class="p">,</span> <span class="p">{</span> <span class="n">id</span> <span class="o">=&gt;</span> <span class="mi">1</span><span class="p">,</span> <span class="n">toys_id</span> <span class="o">=&gt;</span> <span class="mi">1</span><span class="p">,</span> <span class="n">name</span> <span class="o">=&gt;</span> <span class="s">&#39;シャーロック・シェリンフォード&#39;</span> <span class="p">});</span>
+<span class="nv">$db</span><span class="o">-&gt;</span><span class="n">insert</span><span class="p">(</span><span class="s">&#39;detective&#39;</span><span class="p">,</span> <span class="p">{</span> <span class="n">id</span> <span class="o">=&gt;</span> <span class="mi">2</span><span class="p">,</span> <span class="n">toys_id</span> <span class="o">=&gt;</span> <span class="mi">2</span><span class="p">,</span> <span class="n">name</span> <span class="o">=&gt;</span> <span class="s">&#39;譲崎　ネロ&#39;</span> <span class="p">});</span>
+<span class="nv">$db</span><span class="o">-&gt;</span><span class="n">insert</span><span class="p">(</span><span class="s">&#39;detective&#39;</span><span class="p">,</span> <span class="p">{</span> <span class="n">id</span> <span class="o">=&gt;</span> <span class="mi">3</span><span class="p">,</span> <span class="n">toys_id</span> <span class="o">=&gt;</span> <span class="mi">3</span><span class="p">,</span> <span class="n">name</span> <span class="o">=&gt;</span> <span class="s">&#39;エルキュール・バートン&#39;</span> <span class="p">});</span>
+<span class="nv">$db</span><span class="o">-&gt;</span><span class="n">insert</span><span class="p">(</span><span class="s">&#39;detective&#39;</span><span class="p">,</span> <span class="p">{</span> <span class="n">id</span> <span class="o">=&gt;</span> <span class="mi">4</span><span class="p">,</span> <span class="n">toys_id</span> <span class="o">=&gt;</span> <span class="mi">4</span><span class="p">,</span> <span class="n">name</span> <span class="o">=&gt;</span> <span class="s">&#39;コーデリア・グラウカ&#39;</span> <span class="p">});</span>
+
+<span class="c1"># ここより後ろに試したいコードを書きます</span>
+</code></pre>
+</div>
+
+
+
+
+<h2>Row オブジェクトのカスタマイズの前に</h2>
+
+
+
+
+<p>アプリを作成する場合、どのようなソフトウェア構成にしていますか？</p>
+
+
+
+
+<p>Web アプリでフレームワークを使っている場合は、フレームワークの規約にしたがうのが良いでしょう。
+そうでない場合は、CPAN モジュールと同じレイアウトにしておくのがおすすめです。(なお、Web Application Framework を使う
+場合も、大抵の場合 CPAN レイアウトになっているはずです。)</p>
+
+
+
+
+<p>CPAN レイアウトを作るには、pmsetup とか Module::Starter とか Module::Setup とかそのへんのツールを使えば簡単にできます。
+僕は Module::Setup を使っています。</p>
+
+
+
+
+<ul>
+<li><a href="http://perl-users.jp/articles/advent-calendar/2009/hacker/19.html">Module::Setup でらくらくモジュール作成</a></li>
+</ul>
+
+
+
+
+<p>さて、CPAN レイアウトを取っていると、プロジェクト(アプリケーション)で使うライブラリは lib というディレクトリに入れているかと
+思います。カスタマイズした、Row オブジェクトも lib 配下に置くことになります。</p>
+
+
+
+
+<p>Row オブジェクトの命名規則は、たとえばプロジェクト名が MyProj だとしたら、「MyProj::DB::Row::テーブル名」 みたいな感じにすると分かりやすくて
+よいのではないか、と思います。命名規則は、いつかまた解説すると思います。</p>
+
+
+
+
+<h2>カスタマイズ方法</h2>
+
+
+
+
+<p>では実際に Row オブジェクトのカスタマイズをします。プロジェクト名は仮に MilkyHolmes としておきましょうか。detective テーブルの Row オブジェクト
+を拡張します。</p>
+
+
+
+
+<p>ファイル名でいうと、lib/MilkyHolmes/DB/Row/detective.pm。 パッケージ名でいうと、MilkyHolmes::DB::Row::detective となります。お気に入りの開発ツール
+(僕は emacs を使っています)で、ファイルを開きましょう。</p>
+
+
+
+
+<p>Kappa は FK とかをみて、つながっているテーブルのデータを引っ張る機能とかが<strong>ありません</strong>。(まあ今回の例では FK 張ってませんが)
+ですので、Row オブジェクトを拡張して、detective の Row オブジェクトから toys の name(トイズの名前)を引く、
+toys_name というメソッドを付けてみましょう。</p>
+
+
+
+
+<div class="highlight"><pre><code class="perl"><span class="nb">package</span> <span class="nn">MilkyHolmes::DB::Row::</span><span class="n">detective</span><span class="p">;</span>
+<span class="k">use</span> <span class="n">parent</span> <span class="sx">qw(Kappa::Row)</span><span class="p">;</span>
+<span class="k">use</span> <span class="n">strict</span><span class="p">;</span>
+<span class="k">use</span> <span class="n">warnings</span><span class="p">;</span>
+
+<span class="k">sub </span><span class="nf">toys_name</span> <span class="p">{</span>
+    <span class="k">my</span><span class="p">(</span><span class="nv">$self</span><span class="p">)</span> <span class="o">=</span> <span class="nv">@_</span><span class="p">;</span>
+    <span class="k">my</span> <span class="nv">$toys_row</span> <span class="o">=</span> <span class="nv">$self</span><span class="o">-&gt;</span><span class="n">db</span><span class="o">-&gt;</span><span class="n">select_row</span><span class="p">(</span><span class="s">&#39;toys&#39;</span><span class="p">,</span> <span class="p">{</span> <span class="n">id</span> <span class="o">=&gt;</span> <span class="nv">$self</span><span class="o">-&gt;</span><span class="n">toys_id</span> <span class="p">})</span> <span class="p">;</span>
+    <span class="k">return</span> <span class="s">&#39;&#39;</span> <span class="k">if</span> <span class="p">(</span> <span class="o">!</span><span class="nb">defined</span> <span class="nv">$toys_row</span> <span class="p">);</span>
+    <span class="k">return</span> <span class="nv">$toys_row</span><span class="o">-&gt;</span><span class="n">name</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="mi">1</span><span class="p">;</span>
+</code></pre>
+</div>
+
+
+
+
+<p>Row オブジェクトの db メソッドを呼ぶと、Kappa (呼び出し元)のオブジェクトが取れるのでした。
+これを用いて、toys テーブルの行を取得し、toys.name の値を返しています。(なお、Kappa には透過キャッシュとかないので、
+処理が重くなったり、重そうだったら必要に応じてキャッシュを入れる必要があります。)</p>
+
+
+
+
+<h2>カスタマイズした Row オブジェクトの使い方</h2>
+
+
+
+
+<p>このままでは、定義した Row オブジェクトを使うことができません。Kappa に Row オブジェクトがどこにあるかを教えてあげる
+必要があります。Kappa の new にオプションとして、row_namespace というオプションをわたします。</p>
+
+
+
+
+<div class="highlight"><pre><code class="perl"><span class="k">use</span> <span class="n">Kappa</span><span class="p">;</span>
+<span class="c1"># </span>
+<span class="c1"># コンストラクタで row_namespace を指定</span>
+<span class="c1">#</span>
+<span class="k">my</span> <span class="nv">$db</span> <span class="o">=</span> <span class="n">Kappa</span><span class="o">-&gt;</span><span class="k">new</span><span class="p">(</span><span class="nv">$dbh</span><span class="p">,</span> <span class="p">{</span> <span class="n">row_namespace</span> <span class="o">=&gt;</span> <span class="s">&#39;MilkyHolmes::DB::Row&#39;</span> <span class="p">});</span>
+</code></pre>
+</div>
+
+
+
+
+<p>こうすることで、Row オブジェクトの定義が 「MilkyHolmes::DB::Row::テーブル名」 にあることが Kappa さんに伝わります。</p>
+
+
+
+
+<h2>共通の Row オブジェクト</h2>
+
+
+
+
+<p>テーブルに依存せず、すべての Row オブジェクトに共通の処理を定義したい場合もあるかと思います。
+Kappa は Row オブジェクトの定義を、</p>
+
+
+
+
+<ul>
+<li>「row_namespace::テーブル名」 で定義された、テーブル名ごとの Row オブジェクト</li>
+<li>row_namespace</li>
+<li>Kappa::Row (基本機能)</li>
+</ul>
+
+
+
+
+<p>の順に検索します。ですので、共通処理は row_namespace におきます。今回の例だと、
+MilkyHolmes::DB::Row(ファイル名だと lib/MilkyHolmes/DB/Row.pm )におきます。たとえば CSVの出力ができるような
+csv_output というメソッドを付けてみましょう。</p>
+
+
+
+
+<div class="highlight"><pre><code class="perl"><span class="nb">package</span> <span class="nn">MilkyHolmes::DB::</span><span class="n">Row</span><span class="p">;</span>
+<span class="k">use</span> <span class="n">parent</span> <span class="sx">qw(Kappa::Row)</span><span class="p">;</span>
+<span class="k">use</span> <span class="n">strict</span><span class="p">;</span>
+<span class="k">use</span> <span class="n">warnings</span><span class="p">;</span>
+
+<span class="k">sub </span><span class="nf">csv_output</span> <span class="p">{</span>
+    <span class="k">my</span> <span class="p">(</span><span class="nv">$self</span><span class="p">)</span> <span class="o">=</span> <span class="nv">@_</span><span class="p">;</span>
+    <span class="c1"># これは説明用の超テキトウな実装なので、ちゃんとやるときは Text::CSV 系のモジュールを使ってください。</span>
+    <span class="k">my</span> <span class="nv">%row_value</span> <span class="o">=</span> <span class="nv">$self</span><span class="o">-&gt;</span><span class="n">row_value</span><span class="p">;</span>
+    <span class="k">return</span> <span class="nb">join</span><span class="p">(</span><span class="s">&#39;,&#39;</span><span class="p">,</span> <span class="nb">sort</span> <span class="nb">values</span> <span class="nv">%row_value</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="mi">1</span><span class="p">;</span>
+</code></pre>
+</div>
+
+
+
+
+<p>カスタマイズした Row オブジェクト(detective テーブルのもの)からも使えるように、親クラスを変更しておきます。</p>
+
+
+
+
+<div class="highlight"><pre><code class="perl"><span class="nb">package</span> <span class="nn">MilkyHolmes::DB::Row::</span><span class="n">detective</span><span class="p">;</span>
+<span class="k">use</span> <span class="n">parent</span> <span class="sx">qw(MilkyHolmes::DB::Row)</span><span class="p">;</span> <span class="c1">#親クラスを変更</span>
+<span class="c1"># ...以降は前と同じ</span>
+</code></pre>
+</div>
+
+
+
+
+<h2>サンプル</h2>
+
+
+
+
+<p><a href="https://github.com/tsucchi/Kappa-Example/zipball/2012-10-09-kappa_customized_row_object-rev02">動作するサンプル</a>を作成しました。
+bin ディレクトリの customized_row_object.pl が今回のサンプルです。lib/MilkyHolmes/Row 配下も実装してありますので、確認してみてください。</p>
+
+
+
+
+<h2>まとめ</h2>
+
+
+
+
+<p>今回は Row オブジェクトのカスタマイズ方法について解説しました。次回はテーブルクラスの拡張方法について解説します。
+なんとなく、読者の方が Teng とか Skinny とか使っているのを想定して、先に Row オブジェクトについて解説しましたが、
+実は Kappa においては、テーブルクラスのほうが重要です。(と、僕は考えています)</p>
+
+
+
+
+<p>ではでは。また次回。</p>
+
+
+<hr />
+
+<div class="fb-like" data-href="http://tsucchi.github.com//kappa/2012/10/09/kappa_customized_row_object" data-send="true" data-width="450" data-show-faces="true"></div>
+
+
+<p><a href="https://twitter.com/share" class="twitter-share-button" data-url="http://tsucchi.github.com/kappa/2012/10/09/kappa_customized_row_object" data-via="tsucchi" data-lang="ja">ツイート</a></p>
+
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+
+
+
+<h1>2012-10-06 <a href="/misc/2012/10/06/zatsudan_after_yapc">最近何となく考えてたこととか</a></h1>
+
+
+
+
+<div class="pull-right">
+
+
+
+
+  
+     
+        <a href="/tags.html#雑談-ref"><span class="label label-info">雑談 <span>12</span></span></a>
+    
+  
+
+
+
+</div>
+
+
+<br>
+
+
+
+
+<p>今日は完全に雑談です。ってか愚痴なのかも。</p>
+
+
+
+
+<p>YAPC の前後くらいからちょっとずつ意識していたことを書きます。</p>
+
+
+
+
+<p>僕は 2003 年に(今は亡き)ハードベンダー某S社に就職し、インフラエンジニアをしておりました。 2007 年に今の会社に移ってからは、アプリ屋さん兼 DBA って感じでお仕事しております。</p>
+
+
+
+
+<p>んで、ワタクシ今月で、34になりますので、プログラマ的には来年定年(笑)を迎えるわけです。</p>
+
+
+
+
+<p>「定年(笑)」とは書いたものの、あんまり笑えた状況ではなくて、やっぱりこの位の年齢になると、関連部署間の調整とかそういうの求められはじめられたりして、だんだんコードを書く時間が減ってくるわけです。</p>
+
+
+
+
+<p>で、得意な分野(僕はここ3年くらい、ずっと業務系 アプリの Web API をずっと作ってきたので、その辺の DB 設計とか API 設計とその実装)だったら、結構自信あるので、「ちょっととんがった一般人」くらいのレベルのお仕事ならできる気がするわけです。まあこの分野(+テストまわりもかな？)だったら、モヒカンにマサカリや椅子を投げられても、ギリギリ抵抗できる自信はあるわけです。</p>
+
+
+
+
+<p>その一方で、フロントまわり(リバースプロキシとか HTML とか JSとかそのへん)とか、長年遠ざかってるインフラまわり(特に AWS とかその辺のやつと、仮想化まわりとか)が全然分かってなくて、その辺に危機感を感じたりするわけです。</p>
+
+
+
+
+<p>でも会社的には、「技術だけじゃなくて。。。」みたいな話もあって、まあそれはそうなんだけど、じゃあオレが技術的な事から手を引いても大丈夫なのかよ、っていったらそんな事ない現状もあったりして。。。オレはいったいどうすればいいんですかね？</p>
+
+
+
+
+<p>とりあえず、今年いっぱいくらいの間に、Perl じゃない言語でも Perl くらい書けるようになりたいなー、とか、フロントまわりってか Web アプリちゃんと作れるようになりたいなー、とか思ってるので、その辺の修行はしようかな、と思います。あとは来年からどのくらい時間とれるか良くわかんないけど、そろそろもう一度インフラまわりに向き合わないとヤバいかなー、とか思ってたりします。</p>
+
+
+
+
+<p>そのうえで、会社的な要求と、どうすり合わせるか(あるいはすり合わせないで突っ張るのか？)とかを考えていけばいいのかなー、とか思ったり。</p>
+
+
+
+
+<p>あー、記事書いて良かったかも。書いてみると色々分かるね。</p>
+
+
+<hr />
+
+<div class="fb-like" data-href="http://tsucchi.github.com//misc/2012/10/06/zatsudan_after_yapc" data-send="true" data-width="450" data-show-faces="true"></div>
+
+
+<p><a href="https://twitter.com/share" class="twitter-share-button" data-url="http://tsucchi.github.com/misc/2012/10/06/zatsudan_after_yapc" data-via="tsucchi" data-lang="ja">ツイート</a></p>
+
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+
+
+
+<h1>2012-10-04 <a href="/db/2012/10/04/dbix_decorator">DBIx::Decorator ってのを書いてみたら、色々ダメさ加減が分かった話</a></h1>
+
+
+
+
+<div class="pull-right">
+
+
+
+
+  
+     
+        <a href="/tags.html#perl-ref"><span class="label label-info">perl <span>15</span></span></a>
+     
+        <a href="/tags.html#db-ref"><span class="label label-info">db <span>10</span></span></a>
+    
+  
+
+
+
+</div>
+
+
+<br>
+
+
+
+
+<p>twitter にもちょいっとつぶやいたのですが、DBI 自体をいい感じに拡張できる物体があるといいなー、と思って、
+試しに書いてみた。Decorator とメソッドが生えてくる Plugin 形式と両方考えて、今回は試しに Decorator でやってみた。</p>
+
+
+
+
+<ul>
+<li><a href="https://github.com/tsucchi/p5-DBIx-Decorator">p5-DBIx-Decorator</a></li>
+</ul>
+
+
+
+
+<h3>やりたかったこと</h3>
+
+
+
+
+<ul>
+<li>トランザクション管理とか、コネクション管理とか、そういう機能を好きな IF を選んで拡張できたらいいな</li>
+<li>拡張するのは、DBI 自体だとうれしいな</li>
+</ul>
+
+
+
+
+<h3>とりあえず Decorator でプラグイン一個書いてみて分かったこと。</h3>
+
+
+
+
+<ul>
+<li>むずい。何が正しいのかさっぱり分からん</li>
+<li>dbh を無理やり bless し直してるんだが、これちゃんと動くんだろーか？？？
+
+<ul>
+<li>そういえば普通に SQL 投げるテスト書こうと思って書いてねーや。まあ POC なんでべつにいいか。</li>
+</ul>
+</li>
+<li>Decorator って、親とすべてのサブクラスを把握しきっていないと書きにくいなぁ
+
+<ul>
+<li>自分で全部書くなら問題ないが、誰かにプラグイン書いてもらうとか無理だね</li>
+</ul>
+</li>
+<li>多分、どういう形式でやるにしても、結局他のプラグインとの相互作用が難しい。
+
+<ul>
+<li>たとえば、自動再接続したら、途中のトランザクションをロールバックするとか、そういうのどうすんだろ？</li>
+<li>そういうフックを Decorator の親に入れていくんだろうが、設計がムズそうだなー</li>
+</ul>
+</li>
+</ul>
+
+
+
+
+<p>あまりに面倒くさいので、「オレ好みの DBI 拡張」を書く方が良いのかもしれんなー、とも思った。柔軟性ないけど。</p>
+
+
+
+
+<h3>結論</h3>
+
+
+
+
+<p>正解はひとつ！じゃない！！(There is more than one way to do it)</p>
+
+
+<hr />
+
+<div class="fb-like" data-href="http://tsucchi.github.com//db/2012/10/04/dbix_decorator" data-send="true" data-width="450" data-show-faces="true"></div>
+
+
+<p><a href="https://twitter.com/share" class="twitter-share-button" data-url="http://tsucchi.github.com/db/2012/10/04/dbix_decorator" data-via="tsucchi" data-lang="ja">ツイート</a></p>
+
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+
+
+
+<h1>2012-10-02 <a href="/kappa/2012/10/02/kappa_row_object">Kappa の飼い方(Kappa という ORM の話) その5 Row オブジェクトの基本</a></h1>
+
+
+
+
+<div class="pull-right">
+
+
+
+
+  
+     
+        <a href="/tags.html#perl-ref"><span class="label label-info">perl <span>15</span></span></a>
+     
+        <a href="/tags.html#db-ref"><span class="label label-info">db <span>10</span></span></a>
+     
+        <a href="/tags.html#orm-ref"><span class="label label-info">orm <span>8</span></span></a>
+     
+        <a href="/tags.html#kappa-ref"><span class="label label-info">kappa <span>8</span></span></a>
+    
+  
+
+
+
+</div>
+
+
+<br>
+
+
+
+
+<p>こんばんはこんばんは。
+<a href="http://yapcasia.org/2012/">YAPC::Asia</a>も無事に終了しましたねー。超楽しかった。</p>
+
+
+
+
+<p>この連載(?)は、YAPC 開催前に宣伝も兼ねて(?)書いてたのですが、間に合いませんでしたw
+まあでも読者の方がちゃんといることが分ったので(こういうの超重要。すごいうれしいですよ。まじで。)
+連載つづけます。</p>
+
+
+
+
+<p>YAPC でお話させていただいた、 <a href="http://yapcasia.org/2012/talk/show/863251ce-d870-11e1-924a-0d4e6aeab6a4">Perl と SQL のいろいろ</a>
+は公式サイトにプレゼン資料もアップされております。そろそろ動画も公開されると思う(1日目のは公開されてるみたい)ので、
+見たかったけど見逃した方はチェックすべし！</p>
+
+
+
+
+<p>(※ここまでテンプレ)</p>
+
+
+
+
+<p><a href="https://github.com/tsucchi/p5-Kappa">Kappa</a> という ORM の話。今日は select したときに返ってくる Row オブジェクトの話です。</p>
+
+
+
+
+<h2>目次</h2>
+
+
+
+
+<ul>
+<li><a href="/kappa/2012/09/15/kappa_background">その1 開発の背景のお話</a></li>
+<li><a href="/kappa/2012/09/17/kappa_install">その2 インストールとかのお話</a></li>
+<li><a href="/kappa/2012/09/22/kappa_basic_operation">その3 基本操作</a></li>
+<li><a href="/kappa/2012/09/25/kappa_select_and_rowobject">その4 select 系いろいろ</a></li>
+<li><a href="/kappa/2012/10/02/kappa_row_object">その5 Row オブジェクトの基本</a></li>
+<li><a href="/kappa/2012/10/09/kappa_customized_row_object">その6 Row オブジェクトのカスタマイズ</a></li>
+<li><a href="/kappa/2012/10/10/kappa_table_class">その7 テーブルクラスとそのカスタマイズ</a></li>
+<li><a href="/kappa/2012/10/23/kappa_misc">その8 雑多な話</a></li>
+</ul>
+
+
+
+
+<h2>事前準備</h2>
+
+
+
+
+<p>テーブルを作っておきましょう。前回 or 前々回に作ってれば作らなくていいです。</p>
+
+
+
+
+<div class="highlight"><pre><code class="perl"><span class="k">use</span> <span class="n">DBI</span><span class="p">;</span>
+<span class="k">my</span> <span class="nv">$dbh</span> <span class="o">=</span> <span class="n">DBI</span><span class="o">-&gt;</span><span class="nb">connect</span><span class="p">(</span><span class="s">&quot;dbi:SQLite:dbname=$dbfile&quot;</span><span class="p">,</span><span class="s">&#39;&#39;</span><span class="p">,</span><span class="s">&#39;&#39;</span><span class="p">);</span>
+<span class="nv">$dbh</span><span class="o">-&gt;</span><span class="k">do</span><span class="p">(</span><span class="s">&quot;</span>
+<span class="s">CREATE TABLE detective (</span>
+<span class="s">  id    INT PRIMARY KEY,</span>
+<span class="s">  name  TEXT</span>
+<span class="s">);</span>
+<span class="s">&quot;</span><span class="p">);</span>
+</code></pre>
+</div>
+
+
+
+
+<p>データも入れといてくださいね。(これも前回 or 前々回に入れてる人は入れなくていいです。)</p>
+
+
+
+
+<div class="highlight"><pre><code class="perl"><span class="k">use</span> <span class="n">Kappa</span><span class="p">;</span>
+<span class="k">my</span> <span class="nv">$db</span> <span class="o">=</span> <span class="n">Kappa</span><span class="o">-&gt;</span><span class="k">new</span><span class="p">(</span><span class="nv">$dbh</span><span class="p">);</span>
+<span class="nv">$db</span><span class="o">-&gt;</span><span class="n">insert</span><span class="p">(</span><span class="s">&#39;detective&#39;</span><span class="p">,</span> <span class="p">{</span> <span class="n">id</span> <span class="o">=&gt;</span> <span class="mi">1</span><span class="p">,</span> <span class="n">name</span> <span class="o">=&gt;</span> <span class="s">&#39;シャーロック・シェリンフォード&#39;</span> <span class="p">});</span>
+<span class="nv">$db</span><span class="o">-&gt;</span><span class="n">insert</span><span class="p">(</span><span class="s">&#39;detective&#39;</span><span class="p">,</span> <span class="p">{</span> <span class="n">id</span> <span class="o">=&gt;</span> <span class="mi">2</span><span class="p">,</span> <span class="n">name</span> <span class="o">=&gt;</span> <span class="s">&#39;譲崎　ネロ&#39;</span> <span class="p">});</span>
+<span class="nv">$db</span><span class="o">-&gt;</span><span class="n">insert</span><span class="p">(</span><span class="s">&#39;detective&#39;</span><span class="p">,</span> <span class="p">{</span> <span class="n">id</span> <span class="o">=&gt;</span> <span class="mi">3</span><span class="p">,</span> <span class="n">name</span> <span class="o">=&gt;</span> <span class="s">&#39;エルキュール・バートン&#39;</span> <span class="p">});</span>
+<span class="nv">$db</span><span class="o">-&gt;</span><span class="n">insert</span><span class="p">(</span><span class="s">&#39;detective&#39;</span><span class="p">,</span> <span class="p">{</span> <span class="n">id</span> <span class="o">=&gt;</span> <span class="mi">4</span><span class="p">,</span> <span class="n">name</span> <span class="o">=&gt;</span> <span class="s">&#39;コーデリア・グラウカ&#39;</span> <span class="p">});</span>
+</code></pre>
+</div>
+
+
+
+
+<h2>戻り値指定と Row オブジェクトの関係</h2>
+
+
+
+
+<p>前回の復習になりますが、select 系は戻り値の返り方ごとに、下記 4 タイプがあります。</p>
+
+
+
+
+<ul>
+<li>select : コンテキストに応じて 1レコード or 全レコードを返します</li>
+<li>select_row : 1レコードを返します</li>
+<li>select_all : 全レコードを返します。配列が返り、配列の1要素は、row の場合と同じです</li>
+<li>select_itr : イテレータを返します。イテレータの next() を呼ぶと、1行分データが返ります。</li>
+</ul>
+
+
+
+
+<p>つまり、Row オブジェクトは、</p>
+
+
+
+
+<ul>
+<li>select_row の戻り値</li>
+<li>select_all の戻り値の配列の一要素</li>
+<li>select_itr の戻り値のイテレータで、next() を呼んだときの値</li>
+</ul>
+
+
+
+
+<p>です。ただし、一部例外があります。</p>
+
+
+
+
+<ul>
+<li>該当レコードがない場合</li>
+<li>row_object_enable に 0 がセットされている場合</li>
+</ul>
+
+
+
+
+<p>該当レコードがない場合、select_row は undef, select_all は空の配列 が返ります。select_itr は 1回もイテレートできないものが返ります。
+select_row 系で undef が返るのがちょっと微妙だなー、と思うのですが、もう今さら変えられないです。。。</p>
+
+
+
+
+<p>row_object_enable については、次節で紹介します。</p>
+
+
+
+
+<h2>row_object_enable</h2>
+
+
+
+
+<p>row_object_enable に 0 (FALSE になる値）をセットすると、Row オブジェクトが生成されなくなります。</p>
+
+
+
+
+<div class="highlight"><pre><code class="perl"><span class="k">use</span> <span class="n">Kappa</span><span class="p">;</span>
+<span class="k">my</span> <span class="nv">$db</span> <span class="o">=</span> <span class="n">Kappa</span><span class="o">-&gt;</span><span class="k">new</span><span class="p">(</span><span class="nv">$dbh</span><span class="p">);</span>
+<span class="nv">$db</span><span class="o">-&gt;</span><span class="n">row_object_enable</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+<span class="k">my</span> <span class="nv">$row</span> <span class="o">=</span> <span class="nv">$db</span><span class="o">-&gt;</span><span class="nb">select</span><span class="p">(</span><span class="s">&#39;detective&#39;</span><span class="p">,</span> <span class="p">{</span> <span class="n">id</span> <span class="o">=&gt;</span> <span class="mi">1</span> <span class="p">});</span>
+<span class="c1"># =&gt; { id =&gt; 1, name =&gt; &#39;シャーロック・シェリンフォード&#39;}</span>
+<span class="c1"># こんな感じの hashref が返るようになります。</span>
+
+<span class="nv">$db</span><span class="o">-&gt;</span><span class="n">row_object_enable</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span><span class="c1">#1(TRUE)にもどすと</span>
+<span class="c1"># 元通り Row オブジェクトが返ります</span>
+</code></pre>
+</div>
+
+
+
+
+<p>row_object_enable に 0 を設定すると、Row オブジェクトのかわりに hashref が返るようになります。
+Row オブジェクト生成すると遅いとか、hashref のほうが取扱いしやすい場合(変数として渡ってきたキー名を使って
+データを取り出したいときとか)に使うとよいです。ですが、今の状態が分からなくなると面倒なので、次節に説明する
+ガード付きのやつを僕は良く使っています。</p>
+
+
+
+
+<h2>ガードつきの row_object_enable</h2>
+
+
+
+
+<p>row_object_enable の現在の状態を知る方法が、そういえばありませんw(作らなきゃダメだな)</p>
+
+
+
+
+<p>また、プログラムの途中で状態を変更してしまうと、row_object_enable の状態が意図しないものに
+なってしまう可能性があります。</p>
+
+
+
+
+<p>ですので、戻り値を指定して、row_object_enable を呼ぶと、戻り値の変数のスコープを抜けたタイミングで、
+以前の値に戻すようになっています。</p>
+
+
+
+
+<div class="highlight"><pre><code class="perl"><span class="k">use</span> <span class="n">Kappa</span><span class="p">;</span>
+<span class="k">my</span> <span class="nv">$db</span> <span class="o">=</span> <span class="n">Kappa</span><span class="o">-&gt;</span><span class="k">new</span><span class="p">(</span><span class="nv">$dbh</span><span class="p">);</span>
+<span class="p">{</span> <span class="c1">#スコープ定義</span>
+    <span class="k">my</span> <span class="nv">$guard</span> <span class="o">=</span> <span class="nv">$db</span><span class="o">-&gt;</span><span class="n">row_object_enable</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span> <span class="c1">#ここで戻り値指定で呼ぶ</span>
+    <span class="k">my</span> <span class="nv">$row</span> <span class="o">=</span> <span class="nv">$db</span><span class="o">-&gt;</span><span class="nb">select</span><span class="p">(</span><span class="s">&#39;detective&#39;</span><span class="p">,</span> <span class="p">{</span> <span class="n">id</span> <span class="o">=&gt;</span> <span class="mi">1</span> <span class="p">});</span>
+    <span class="c1"># ここでは Row オブジェクトが無効になっている</span>
+    <span class="c1"># =&gt; { id =&gt; 1, name =&gt; &#39;シャーロック・シェリンフォード&#39;}</span>
+<span class="p">}</span> 
+
+<span class="c1"># スコープを抜けると。。。</span>
+<span class="c1"># row_object_enable がデフォルト(1)に戻る</span>
+</code></pre>
+</div>
+
+
+
+
+<p>大変便利な機能なのですが、0.11 までのバージョンでは不具合がありましたorz</p>
+
+
+
+
+<p>今もおかしい部分もあるかもしれませんので、使ってみておかしなところを見つけた場合はご報告いただけるとありがたいです。
+(twitter でも github issues でもなんでもいいです)</p>
+
+
+
+
+<h2>Row オブジェクトでできること</h2>
+
+
+
+
+<p>デフォルトの Row オブジェクトは、まずカラムの情報をとるメソッドがあります。</p>
+
+
+
+
+<div class="highlight"><pre><code class="perl"><span class="k">use</span> <span class="n">Kappa</span><span class="p">;</span>
+<span class="k">my</span> <span class="nv">$db</span> <span class="o">=</span> <span class="n">Kappa</span><span class="o">-&gt;</span><span class="k">new</span><span class="p">(</span><span class="nv">$dbh</span><span class="p">);</span>
+<span class="k">my</span> <span class="nv">$row</span> <span class="o">=</span> <span class="nv">$db</span><span class="o">-&gt;</span><span class="nb">select</span><span class="p">(</span><span class="s">&#39;detective&#39;</span><span class="p">,</span> <span class="p">{</span> <span class="n">id</span> <span class="o">=&gt;</span> <span class="mi">1</span> <span class="p">});</span>
+<span class="nv">$row</span><span class="o">-&gt;</span><span class="n">id</span><span class="p">;</span>   <span class="c1"># =&gt; 1</span>
+<span class="nv">$row</span><span class="o">-&gt;</span><span class="n">name</span><span class="p">;</span> <span class="c1"># =&gt; &#39;シャーロック・シェリンフォード&#39;</span>
+</code></pre>
+</div>
+
+
+
+
+<p>あとは、親のハンドルを返すメソッド(db)があります。(厳密にはちょっと違うのですが、現時点ではその違いは説明できません。)
+Row オブジェクトをカスタマイズすることができるのですが、その際に使われます。(次回説明します)。</p>
+
+
+
+
+<p>呼び出し元のテーブル名を返す、table_name というのもあります。(これはあんまり使わないかも)</p>
+
+
+
+
+<div class="highlight"><pre><code class="perl"><span class="k">use</span> <span class="n">Kappa</span><span class="p">;</span>
+<span class="k">my</span> <span class="nv">$db</span> <span class="o">=</span> <span class="n">Kappa</span><span class="o">-&gt;</span><span class="k">new</span><span class="p">(</span><span class="nv">$dbh</span><span class="p">);</span>
+<span class="k">my</span> <span class="nv">$row</span> <span class="o">=</span> <span class="nv">$db</span><span class="o">-&gt;</span><span class="nb">select</span><span class="p">(</span><span class="s">&#39;detective&#39;</span><span class="p">,</span> <span class="p">{</span> <span class="n">id</span> <span class="o">=&gt;</span> <span class="mi">1</span> <span class="p">});</span>
+<span class="nv">$row</span><span class="o">-&gt;</span><span class="n">db</span><span class="p">;</span>         <span class="c1"># $db と同じものが返る</span>
+<span class="nv">$row</span><span class="o">-&gt;</span><span class="n">table_name</span><span class="p">;</span> <span class="c1"># =&gt; &#39;detective&#39;</span>
+</code></pre>
+</div>
+
+
+
+
+<p>また、get_columns(), row_value() というメソッドがあります。get_columns() は row_object_enable が 0 のときに返るような
+hashref が返ります。row_value は hashref ではなく、hash が返ります。</p>
+
+
+
+
+<div class="highlight"><pre><code class="perl"><span class="k">use</span> <span class="n">Kappa</span><span class="p">;</span>
+<span class="k">my</span> <span class="nv">$db</span> <span class="o">=</span> <span class="n">Kappa</span><span class="o">-&gt;</span><span class="k">new</span><span class="p">(</span><span class="nv">$dbh</span><span class="p">);</span>
+<span class="k">my</span> <span class="nv">$row</span> <span class="o">=</span> <span class="nv">$db</span><span class="o">-&gt;</span><span class="nb">select</span><span class="p">(</span><span class="s">&#39;detective&#39;</span><span class="p">,</span> <span class="p">{</span> <span class="n">id</span> <span class="o">=&gt;</span> <span class="mi">1</span> <span class="p">});</span>
+<span class="k">my</span> <span class="nv">$row_href</span> <span class="o">=</span> <span class="nv">$row</span><span class="o">-&gt;</span><span class="n">get_columns</span><span class="p">;</span> <span class="c1"># =&gt; { id =&gt; 1, name =&gt; &#39;シャーロック・シェリンフォード&#39; }</span>
+<span class="k">my</span> <span class="nv">%row_value</span> <span class="o">=</span> <span class="nv">$row</span><span class="o">-&gt;</span><span class="n">row_value</span><span class="p">;</span>  <span class="c1"># =&gt; ( id =&gt; 1, name =&gt; &#39;シャーロック・シェリンフォード&#39; )</span>
+</code></pre>
+</div>
+
+
+
+
+<h2>まとめ</h2>
+
+
+
+
+<p>今回は Row オブジェクトの基本的な機能を紹介しました。そういえば、サンプルコードの探偵さんは YAPC本編でも一部使ったのですが、
+特にツッコミもなく寂しい限り(?)です。(あ、でも一瞬反応あったかな？)。</p>
+
+
+
+
+<p>次回は多分 Row オブジェクトのカスタマイズ方法について説明します。せっかくなので、探偵さんのデータも拡充しますよ！</p>
+
+
+<hr />
+
+<div class="fb-like" data-href="http://tsucchi.github.com//kappa/2012/10/02/kappa_row_object" data-send="true" data-width="450" data-show-faces="true"></div>
+
+
+<p><a href="https://twitter.com/share" class="twitter-share-button" data-url="http://tsucchi.github.com/kappa/2012/10/02/kappa_row_object" data-via="tsucchi" data-lang="ja">ツイート</a></p>
+
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+
+
+
+<h1>2012-09-30 <a href="/yapcasia/2012/09/30/yapc_day2">昨日はYAPC::Asia 2012 2日め(最終日)でした。</a></h1>
+
+
+
+
+<div class="pull-right">
+
+
+
+
+  
+     
+        <a href="/tags.html#yapcasia-ref"><span class="label label-info">yapcasia <span>4</span></span></a>
+     
+        <a href="/tags.html#yapcasia2012-ref"><span class="label label-info">yapcasia2012 <span>4</span></span></a>
+    
+  
+
+
+
+</div>
+
+
+<br>
+
+
+
+
+<p>日付かわったので、昨日は<a href="http://yapcasia.org/2012/">YAPC::Asia</a>の最終日でした。</p>
+
+
+
+
+<p>ワタクシの発表も無事完了いたしました。裏番組が超強力(さらに追い討ちをかけるように LTソンも gfx さんだったw)
+でしたが、無事沢山の方に見ていただけたので、嬉しかった。</p>
+
+
+
+
+<ul>
+<li><a href="http://yapcasia.org/2012/talk/show/863251ce-d870-11e1-924a-0d4e6aeab6a4">Perl と SQL のいろいろ</a></li>
+</ul>
+
+
+
+
+<p>多分そのうち動画がアップされると思うので、見たかったけど見逃した方はこちら(↑)のリンクよりご覧ください。
+(去年はスイーツエリアだったから録画なしだったので超嬉しい。でもちょっとはずかしい)。資料だけなら、現時点でも見れると思います。</p>
+
+
+
+
+<p>さてさて、今日はこの辺を見てきましたよ。</p>
+
+
+
+
+<ul>
+<li><a href="http://yapcasia.org/2012/talk/show/08930a0c-b132-11e1-885d-564e6aeab6a4">1台から500台までのMySQL運用(YAPC::Asia編)</a>(後半のみ視聴)</li>
+<li><a href="http://yapcasia.org/2012/talk/show/a3f896b4-b8e0-11e1-bde8-38876aeab6a4">Perlでちょいモテデザインパターン</a></li>
+<li><a href="http://yapcasia.org/2012/talk/show/93912060-b9b8-11e1-9336-d0be6aeab6a4">CPANに恩返ししよう</a></li>
+<li><a href="http://yapcasia.org/2012/talk/show/863251ce-d870-11e1-924a-0d4e6aeab6a4">Perl と SQL のいろいろ</a>(じぶんのやつ)</li>
+<li><a href="http://yapcasia.org/2012/talk/show/73dfc76c-daf6-11e1-9125-0d4e6aeab6a4">シリコンバレーと世界のPerlエンジニア</a></li>
+<li><a href="http://yapcasia.org/2012/talk/show/56ce8ad8-abb6-11e1-93ce-57a46aeab6a4">ウェブアプリケーション開発の現状・課題とJSX</a></li>
+<li><a href="http://yapcasia.org/2012/talk/show/3570fad2-d484-11e1-964b-37a36aeab6a4">very simple ORMapper Teng</a></li>
+<li><a href="http://yapcasia.org/2012/talk/show/3eac4714-d920-11e1-bf45-0d4e6aeab6a4">モダンmod_perl入門</a></li>
+<li><a href="http://yapcasia.org/2012/talk/show/c9c6fcb0-dbad-11e1-bcf1-95936aeab6a4">Lightning Talks Day 2</a></li>
+<li><a href="http://yapcasia.org/2012/talk/show/79991522-db79-11e1-be22-0d4e6aeab6a4">How Perl Changed My Life</a></li>
+<li><a href="http://yapcasia.org/2012/talk/show/736d6cfc-bbf8-11e1-88ea-b39f6aeab6a4">Closing</a></li>
+<li><a href="http://atnd.org/event/yapc2012">YAPC::Asia 2012 後夜祭</a>(アンオフィシャルです)</li>
+</ul>
+
+
+
+
+<p>昨日散々 Tim Bunce, Tim Bunce って書いてたのですが、今日は Tim のセッションの時間は別のやつ見てきました。Teng と mod_perl のやつ。
+どっちも面白かったので良かった。mod_perl は今まで大嫌いだったのですが、今回のトークを見て以来、無限の可能性を感じてしまって、ちょっと
+おかしな感じになっています。何か作ってみようかなー、みたいな。</p>
+
+
+
+
+<p>後夜祭も楽しかったです。一日目の懇親会はぼっち気味なのに、後夜祭は何故かそうならないマジック。ってか超楽しかった。
+あと、何名かの方に、「そのid 知ってる」と言っていただいたので、blog 書いたり地道に活動して良かったなー、とか思った次第。</p>
+
+
+
+
+<p>で、昨年も書いたのですが、今年も思いは変わらないのでもう一度。</p>
+
+
+
+
+<p>YAPC っていうのはハレの舞台です。超楽しい。でも、このハレの舞台の前には、穢れた日常に対して、
+どれだけきっちり向かい合ってきたかが問われてるわけです。僕の例で言えば、「クソみたいな MySQL のストアドプロシージャを
+どうにかしないとヤバいなー」とか、そういうことに、ここ1〜2年くらい向き合ってきた事が反映されているわけです。</p>
+
+
+
+
+<p>明日から、また穢れた日常が始まるわけですが、どれだけきっちり向き合えるかが次の1年を決めるわけです。明日からも頑張ろう、っと。</p>
+
+
+
+
+<h4>注</h4>
+
+
+
+
+<p>あ、一応フォローしとくと、MySQL のストアドプロシージャがまったくダメなわけではなくて、弊社での使い方が間違っているのでダメダメなだけです。
+使いようによっては、きっと役に立つのだろう、と思います(嫌いだけど)</p>
+
+
+<hr />
+
+<div class="fb-like" data-href="http://tsucchi.github.com//yapcasia/2012/09/30/yapc_day2" data-send="true" data-width="450" data-show-faces="true"></div>
+
+
+<p><a href="https://twitter.com/share" class="twitter-share-button" data-url="http://tsucchi.github.com/yapcasia/2012/09/30/yapc_day2" data-via="tsucchi" data-lang="ja">ツイート</a></p>
+
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+
+
+
+<h1>2012-09-29 <a href="/yapcasia/2012/09/29/yapc_happyou">YAPC::Asia 2012 発表資料「Perl と SQL のいろいろ」</a></h1>
+
+
+
+
+<div class="pull-right">
+
+
+
+
+  
+     
+        <a href="/tags.html#yapcasia-ref"><span class="label label-info">yapcasia <span>4</span></span></a>
+     
+        <a href="/tags.html#yapcasia2012-ref"><span class="label label-info">yapcasia2012 <span>4</span></span></a>
+     
+        <a href="/tags.html#perl-ref"><span class="label label-info">perl <span>15</span></span></a>
+     
+        <a href="/tags.html#sql-ref"><span class="label label-info">sql <span>1</span></span></a>
+    
+  
+
+
+
+</div>
+
+
+<br>
+
+
+
+
+<p>本日お越しいただいた方、有難うございました。裏番組が超強力(メインホールに宮川さん、お隣が弾さんのうえ、LTソンで gfx さんがやってるとか、まじありえないだろwってかマジでオレ涙目ですわー)でしたが、思いのほか、沢山集まっていただいて嬉しかったです。</p>
+
+
+
+
+<p>発表資料は下記に置いておきます。アニメーションちゃんと動いてないけど、ご了承ください。ちゃんとしたやつ(LibreOffice で書いてます)が欲しい方は
+私のところまでご連絡ください。(twitter なら @tsucchi ね。)</p>
+
+
+
+
+<iframe src="http://www.slideshare.net/slideshow/embed_code/14511986" width="427" height="356" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px" allowfullscreen> </iframe>
+
+
+
+
+<p> <div style="margin-bottom:5px"> <strong> <a href="http://www.slideshare.net/tsucchi/perlsql" title="PerlとSQLのいろいろ" target="_blank">PerlとSQLのいろいろ</a> </strong> from <strong><a href="http://www.slideshare.net/tsucchi" target="_blank">Takuya Tsuchida</a></strong></div></p>
+
+
+
+
+<p>あと、スライド中にも紹介した、nihen さんのトークが(はからずも)このトークの続きみたいな感じになっていて、いい感じなので一緒に見ておくと
+良いかもしれません。これ => <a href="http://yapcasia.org/2012/talk/show/3570fad2-d484-11e1-964b-37a36aeab6a4">very simple ORMapper Teng</a>。</p>
+
+
+
+
+<h2>Q.A.</h2>
+
+
+
+
+<ul>
+<li>Q1. トランザクションのところについて。例外処理とかあまり真面目にしなくてよいのが LL の良さなので、try/catch するのはあまり良くないのでは？</li>
+<li><p>A1. 確かにその通りで、今回紹介できなかったが、トランザクション管理モジュールを使うのがお勧め(DBIx::TransactionManager など)</p></li>
+<li><p>Q2. SQL インジェクションについて。プレースホルダを使うのは知っている人は知っている。知らない人に強制させる方法は何かないか？</p></li>
+<li><p>A2. DBI では難しい。ORM などを使うのがよいのではないか。</p></li>
+<li><p>Q3. SQL を (SQL::Library で)分離した際の、名前付けで注意しなければならないとのことだが、実際にどのようにつけているか？</p></li>
+<li>A3. ファイル名は SQL の FROM のテーブル名で、SQL 名は呼び出し元のメソッド名をつけています。</li>
+</ul>
+
+
+
+
+<p>毎年マサカリが飛んできて、YAPC マジ怖いですw。
+来年あたりは、「一般人だと思った？残念、逸般人でした！」って感じで、サクッとマサカリ投げ返したいですね！</p>
+
+
+
+
+<h2>補足</h2>
+
+
+
+
+<p>Data::Section::Simple (というか __DATA__ ファイルハンドルが mod_perl では使えない、とスライドにありますが、
+厳密には、mod_perl ではなく、Apache::Registry/PerlRun などの、いわゆる「速いCGI」としての mod_perl 環境の制限らしいです。
+(と、<a href="https://twitter.com/mod_perl_info/status/253419203976118273">mod_perl の神から、お告げがありました</a> )
+試したことないのですが、素の mod_perl のハンドラだと使えるらしいです。</p>
+
+
+<hr />
+
+<div class="fb-like" data-href="http://tsucchi.github.com//yapcasia/2012/09/29/yapc_happyou" data-send="true" data-width="450" data-show-faces="true"></div>
+
+
+<p><a href="https://twitter.com/share" class="twitter-share-button" data-url="http://tsucchi.github.com/yapcasia/2012/09/29/yapc_happyou" data-via="tsucchi" data-lang="ja">ツイート</a></p>
+
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+
+
+
+
+
+		</div>
+	  <footer>
+		<p>&copy; tsucchi 2012 
+		  with help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
+		  and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>
+		</p>
+	  </footer>
+	  </div>
+	  <div class="span3">
+		<div class="sidebar">
+  <div class="rss">
+	<h4>RSS</h4>
+	<a href="/feed.xml"><img src="/assets/icons/feed-icon-14x14.png" alt="RSS"></a>
+  </div>
+  <div class="profile sidebar_box">
+	<h4>プロフィール</h4>
+	<img src="/assets/icons/icon_myself.jpg" alt="アイコン画像が表示できませんでした">
+	<dl>
+	  <dt>なまえ</dt>
+	  <dd>tsucchi</dd>
+	  <dt>ないよう</dt>
+	  <dd>Perl とか DB とか雑談とか</dd>
+	  <dt>活動場所</dt>
+	  <dd>埼玉時々東京</dd>
+
+	  <dd><a href="https://twitter.com/tsucchi">@tsucchi(twitter)</a></dd>
+	  <dd><a href="http://search.cpan.org/~tsucchi/">CPAN</a></dd>
+	  <dd><a href="https://github.com/tsucchi">github</a></dd>
+	  <dd><a href="http://d.hatena.ne.jp/tsucchi1022/">はてダ</a></dd>
+	  <dd><a href="http://tsucchi.hatenablog.com/">はてブロ</a></dd>
+	  <dd><a href="http://booklog.jp/users/tsucchi">Booklog</a></dd>
+	</dl>
+  </div>
+  <div class="search sidebar_box">
+	<h4>サイト内検索(google)</h4>
+	<form class="well" action="http://www.google.com/search">
+	  <input type="hidden" name="hl" value="ja" />
+	  <input type="hidden" name="ie" value="Shift_JIS">
+	  <input type="hidden" name="oe" value="Shift_JIS">
+	  <input type="hidden" value="tsucchi.github.com" name="as_sitesearch" />
+	  <input type="text" name="q" maxlength="256" value="" class="input-medium search-query"/>
+	  <input type="submit" name="btnG" value="検索" class="btn"/>
+	</form>
+  </div>
+  <div class="articles sidebar_box">
+	<h4>Recent Posts</h4>
+	<ul class="posts">
+	  
+	  <li><span>2013-01-14</span> : <a href="/hpc/2013/01/14/supercomputer">スパコンの話。あるいは、僕がちょっとだけ触れたスーパーコンピュータの世界</a></li>
+	  
+	  <li><span>2013-01-06</span> : <a href="/cpan/2013/01/06/sql_executor">SQL::Executor 0.14 をリリースしました。もしくは ORM とか関連モジュールはこれでいいんじゃね？という話。</a></li>
+	  
+	  <li><span>2013-01-04</span> : <a href="/misc/2013/01/04/newyear">あけましておめでとうございます</a></li>
+	  
+	  <li><span>2012-12-31</span> : <a href="/misc/2012/12/31/matome">2012年の振り返り</a></li>
+	  
+	  <li><span>2012-12-23</span> : <a href="/music/2012/12/23/music">変調された音とそうでない音と</a></li>
+	  
+	  <li><span>2012-12-14</span> : <a href="/milkyholms/2012/12/14/izsm">ミルキィホームズ ライブ in 武道館の、橘田いずみさんの話</a></li>
+	  
+	  <li><span>2012-12-07</span> : <a href="/anime/2012/12/07/kurobas">脅迫に屈するのはダメだと思うんだ</a></li>
+	  
+	  <li><span>2012-11-20</span> : <a href="/misc/2012/11/20/zatsudan">近況あるいは、奇跡も、魔法も、あるんだよって話</a></li>
+	  
+	  <li><span>2012-11-17</span> : <a href="/misc/2012/11/17/zatsudan">近況あるいは、こんなの絶対おかしいよ、という話</a></li>
+	  
+	  <li><span>2012-11-09</span> : <a href="/excel/2012/11/09/excel_grayscale_print">Excel でグレースケールの印刷プレビューをする</a></li>
+	  
+	  <li><a href="/archive.html">...more</a></li>
+	</ul>
+  </div>
+  <div class="tags">
+	<h4>タグ</h4>
+	<ul class="unstyled">
+	    
+	  
+  
+     
+    	<li><a href="/tags.html#blog-ref"><span class="label label-info">blog <span>2</span></span></a></li>
+     
+    	<li><a href="/tags.html#perl-ref"><span class="label label-info">perl <span>15</span></span></a></li>
+     
+    	<li><a href="/tags.html#Windows-ref"><span class="label label-info">Windows <span>2</span></span></a></li>
+     
+    	<li><a href="/tags.html#SQL-ref"><span class="label label-info">SQL <span>1</span></span></a></li>
+     
+    	<li><a href="/tags.html#DB-ref"><span class="label label-info">DB <span>1</span></span></a></li>
+     
+    	<li><a href="/tags.html#linux-ref"><span class="label label-info">linux <span>1</span></span></a></li>
+     
+    	<li><a href="/tags.html#security-ref"><span class="label label-info">security <span>1</span></span></a></li>
+     
+    	<li><a href="/tags.html#雑談-ref"><span class="label label-info">雑談 <span>12</span></span></a></li>
+     
+    	<li><a href="/tags.html#ruby-ref"><span class="label label-info">ruby <span>1</span></span></a></li>
+     
+    	<li><a href="/tags.html#test-ref"><span class="label label-info">test <span>1</span></span></a></li>
+     
+    	<li><a href="/tags.html#RSpec-ref"><span class="label label-info">RSpec <span>1</span></span></a></li>
+     
+    	<li><a href="/tags.html#プログラミング-ref"><span class="label label-info">プログラミング <span>1</span></span></a></li>
+     
+    	<li><a href="/tags.html#db-ref"><span class="label label-info">db <span>10</span></span></a></li>
+     
+    	<li><a href="/tags.html#orm-ref"><span class="label label-info">orm <span>8</span></span></a></li>
+     
+    	<li><a href="/tags.html#kappa-ref"><span class="label label-info">kappa <span>8</span></span></a></li>
+     
+    	<li><a href="/tags.html#イベント-ref"><span class="label label-info">イベント <span>2</span></span></a></li>
+     
+    	<li><a href="/tags.html#yapcasia-ref"><span class="label label-info">yapcasia <span>4</span></span></a></li>
+     
+    	<li><a href="/tags.html#yapcasia2012-ref"><span class="label label-info">yapcasia2012 <span>4</span></span></a></li>
+     
+    	<li><a href="/tags.html#sql-ref"><span class="label label-info">sql <span>1</span></span></a></li>
+     
+    	<li><a href="/tags.html#mod_perl-ref"><span class="label label-info">mod_perl <span>1</span></span></a></li>
+     
+    	<li><a href="/tags.html#excel-ref"><span class="label label-info">excel <span>1</span></span></a></li>
+     
+    	<li><a href="/tags.html#印刷-ref"><span class="label label-info">印刷 <span>1</span></span></a></li>
+     
+    	<li><a href="/tags.html#アニメ-ref"><span class="label label-info">アニメ <span>1</span></span></a></li>
+     
+    	<li><a href="/tags.html#ミルキィホームズ-ref"><span class="label label-info">ミルキィホームズ <span>1</span></span></a></li>
+     
+    	<li><a href="/tags.html#音楽-ref"><span class="label label-info">音楽 <span>1</span></span></a></li>
+     
+    	<li><a href="/tags.html#cpan-ref"><span class="label label-info">cpan <span>1</span></span></a></li>
+     
+    	<li><a href="/tags.html#スパコン-ref"><span class="label label-info">スパコン <span>1</span></span></a></li>
+    
+  
+
+
+
+	</ul>
+  </div>
+  <div class="twitter-widget">
+	<h4>twitter</h4>
+	<a href="https://twitter.com/tsucchi" class="twitter-follow-button" data-show-count="false" data-lang="ja">@tsucchiをフォロー</a>
+	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+	<script charset="utf-8" src="http://widgets.twimg.com/j/2/widget.js"></script>
+	<script>
+	  new TWTR.Widget({
+version: 2,
+type: 'profile',
+rpp: 4,
+interval: 30000,
+width: 125,
+height: 300,
+theme: {
+shell: {
+background: '#333333',
+color: '#ffffff'
+},
+tweets: {
+background: '#000000',
+color: '#ffffff',
+links: '#4aed05'
+}
+},
+features: {
+scrollbar: false,
+loop: false,
+live: false,
+behavior: 'all'
+}
+}).render().setUser('tsucchi').start();
+
+	</script>
+  </div>
+  <div class="booklog-widget">
+	<h4>booklog</h4>
+	<script type="text/javascript" src="http://widget.booklog.jp/blogparts/js/booklog_minishelf.js?black_disp" id="booklog_minishelf"></script>
+	<script type="text/javascript" src="http://api.booklog.jp/json/tsucchi?category=0&count=15&callback=booklog_minishelf"></script>
+  </div>
+</div>
+
+	  </div>
+    </div> <!-- /container -->
+    
+  </body>
+</html>
+
