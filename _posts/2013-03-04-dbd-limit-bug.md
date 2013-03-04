@@ -12,7 +12,7 @@ title: DBD::mysql の不具合っぽい挙動を見つけたので、とりあ�
 
 本家だから、かっちょいいパーサとか組んで SQL ステートメント読んでるものとばかり思っていたのだけど、根性でパースしてる感じのソースで、「これは大変だなー」って思った。で、問題っぽいのがこれ。 dbdimp.c 602行目あたり。
 
-{% highlight C %}
+{% highlight c %}
 /*
   it would be good to be able to handle any number of cases and orders
 */
