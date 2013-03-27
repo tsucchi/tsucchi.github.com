@@ -10,6 +10,8 @@ title: シェルスクリプトとかユニケージとかフラットファイ�
 
 僕のこの blog は github pages を使っています。ですので、blog 記事書くだけで、github のアクティビティ増えて、なんか「オープンソース活動に貢献してる」風に見えてかっちょいいので、今日も記事を書いてみようと思います。トップ記事がいつまでも[アレ](http://tsucchi.github.com/milkyholmes/2013/03/24/milkyholmes-best-album)なのもどうかと思いますしね。(ミルキィホームズのベストアルバムはホントにお勧めなので、みんな買ってね！)
 
+[この記事](http://enterprisezine.jp/article/detail/4579)読んで、思ったこととかそんな感じの話です。
+
 ユニケージ開発手法、なんかよく分からないんで、よく分からないからカジュアルにこんな感じでつぶやいてみたんですが。。。
 
 <blockquote class="twitter-tweet" lang="ja"><p>うーん、コレどうなんだろ。こういうので十分な環境はあるのだろうけど、業務拡大してある一定の規模超えたら死にそう。 / “シェルスクリプトでビッグデータ処理～ユニケージ開発手法とは～（1/4）:企業のIT・経営・ビジネスをつなぐ情報…” <a href="http://t.co/RNGKVBTmqU" title="http://htn.to/Tu3sQe">htn.to/Tu3sQe</a></p>&mdash; tsucchi(@tsucchi) <a href="https://twitter.com/tsucchi/status/316755716591468544">2013年3月27日</a></blockquote>
