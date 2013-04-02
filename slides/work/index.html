@@ -1,0 +1,224 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
+    <link href="css/impress.css" rel="stylesheet" />
+</head>
+<body>
+<div id="impress" class="impress-not-supported">
+    <div class="fallback-message">
+        <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+        <p>For the best experience please use the latest <b>Chrome</b> or <b>Safari</b> browser. Firefox 10 (to be released soon) will also handle it.</p>
+    </div>
+
+<div id="title" class="step" data-y="0" data-x="0">
+<h1>私の作ったもの</h1>
+
+<p><address>Takuya Tsuchida (tsucchi)</address></p>
+
+</div>
+<div class="step" data-y="0" data-x="1200">
+<h2>作ったものについて</h2>
+
+<p>基本的に、バックエンドの処理で使うものばかりなので、紹介スライドを書きました。すべて Perl のモジュールです。 <br />
+<br></p>
+
+<ul>
+<li>Test::Mock::ExternalCommand</li>
+<li>SQL::Executor</li>
+<li>Kappa(ORM)</li>
+</ul>
+
+</div>
+<div class="step" data-y="0" data-x="2400">
+<h2>メンテナンスしているもの</h2>
+
+<p>私が作ったわけではないが、引き継いでメンテナンスしているもの。Pure Perl の MySQL データベースドライバ関係です。
+<br>
+<br></p>
+
+<ul>
+<li>Net::MySQL</li>
+<li>DBD::mysqlPP</li>
+</ul>
+
+</div>
+<div class="step" data-y="0" data-x="3600">
+<h2>Test::Mock::ExternalCommand</h2>
+
+<p>コマンドの出力や終了ステータスを置き換えるモジュール。Nagios のプラグインを書く際のテストなどに使っています。</p>
+
+<pre><code>use Test::Mock::ExternalCommand;
+my $m = Test::Mock::ExternalCommand-&gt;new();
+$m-&gt;set_command( 'ls', "file1\nfile2\n", 0);
+# use 'ls' in your test.
+</code></pre>
+
+</div>
+<div class="step" data-y="0" data-x="4800">
+<h2>SQL::Executor(1 of 2)</h2>
+
+<p>基本的な CRUD 操作と難しい SQL を投げやすくするための名前つきプレースホルダをサポートしています</p>
+
+<pre><code>my $ex = SQL::Executor-&gt;new($dbh);
+my @rows = $ex-&gt;select('employee', { id =&gt; 123 });
+$ex-&gt;insert('employee', {
+    id   =&gt; 124,
+    name =&gt; 'Smith'
+});
+$ex-&gt;delete('employee', { id =&gt; 124 });
+</code></pre>
+
+</div>
+<div class="step" data-y="800" data-x="0">
+<h2>SQL::Executor(2 of 2)</h2>
+
+<p>名前つきプレースホルダの例</p>
+
+<pre><code>$sql = 'SELECT id, name 
+          FROM employee 
+          WHERE value2 = :arg1';
+@rows= $ex-&gt;select_named($sql, {
+    arg1 =&gt; 'aaa'
+});
+</code></pre>
+
+</div>
+<div class="step" data-y="800" data-x="1200">
+<h2>Kappa</h2>
+
+<p>私が作成した ORM。SQL::Executor を基本に、Row オブジェクトを返したり、テーブル毎に機能拡張できるようにしています。</p>
+
+<pre><code>use Kappa;
+my $db = Kappa-&gt;new($dbh);
+my $row_obj = $db-&gt;select('SOME_TABLE', { id =&gt; 123 });
+print $row_obj-&gt;id, $row_obj-&gt;value;
+</code></pre>
+
+</div>
+<div class="step" data-y="800" data-x="2400">
+<h2>開発の背景</h2>
+
+<ul>
+<li>テーブルが多く、スキーマ定義をすべて書けなかった</li>
+<li>LEFT JOIN を多用する長い SQL が多い</li>
+<li>処理自体は SQL を投げて終わり、の簡単なものがほとんど</li>
+</ul>
+
+</div>
+<div class="step" data-y="800" data-x="3600">
+<h2>Kappa の特長と設計思想</h2>
+
+<ul>
+<li>簡単な CRUD 操作は簡単に実行したい</li>
+<li>複雑な SQL も投げられるようにしたい
+<ul>
+<li>複雑な SQL を投げても Row オブジェクトが欲しい</li>
+</ul></li>
+<li>テーブル単位にモデルクラスを拡張したい 
+<ul>
+<li>モデルクラスやスキーマクラスが無くても動くようにしたい</li>
+</ul></li>
+</ul>
+
+</div>
+<div class="step" data-y="800" data-x="4800">
+<h2>機能</h2>
+
+<p>ORM としての基本機能以外で、特徴的なものとして下記がある
+<br></p>
+
+<ul>
+<li>ガードつきの Row オブジェクトの有効/無効切り替え</li>
+<li>テーブル毎の拡張と拡張時の省略記法</li>
+<li>SQL のデータセクションへの配置</li>
+</ul>
+
+</div>
+<div class="step" data-y="1600" data-x="0">
+<h2>ガードつきの Row オブジェクトの有効/無効切り替え</h2>
+
+<p>スコープ単位で Row オブジェクトを生成するかしないかを切り替えることができる。</p>
+
+<pre><code>my $db = Kappa-&gt;new($dbh);
+{ #スコープ定義
+    my $guard = $db-&gt;row_object_enable(0);
+    my $row = $db-&gt;select('employee', { id =&gt; 1 });
+    # ここでは Row オブジェクトが無効
+    # =&gt; { id =&gt; 1, name =&gt; '山田　太郎' }
+} 
+# スコープを抜けると戻る(Row オブジェクトが返る)
+</code></pre>
+
+</div>
+<div class="step" data-y="1600" data-x="1200">
+<h2>テーブル毎の拡張と拡張時の省略記法</h2>
+
+<p>テーブル毎にクラスを作って、メソッドを追加できます。クラス内では、テーブル名を省略できます。</p>
+
+<pre><code>package MyProj::DB::Table::employee;
+use parent qw(Kappa);
+sub sections_name_from_id {
+    my($self, $id) = @_;
+    my $row = $self-&gt;select_row({ id =&gt; $id });
+    return $row-&gt;section_name;
+}
+1;
+</code></pre>
+
+</div>
+<div class="step" data-y="1600" data-x="2400">
+<h2>SQL のデータセクションへの配置(1 of 2)</h2>
+
+<p>SQL をデータセクション(ファイルの末尾)に置いて、それを呼び出すことができます。</p>
+
+<pre><code>package MyProj::DB::Table::employee;
+use parent qw(Kappa);
+1;
+__DATA__
+@@ section_name_from_id
+SELECT * FROM employee WHERE id = :id; 
+</code></pre>
+
+</div>
+<div class="step" data-y="1600" data-x="3600">
+<h2>SQL のデータセクションへの配置(2 of 2)</h2>
+
+<p>呼び出し側では、下記のようにします。また、省略時はメソッドと同名の SQL を呼び出します。</p>
+
+<pre><code>$self-&gt;sql('section_name_from_id')
+</code></pre>
+
+</div>
+<div class="step" data-y="1600" data-x="4800">
+<h2>省略記法を用意した理由</h2>
+
+<p>「省略できるように」書いていくと、ある程度綺麗なクラス分割ができるようにしたかったため。テーブル名が入らないようにメソッドを書いていくと、自然にクラス毎に責任分割されるようになる。</p>
+
+</div>
+<div class="step" data-y="2400" data-x="0">
+<h1>以上です</h1>
+
+</div>
+
+
+    <div id="overview" class="step" data-x="3000" data-y="1500" data-scale="10">
+    </div>
+
+</div>
+
+<div class="hint">
+    <p>Use a spacebar or arrow keys to navigate</p>
+</div>
+<script>
+if ("ontouchstart" in document.documentElement) { 
+    document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";
+}
+</script>
+<script src="js/impress.js"></script>
+
+</body>
+</html>
+
