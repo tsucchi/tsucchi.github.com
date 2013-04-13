@@ -21,9 +21,9 @@ title: 最近の記事
 
 <hr>
 
-<div class="fb-like" data-href="http://tsucchi.github.com/{{ post.url }}" data-send="true" data-width="450" data-show-faces="true"></div>
+<div class="fb-like" data-href="http://tsucchi.github.io/{{ post.url }}" data-send="true" data-width="450" data-show-faces="true"></div>
 
-<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://tsucchi.github.com{{ post.url }}" data-via="tsucchi" data-lang="ja">ツイート</a>
+<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://tsucchi.github.io{{ post.url }}" data-via="tsucchi" data-lang="ja">ツイート</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 
 {% endfor %}
