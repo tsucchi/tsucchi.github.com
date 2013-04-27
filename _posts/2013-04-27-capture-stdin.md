@@ -9,6 +9,7 @@ title: ひさびさに STDIN キャプチャしようとしたら、ちょっと
 多分、[コレ](http://d.hatena.ne.jp/tsucchi1022/20090604/1244126883)とかの続きっぽい話。
 
 [PerlIO::scalar でopenできるのはバイト列だけ！ - Islands in the byte stream](http://d.hatena.ne.jp/gfx/20130426/1366947365)
+
 ```
 Perl 5.18 からは、PerlIO::scalarでopenできるのはバイト列だけになるようです。
 ```
@@ -78,7 +79,7 @@ Wide character in print at /home/tsucchi/perl5/perlbrew/perls/perl-5.16/lib/5.16
 冷静に考えれば、STDIN 経由で入ってくる入力は、(文字列じゃないから)、処理する前に
 decode かけるべきものなので、こんな感じで書いた方が本物っぽいかな。
 
-```
+```perl
 #!/usr/bin/perl
 use strict;
 use warnings;
