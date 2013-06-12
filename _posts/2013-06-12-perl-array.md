@@ -61,3 +61,12 @@ my(@aaa) = '';
 ```
 
 むー、そういうことか。やっぱ罠だなー。。。
+
+### 追記2
+
+- [toku_bassさん](https://twitter.com/toku_bass/status/344835407931920384)より、
+
+<blockquote class="twitter-tweet" lang="ja"><p>@<a href="https://twitter.com/tsucchi">tsucchi</a> これってreturn undef;せずにreturnだけ書けってのと同じやつですね。</p>&mdash; toku_bassさん (@toku_bass) <a href="https://twitter.com/toku_bass/status/344835407931920384">2013年6月12日</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+ですね。戻り値の時は意識してたけど、代入の時は考慮してなかった。。。
