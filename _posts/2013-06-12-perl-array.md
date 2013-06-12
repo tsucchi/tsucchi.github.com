@@ -25,6 +25,7 @@ say join ',', @aaa;
 これ、出力どうなると思います？ってか、そもそもコンパイル通るとおもいます？
 
 結果
+
 ```
 tsucchi@immature[522]$ perl ../a.pl
 ,something1,something2
