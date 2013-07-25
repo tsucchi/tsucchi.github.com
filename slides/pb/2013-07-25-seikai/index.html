@@ -1,0 +1,523 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>正解はひとつ！じゃない！！</title>
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
+    <link href="css/impress.css"  rel="stylesheet" />
+    <link href="css/pygments.css" rel="stylesheet" />
+</head>
+<body>
+<div id="impress" class="impress-not-supported">
+    <div class="fallback-message">
+        <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+        <p>For the best experience please use the latest <b>Chrome</b> or <b>Safari</b> browser. Firefox 10 (to be released soon) will also handle it.</p>
+    </div>
+
+<div class="step" id="title" data-x="0" data-y="0">
+
+
+<h1>正解はひとつ！じゃない！！</h1>
+
+<p></p>
+<address><a href="http://twitter.com/tsucchi">@tsucchi</a></address>
+
+
+</div>
+<div class="step" data-x="1200" data-y="0">
+
+
+<h2>自己紹介</h2>
+
+<ul>
+<li>土田　拓也(つちだ　たくや)</li>
+<li>
+<a href="http://twitter.com/tsucchi">@tsucchi</a> とか <a href="http://tsucchi.github.io/">blog(http://tsucchi.github.io/)</a>とか</li>
+<li>2013年6月より、<a href="http://www.shanon.co.jp/">株式会社シャノン</a> という所で、Perl とか SQL とか書いてます
+
+<ul>
+<li><a href="http://shanon-tech.blogspot.jp/">技術ブログやってます！</a></li>
+</ul>
+</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="2400" data-y="0">
+
+
+<h2>で、今回のテーマについて</h2>
+
+<ul>
+<li>「Perl の文化」ですよね！</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="3600" data-y="0">
+
+<h2>Perl の文化と言ったら...</h2>
+
+</div>
+<div class="step" data-x="4800" data-y="0">
+
+<h2>これしかないだろう！</h2>
+
+</div>
+<div class="step" data-x="0" data-y="800">
+
+<h2>There's More Than One Way To Do It(TMTOWTDI)</h2>
+
+</div>
+<div class="step" data-x="1200" data-y="800">
+
+<h2>日本語で言うと...</h2>
+
+</div>
+<div class="step" data-x="2400" data-y="800">
+
+
+<h2>正解はひとつ！じゃない！！</h2>
+
+<p><img src="./seikai.jpg"></p>
+
+
+</div>
+<div class="step" data-x="3600" data-y="800">
+
+<h2>すいません、うそです</h2>
+
+</div>
+<div class="step" data-x="4800" data-y="800">
+
+
+<h2>正解はひとつ！じゃない！！</h2>
+
+<ul>
+<li>日本語では<code>「やり方はひとつじゃない」</code>とか<code>「やり方はいろいろある」</code>とか訳される事が多いです</li>
+<li>ミルキィホームズめっちゃ好きなんです！</li>
+<li>なので、個人的に<code>「正解はひとつ！じゃない！！」</code>を訳語として推したい！</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="0" data-y="1600">
+
+
+<h2>で、それってどういう事？</h2>
+
+<ul>
+<li>同じ事を実現するのに、やり方が一つじゃ無くてもいいよね！って事。</li>
+<li>簡単な例だと if と unless とか</li>
+</ul>
+<div class="highlight"><pre><span class="k">if</span> <span class="p">(</span> <span class="o">!</span><span class="nb">defined</span> <span class="nv">$toys</span> <span class="p">)</span> <span class="p">{</span>
+    <span class="k">print</span> <span class="s">"トイズが無いのでダメダメですー"</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">unless</span> <span class="p">(</span> <span class="nb">defined</span> <span class="nv">$toys</span> <span class="p">)</span> <span class="p">{</span>
+    <span class="k">print</span> <span class="s">"トイズが無いのでダメダメですー"</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+<ul>
+<li>どちらを使っても意味、というか動作は一緒</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="1200" data-y="1600">
+
+
+<h2>正解はひとつ！じゃない！！</h2>
+
+<ul>
+<li>Perl は構文から使い方に至るまで、こういうのがとても多い</li>
+<li>構文
+
+<ul>
+<li>if/unless</li>
+<li>for/foreach</li>
+<li>say/print/printf</li>
+<li>or と ||</li>
+<li>カンマ(,)とファットカンマ(=&gt;)</li>
+</ul>
+</li>
+<li>使い方
+
+<ul>
+<li>モジュール使う/使わない</li>
+<li>オブジェクトどうする？</li>
+<li>DB アクセスどうする？</li>
+<li>Web アプリ作るのに、何使う？</li>
+</ul>
+</li>
+<li>etc.</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="2400" data-y="1600">
+
+
+<h2>構文について、もう少し</h2>
+
+<ul>
+<li>色んな書き方があるのは多分悪い事じゃない。
+
+<ul>
+<li>書き方が一つしかないと、それが気に入らない時、窮屈に感じますよね</li>
+<li>さっきの if と unless はどっちでもいい</li>
+</ul>
+</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="3600" data-y="1600">
+
+
+<h2>構文について、もう少し</h2>
+
+<ul>
+<li>でも、そうじゃないものもある</li>
+</ul>
+<div class="highlight"><pre><span class="c1"># 悪い例1) これは気持ち悪い。for を使うべき</span>
+<span class="k">foreach</span> <span class="p">(</span> <span class="k">my</span> <span class="nv">$i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="nv">$i</span> <span class="o">&lt;</span> <span class="nv">@detective_names</span><span class="p">;</span> <span class="nv">$i</span><span class="o">++</span> <span class="p">)</span> <span class="p">{</span>
+    <span class="k">print</span> <span class="s">"探偵さんの名前は$detective_names[$i]です¥n"</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1"># 悪い例2) unless に複数の条件がくると読みにくい。</span>
+<span class="c1"># if( !$is_police &amp;&amp; !$has_toys ) (警察じゃなくてトイズが無い)の方が良い</span>
+<span class="k">unless</span> <span class="p">(</span> <span class="nv">$is_police</span> <span class="o">||</span> <span class="nv">$has_toys</span> <span class="p">)</span> <span class="p">{</span>
+    <span class="c1"># 警察かトイズを持ってるでは無い？？？</span>
+    <span class="k">print</span> <span class="s">"ダメダメ探偵かもしれません¥n"</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+
+</div>
+<div class="step" data-x="4800" data-y="1600">
+
+
+<h2>「でも、ビギナーだし、そんなの分かんないよ！」</h2>
+
+<p><img src="./beginner.jpg" width="60%" height="60%"></p>
+
+<p>※ ビギナー(画像はイメージです)</p>
+
+
+</div>
+<div class="step" data-x="0" data-y="2400">
+
+
+<h2>「でも、ビギナーだし、そんなの分かんないよ！」</h2>
+
+<ul>
+<li>おっしゃる通りです</li>
+<li>分からないのはしょうがない。でも勉強しましょう！</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="1200" data-y="2400">
+
+
+<h2>「でも、ビギナーだし、そんなの分かんないよ！」</h2>
+
+<ul>
+<li><a href="http://blog.livedoor.jp/dankogai/archives/51222971.html">perl - 現代的な Perl を再習得する方法は(http://blog.livedoor.jp/dankogai/archives/51222971.html)</a></li>
+</ul>
+<pre><code>一番大事なのは、役立つPerlプログラムを書くのに、Perlの全てを知っている必要は全くないということです。
+小さなところから先に習ってよいのです。
+Perlで赤ちゃん言葉を話しても、私たちは笑ったりしないと約束します。
+</code></pre>
+
+<ul>
+<li>慣れないうちは、「赤ちゃん言葉」でもいいけど、いつまでも「赤ちゃん言葉」なのは恥ずかしいですよね！</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="2400" data-y="2400">
+
+
+<h2>「でも、どうやって勉強したら良いか、分からないよ！」</h2>
+
+<p><img src="./study.jpg"></p>
+
+<p>※画像はイメージです</p>
+
+
+</div>
+<div class="step" data-x="3600" data-y="2400">
+
+
+<h2>「でも、どうやって勉強したら良いか、分からないよ！」</h2>
+
+<ul>
+<li>おっしゃる通りです。僕も結構苦労したし、今も苦労してます！</li>
+<li>本を読むのが一番効果的だと思う</li>
+<li>書き方なら「Perl ベストプラクティス」とか
+
+<ul>
+<li>こういう分厚い本だと、一人で読むのはちょっと辛いかも</li>
+<li>読書会とかいいかもしれない</li>
+</ul>
+</li>
+</ul>
+<p><img src="./pbp.jpg" width="20%" height="20%"></p>
+
+
+</div>
+<div class="step" data-x="4800" data-y="2400">
+
+
+<h2>「でも、どうやって勉強したら良いか、分からないよ！」</h2>
+
+<ul>
+<li>Perl Beginners のビギナーセッションで聞いてみる！</li>
+<li>blog 書いてみると、コメントもらえるかも</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="0" data-y="3200">
+
+
+<h2>使い方について、もう少し(1)</h2>
+
+<ul>
+<li>オブジェクトどうする？
+
+<ul>
+<li>組み込みの方法 (bless)</li>
+<li>Class::Accessor::*</li>
+<li>Moose/Mouse/Moo みたいな高度なオブジェクトシステム使う</li>
+</ul>
+</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="1200" data-y="3200">
+
+
+<h2>使い方について、もう少し(2)</h2>
+
+<ul>
+<li>DB アクセスどうする？
+
+<ul>
+<li>DBI でがんばる</li>
+<li>O/R mapper(ORM)使う
+
+<ul>
+<li>DBIx::Class(DBIC)みたいな大規模なやつ使う</li>
+<li>Teng みたいな軽いの使う</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="2400" data-y="3200">
+
+
+<h2>使い方について、もう少し(3)</h2>
+
+<ul>
+<li>Web アプリ
+
+<ul>
+<li>CGI?
+
+<ul>
+<li>さすがにもう無いかな？</li>
+</ul>
+</li>
+<li>Web Application Framework 使う
+
+<ul>
+<li>Catalyst みたいなフルスタック使う</li>
+<li>Mojolicious とか Amon2 みたいな軽量なやつ使う</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="3600" data-y="3200">
+
+
+<h2>使い方について、もう少し(4)</h2>
+
+<ul>
+<li>こういうのは、流行り廃りがあるので、本当に難しい
+
+<ul>
+<li>3年くらい前に主流だったのが、あっという間にオワコンになってしまったり...</li>
+</ul>
+</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="4800" data-y="3200">
+
+
+<h2>「書き方覚えるのに精一杯で、流行りとか無理ですー」</h2>
+
+<p><img src="./muridesu.jpg"></p>
+
+<p>※無理ですー(画像はイメージです)</p>
+
+
+</div>
+<div class="step" data-x="0" data-y="4000">
+
+
+<h2>「書き方覚えるのに精一杯で、流行りとか無理ですー」</h2>
+
+<ul>
+<li>ですねー。でも、流行りがあるのは仕方ないです
+
+<ul>
+<li>アクティブに開発されている証拠ですからね！</li>
+<li>Perl に限らず、どの言語使っていてもある</li>
+</ul>
+</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="1200" data-y="4000">
+
+
+<h2>「書き方覚えるのに精一杯で、流行りとか無理ですー」</h2>
+
+<ul>
+<li>モジュールの選び方
+
+<ul>
+<li><a href="http://blog.64p.org/entry/20080520/1211292598">CPANソムリエになる方法 - http://blog.64p.org/entry/20080520/1211292598</a></li>
+</ul>
+</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="2400" data-y="4000">
+
+
+<h2>「書き方覚えるのに精一杯で、流行りとか無理ですー」</h2>
+
+<ul>
+<li>大物(フルスタック)と小物(軽量級)
+
+<ul>
+<li>フルスタックの方が、できる事は多いし、大抵良くできてるけど、覚えるのが大変</li>
+<li>小物は制限があったりするけど、学習が楽で、何かあったときに追いかけるのも楽</li>
+<li>日本の Perl 使いは、小物を好む傾向が強い気がします</li>
+</ul>
+</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="3600" data-y="4000">
+
+
+<h2>「書き方覚えるのに精一杯で、流行りとか無理ですー」</h2>
+
+<ul>
+<li>雑誌読んでみるとか</li>
+<li>blog 書いてみるとか</li>
+<li>各種チャットで聞いてみる、とか？
+
+<ul>
+<li><a href="http://lingr.com/room/perl_jp/">Perl の話題を日本語で - http://lingr.com/room/perl_jp/</a></li>
+<li><a href="http://yancha.topolog.info/">Perl 入学式 - http://yancha.topolog.info/</a></li>
+<li><a href="http://yancha.hachiojipm.org:3000/">Hachioji.pm - http://yancha.hachiojipm.org:3000/</a></li>
+</ul>
+</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="4800" data-y="4000">
+
+
+<h2>まとめ</h2>
+
+<ul>
+<li>TMTOWTDI = 正解はひとつ！じゃない！！
+
+<ul>
+<li>でも、いいやり方、悪いやり方はあるから、ちゃんと勉強しよう！</li>
+<li>分からないことは、聞いてみたり、blog 書いてみるといいと思う！</li>
+</ul>
+</li>
+</ul>
+<p><img src="./mondaikaiketsu.jpg" width="50%" height="50%"></p>
+
+<p>※ 問☆題☆解☆決☆(画像はイメージです)</p>
+
+
+</div>
+<div class="step" data-x="0" data-y="4800">
+
+<h2>おしまい</h2>
+
+</div>
+<div class="step" data-x="1200" data-y="4800">
+
+<h2>の、前に...</h2>
+
+</div>
+<div class="step" data-x="2400" data-y="4800">
+
+<h2>One More Thing</h2>
+
+</div>
+<div class="step" data-x="3600" data-y="4800">
+
+
+<h2>ふたりはミルキィホームズ 絶賛放送中！</h2>
+
+<ul>
+<li><a href="http://milky-holmes-anime.com/futari/onair/">http://milky-holmes-anime.com/futari/onair/</a></li>
+<li>TOKYO MX 毎週土曜日　22:00～</li>
+<li>BS日テレ  毎週日曜日　26:00～</li>
+</ul>
+<p><img src="./futariha_milky.jpg" width="40%" height="40%"></p>
+
+
+</div>
+<div class="step" data-x="4800" data-y="4800">
+
+<h1>今度こそ おしまい</h1>
+
+</div>
+
+
+    <div id="overview" class="step" data-x="3000" data-y="1500" data-scale="10">
+    </div>
+
+</div>
+
+<div class="hint">
+    <p>Use a spacebar or arrow keys to navigate</p>
+</div>
+<script>
+if ("ontouchstart" in document.documentElement) { 
+    document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";
+}
+</script>
+<script src="js/impress.js"></script>
+</body>
+</html>
+
