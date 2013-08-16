@@ -39,7 +39,7 @@ SQL::Maker   : SELECT * FROM hoge WHERE ( 0=1 )
 
 ちょい前の Rails の ActiveRecord でこんなクエリ見たなぁ、とか思いました。
 
-ちなみに、名状しがたいくらい古いバージョンの SQL::Abstract だと
+ちなみに、名状しがたい古いバージョンの SQL::Abstract だと
 
 ```
 SQL::Abstract: SELECT * FROM hoge WHERE ( )
