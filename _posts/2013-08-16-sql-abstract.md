@@ -6,7 +6,7 @@ title: SQL::Abstract とか SQL::Maker で空の配列リファレンスを渡�
 ---
 {% include JB/setup %}
 
-SQL::Maker や SQL::Abstract に配列リファレンスを渡すと、IN検索相当(orでの結合)になります。
+SQL::Maker や SQL::Abstract に配列リファレンスを渡すと、IN検索相当(orでの検索)になります。
 
 んで、空の配列リファレンスを渡すと、どうなるかというと...
 
@@ -27,6 +27,7 @@ say "SQL::Abstract: $ab_sql";
 say "SQL::Maker   : $mk_sql";
 
 ```
+
 
 こんな感じです。
 
