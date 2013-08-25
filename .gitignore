@@ -3,3 +3,4 @@ _theme_packages/*
 .rbenv-version
 .rvmrc
 *~
+.DS_Store
