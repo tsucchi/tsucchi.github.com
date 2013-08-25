@@ -1,0 +1,232 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>自己紹介とか</title>
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
+    <link href="css/impress.css"  rel="stylesheet" />
+    <link href="css/pygments.css" rel="stylesheet" />
+</head>
+<body>
+<div id="impress" class="impress-not-supported">
+    <div class="fallback-message">
+        <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+        <p>For the best experience please use the latest <b>Chrome</b> or <b>Safari</b> browser. Firefox 10 (to be released soon) will also handle it.</p>
+    </div>
+
+<div class="step" id="title" data-x="0" data-y="0">
+
+
+<h1>自己紹介とか</h1>
+
+<p></p>
+<address><a href="http://twitter.com/tsucchi">@tsucchi</a></address>
+はちぴー初参加です。よろしくです
+
+</div>
+<div class="step" data-x="1200" data-y="0">
+
+
+<h2>自己紹介</h2>
+
+<ul>
+<li>土田　拓也(つちだ　たくや)</li>
+<li>
+<a href="http://twitter.com/tsucchi">@tsucchi</a> とか <a href="http://tsucchi.github.io/">blog(http://tsucchi.github.io/)</a>とか</li>
+<li>2013年6月より、<a href="http://www.shanon.co.jp/">株式会社シャノン</a> という所で、Perl とか SQL とか書いてます</li>
+<li>
+<img src="./icon.jpeg"> こんなかんじのアイコンです
+
+<ul>
+<li>ちなみにこれ、恵比寿でピアノ弾いてるとこです</li>
+<li>近影っぽく見えるけど、実は5年くらい前の写真...</li>
+</ul>
+</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="2400" data-y="0">
+
+
+<h2>好きなもの</h2>
+
+<ul>
+<li>
+<code>Perl</code> とか<code>ミルキィホームズ</code>とか</li>
+<li>DB はお仕事で一生懸命使ってるけど、あんま好きじゃないです</li>
+<li>ORM 作ったり、使ったり、いじったりするのは好きかも</li>
+</ul>
+<p><img src="./futariha_milky.jpg" width="30%" height="30%"></p>
+
+
+</div>
+<div class="step" data-x="3600" data-y="0">
+
+
+<h2>で、今回のテーマについて</h2>
+
+<ul>
+<li>コールバックですよね！</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="4800" data-y="0">
+
+<h2>JS ほとんど書かないから、使った事無い！以上！</h2>
+
+</div>
+<div class="step" data-x="0" data-y="800">
+
+
+<h2>いや、あった</h2>
+
+<ul>
+<li>twitter 上で、ミルキィホームズに関連したつぶやきを、perlism みたいに集めるやつ作ろうとしてた</li>
+<li>AnyEvent::Twitter::Stream 使ってました。アレ、コールバックですよね！</li>
+<li>tweet の limit をすぐ超えちゃうし、動かしてみたらコレじゃない感出てきたので、今は止めてます...</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="1200" data-y="800">
+
+<h2>僕が本当に欲しかったもの。それは...</h2>
+
+</div>
+<div class="step" data-x="2400" data-y="800">
+
+<h2>twitter を検索したい！</h2>
+
+</div>
+<div class="step" data-x="3600" data-y="800">
+
+<h2>検索画面あるじゃん？</h2>
+
+</div>
+<div class="step" data-x="4800" data-y="800">
+
+<h2>通常の検索だとダメなんです！</h2>
+
+</div>
+<div class="step" data-x="0" data-y="1600">
+
+
+<h2>通常の検索だとダメな点</h2>
+
+<ul>
+<li>#milkyholmes(ミルキィホームズのハッシュタグ)で検索するとすぐ分かるのですが...
+
+<ul>
+<li>
+<code>アフィリエイトつきリンク</code>とか...</li>
+<li>
+<code>定期ポスト</code>とか...
+
+<ul>
+<li>「ミルキィとか好きです！フォローよろ」って言うなら、アニメの感想とか tweet してよ...</li>
+<li>定期投げてる人に限って、そういうの無いんですよ...</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>そういうのウザいので、見たく無い！<br>
+</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="1200" data-y="1600">
+
+
+<h2>解決策1) vs アフィリエイト</h2>
+
+<ul>
+<li>それっぽいリンクを含む tweet を避ければ良い</li>
+</ul>
+<div class="highlight"><pre><span class="p">(</span>
+  <span class="s">'amazon.co.jp'</span><span class="p">,</span>
+  <span class="s">'amzn.to'</span><span class="p">,</span>
+  <span class="s">'books.rakuten.co.jp'</span><span class="p">,</span>
+  <span class="o">...</span>
+<span class="p">)</span>
+</pre></div>
+
+
+</div>
+<div class="step" data-x="2400" data-y="1600">
+
+
+<h2>解決策2) vs 定期ポスト</h2>
+
+<ul>
+<li>それっぽいクライアントを避ければ良い
+
+<ul>
+<li>最近 Web 画面だとクライアント見えなくなってるけど、API なら見える</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><pre><span class="p">(</span>
+  <span class="s">'twittbot.net'</span><span class="p">,</span>
+  <span class="s">'twiroboJP'</span><span class="p">,</span>
+  <span class="s">'makebot.sh'</span><span class="p">,</span>
+  <span class="o">...</span>
+<span class="p">)</span>
+</pre></div>
+
+
+</div>
+<div class="step" data-x="3600" data-y="1600">
+
+<h2>で、作ってみた...</h2>
+
+</div>
+<div class="step" data-x="4800" data-y="1600">
+
+<h2>と言いたいところなのですが...</h2>
+
+</div>
+<div class="step" data-x="0" data-y="2400">
+
+
+<h2>すいません、最近「艦これ」にハマってたので、作ってません！</h2>
+
+<p><img src="kankore.png" width="60%" height="60%"></p>
+
+<ul>
+<li>ちなみに秘書艦は<code>文月</code>、お気に入りは<code>那珂</code>ちゃんです！</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="1200" data-y="2400">
+
+<h2>まあそのうち作ると思います</h2>
+
+</div>
+<div class="step" data-x="2400" data-y="2400">
+
+<h1>おしまい</h1>
+
+</div>
+
+
+    <div id="overview" class="step" data-x="3000" data-y="1500" data-scale="10">
+    </div>
+
+</div>
+
+<div class="hint">
+    <p>Use a spacebar or arrow keys to navigate</p>
+</div>
+<script>
+if ("ontouchstart" in document.documentElement) { 
+    document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";
+}
+</script>
+<script src="js/impress.js"></script>
+</body>
+</html>
+
