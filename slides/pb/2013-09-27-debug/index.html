@@ -1,0 +1,297 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Data::Dumper で print デバッグ</title>
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
+    <link href="css/impress.css"  rel="stylesheet" />
+    <link href="css/pygments.css" rel="stylesheet" />
+</head>
+<body>
+<div id="impress" class="impress-not-supported">
+    <div class="fallback-message">
+        <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+        <p>For the best experience please use the latest <b>Chrome</b> or <b>Safari</b> browser. Firefox 10 (to be released soon) will also handle it.</p>
+    </div>
+
+<div class="step" id="title" data-x="0" data-y="0">
+
+
+<h1>Data::Dumper で print デバッグ</h1>
+
+<p></p>
+<address><a href="http://twitter.com/tsucchi">@tsucchi</a></address>
+
+
+</div>
+<div class="step" data-x="1200" data-y="0">
+
+
+<h2>自己紹介</h2>
+
+<ul>
+<li>土田　拓也(つちだ　たくや)</li>
+<li>
+<a href="http://twitter.com/tsucchi">@tsucchi</a> とか <a href="http://tsucchi.github.io/">blog(http://tsucchi.github.io/)</a>とか</li>
+<li>
+<a href="http://www.shanon.co.jp/">株式会社シャノン</a> という所で、Perl とか SQL とか書いてます
+
+<ul>
+<li>最近は SQL あんま書いてなくて、Perl ばっかりかも</li>
+<li>今日はミルキィホームズネタはありません</li>
+</ul>
+</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="2400" data-y="0">
+
+
+<h2>まずはおわび</h2>
+
+<ul>
+<li>体系立てて、まとめていい感じにしたかったのですが、無理でした。ごめんなさい</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="3600" data-y="0">
+
+
+<h2>で、今回のテーマについて</h2>
+
+<ul>
+<li>バグですよね</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="4800" data-y="0">
+
+
+<h2>バグ...つらいですよね</h2>
+
+<ul>
+<li>何が辛いって、やっぱり再現させたり原因調査したりとか、そのへん</li>
+<li>1日以上頑張って調査して...原因分かったら修正はたった数行とか...</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="0" data-y="800">
+
+
+<h2>分かってしまえば簡単な事も、分かるまでは辛い</h2>
+
+<ul>
+<li>バグに限らない話かも、ですが</li>
+<li>基本的には、頑張ってデバッグするしかない</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="1200" data-y="800">
+
+<h2>そんなバグに悩むプログラマの友...それが...</h2>
+
+</div>
+<div class="step" data-x="2400" data-y="800">
+
+<h2>Data::Dumper</h2>
+
+</div>
+<div class="step" data-x="3600" data-y="800">
+
+
+<h2>基本の使い方</h2>
+
+<div class="highlight"><pre><span class="k">use</span> <span class="nn">Data::</span><span class="n">Dumper</span><span class="p">;</span>
+<span class="o">...</span>
+<span class="nb">warn</span> <span class="n">Dumper</span><span class="p">(</span><span class="nv">$nanka_fukuzatsuna_data</span><span class="p">);</span>
+</pre></div>
+
+<pre><code>VAR1 = {
+          'key2' =&gt; [
+                      'value1',
+                      'value2'
+                    ],
+          'key1' =&gt; 'some_value'
+        };
+</code></pre>
+
+
+</div>
+<div class="step" data-x="4800" data-y="800">
+
+
+<h2>デバッグ用途だとこんな感じ</h2>
+
+<div class="highlight"><pre><span class="k">use</span> <span class="nn">Data::</span><span class="n">Dumper</span><span class="p">;</span> <span class="nb">warn</span> <span class="n">Dumper</span><span class="p">(</span><span class="nv">$nanka_fukuzatsuna_data</span><span class="p">);</span>
+</pre></div>
+
+<ul>
+<li>めんどくさいので1行に押し込んで書いたりします</li>
+<li>エディタのマクロなどに登録している人も多いですね</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="0" data-y="1600">
+
+
+<h2>長いメソッドのデバッグ</h2>
+
+<div class="highlight"><pre><span class="k">sub </span><span class="nf">nagai_method</span> <span class="p">{</span>
+<span class="o">...</span>
+   <span class="k">use</span> <span class="nn">Data::</span><span class="n">Dumper</span><span class="p">;</span> <span class="nb">warn</span> <span class="n">Dumper</span><span class="p">(</span><span class="nv">$nanka_fukuzatsuna_data</span><span class="p">);</span>
+<span class="o">...</span>
+   <span class="k">use</span> <span class="nn">Data::</span><span class="n">Dumper</span><span class="p">;</span> <span class="nb">warn</span> <span class="n">Dumper</span><span class="p">(</span><span class="nv">$nanka_fukuzatsuna_data</span><span class="p">);</span>
+<span class="o">...</span>
+<span class="p">}</span>
+</pre></div>
+
+<ul>
+<li>...わりと辛い</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="1200" data-y="1600">
+
+
+<h2>2分探索</h2>
+
+<div class="highlight"><pre><span class="k">sub </span><span class="nf">nagai_method</span> <span class="p">{</span>
+<span class="o">...</span>
+   <span class="k">use</span> <span class="nn">Data::</span><span class="n">Dumper</span><span class="p">;</span> <span class="nb">warn</span> <span class="s">"1: "</span> <span class="o">.</span> <span class="n">Dumper</span><span class="p">(</span><span class="nv">$nanka_fukuzatsuna_data</span><span class="p">);</span>
+<span class="o">...</span>
+   <span class="k">use</span> <span class="nn">Data::</span><span class="n">Dumper</span><span class="p">;</span> <span class="nb">warn</span> <span class="s">"2: "</span> <span class="o">.</span> <span class="n">Dumper</span><span class="p">(</span><span class="nv">$nanka_fukuzatsuna_data</span><span class="p">);</span>
+<span class="o">...</span>
+   <span class="k">use</span> <span class="nn">Data::</span><span class="n">Dumper</span><span class="p">;</span> <span class="nb">warn</span> <span class="s">"3: "</span> <span class="o">.</span> <span class="n">Dumper</span><span class="p">(</span><span class="nv">$nanka_fukuzatsuna_data</span><span class="p">);</span>
+<span class="o">...</span>
+   <span class="k">use</span> <span class="nn">Data::</span><span class="n">Dumper</span><span class="p">;</span> <span class="nb">warn</span> <span class="s">"4: "</span> <span class="o">.</span> <span class="n">Dumper</span><span class="p">(</span><span class="nv">$nanka_fukuzatsuna_data</span><span class="p">);</span>
+<span class="o">...</span>
+</pre></div>
+
+<ul>
+<li>こんな感じで打ちまくっても良いのですが...</li>
+<li>沢山打つのつらいので、2分探索します
+
+<ul>
+<li>1と2の間におかしいところがあれば、その間のデバッグプリントを増やし...</li>
+<li>3と4は要らないので消す...</li>
+<li>で、だんだん範囲を狭めていく</li>
+</ul>
+</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="2400" data-y="1600">
+
+
+<h2>ログに書く場合</h2>
+
+<div class="highlight"><pre><span class="k">use</span> <span class="nn">Data::</span><span class="n">Dumper</span><span class="p">;</span> <span class="n">write_log</span> <span class="n">Dumper</span><span class="p">(</span><span class="s">"data_dayo: $nanka_fukuzatsuna_data"</span><span class="p">);</span>
+</pre></div>
+
+<ul>
+<li>ログに絶対出ない文字列を付与する(例: data_dayo: )</li>
+<li>あとで grep とかで検索するときに便利</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="3600" data-y="1600">
+
+
+<h2>問題の関数がどこから呼ばれてるか分からない</h2>
+
+<div class="highlight"><pre><span class="k">use</span> <span class="nn">Data::</span><span class="n">Dumper</span><span class="p">;</span> <span class="nb">warn</span> <span class="n">Dumper</span><span class="p">(</span><span class="s">"dokodaro: "</span> <span class="o">.</span> <span class="n">Dumper</span><span class="p">([</span><span class="nb">caller</span><span class="p">()])</span> <span class="p">);</span>
+</pre></div>
+
+<ul>
+<li>他人が書いたコードとか</li>
+<li>仕組みをあんまり理解してないフレームワーク使っている場合とか</li>
+<li>caller を使う</li>
+<li>その他スタックトレース出す系のモジュールを使っても良い(Carp::cluck とか)</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="4800" data-y="1600">
+
+
+<h2>サブルーチンリファレンス使ってる場合</h2>
+
+<ul>
+<li>Beginners なんで、あんま無いと思うけど...</li>
+<li>Data::Dumper::Concise を使う</li>
+<li>モジュール入れられない縛りプレイしている場合は、こんな感じ</li>
+</ul>
+<div class="highlight"><pre><span class="k">use</span> <span class="nn">Data::</span><span class="n">Dumper</span><span class="p">;</span>
+<span class="p">{</span>
+    <span class="nb">local</span> <span class="nv">$</span><span class="nn">Data::Dumper::</span><span class="nv">Terse</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="nb">local</span> <span class="nv">$</span><span class="nn">Data::Dumper::</span><span class="nv">Indent</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="nb">local</span> <span class="nv">$</span><span class="nn">Data::Dumper::</span><span class="nv">Useqq</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="nb">local</span> <span class="nv">$</span><span class="nn">Data::Dumper::</span><span class="nv">Deparse</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="nb">local</span> <span class="nv">$</span><span class="nn">Data::Dumper::</span><span class="nv">Quotekeys</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="nb">local</span> <span class="nv">$</span><span class="nn">Data::Dumper::</span><span class="nv">Sortkeys</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="nb">warn</span> <span class="n">Dumper</span><span class="p">(</span><span class="nv">$var</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+
+
+</div>
+<div class="step" data-x="0" data-y="2400">
+
+
+<h2>print デバッグする際の前提</h2>
+
+<ul>
+<li>git とか svn は使ってますよね？</li>
+<li>warn "hoge_dayo" とか残ってたら格好わるいです</li>
+<li>直したらデバッグプリントは削除するか、適切なログに置き換えましょう</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="1200" data-y="2400">
+
+
+<h2>まとめ</h2>
+
+<ul>
+<li>デバッグ辛いけど、特効薬も銀の弾丸は無いので、地道に頑張りましょう</li>
+</ul>
+<p><img src="./mondaikaiketsu.jpg" width="50%" height="50%"></p>
+
+<p>※ 問☆題☆解☆決☆(画像はイメージです)</p>
+
+
+</div>
+<div class="step" data-x="2400" data-y="2400">
+
+<h1>おしまい</h1>
+
+</div>
+
+
+    <div id="overview" class="step" data-x="3000" data-y="1500" data-scale="10">
+    </div>
+
+</div>
+
+<div class="hint">
+    <p>Use a spacebar or arrow keys to navigate</p>
+</div>
+<script>
+if ("ontouchstart" in document.documentElement) { 
+    document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";
+}
+</script>
+<script src="js/impress.js"></script>
+</body>
+</html>
+

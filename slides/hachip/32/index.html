@@ -1,0 +1,180 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Perl リスクとか</title>
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
+    <link href="css/impress.css"  rel="stylesheet" />
+    <link href="css/pygments.css" rel="stylesheet" />
+</head>
+<body>
+<div id="impress" class="impress-not-supported">
+    <div class="fallback-message">
+        <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+        <p>For the best experience please use the latest <b>Chrome</b> or <b>Safari</b> browser. Firefox 10 (to be released soon) will also handle it.</p>
+    </div>
+
+<div class="step" id="title" data-x="0" data-y="0">
+
+
+<h1>Perl リスクとか</h1>
+
+<p></p>
+<address><a href="http://twitter.com/tsucchi">@tsucchi</a></address>
+
+
+</div>
+<div class="step" data-x="1200" data-y="0">
+
+
+<h2>自己紹介</h2>
+
+<ul>
+<li>土田　拓也(つちだ　たくや)</li>
+<li>
+<a href="http://twitter.com/tsucchi">@tsucchi</a> とか <a href="http://tsucchi.github.io/">blog(http://tsucchi.github.io/)</a>とか</li>
+<li>普段は Perl とか SQL とか書いてます</li>
+<li>
+<img src="./icon.jpeg"> こんなかんじのアイコンです</li>
+<li>
+<code>Perl</code> と <code>ミルキィホームズ</code>が好きです</li>
+<li>最近「艦これ」にはまってます。<a href="http://blog.livedoor.jp/kankore200/archives/31451312.html">文月教</a>です</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="2400" data-y="0">
+
+
+<h2>で、今回のテーマについて</h2>
+
+<ul>
+<li>なんだっけ？</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="3600" data-y="0">
+
+<h2>まあいいや</h2>
+
+</div>
+<div class="step" data-x="4800" data-y="0">
+
+<h2>良く言われる Perl の悪いところを改善したい！</h2>
+
+</div>
+<div class="step" data-x="0" data-y="800">
+
+<h2>と、ふと思いました</h2>
+
+</div>
+<div class="step" data-x="1200" data-y="800">
+
+
+<h2>Perl の悪いところの例</h2>
+
+<ul>
+<li>省略記法</li>
+<li>特殊変数が覚えられない</li>
+<li>日本語のドキュメントが少ない</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="2400" data-y="800">
+
+<h2>これらの問題を一気に解決する、cool な手法を思いついた！</h2>
+
+</div>
+<div class="step" data-x="3600" data-y="800">
+
+<h2>それは...</h2>
+
+</div>
+<div class="step" data-x="4800" data-y="800">
+
+
+<h2>use Japanese</h2>
+
+<ul>
+<li>日本語でおk</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="0" data-y="1600">
+
+
+<h2>つかいかた</h2>
+
+<div class="highlight"><pre><span class="k">use</span> <span class="n">Japanese</span><span class="p">;</span>
+<span class="k">my</span> <span class="nv">$input</span> <span class="o">=</span> <span class="s">"ふたりはミルキィホームズ絶賛放送中！"</span><span class="p">;</span>
+<span class="k">if</span> <span class="p">(</span> <span class="nv">$input</span> <span class="o">=~</span> <span class="sx">qr/ミルキィホームズ/</span> <span class="p">)</span> <span class="p">{</span>
+    <span class="n">say</span> <span class="nv">$</span><span class="err">照合;</span>   <span class="err">#</span> <span class="err">=&gt;</span> <span class="err">ミルキィホームズ</span>
+    <span class="nv">say</span> <span class="nv">$</span><span class="err">前照合;</span> <span class="err">#</span> <span class="err">=&gt;</span> <span class="err">ふたりは</span>
+    <span class="nv">say</span> <span class="nv">$</span><span class="err">後照合;</span> <span class="err">#</span> <span class="err">=&gt;</span> <span class="err">絶賛放送中！</span>
+<span class="err">}</span>
+</pre></div>
+
+
+</div>
+<div class="step" data-x="1200" data-y="1600">
+
+
+<h2>超読みやすい。最高！</h2>
+
+<ul>
+<li>これでもう DIS られない！</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="2400" data-y="1600">
+
+
+<h2>補足</h2>
+
+<ul>
+<li>あ、「思いついた」って書いたけど、思いついたの僕じゃないです。</li>
+<li>YAPC の直前あたりに、Yancha でそんな話してたので</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="3600" data-y="1600">
+
+
+<h2>制限事項</h2>
+
+<ul>
+<li>まだ、この3変数しか実装してません。</li>
+<li>僕と一緒に美しい日本語を考えませんか！</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="4800" data-y="1600">
+
+<h1>おしまい</h1>
+
+</div>
+
+
+    <div id="overview" class="step" data-x="3000" data-y="1500" data-scale="10">
+    </div>
+
+</div>
+
+<div class="hint">
+    <p>Use a spacebar or arrow keys to navigate</p>
+</div>
+<script>
+if ("ontouchstart" in document.documentElement) { 
+    document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";
+}
+</script>
+<script src="js/impress.js"></script>
+</body>
+</html>
+
