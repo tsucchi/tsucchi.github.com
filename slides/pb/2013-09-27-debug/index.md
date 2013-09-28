@@ -8,7 +8,7 @@ Data::Dumper で print デバッグ
 ---
 + 土田　拓也(つちだ　たくや)
 + [@tsucchi](http://twitter.com/tsucchi) とか [blog(http://tsucchi.github.io/)](http://tsucchi.github.io/)とか
-+ [株式会社シャノン](http://www.shanon.co.jp/) という所で、Perl とか SQL とか書いてます
++ 普段はお仕事で Perl とか SQL とか書いてます
     + 最近は SQL あんま書いてなくて、Perl ばっかりかも
     + 今日はミルキィホームズネタはありません
 
