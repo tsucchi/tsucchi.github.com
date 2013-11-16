@@ -1,0 +1,265 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>データベースのテストのお話::Lite</title>
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
+    <link href="css/impress.css"  rel="stylesheet" />
+    <link href="css/pygments.css" rel="stylesheet" />
+</head>
+<body>
+<div id="impress" class="impress-not-supported">
+    <div class="fallback-message">
+        <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+        <p>For the best experience please use the latest <b>Chrome</b> or <b>Safari</b> browser. Firefox 10 (to be released soon) will also handle it.</p>
+    </div>
+
+<div class="step" id="title" data-x="0" data-y="0">
+
+
+<h1>データベースのテストのお話::Lite</h1>
+
+<p></p>
+<address><a href="http://twitter.com/tsucchi">@tsucchi</a></address>
+
+
+</div>
+<div class="step" data-x="1200" data-y="0">
+
+
+<h2>自己紹介</h2>
+
+<ul>
+<li>土田　拓也(つちだ　たくや)</li>
+<li>
+<a href="http://twitter.com/tsucchi">@tsucchi</a> とか <a href="http://tsucchi.github.io/">blog(http://tsucchi.github.io/)</a>とか</li>
+<li>普段は Perl とか SQL とか書いてます</li>
+<li>
+<img src="./icon.jpeg"> こんなかんじのアイコンです</li>
+<li>
+<code>Perl</code> と <code>ミルキィホームズ</code>が好きです</li>
+<li>最近「艦これ」にはまってます。E-4クリアできないよー...</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="2400" data-y="0">
+
+
+<h2>で、今回のテーマについて</h2>
+
+<ul>
+<li>何でしたっけ？</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="3600" data-y="0">
+
+<h2>まあいいや</h2>
+
+</div>
+<div class="step" data-x="4800" data-y="0">
+
+<h2>特にあんまりネタ無いので、既出のやつから</h2>
+
+</div>
+<div class="step" data-x="0" data-y="800">
+
+
+<h2>最近のお仕事の話</h2>
+
+<ul>
+<li>わりとレガシーな Perl アプリケーションのメンテしてます</li>
+<li>テスト一応あるんだけど、少ない</li>
+<li>テストの仕組み自体も割と辛い感じだった</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="1200" data-y="800">
+
+
+<h2>で、やったこと</h2>
+
+<ul>
+<li>Test::Mock::Guard の劣化コピーみたいの作った
+
+<ul>
+<li>Class::Load の依存がきついので、本物はインストールできず</li>
+</ul>
+</li>
+<li>O/R Mapper のモックを簡単に作れる物体を作った</li>
+<li>DBI をスタブするやつを作った &lt;- コレについて説明します</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="2400" data-y="800">
+
+<h2>それ、DBD::Mock でよくね？</h2>
+
+</div>
+<div class="step" data-x="3600" data-y="800">
+
+
+<h2>それ、DBD::Mock でよくね？</h2>
+
+<ul>
+<li>
+<a href="http://search.cpan.org/%7Edichi/DBD-Mock-1.45/lib/DBD/Mock.pm">DBD::Mock</a>に慣れてるなら、それでいいと思います</li>
+<li>僕は慣れてません。毎回ぐぐってる</li>
+<li>割と何でも出来るんだけど、結構めんどくさい(と個人的に思います)</li>
+<li>あと、毎度の事ながら、レガシー環境で縛りプレイしてるので、安易にモジュール追加なんてできない</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="4800" data-y="800">
+
+<h2>じゃあ、Test::Mock::Guard(とか)で、DBI の振る舞い偽装すればよくね？</h2>
+
+</div>
+<div class="step" data-x="0" data-y="1600">
+
+
+<h2>じゃあ、Test::Mock::Guard(とか)で、DBI の振る舞い偽装すればよくね？</h2>
+
+<ul>
+<li>それはそれで、めんどくさい</li>
+<li>$dbh ってなんだっけ？みたいな
+
+<ul>
+<li>正解は DBI::db。普段はあんま見ることは無い</li>
+</ul>
+</li>
+<li>あと、$sth とかを偽装しようとすると結構めんどい
+
+<ul>
+<li>「...is not a DBI handle (has no magic)」とかいう訳の分からないエラーが出て泣きそうになる</li>
+</ul>
+</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="1200" data-y="1600">
+
+
+<h2>つーわけで作った</h2>
+
+<ul>
+<li>会社版のやつは、会社のアプリに密結合してるので、そうじゃない版をご紹介</li>
+<li><a href="https://github.com/tsucchi/p5-Test-Stub-DBI">Test::Stub::DBI - github</a></li>
+</ul>
+
+
+</div>
+<div class="step" data-x="2400" data-y="1600">
+
+
+<h2>使い方(1) $sth をなんとかするやつ</h2>
+
+<div class="highlight"><pre><span class="k">use</span> <span class="nn">Test::Stub::</span><span class="n">DBI</span><span class="p">;</span>
+<span class="k">my</span> <span class="nv">$count</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="k">my</span> <span class="nv">$guard</span> <span class="o">=</span> <span class="n">stub_dbi</span><span class="p">(</span>
+    <span class="n">sth</span> <span class="o">=&gt;</span> <span class="p">{</span>
+        <span class="n">fetchrow_arrayref</span> <span class="o">=&gt;</span> <span class="k">sub </span><span class="p">{</span> 
+            <span class="nv">$count</span><span class="o">++</span><span class="p">;</span>
+            <span class="k">return</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">if</span> <span class="p">(</span> <span class="nv">$count</span> <span class="o">==</span> <span class="mi">1</span> <span class="p">);</span>
+            <span class="k">return</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">},</span>
+<span class="p">);</span>
+<span class="k">my</span> <span class="nv">$dbh</span> <span class="o">=</span> <span class="nn">Test::Stub::</span><span class="n">DBI</span><span class="o">-&gt;</span><span class="nb">connect</span><span class="p">();</span>
+<span class="k">my</span> <span class="nv">$sth</span> <span class="o">=</span> <span class="nv">$dbh</span><span class="o">-&gt;</span><span class="n">prepare</span><span class="p">(</span><span class="s">'SELECT * FROM SOME_TABLE'</span><span class="p">);</span>
+<span class="nv">$sth</span><span class="o">-&gt;</span><span class="n">execute</span><span class="p">();</span>
+<span class="n">is_deeply</span><span class="p">(</span> <span class="nv">$sth</span><span class="o">-&gt;</span><span class="n">fetchrow_arrayref</span><span class="p">,</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="p">);</span>
+<span class="n">is</span><span class="p">(</span> <span class="nv">$sth</span><span class="o">-&gt;</span><span class="n">fetchrow_arrayref</span><span class="p">,</span> <span class="nb">undef</span> <span class="p">);</span>
+</pre></div>
+
+
+</div>
+<div class="step" data-x="3600" data-y="1600">
+
+
+<h2>使い方(2) $dbh をなんとかするやつ</h2>
+
+<div class="highlight"><pre><span class="k">my</span> <span class="nv">$count</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="k">my</span> <span class="nv">$guard</span> <span class="o">=</span> <span class="n">stub_dbi</span><span class="p">(</span>
+    <span class="n">dbh</span> <span class="o">=&gt;</span> <span class="p">{</span> <span class="n">prepare</span> <span class="o">=&gt;</span> <span class="k">sub </span><span class="p">{</span> <span class="nb">die</span> <span class="s">"prepare failed"</span> <span class="p">},</span> <span class="p">},</span>
+<span class="p">);</span>
+<span class="k">my</span> <span class="nv">$dbh</span> <span class="o">=</span> <span class="nn">Test::Stub::</span><span class="n">DBI</span><span class="o">-&gt;</span><span class="nb">connect</span><span class="p">();</span>
+<span class="n">try</span> <span class="p">{</span>
+    <span class="k">my</span> <span class="nv">$sth</span> <span class="o">=</span> <span class="nv">$dbh</span><span class="o">-&gt;</span><span class="n">prepare</span><span class="p">(</span><span class="s">'SELECT * FROM SOME_TABLE'</span><span class="p">);</span>
+    <span class="n">fail</span> <span class="s">'exception expected'</span><span class="p">;</span>
+<span class="p">}</span> <span class="n">catch</span> <span class="p">{</span>
+    <span class="n">like</span><span class="p">(</span> <span class="nv">$_</span><span class="p">,</span> <span class="sx">qr/^prepare failed/</span> <span class="p">);</span>
+<span class="p">};</span>
+</pre></div>
+
+
+</div>
+<div class="step" data-x="4800" data-y="1600">
+
+
+<h2>使い方(3) DBI をなんとかするやつ</h2>
+
+<div class="highlight"><pre><span class="k">my</span> <span class="nv">$count</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="k">my</span> <span class="nv">$guard</span> <span class="o">=</span> <span class="n">stub_dbi</span><span class="p">(</span>
+    <span class="n">dbi</span> <span class="o">=&gt;</span> <span class="p">{</span>
+        <span class="nb">connect</span> <span class="o">=&gt;</span> <span class="k">sub </span><span class="p">{</span> <span class="nb">die</span> <span class="s">"connect failed"</span> <span class="p">},</span>
+    <span class="p">},</span>
+<span class="p">);</span>
+<span class="n">try</span> <span class="p">{</span>
+    <span class="k">my</span> <span class="nv">$dbh</span> <span class="o">=</span> <span class="n">DBI</span><span class="o">-&gt;</span><span class="nb">connect</span><span class="p">(</span><span class="s">'dbd::dummy'</span><span class="p">);</span>
+    <span class="n">fail</span> <span class="s">'exception expected'</span><span class="p">;</span>
+<span class="p">}</span> <span class="n">catch</span> <span class="p">{</span>
+    <span class="n">like</span><span class="p">(</span> <span class="nv">$_</span><span class="p">,</span> <span class="sx">qr/^connect failed/</span> <span class="p">);</span>
+<span class="p">};</span>
+</pre></div>
+
+
+</div>
+<div class="step" data-x="0" data-y="2400">
+
+
+<h2>注意</h2>
+
+<ul>
+<li>手抜き実装なので、色々おかしいかも</li>
+<li>GitHub止まりモジュールです</li>
+<li>SQL毎に処理を変えるとか、今のところはできません
+
+<ul>
+<li>そのうち実装したい</li>
+</ul>
+</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="1200" data-y="2400">
+
+<h1>おしまい</h1>
+
+</div>
+
+
+    <div id="overview" class="step" data-x="3000" data-y="1500" data-scale="10">
+    </div>
+
+</div>
+
+<div class="hint">
+    <p>Use a spacebar or arrow keys to navigate</p>
+</div>
+<script>
+if ("ontouchstart" in document.documentElement) { 
+    document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";
+}
+</script>
+<script src="js/impress.js"></script>
+</body>
+</html>
+
