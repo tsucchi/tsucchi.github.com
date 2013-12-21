@@ -1,0 +1,310 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>本当にあった...かもしれない業務系の話</title>
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
+    <link href="css/impress.css"  rel="stylesheet" />
+    <link href="css/pygments.css" rel="stylesheet" />
+</head>
+<body>
+<div id="impress" class="impress-not-supported">
+    <div class="fallback-message">
+        <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+        <p>For the best experience please use the latest <b>Chrome</b> or <b>Safari</b> browser. Firefox 10 (to be released soon) will also handle it.</p>
+    </div>
+
+<div class="step" id="title" data-x="0" data-y="0">
+
+
+<h1>本当にあった...かもしれない業務系の話</h1>
+
+<p></p>
+<address><a href="http://twitter.com/tsucchi">@tsucchi</a></address>
+
+
+</div>
+<div class="step" data-x="1200" data-y="0">
+
+
+<h2>自己紹介</h2>
+
+<ul>
+<li>土田　拓也(つちだ　たくや)</li>
+<li>
+<a href="http://twitter.com/tsucchi">@tsucchi</a> とか <a href="http://tsucchi.github.io/">blog(http://tsucchi.github.io/)</a>とか</li>
+<li>普段は Perl とか SQL とか書いてます</li>
+<li>
+<img src="./icon.jpeg"> こんなかんじのアイコンです</li>
+<li>
+<code>Perl</code> と <code>ミルキィホームズ</code>が好きです</li>
+<li>ミルキィホームズのニューアルバム「Dreamin'」好評発売中です。最高です。</li>
+</ul>
+<iframe src="http://rcm-fe.amazon-adsystem.com/e/cm?t=tsucchisblog-22&amp;o=9&amp;p=8&amp;l=as1&amp;asins=B00FRDIYTY&amp;ref=qf_sp_asin_til&amp;fc1=000000&amp;IS2=1&amp;lt1=_blank&amp;m=amazon&amp;lc1=0000FF&amp;bc1=000000&amp;bg1=FFFFFF&amp;f=ifr" style="width:120px;height:240px;" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"></iframe>
+
+
+</div>
+<div class="step" data-x="2400" data-y="0">
+
+
+<h2>で、今回のテーマについて</h2>
+
+<ul>
+<li>何でしたっけ？</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="3600" data-y="0">
+
+<h2>あ、僕が決めたんだった</h2>
+
+</div>
+<div class="step" data-x="4800" data-y="0">
+
+
+<h2>本当にあったレガシーな話</h2>
+
+<ul>
+<li>最近はwebサービス作ってるので、あんまそういうの無いかも</li>
+<li>名状しがたいバージョンのアレとか無くは無いけど...</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="0" data-y="800">
+
+<h2>キャタリスト最高！とか、CDBI最高！とか...</h2>
+
+</div>
+<div class="step" data-x="1200" data-y="800">
+
+
+<h2>レガシーでもいいじゃない、動いてるんだもの</h2>
+
+<ul>
+<li>レガシーが悪いというわけじゃない</li>
+<li>僕たちの給料を生んでるのだから、クソコードでもレガシーでも一応正義</li>
+<li>メンテが本業の足かせにならぬよう、リプレースや葬儀は必要</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="2400" data-y="800">
+
+<h2>本題</h2>
+
+</div>
+<div class="step" data-x="3600" data-y="800">
+
+<h2>FTPサーバ</h2>
+
+</div>
+<div class="step" data-x="4800" data-y="800">
+
+
+<h2>FTPサーバ</h2>
+
+<ul>
+<li>業務系だと、多分わりとよく使われています</li>
+<li>僕がいた所は数GBのデータファイルとか取り扱っていたので、FTP以外だと割とつらい
+
+<ul>
+<li>SCPだと遅いとか</li>
+<li>スクリプトから叩くのがFTPだと楽とか</li>
+<li>なお、同様の理由で telnet も結構使われてたりします</li>
+</ul>
+</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="0" data-y="1600">
+
+
+<h2>野良サーバ...</h2>
+
+<ul>
+<li>で、便利なので個人的にFTPサーバを建てる輩が現れる</li>
+<li>便利なので、みんな使う</li>
+<li>...いつの間にか運用に組み込まれ...</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="1200" data-y="1600">
+
+
+<h2>重要なファイルとか入ってたよ！</h2>
+
+<p><img src="./outdayo.jpg"></p>
+
+<ul>
+<li><code>アウトだよ！！</code></li>
+</ul>
+
+
+</div>
+<div class="step" data-x="2400" data-y="1600">
+
+
+<h2>野良サーバ...</h2>
+
+<ul>
+<li>なんか warftpd とか使ってるし</li>
+<li>良く落ちるし</li>
+<li>名状しがたいユーザ名とパスワードが使われてた</li>
+</ul>
+<p>ちなみに、今は駆逐されたはず。。。</p>
+
+
+</div>
+<div class="step" data-x="3600" data-y="1600">
+
+<h2>データメンテ</h2>
+
+</div>
+<div class="step" data-x="4800" data-y="1600">
+
+
+<h2>データメンテ</h2>
+
+<ul>
+<li>ナチュラルの複合主キーで、「バーコード番号」「枝版」みたいなテーブルがあった</li>
+<li>「ごめん、枝版間違えちゃった(てへぺろ)」</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="0" data-y="2400">
+
+
+<h2>死ね、マジで死ね！</h2>
+
+<p><img src="dragonscrew.jpg"></p>
+
+
+</div>
+<div class="step" data-x="1200" data-y="2400">
+
+
+<h2>すいません取り乱しました</h2>
+
+<ul>
+<li>こういう事が普通にあるので、ナチュラルの複合種キーなんて絶対使いたくない</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="2400" data-y="2400">
+
+<h2>うぃんどーず</h2>
+
+</div>
+<div class="step" data-x="3600" data-y="2400">
+
+
+<h2>うぃんどーず</h2>
+
+<ul>
+<li>みんな大好きWindows.</li>
+<li>装置の付帯PCとかあって、Windows2000が捨てられない...</li>
+<li>Windows2000が捨てれないので、.Net Framework が 2.X止まりになる</li>
+<li>新しい機能が使えなくて割とつらい</li>
+<li>ウイルス対策ソフトも別途準備したりめんどくさい</li>
+<li>いい加減捨てようよー。。。</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="4800" data-y="2400">
+
+<h2>データ転送サーバ</h2>
+
+</div>
+<div class="step" data-x="0" data-y="3200">
+
+
+<h2>データ転送サーバ</h2>
+
+<ul>
+<li>工場系とオフィス系のネットワーク間で重要なデータを直接やり取りするのはまずい</li>
+<li>...ということで、中間サーバみたいなのを置く事になった</li>
+<li>さっきも書いたけど、数GBのデータとかも来るんだけど...</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="1200" data-y="3200">
+
+
+<h2>1GBメモリってなんだよ！死ぬ気か！ってか10年前か！</h2>
+
+<ul>
+<li>なお発注者は逃亡...</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="2400" data-y="3200">
+
+
+<h2>死ね、マジで死ね！</h2>
+
+<p><img src="./naniiroda.jpg"></p>
+
+<p>※ お前の血は何色だ！</p>
+
+
+</div>
+<div class="step" data-x="3600" data-y="3200">
+
+
+<h2>すいません取り乱しました</h2>
+
+<ul>
+<li>死ねというか、むしろ僕が死にました。</li>
+<li>swap 増やしてとりあえず逃げつつ、メモリ買ってもらいました</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="4800" data-y="3200">
+
+
+<h2>※このお話はフィクションです</h2>
+
+<p>今では問題解決してるはず...</p>
+
+<p><img src="./mondaikaiketsu.jpg" width="50%" height="50%"></p>
+
+<ul>
+<li>問☆題☆解☆決(イメージです)</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="0" data-y="4000">
+
+<h1>おしまい</h1>
+
+</div>
+
+
+    <div id="overview" class="step" data-x="3000" data-y="1500" data-scale="10">
+    </div>
+
+</div>
+
+<div class="hint">
+    <p>Use a spacebar or arrow keys to navigate</p>
+</div>
+<script>
+if ("ontouchstart" in document.documentElement) { 
+    document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";
+}
+</script>
+<script src="js/impress.js"></script>
+</body>
+</html>
+
