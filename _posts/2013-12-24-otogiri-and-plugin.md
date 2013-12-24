@@ -133,7 +133,7 @@ Sunny がくっついていると、例えば
 INSERT /* /Users/tsucchi/git/p5-Otogiri-Plugin-InsertOnDuplicate/lib/Otogiri/Plugin/InsertOnDuplicate.pm line 20 */ INTO `member`
 (`name`, `id`)
 VALUES ('mimorin', '1')
-ON DUPLICATE KEY UPDATE `name` = 'izusama' at /Users/tsucchi/.perlbrew/libs/perl-5.19@default/lib/perl5/DBIx/Sunny.pm line 150
+ON DUPLICATE KEY UPDATE `name` = 'izusama'
 ```
 
 こんな感じで、コメントでSQLの出所を入れてくれるので、スローログとかエラーログとかを見るときに嬉しいです。
