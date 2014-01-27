@@ -1,0 +1,250 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>AngularJS を触ってみた</title>
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
+    <link href="css/impress.css"  rel="stylesheet" />
+    <link href="css/pygments.css" rel="stylesheet" />
+</head>
+<body>
+<div id="impress" class="impress-not-supported">
+    <div class="fallback-message">
+        <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+        <p>For the best experience please use the latest <b>Chrome</b> or <b>Safari</b> browser. Firefox 10 (to be released soon) will also handle it.</p>
+    </div>
+
+<div class="step" id="title" data-x="0" data-y="0">
+
+
+<h1>AngularJS を触ってみた</h1>
+
+<p>社内勉強会資料@2014/01/27</p>
+
+<p></p>
+<address>土田　拓也</address>
+
+
+</div>
+<div class="step" data-x="1200" data-y="0">
+
+
+<h2>注意</h2>
+
+<ul>
+<li>まだがっつり使ったわけではないので、ハードな突っ込みが入ってもお答えできません...</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="2400" data-y="0">
+
+
+<h2>AngularJS</h2>
+
+<ul>
+<li>Google を中心に開発されている JavaScript のフレームワーク
+
+<ul>
+<li>いわゆる「クライアントサイド MVC」(Angular の開発者は「MVW」と言っている)</li>
+</ul>
+</li>
+<li>MVW -- Model, View, Whatever
+
+<ul>
+<li>MVCを語りだすと宗教戦争になりがち</li>
+<li>「モデルと、ビューと、あとは何でもいいじゃん(Whatever)」というノリらしい</li>
+</ul>
+</li>
+<li>JS というより、<code>テンプレート + そこからコールバックされる一連の仕組み</code>、という感じ
+
+<ul>
+<li>なのでやはり「フレームワーク」</li>
+</ul>
+</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="3600" data-y="0">
+
+
+<h2>テンプレート(1)</h2>
+
+<ul>
+<li>JavaScript 式、変数の参照</li>
+</ul>
+<pre><code>{{ javascript の式 }}
+</code></pre>
+
+<p>例)</p>
+
+<div class="highlight"><pre><span class="p">{{</span> <span class="mi">1</span> <span class="o">+</span> <span class="mi">2</span> <span class="p">}}</span>
+<span class="p">{{</span> <span class="nx">phone</span><span class="p">.</span><span class="nx">name</span> <span class="p">}}</span>
+</pre></div>
+
+
+</div>
+<div class="step" data-x="4800" data-y="0">
+
+
+<h2>テンプレート(2)</h2>
+
+<ul>
+<li>HTML タグに ng- で始まる独自の属性を使うといろいろな事が出来る</li>
+<li>繰り返しは ng-repeat</li>
+<li>下記の例だと、phones という配列から phone という値を取り出す。(いわゆる foreach)</li>
+</ul>
+<div class="highlight"><pre><span class="nt">&lt;li</span> <span class="na">ng-repeat=</span><span class="s">"phone in phones"</span><span class="nt">&gt;</span>
+    {{phone.name}}
+    <span class="nt">&lt;p&gt;</span>{{phone.snippet}}<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/li&gt;</span>
+</pre></div>
+
+
+</div>
+<div class="step" data-x="0" data-y="800">
+
+
+<h2>テンプレート(3)</h2>
+
+<ul>
+<li>TTだと下記のような感じ</li>
+<li>Angular のテンプレートだと、HTMLの構造がテンプレートのディレクティブで崩されない</li>
+</ul>
+<div class="highlight"><pre>※ AngularJS ではなく、TemplateToolkit です!
+[% FOREACH phone = phones %]
+    <span class="nt">&lt;li&gt;</span>
+        phone.name
+        <span class="nt">&lt;p&gt;</span>phone.snippet<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;/li&gt;</span>
+[% END %]
+</pre></div>
+
+
+</div>
+<div class="step" data-x="1200" data-y="800">
+
+
+<h2>フィルタ</h2>
+
+<ul>
+<li>フィルタは、テンプレートから | で呼び出せる</li>
+<li>独自のフィルタも使用可能</li>
+</ul>
+<div class="highlight"><pre><span class="nt">&lt;dd&gt;</span>{{phone.connectivity.gps | checkmark}}<span class="nt">&lt;/dd&gt;</span>
+</pre></div>
+
+
+</div>
+<div class="step" data-x="2400" data-y="800">
+
+
+<h2>コールバック</h2>
+
+<ul>
+<li>クリック時の動作を ng-click で指定できる</li>
+<li>下記の例だと、画像をクリックした際に、setImage がコールバックされる</li>
+</ul>
+<div class="highlight"><pre><span class="nt">&lt;img</span> <span class="na">ng-src=</span><span class="s">"{{img}}"</span> <span class="na">ng-click=</span><span class="s">"setImage(img)"</span><span class="nt">&gt;</span>
+</pre></div>
+
+
+</div>
+<div class="step" data-x="3600" data-y="800">
+
+
+<h2>データ</h2>
+
+<ul>
+<li>サーバから受け取るデータは、JSON を使うと簡単</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="4800" data-y="800">
+
+
+<h2>テスト</h2>
+
+<ul>
+<li>特に決まりは無く、JavaScript の Testing Framework を普通に使う
+
+<ul>
+<li>Jasmine がよく使われているらしい</li>
+</ul>
+</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="0" data-y="1600">
+
+
+<h2>アプリケーションのアーキテクチャ</h2>
+
+<ul>
+<li>データが JSON で受け取るのが便利なので、サーバサイドはシンプルな JSON-API にしておくのが良さそう</li>
+<li>クライアントは API を叩くものを各種用意する(...という事が AngularJS を使っているとやりやすそう)
+
+<ul>
+<li>AngularJS を使った HTML ベース</li>
+<li>Android/iOS アプリ</li>
+<li>etc.</li>
+</ul>
+</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="1200" data-y="1600">
+
+
+<h2>情報リソース</h2>
+
+<ul>
+<li>公式のチュートリアルが分かりやすい。有志による日本語訳バージョンもある
+
+<ul>
+<li>(公式) <a href="http://angularjs.org/">http://angularjs.org/</a>
+</li>
+<li>(チュートリアル) <a href="http://docs.angularjs.org/tutorial">http://docs.angularjs.org/tutorial</a>
+</li>
+<li>(同日本語訳) <a href="https://github.com/angularjs-jp/angular.js/wiki">https://github.com/angularjs-jp/angular.js/wiki</a>
+</li>
+</ul>
+</li>
+<li>2013年のアドベントカレンダー
+
+<ul>
+<li><a href="http://qiita.com/advent-calendar/2013/angularjs-startup">http://qiita.com/advent-calendar/2013/angularjs-startup</a></li>
+</ul>
+</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="2400" data-y="1600">
+
+<h1>おしまい</h1>
+
+</div>
+
+
+    <div id="overview" class="step" data-x="3000" data-y="1500" data-scale="10">
+    </div>
+
+</div>
+
+<div class="hint">
+    <p>Use a spacebar or arrow keys to navigate</p>
+</div>
+<script>
+if ("ontouchstart" in document.documentElement) { 
+    document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";
+}
+</script>
+<script src="js/impress.js"></script>
+</body>
+</html>
+
