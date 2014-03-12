@@ -49,7 +49,12 @@ DBIx::Inspector で FK の情報が引っ張っているので、対応してる
 アプリで使うってよりも、開発環境でちょっとデータメンテしたい、とかテストデータのロードする前にクリーンアップしたい、とかそういう
 用途を想定してる感じです。(というか、多分この物体はアプリで使ってはいけない)
 
-気が向いたら CPAN にアップするかもです。
+<del>気が向いたら CPAN にアップするかもです。</del>
+
+### 2014-03-12 追記
+気が向いたので、CPAN にアップしました。
+
++ [Otogiri::Plugin::DeleteCascade - Otogiri Plugin for cascading delete by following FK columns](https://metacpan.org/release/Otogiri-Plugin-DeleteCascade)
 
 
 
