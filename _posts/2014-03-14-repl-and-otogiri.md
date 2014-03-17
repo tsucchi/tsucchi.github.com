@@ -89,6 +89,7 @@ alias otogiri-myservice='reply --cfg $HOME/.replyrc_myservice'
 
 ## 補足
 Perl入学式の校長としても有名な、papix 氏が Reply のプラグイン書いてるみたいです。
+
 + [Reply::Plugin::Otogiri](https://github.com/papix/Reply-Plugin-Otogiri)
 
 ちょっと試したんだけど、うまく動かなかったので、うまくいったらコレの紹介も書こうと思います。
