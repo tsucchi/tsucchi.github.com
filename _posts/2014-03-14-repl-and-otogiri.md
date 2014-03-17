@@ -10,10 +10,10 @@ title: REPLでORMを使えるようにすると、めっちゃ便利だ、とい
 rails console の劣化版みたいなやつの紹介です
 
 ## それじゃ分かんないよ？
-コマンドラインから ORM のメソッド投げたりできます。便利
+端末からインタラクティブに ORM のメソッド投げたりできます。便利
 
 ## ってか REPL って何？
-シェルの中でインタラクティブにプログラムを実行する物体です。Perl では [Reply](http://search.cpan.org/dist/Reply/bin/reply) ってのがおすすめです。
+端末でインタラクティブにプログラムを実行する物体です。irb とかが有名ですね。Perl では [Reply](http://search.cpan.org/dist/Reply/bin/reply) ってのがおすすめです。
 
 良くわからない人は以下の記事読んで、実際に使ってみるのが良いと思う。
 
@@ -87,6 +87,12 @@ alias otogiri-myservice='reply --cfg $HOME/.replyrc_myservice'
 ...
 ```
 
+## 補足
+Perl入学式の校長としても有名な、papix 氏が Reply のプラグイン書いてるみたいです。
++ [Reply::Plugin::Otogiri](https://github.com/papix/Reply-Plugin-Otogiri)
+
+ちょっと試したんだけど、うまく動かなかったので、うまくいったらコレの紹介も書こうと思います。
+
 ## FAQ?
 ### 便利？
 便利ですよ。めっちゃ捗るので是非試して欲しい。
@@ -97,7 +103,10 @@ alias otogiri-myservice='reply --cfg $HOME/.replyrc_myservice'
 ...ってのは半分本気で半分ジョークです。Otogiri::Plugin::DeleteCascade を有効にしているので、FK あるテーブルも上から消せるのが最高に気持ちいいです。
 
 ### Teng で同じ事やりたいんだけど...
-.replyrc_myservice の `use Otogiri` してる所の周辺を書き換えてください。僕最近 Teng 使ってないし。
+.replyrc_myservice の `use Otogiri` してる所の周辺を書き換えてください。僕最近 Teng 使ってないし。あとは初期化の時に Row Object を無効にしといた方がデータが見やすくて良いかも。
 
 ### DBIC で同じ事やりたいんだけど...
 .replyrc_myservice の(ry
+
+### CDBI で同じ事やりたいんだけど...
+.replyrc_m(ry
