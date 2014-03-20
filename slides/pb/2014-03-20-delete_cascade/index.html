@@ -1,0 +1,353 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>「異常な努力」をするまえに</title>
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
+    <link href="css/impress.css"  rel="stylesheet" />
+    <link href="css/pygments.css" rel="stylesheet" />
+</head>
+<body>
+<div id="impress" class="impress-not-supported">
+    <div class="fallback-message">
+        <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+        <p>For the best experience please use the latest <b>Chrome</b> or <b>Safari</b> browser. Firefox 10 (to be released soon) will also handle it.</p>
+    </div>
+
+<div class="step" id="title" data-x="0" data-y="0">
+
+
+<h1>「異常な努力」をするまえに</h1>
+
+<p></p>
+<address><a href="http://twitter.com/tsucchi">@tsucchi</a></address>
+
+
+</div>
+<div class="step" data-x="1200" data-y="0">
+
+
+<h2>自己紹介</h2>
+
+<ul>
+<li>土田　拓也(つちだ　たくや)</li>
+<li>
+<a href="http://twitter.com/tsucchi">@tsucchi</a> とか <a href="http://tsucchi.github.io/">blog(http://tsucchi.github.io/)</a>とか</li>
+<li>普段は Perl とか SQL とか書いてます</li>
+<li>
+<img src="./icon.jpeg"> こんなかんじのアイコンです</li>
+<li>
+<code>Perl</code> と <code>ミルキィホームズ</code>が好きです</li>
+<li>ミルキィホームズの新曲「冒険☆ミルキィロード!!」4/30発売予定！</li>
+</ul>
+<iframe src="http://rcm-fe.amazon-adsystem.com/e/cm?t=tsucchisblog-22&amp;o=9&amp;p=8&amp;l=as1&amp;asins=B00IO2EBGA&amp;ref=qf_sp_asin_til&amp;fc1=000000&amp;IS2=1&amp;lt1=_blank&amp;m=amazon&amp;lc1=0000FF&amp;bc1=000000&amp;bg1=FFFFFF&amp;f=ifr" style="width:120px;height:240px;" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"></iframe>
+
+
+</div>
+<div class="step" data-x="2400" data-y="0">
+
+
+<h2>はじめに</h2>
+
+<ul>
+<li>世の中には「異常な努力」によって支えられているモジュールやソフトウェアが沢山あります
+
+<ul>
+<li>CGI.pm(最近あんま使わないけど)</li>
+<li>メール系(Email::*)</li>
+<li>DB系(DBD::*)</li>
+<li>...ほかにも多分いろいろ</li>
+</ul>
+</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="3600" data-y="0">
+
+
+<h2>CGI.pm</h2>
+
+<ul>
+<li>歴史的な事情(互換性?)とか...</li>
+<li>オブジェクト指向IFと関数IFの両サポートとか...</li>
+<li>Export の独自実装(ロードを速くしたい？)とか...</li>
+<li>
+<a href="https://metacpan.org/source/MARKSTOS/CGI.pm-3.65/lib/CGI.pm#L978">このへんが特にやばい</a>
+
+<ul>
+<li>文字列なのにソースコード</li>
+</ul>
+</li>
+</ul>
+<p>※個人の感想です    </p>
+
+
+</div>
+<div class="step" data-x="4800" data-y="0">
+
+
+<h2>メール系</h2>
+
+<ul>
+<li>Email::Sender と周辺のツール</li>
+<li>メールの仕様が複雑奇怪なため</li>
+<li><a href="http://yapcasia.org/2011/talk/59">YAPC::Asia 2011 RJBS氏のトーク「闇のEメール伝説」</a></li>
+</ul>
+
+
+</div>
+<div class="step" data-x="0" data-y="800">
+
+
+<h2>DB系</h2>
+
+<ul>
+<li>XSで書かれているので、僕らのようなカジュアルユーザには読みにくい
+
+<ul>
+<li>速度のためと、DBMSのクライアントライブラリを使うため</li>
+</ul>
+</li>
+<li>歴史も古い</li>
+<li>プレースホルダ周りとか、結構複雑でバグってたりする(しかも簡単に直りそうにない)
+
+<ul>
+<li>自前で SQL のパースをしている</li>
+<li><a href="https://github.com/CaptTofu/DBD-mysql/issues/38">placeholder in LIMIT causes syntax error</a></li>
+<li><a href="http://tsucchi.github.io/perl/2013/03/04/dbd-limit-bug/">DBD::mysql の不具合っぽい挙動を見つけたので、とりあえず issue あげてみた</a></li>
+</ul>
+</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="1200" data-y="800">
+
+
+<h2>ちょっとだけまとめ</h2>
+
+<ul>
+<li>複雑なものを取り扱うために「異常な努力」が必要なのは仕方ない気がする</li>
+<li>Email とか DB のドライバとか、メンテ大変だけど、誰かが頑張らないと皆が不幸になる</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="2400" data-y="800">
+
+
+<h2>ところで</h2>
+
+<ul>
+<li>普通に生きていれば、こういう大変そうなモジュールに関わることはありません
+
+<ul>
+<li>Beginners だし。。。</li>
+</ul>
+</li>
+<li>でも、<code>実は結構簡単なのに、異常な努力をしてしまう</code>事は結構あります。</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="3600" data-y="800">
+
+<h2>例1) CSV</h2>
+
+</div>
+<div class="step" data-x="4800" data-y="800">
+
+
+<h2>例1) CSV</h2>
+
+<ul>
+<li>カンマ区切りだから、split でいいよね？</li>
+</ul>
+<div class="highlight"><pre><span class="k">my</span> <span class="nv">@values</span> <span class="o">=</span> <span class="nb">split</span><span class="p">(</span><span class="sx">qr/,/</span><span class="p">,</span> <span class="nv">$input</span><span class="p">);</span>
+</pre></div>
+
+<p>これで本当に大丈夫？</p>
+
+
+</div>
+<div class="step" data-x="0" data-y="1600">
+
+
+<h2>例1) CSV</h2>
+
+<ul>
+<li>大丈夫じゃないです
+
+<ul>
+<li>改行したい...</li>
+<li>カンマ自体をデータに含めたい...</li>
+<li>クォートしたい...</li>
+<li>etc...</li>
+</ul>
+</li>
+</ul>
+<p>CSV の仕様は意外と複雑(だし、標準もない)。じゃあどうすれば？</p>
+
+
+</div>
+<div class="step" data-x="1200" data-y="1600">
+
+
+<h2>例1) CSV</h2>
+
+<ul>
+<li>Text::CSV(_XS) を使う
+
+<ul>
+<li>さっきの問題を全部解決できる</li>
+<li>自分で実装しようとすると、凄く大変</li>
+</ul>
+</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="2400" data-y="1600">
+
+
+<h2>例2) 配列から小配列を取る処理</h2>
+
+<ul>
+<li>100,000件くらいのデータを1000件ずつ処理したい、とかそういう場合の処理</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="3600" data-y="1600">
+
+
+<h2>例2) 配列から小配列を取る処理</h2>
+
+<div class="highlight"><pre><span class="k">my</span> <span class="nv">@ids</span> <span class="o">=</span> <span class="o">...</span> <span class="c1">#処理したい10万件くらいのデータ</span>
+<span class="k">my</span> <span class="nv">$ceil</span> <span class="o">=</span> <span class="n">ceil</span><span class="p">(</span><span class="nv">@ids</span><span class="o">/</span><span class="mi">1000</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span>
+<span class="k">foreach</span> <span class="k">my</span> <span class="nv">$i</span> <span class="p">(</span> <span class="mi">0</span><span class="o">..</span><span class="nv">$ceil</span> <span class="p">)</span> <span class="p">{</span>
+    <span class="k">my</span> <span class="nv">$start_index</span> <span class="o">=</span> <span class="nv">$i</span> <span class="o">*</span> <span class="mi">1000</span><span class="p">;</span>
+    <span class="k">my</span> <span class="nv">$end_index</span> <span class="o">=</span> <span class="nv">$i</span> <span class="o">!=</span> <span class="nv">$ceil</span> <span class="p">?</span> <span class="p">((</span><span class="nv">$i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="mi">1000</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="p">:</span> <span class="nv">$#ids</span><span class="p">;</span>
+    <span class="k">my</span> <span class="nv">@sub_ids</span> <span class="o">=</span> <span class="nv">@ids</span><span class="p">[</span><span class="nv">$start_index</span><span class="o">..</span><span class="nv">$end_index</span><span class="p">];</span>
+    <span class="c1"># @sub_ids が小配列なので、これ使って処理</span>
+<span class="p">}</span>
+</pre></div>
+
+
+</div>
+<div class="step" data-x="4800" data-y="1600">
+
+
+<h2>例2) 配列から小配列を取る処理</h2>
+
+<ul>
+<li>ナニコレ、イミワカンナイ...</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="0" data-y="2400">
+
+
+<h2>例2) 配列から小配列を取る処理</h2>
+
+<ul>
+<li>splice を使うと簡単に書ける</li>
+<li><a href="http://tsucchi.github.io/perl/2014/02/06/splice/">今だからこそ知って欲しい、splice の話</a></li>
+</ul>
+<div class="highlight"><pre><span class="k">my</span> <span class="nv">@ids</span> <span class="o">=</span> <span class="o">...</span> <span class="c1">#10万件のidの配列</span>
+<span class="k">while</span> <span class="p">(</span> <span class="k">my</span> <span class="nv">@sub_ids</span> <span class="o">=</span> <span class="nb">splice</span><span class="p">(</span><span class="nv">@ids</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span> <span class="p">)</span> <span class="p">{</span>
+    <span class="c1"># @sub_ids が小配列なので、これ使って処理</span>
+<span class="p">}</span>
+</pre></div>
+
+
+</div>
+<div class="step" data-x="1200" data-y="2400">
+
+
+<h2>例3) Otogiri::Plugin::DeleteCascade</h2>
+
+<ul>
+<li>僕の個人的な体験</li>
+<li>外部キーをたどって、親のテーブルを削除したときに、子のテーブルも一緒に削除したい</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="2400" data-y="2400">
+
+
+<h2>例3) Otogiri::Plugin::DeleteCascade</h2>
+
+<ul>
+<li>
+<a href="https://github.com/tsucchi/p5-Otogiri-Plugin-DeleteCascade/blob/70505d5553b06b55c51ad9bd25333eaccfc62530/lib/Otogiri/Plugin/DeleteCascade.pm#L24-L40">当初の実装</a>
+
+<ul>
+<li>めんどくさい SQL を頑張って書いた</li>
+<li>これは実は不十分で、スキーマの情報とか足りてない</li>
+<li>他にもバグってるかもしれない</li>
+</ul>
+</li>
+<li>
+<a href="https://github.com/tsucchi/p5-Otogiri-Plugin-DeleteCascade/blob/master/lib/Otogiri/Plugin/DeleteCascade.pm#L22-L40">今の実装</a>
+
+<ul>
+<li>
+<a href="http://search.cpan.org/dist/DBIx-Inspector/">DBIx::Inspector</a>というモジュールで FK をたどることで、シンプルになった</li>
+</ul>
+</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="3600" data-y="2400">
+
+
+<h2>まとめ</h2>
+
+<ul>
+<li>難しい処理をするときに、難しいコードを書いてしまうのは仕方ない
+
+<ul>
+<li>先人達が頑張ってくれてるなら、ソレに乗らない手は無い</li>
+</ul>
+</li>
+<li>簡単な処理を難しく書いてしまっていないか、自戒してみる
+
+<ul>
+<li>ぐぐってみたり</li>
+<li>誰かに聞いてみたり</li>
+<li>blog に書いてみる</li>
+</ul>
+</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="4800" data-y="2400">
+
+<h1>おしまい</h1>
+
+</div>
+
+
+    <div id="overview" class="step" data-x="3000" data-y="1500" data-scale="10">
+    </div>
+
+</div>
+
+<div class="hint">
+    <p>Use a spacebar or arrow keys to navigate</p>
+</div>
+<script>
+if ("ontouchstart" in document.documentElement) { 
+    document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";
+}
+</script>
+<script src="js/impress.js"></script>
+</body>
+</html>
+
