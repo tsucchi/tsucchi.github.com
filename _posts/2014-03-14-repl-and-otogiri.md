@@ -92,7 +92,16 @@ Perl入学式の校長としても有名な、papix 氏が Reply のプラグイ
 
 + [Reply::Plugin::Otogiri](https://github.com/papix/Reply-Plugin-Otogiri)
 
-ちょっと試したんだけど、うまく動かなかったので、うまくいったらコレの紹介も書こうと思います。
+<del>ちょっと試したんだけど、うまく動かなかったので、うまくいったらコレの紹介も書こうと思います。</del>
+
+### 2014/03/22 追記
+作者さんの紹介記事も出たのでリンクしときます。
+
++ [｢Reply::Plugin::Otogiri｣を書いた](http://masteries.papix.net/entry/2014-03-22-reply-plugin-otogiri.html)
+
+なるほど。メソッドが大文字でエクスポートされてたのね...(小文字で呼んでて、エラーになって、アレ？ってなってた。。。)
+
+(追記おわり)
 
 ## FAQ?
 ### 便利？
