@@ -1,0 +1,390 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>パーサーのはなし(?)</title>
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
+    <link href="css/impress.css"  rel="stylesheet" />
+    <link href="css/pygments.css" rel="stylesheet" />
+</head>
+<body>
+<div id="impress" class="impress-not-supported">
+    <div class="fallback-message">
+        <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+        <p>For the best experience please use the latest <b>Chrome</b> or <b>Safari</b> browser. Firefox 10 (to be released soon) will also handle it.</p>
+    </div>
+
+<div class="step" id="title" data-x="0" data-y="0">
+
+
+<h1>パーサーのはなし(?)</h1>
+
+<p></p>
+<address><a href="http://twitter.com/tsucchi">@tsucchi</a></address>
+
+
+</div>
+<div class="step" data-x="1200" data-y="0">
+
+
+<h2>自己紹介</h2>
+
+<ul>
+<li>土田　拓也(つちだ　たくや)</li>
+<li>
+<a href="http://twitter.com/tsucchi">@tsucchi</a> とか <a href="http://tsucchi.github.io/">blog(http://tsucchi.github.io/)</a>とか</li>
+<li>普段は Perl とか SQL とか書いてます</li>
+<li>
+<img src="./icon.jpeg"> こんなかんじのアイコンです</li>
+<li>
+<code>Perl</code> と <code>ミルキィホームズ</code>が好きです</li>
+<li>ミルキィホームズの新曲「冒険☆ミルキィロード!!」4/30発売予定！</li>
+</ul>
+<iframe src="http://rcm-fe.amazon-adsystem.com/e/cm?t=tsucchisblog-22&amp;o=9&amp;p=8&amp;l=as1&amp;asins=B00IO2EBGA&amp;ref=qf_sp_asin_til&amp;fc1=000000&amp;IS2=1&amp;lt1=_blank&amp;m=amazon&amp;lc1=0000FF&amp;bc1=000000&amp;bg1=FFFFFF&amp;f=ifr" style="width:120px;height:240px;" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"></iframe>
+
+
+</div>
+<div class="step" data-x="2400" data-y="0">
+
+
+<h2>で、今回のテーマについて</h2>
+
+<ul>
+<li>何でしたっけ？</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="3600" data-y="0">
+
+<h2>パーサーだっけ？</h2>
+
+</div>
+<div class="step" data-x="4800" data-y="0">
+
+
+<h2>パーサーについて</h2>
+
+<ul>
+<li>○○社が送付するクソのような PS ファイルをパースする話とか...</li>
+<li>△△社が送付するクソのような Excel ファイルをパースする話とか...</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="0" data-y="800">
+
+<h2>してもいいですが、炎上したりすると困るので、最近の話をします</h2>
+
+</div>
+<div class="step" data-x="1200" data-y="800">
+
+
+<h1>Reply の話</h1>
+
+<p></p>
+<address><a href="http://twitter.com/tsucchi">@tsucchi</a></address>
+
+
+</div>
+<div class="step" data-x="2400" data-y="800">
+
+
+<h2>Reply について</h2>
+
+<ul>
+<li><a href="http://blog.64p.org/entry/2013/06/07/180316">Reply is awesome!</a></li>
+<li>知らない方のために簡単に説明すると、「irbみたいなやつ」です</li>
+</ul>
+<pre><code>tsucchi@surreal[620]$ reply
+reply@surreal.local[0]&gt; 
+reply@surreal.local[1]&gt; 1 + 1
+$res[0] = '2'
+
+reply@surreal.local[2]&gt; $a = 123
+$res[1] = '123'
+
+reply@surreal.local[3]&gt; $b = 456
+$res[2] = '456'
+
+reply@surreal.local[4]&gt; $a + $b
+$res[3] = '579'
+
+reply@surreal.local[5]&gt; rand()
+$res[4] = '0.0647113826862586'
+
+reply@surreal.local[6]&gt; exit
+</code></pre>
+
+
+</div>
+<div class="step" data-x="3600" data-y="800">
+
+
+<h2>Reply is 便利</h2>
+
+<ul>
+<li>結構便利
+
+<ul>
+<li>「a.pl 書いてお試し」、みたいなのが無くなった</li>
+</ul>
+</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="4800" data-y="800">
+
+
+<h2>Reply is MORE 便利</h2>
+
+<ul>
+<li>ORM と組み合わせると最高便利っぽい
+
+<ul>
+<li><a href="http://tsucchi.github.io/perl/2014/03/14/repl-and-otogiri/">REPLでORMを使えるようにすると、めっちゃ便利だ、という話</a></li>
+</ul>
+</li>
+</ul>
+<pre><code>% reply-service1
+1&gt; Select('detective', { id =&gt; 1 });
+$res[1] = {
+    id =&gt; 1,
+    name =&gt; 'シャーロック・シェリンフォード',
+    age =&gt; 15,
+    toys =&gt; 'サイコキネシス',
+    birthday =&gt; '3/31',
+}
+</code></pre>
+
+
+</div>
+<div class="step" data-x="0" data-y="1600">
+
+
+<h2>Reply を More More 便利に使うための Tips</h2>
+
+<ul>
+<li>
+<code>no strict 'vars'</code>
+
+<ul>
+<li>スクリプト書くときは strict 指定するのは基本ですが、Reply だと若干うざい</li>
+</ul>
+</li>
+<li>
+<code>[LoadClass]</code>
+
+<ul>
+<li>use しなくても<code>よしな</code>にロードしてくれる物体</li>
+</ul>
+</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="1200" data-y="1600">
+
+
+<h2>Reply を More More More 便利に使うための Tips</h2>
+
+<ul>
+<li>
+<a href="https://github.com/papix/Reply-Plugin-Otogiri">Reply::Plugin::Otogiri</a>
+
+<ul>
+<li>Otogiri の関数が使える(papix氏作)</li>
+<li>もっとジェネリックな Reply::Plugin::ORM ってのも作ってるっぽいので期待</li>
+</ul>
+</li>
+<li>
+<a href="http://tsucchi.github.io/perl/2014/04/04/reply-plugin-datadumper-autoencode">Reply::Plugin::DataDumperAutoEncode</a>
+
+<ul>
+<li>出力を自動エンコードしてくれる物体(俺氏作)</li>
+</ul>
+</li>
+<li>
+<a href="http://tsucchi.github.io/perl/2014/04/10/reply-plugin-standardprompt">Reply::Plugin::StandardPrompt</a>
+
+<ul>
+<li>シェルみたいなカスタマイズ可能なプロンプトを提供する(俺氏作)</li>
+</ul>
+</li>
+<li>
+<a href="http://tsucchi.github.io/perl/2014/02/27/otogiri-plugin-deletecascade">Otogiri::Plugin::DeleteCascade</a>
+
+<ul>
+<li>外部キーを無視して DELETE できる最高のツール(俺氏作)</li>
+</ul>
+</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="2400" data-y="1600">
+
+
+<h2>DataDumperAutoEncode</h2>
+
+<p>こういうのが...</p>
+
+<pre><code>1&gt; Select('detective', { id =&gt; 1 });
+$res[1] = {
+    id =&gt; 1,
+    name =&gt; "\x{30b7}\x{30e3}\x{30fc}\x{30ed}\x{30c3}\x{30af}\x{30fb}\x{30b7}\x{30a7}\x{30ea}\x{30f3}\x{30d5}\x{30a9}\x{30fc}\x{30c9}",
+    age =&gt; 15,
+    toys =&gt; "\x{30b5}\x{30a4}\x{30b3}\x{30ad}\x{30cd}\x{30b7}\x{30b9}",
+    birthday =&gt; '3/31',
+}
+</code></pre>
+
+
+</div>
+<div class="step" data-x="3600" data-y="1600">
+
+
+<h2>DataDumperAutoEncode</h2>
+
+<p>こうなる。超便利！</p>
+
+<pre><code>1&gt; Select('detective', { id =&gt; 1 });
+$res[1] = {
+    id =&gt; 1,
+    name =&gt; 'シャーロック・シェリンフォード',
+    age =&gt; 15,
+    toys =&gt; 'サイコキネシス',
+    birthday =&gt; '3/31',
+}
+</code></pre>
+
+
+</div>
+<div class="step" data-x="4800" data-y="1600">
+
+
+<h2>StandardPrompt</h2>
+
+<ul>
+<li>Reply 本体に付属する FancyPrompt というプラグインがあるが、あんまファンシーじゃない</li>
+<li>bash でいうと下記相当</li>
+</ul>
+<pre><code>export PS1="\!&gt; "
+</code></pre>
+
+
+</div>
+<div class="step" data-x="0" data-y="2400">
+
+
+<h2>StandardPrompt</h2>
+
+<ul>
+<li>StandardPrompt を使うとプロンプトをカスタマイズできる</li>
+</ul>
+<pre><code>[StandardPrompt]
+prompt='reply@' . Show_dbname() . "[$history_count]&gt; "
+</code></pre>
+
+<pre><code>reply@myservice[10]&gt; 
+</code></pre>
+
+<ul>
+<li><a href="http://tsucchi.github.io/perl/2014/04/10/reply-plugin-standardprompt/">Reply::Plugin::StandardPrompt ってのを書いてみた</a></li>
+</ul>
+
+
+</div>
+<div class="step" data-x="1200" data-y="2400">
+
+
+<h2>Otogiri::Plugin::DeleteCascade</h2>
+
+<ul>
+<li>Reply とは直接関係ないんだけどね</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="2400" data-y="2400">
+
+
+<h2>Otogiri::Plugin::DeleteCascade</h2>
+
+<ul>
+<li>Reply とは直接関係ないんだけどね</li>
+<li>僕が Reply と ORM の組み合わせ運用始めるにあたって欲しかったので頑張って書いたツール</li>
+<li>FK のあるテーブルに対して、親を消すと依存する子も一緒に消してくれる</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="3600" data-y="2400">
+
+
+<h2>Otogiri::Plugin::DeleteCascade</h2>
+
+<div class="highlight"><pre><span class="k">use</span> <span class="n">Otogiri</span><span class="p">;</span>
+<span class="k">use</span> <span class="nn">Otogiri::</span><span class="n">Plugin</span><span class="p">;</span>
+
+<span class="n">Otogiri</span><span class="o">-&gt;</span><span class="n">load_plugin</span><span class="p">(</span><span class="s">'DeleteCascade'</span><span class="p">);</span>
+
+<span class="k">my</span> <span class="nv">$db</span> <span class="o">=</span> <span class="n">Otogiri</span><span class="o">-&gt;</span><span class="k">new</span><span class="p">(</span> <span class="n">connect_info</span> <span class="o">=&gt;</span> <span class="nv">$connect_info</span> <span class="p">);</span>
+<span class="nv">$db</span><span class="o">-&gt;</span><span class="n">insert</span><span class="p">(</span><span class="s">'parent_table'</span><span class="p">,</span> <span class="p">{</span> <span class="n">id</span> <span class="o">=&gt;</span> <span class="mi">123</span><span class="p">,</span> <span class="n">value</span> <span class="o">=&gt;</span> <span class="s">'aaa'</span> <span class="p">});</span>
+<span class="nv">$db</span><span class="o">-&gt;</span><span class="n">insert</span><span class="p">(</span><span class="s">'child_table'</span><span class="p">,</span>  <span class="p">{</span> <span class="n">parent_id</span> <span class="o">=&gt;</span> <span class="mi">123</span><span class="p">,</span> <span class="n">value</span> <span class="o">=&gt;</span> <span class="s">'bbb'</span><span class="p">});</span> <span class="c1"># child.parent_id referes parent_table.id(FK)</span>
+
+<span class="nv">$db</span><span class="o">-&gt;</span><span class="n">delete_cascade</span><span class="p">(</span><span class="s">'parent_table'</span><span class="p">,</span> <span class="p">{</span> <span class="n">id</span> <span class="o">=&gt;</span> <span class="mi">123</span> <span class="p">});</span> <span class="c1"># both parent_table and child_table are deleted.</span>
+</pre></div>
+
+
+</div>
+<div class="step" data-x="4800" data-y="2400">
+
+
+<h2>まとめ</h2>
+
+<ul>
+<li>Reply 便利なので、使うと良いです</li>
+<li>設定を工夫すると色々便利なので、やってみると良いと思います</li>
+<li>プラグイン書くのもそんなに大変じゃないので、やってみると良いと思います</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="0" data-y="3200">
+
+
+<h2>まとめ</h2>
+
+<ul>
+<li><code>冒険☆ミルキィロード!!買いましょう！</code></li>
+</ul>
+<iframe src="http://rcm-fe.amazon-adsystem.com/e/cm?t=tsucchisblog-22&amp;o=9&amp;p=8&amp;l=as1&amp;asins=B00IO2EBGA&amp;ref=qf_sp_asin_til&amp;fc1=000000&amp;IS2=1&amp;lt1=_blank&amp;m=amazon&amp;lc1=0000FF&amp;bc1=000000&amp;bg1=FFFFFF&amp;f=ifr" style="width:120px;height:240px;" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"></iframe>
+
+
+</div>
+<div class="step" data-x="1200" data-y="3200">
+
+<h1>おしまい</h1>
+
+</div>
+
+
+    <div id="overview" class="step" data-x="3000" data-y="1500" data-scale="10">
+    </div>
+
+</div>
+
+<div class="hint">
+    <p>Use a spacebar or arrow keys to navigate</p>
+</div>
+<script>
+if ("ontouchstart" in document.documentElement) { 
+    document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";
+}
+</script>
+<script src="js/impress.js"></script>
+</body>
+</html>
+
