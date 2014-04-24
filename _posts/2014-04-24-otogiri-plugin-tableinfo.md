@@ -16,7 +16,7 @@ my $db = Otogiri->new( connect_info => [ ... ] );
 $db->load_plugin('TableInfo');
 my @table_names = $db->show_tables(); # => DB 上にあるテーブル名一覧が返る
 my @filtered_table_name = $db->show_tables(qr/^user/); # => 「user」で始まるテーブル名一覧が返る
-my $create_table_ddl = $db->desc('user'); # => user テーブルの CREATE TABLE 文が変える
+my $create_table_ddl = $db->desc('user'); # => user テーブルの CREATE TABLE 文が返る
 
 ```
 
