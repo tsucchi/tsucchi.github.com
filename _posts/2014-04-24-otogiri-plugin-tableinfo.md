@@ -35,3 +35,12 @@ CREATE TABLE 文が拾えるので割と楽なのですが、PostgreSQL はそ�
 
 「Otogiri 以外でも使ってみたい」って人がいたら、ここのコメントとか [@tsucchi](http://twitter.com/tsucchi) とか github issue とかに
 リクエストしてもらえれば対応するかもしれないし、気が向いたら対応するかもです。
+
+### 2014-04-25 追記
+書き忘れてましたが、github止まりモジュールなので、インストールする際は
+
+```
+cpanm git@github.com:tsucchi/p5-Otogiri-Plugin-TableInfo.git
+```
+
+とかやって入れてください。
