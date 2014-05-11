@@ -31,16 +31,24 @@ CREATE TABLE 文が拾えるので割と楽なのですが、PostgreSQL はそ�
 
 最近いくつか紹介してる、Reply と組み合わせると便利シリーズの一環ですね。まーそこそこ便利だと思うので、興味がある方は使ってみると良いです。
 
-+ [Otogiri::Plugin::TableInfo](https://github.com/tsucchi/p5-Otogiri-Plugin-TableInfo)
++ [Otogiri::Plugin::TableInfo - github](https://github.com/tsucchi/p5-Otogiri-Plugin-TableInfo)
++ [Otogiri::Plugin::TableInfo - CPAN](http://search.cpan.org/dist/Otogiri-Plugin-TableInfo/)
 
 「Otogiri 以外でも使ってみたい」って人がいたら、ここのコメントとか [@tsucchi](http://twitter.com/tsucchi) とか github issue とかに
 リクエストしてもらえれば対応するかもしれないし、気が向いたら対応するかもです。
 
+### 2014-05-11 追記
+CPAN に上げました。
+
++ [Otogiri::Plugin::TableInfo - CPAN](http://search.cpan.org/dist/Otogiri-Plugin-TableInfo/)
+
 ### 2014-04-25 追記
-書き忘れてましたが、github止まりモジュールなので、インストールする際は
+CPAN に上げたので、以下の記述は obsolute です。cpanm とかで普通に入ります
 
-```
-cpanm git@github.com:tsucchi/p5-Otogiri-Plugin-TableInfo.git
-```
+<del>書き忘れてましたが、github止まりモジュールなので、インストールする際は</del>
 
-とかやって入れてください。
+
+<del>cpanm git@github.com:tsucchi/p5-Otogiri-Plugin-TableInfo.git</del>
+
+
+<del>とかやって入れてください。</del>
