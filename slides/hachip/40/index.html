@@ -1,0 +1,423 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>非同期のはなし(?)</title>
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
+    <link href="css/impress.css"  rel="stylesheet" />
+    <link href="css/pygments.css" rel="stylesheet" />
+</head>
+<body>
+<div id="impress" class="impress-not-supported">
+    <div class="fallback-message">
+        <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+        <p>For the best experience please use the latest <b>Chrome</b> or <b>Safari</b> browser. Firefox 10 (to be released soon) will also handle it.</p>
+    </div>
+
+<div class="step" id="title" data-x="0" data-y="0">
+
+
+<h1>非同期のはなし(?)</h1>
+
+<p></p>
+<address><a href="http://twitter.com/tsucchi">@tsucchi</a></address>
+
+
+</div>
+<div class="step" data-x="1200" data-y="0">
+
+
+<h2>自己紹介</h2>
+
+<ul>
+<li>土田　拓也(つちだ　たくや)</li>
+<li>
+<a href="http://twitter.com/tsucchi">@tsucchi</a> とか <a href="http://tsucchi.github.io/">blog(http://tsucchi.github.io/)</a>とか</li>
+<li>普段は Perl とか SQL とか書いてます</li>
+<li>
+<img src="./icon.jpeg"> こんなかんじのアイコンです</li>
+<li>
+<code>Perl</code> と <code>ミルキィホームズ</code>が好きです</li>
+<li>最近は <code>Acme::MilkyHolmes</code> という素敵なモジュールの開発をしています</li>
+</ul>
+<iframe src="http://rcm-fe.amazon-adsystem.com/e/cm?t=tsucchisblog-22&amp;o=9&amp;p=8&amp;l=as1&amp;asins=B00IO2EBGA&amp;ref=qf_sp_asin_til&amp;fc1=000000&amp;IS2=1&amp;lt1=_blank&amp;m=amazon&amp;lc1=0000FF&amp;bc1=000000&amp;bg1=FFFFFF&amp;f=ifr" style="width:120px;height:240px;" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"></iframe>
+
+
+</div>
+<div class="step" data-x="2400" data-y="0">
+
+
+<h2>で、今回のテーマについて</h2>
+
+<ul>
+<li>何でしたっけ？</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="3600" data-y="0">
+
+<h2>非同期だっけ？</h2>
+
+</div>
+<div class="step" data-x="4800" data-y="0">
+
+
+<h2>非同期処理について</h2>
+
+<ul>
+<li>
+<code>Reply でバックグラウンドのジョブを走らせる君</code>が欲しいので誰か書いてください</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="0" data-y="800">
+
+<h2>以上！</h2>
+
+</div>
+<div class="step" data-x="1200" data-y="800">
+
+
+<h1>Reply の話(2)</h1>
+
+<p></p>
+<address><a href="http://twitter.com/tsucchi">@tsucchi</a></address>
+
+
+</div>
+<div class="step" data-x="2400" data-y="800">
+
+
+<h2>Reply について</h2>
+
+<ul>
+<li><a href="http://blog.64p.org/entry/2013/06/07/180316">Reply is awesome!</a></li>
+<li>知らない方のために簡単に説明すると、「irbみたいなやつ」です</li>
+</ul>
+<pre><code>tsucchi@surreal[620]$ reply
+reply@surreal.local[0]&gt; 
+reply@surreal.local[1]&gt; 1 + 1
+$res[0] = '2'
+
+reply@surreal.local[2]&gt; $a = 123
+$res[1] = '123'
+
+reply@surreal.local[3]&gt; $b = 456
+$res[2] = '456'
+
+reply@surreal.local[4]&gt; $a + $b
+$res[3] = '579'
+
+reply@surreal.local[5]&gt; rand()
+$res[4] = '0.0647113826862586'
+
+reply@surreal.local[6]&gt; exit
+</code></pre>
+
+
+</div>
+<div class="step" data-x="3600" data-y="800">
+
+
+<h2>Reply is 便利</h2>
+
+<ul>
+<li>結構便利
+
+<ul>
+<li>「a.pl 書いてお試し」、みたいなのが無くなった</li>
+</ul>
+</li>
+<li>ORM と組み合わせると最高便利っぽい
+
+<ul>
+<li><a href="http://tsucchi.github.io/perl/2014/03/14/repl-and-otogiri/">REPLでORMを使えるようにすると、めっちゃ便利だ、という話</a></li>
+</ul>
+</li>
+</ul>
+<pre><code>% reply-service1
+1&gt; Select('detective', { id =&gt; 1 });
+$res[1] = {
+    id =&gt; 1,
+    name =&gt; 'シャーロック・シェリンフォード',
+    age =&gt; 15,
+    toys =&gt; 'サイコキネシス',
+    birthday =&gt; '3/31',
+}
+</code></pre>
+
+
+</div>
+<div class="step" data-x="4800" data-y="800">
+
+
+<h2>色々便利な物体があるので、試してみてください</h2>
+
+<ul>
+<li>
+<a href="https://github.com/papix/Reply-Plugin-Otogiri">Reply::Plugin::Otogiri</a>
+
+<ul>
+<li>Otogiri の関数が使える(papix氏作)</li>
+<li>Reply::Plugin::ORM ってのも最近できた！(ごめん、まだ試してない)</li>
+</ul>
+</li>
+<li>
+<a href="http://tsucchi.github.io/perl/2014/04/04/reply-plugin-datadumper-autoencode">Reply::Plugin::DataDumperAutoEncode</a>
+
+<ul>
+<li>出力を自動エンコードしてくれる物体(俺氏作)</li>
+</ul>
+</li>
+<li>
+<a href="http://tsucchi.github.io/perl/2014/04/10/reply-plugin-standardprompt">Reply::Plugin::StandardPrompt</a>
+
+<ul>
+<li>シェルみたいなカスタマイズ可能なプロンプトを提供する(俺氏作)</li>
+</ul>
+</li>
+<li>
+<a href="http://tsucchi.github.io/perl/2014/02/27/otogiri-plugin-deletecascade">Otogiri::Plugin::DeleteCascade</a>
+
+<ul>
+<li>外部キーを無視して DELETE できる最高のツール(俺氏作)</li>
+</ul>
+</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="0" data-y="1600">
+
+
+<h2>本題</h2>
+
+<ul>
+<li>SQL 投げたりして、DB のシェルみたいに使ってるから、テーブル定義見たい気がする</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="1200" data-y="1600">
+
+
+<h2>よし、作ろう</h2>
+
+<ul>
+<li><a href="https://github.com/tsucchi/p5-Otogiri-Plugin-TableInfo">Otogiri::Plugin::TableInfo</a></li>
+</ul>
+
+
+</div>
+<div class="step" data-x="2400" data-y="1600">
+
+
+<h1>地獄の話</h1>
+
+<p></p>
+<address><a href="http://twitter.com/tsucchi">@tsucchi</a></address>
+
+
+</div>
+<div class="step" data-x="3600" data-y="1600">
+
+<h2>まずは DBMS 毎にどのようにテーブル定義を取得するか見てみましょう</h2>
+
+</div>
+<div class="step" data-x="4800" data-y="1600">
+
+
+<h2>MySQL</h2>
+
+<ul>
+<li>下記でパツイチ。最高！</li>
+</ul>
+<div class="highlight"><pre><span class="k">my</span> <span class="p">(</span><span class="nv">$create_table_ddl</span><span class="p">)</span> <span class="o">=</span> <span class="nv">$self</span><span class="o">-&gt;</span><span class="n">search_by_sql</span><span class="p">(</span><span class="s">"SHOW CREATE TABLE $table_name"</span><span class="p">);</span>
+</pre></div>
+
+
+</div>
+<div class="step" data-x="0" data-y="2400">
+
+
+<h2>SQLite</h2>
+
+<ul>
+<li>下記で取れる。楽勝！</li>
+</ul>
+<div class="highlight"><pre><span class="k">my</span> <span class="nv">$inspector</span> <span class="o">=</span> <span class="nn">DBIx::</span><span class="n">Inspector</span><span class="o">-&gt;</span><span class="k">new</span><span class="p">(</span><span class="n">dbh</span> <span class="o">=&gt;</span> <span class="nv">$self</span><span class="o">-&gt;</span><span class="n">dbh</span><span class="p">);</span>
+<span class="k">my</span> <span class="nv">$table</span> <span class="o">=</span> <span class="nv">$inspector</span><span class="o">-&gt;</span><span class="n">table</span><span class="p">(</span><span class="nv">$table_name</span><span class="p">);</span>
+<span class="k">my</span> <span class="nv">$create_tabl_ddl</span> <span class="o">=</span>  <span class="nv">$table</span><span class="o">-&gt;</span><span class="p">{</span><span class="n">SQLITE_SQL</span><span class="p">};</span>
+</pre></div>
+
+
+</div>
+<div class="step" data-x="1200" data-y="2400">
+
+
+<h2>PostgreSQL</h2>
+
+<ul>
+<li>そんなものはない！</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="2400" data-y="2400">
+
+
+<h2>え？まじ？</h2>
+
+<ul>
+<li>探せばコマンドあるっしょ？</li>
+<li>多分あんま知られてないAPIとかあって、pg_admin3 とか pg_dump とかはそれ叩いてるんでしょ？</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="3600" data-y="2400">
+
+
+<h2>そんなものは無かった orz</h2>
+
+<ul>
+<li>ぐぐっても <code>pg_dump</code> 叩けとかそんなんばかり</li>
+<li>ひどいのだと、<code>\d テーブル名</code> とか書いてあるけど、それテーブル定義じゃねーだろ！</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="4800" data-y="2400">
+
+
+<h2>そしてトドメ</h2>
+
+<ul>
+<li>pgadmin3-1.18.1/pgadmin/schema/pgDatabase.cpp</li>
+</ul>
+<div class="highlight"><pre><span class="n">sql</span> <span class="o">=</span> <span class="n">wxT</span><span class="p">(</span><span class="s">"-- Database: "</span><span class="p">)</span> <span class="o">+</span> <span class="n">GetQuotedFullIdentifier</span><span class="p">()</span> <span class="o">+</span> <span class="n">wxT</span><span class="p">(</span><span class="s">"</span><span class="se">\n\n</span><span class="s">"</span><span class="p">)</span>
+      <span class="o">+</span> <span class="n">wxT</span><span class="p">(</span><span class="s">"-- DROP DATABASE "</span><span class="p">)</span> <span class="o">+</span> <span class="n">GetQuotedIdentifier</span><span class="p">()</span> <span class="o">+</span> <span class="n">wxT</span><span class="p">(</span><span class="s">";"</span><span class="p">)</span>
+      <span class="o">+</span> <span class="n">wxT</span><span class="p">(</span><span class="s">"</span><span class="se">\n\n</span><span class="s">CREATE DATABASE "</span><span class="p">)</span> <span class="o">+</span> <span class="n">GetQuotedIdentifier</span><span class="p">()</span>
+      <span class="o">+</span> <span class="n">wxT</span><span class="p">(</span><span class="s">"</span><span class="se">\n</span><span class="s">  WITH OWNER = "</span><span class="p">)</span> <span class="o">+</span> <span class="n">qtIdent</span><span class="p">(</span><span class="n">GetOwner</span><span class="p">())</span>
+      <span class="o">+</span> <span class="n">wxT</span><span class="p">(</span><span class="s">"</span><span class="se">\n</span><span class="s">       ENCODING = "</span><span class="p">)</span> <span class="o">+</span> <span class="n">qtDbString</span><span class="p">(</span><span class="n">GetEncoding</span><span class="p">());</span>
+</pre></div>
+
+
+</div>
+<div class="step" data-x="0" data-y="3200">
+
+
+<h2>無ければつくるしかない</h2>
+
+<ul>
+<li>
+<a href="https://github.com/tsucchi/p5-Otogiri-Plugin-TableInfo/blob/fe3b45bcdc1b7321e6628ffc7fac1d93b5c59417/lib/Otogiri/Plugin/TableInfo/Pg.pm#L40-L66">最初の実装</a>
+
+<ul>
+<li>
+<code>pg_dump</code> を叩いて結果を成形する、というめっちゃ雑な実装</li>
+<li>とはいえ、機能としては十分なので、最初の1週間くらいはコレを使ってた</li>
+</ul>
+</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="1200" data-y="3200">
+
+
+<h2>無ければつくるしかない</h2>
+
+<ul>
+<li>
+<a href="https://github.com/tsucchi/p5-Otogiri-Plugin-TableInfo/commits/desc">作業ブランチ</a>
+
+<ul>
+<li>ちょっと荒れ気味のコミットメッセージとどうでも良い知見が得られる
+
+<ul>
+<li>index 定義は pg_dump は何故か加工してるっぽい(DBから取れるのに)とか</li>
+<li>一意制約貼るとき、名前が index かそうじゃないかで、何故か表示が変わるっぽい(機能は多分同じ)とか</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="2400" data-y="3200">
+
+
+<h2>工夫したこと</h2>
+
+<ul>
+<li>最終的な実装は DBIx::Inspector で解析したカラム情報を元に CREATE TABLE 文を組み立ててるので、変な事にならないようにテストを頑張る
+
+<ul>
+<li>
+<code>pg_dump</code> で出したやつと比較して一致するか</li>
+<li>結構アレな実装なのに、カバレッジ96%ある</li>
+</ul>
+</li>
+<li>
+<a href="https://github.com/tsucchi/p5-Otogiri-Plugin-TableInfo/blob/master/eg/compare.t">eg/compare.t</a>
+
+<ul>
+<li>実テーブルを使って比較するためのスクリプト</li>
+</ul>
+</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="3600" data-y="3200">
+
+
+<h2>まとめ</h2>
+
+<ul>
+<li>結構大変だったけど、その後沢山使ってるので、苦労には見合ったかな、と思う</li>
+<li>地獄っぽいけどやる事はシンプルなので、何とかなった感じ</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="4800" data-y="3200">
+
+
+<h2>まとめ</h2>
+
+<ul>
+<li><code>冒険☆ミルキィロード!! まだ買ってない方は是非買ってください</code></li>
+</ul>
+<iframe src="http://rcm-fe.amazon-adsystem.com/e/cm?t=tsucchisblog-22&amp;o=9&amp;p=8&amp;l=as1&amp;asins=B00IO2EBGA&amp;ref=qf_sp_asin_til&amp;fc1=000000&amp;IS2=1&amp;lt1=_blank&amp;m=amazon&amp;lc1=0000FF&amp;bc1=000000&amp;bg1=FFFFFF&amp;f=ifr" style="width:120px;height:240px;" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"></iframe>
+
+
+</div>
+<div class="step" data-x="0" data-y="4000">
+
+<h1>おしまい</h1>
+
+</div>
+
+
+    <div id="overview" class="step" data-x="3000" data-y="1500" data-scale="10">
+    </div>
+
+</div>
+
+<div class="hint">
+    <p>Use a spacebar or arrow keys to navigate</p>
+</div>
+<script>
+if ("ontouchstart" in document.documentElement) { 
+    document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";
+}
+</script>
+<script src="js/impress.js"></script>
+</body>
+</html>
+
