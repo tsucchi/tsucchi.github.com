@@ -1,0 +1,267 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>最高のテストデータの話</title>
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
+    <link href="css/impress.css"  rel="stylesheet" />
+    <link href="css/pygments.css" rel="stylesheet" />
+</head>
+<body>
+<div id="impress" class="impress-not-supported">
+    <div class="fallback-message">
+        <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+        <p>For the best experience please use the latest <b>Chrome</b> or <b>Safari</b> browser. Firefox 10 (to be released soon) will also handle it.</p>
+    </div>
+
+<div class="step" id="title" data-x="0" data-y="0">
+
+
+<h1>最高のテストデータの話</h1>
+
+<p></p>
+<address><a href="http://twitter.com/tsucchi">@tsucchi</a></address>
+
+
+</div>
+<div class="step" data-x="1200" data-y="0">
+
+
+<h2>自己紹介</h2>
+
+<ul>
+<li>土田　拓也(つちだ　たくや)</li>
+<li>
+<a href="http://twitter.com/tsucchi">@tsucchi</a> とか <a href="http://tsucchi.github.io/">blog(http://tsucchi.github.io/)</a>とか</li>
+<li>普段は Perl とか SQL とか書いてます</li>
+<li>
+<img src="./icon.jpeg"> こんなかんじのアイコンです</li>
+<li>
+<code>Perl</code> と <code>ミルキィホームズ</code>が好きです</li>
+</ul>
+<iframe src="http://rcm-fe.amazon-adsystem.com/e/cm?t=tsucchisblog-22&amp;o=9&amp;p=8&amp;l=as1&amp;asins=B00IO2EBGA&amp;ref=qf_sp_asin_til&amp;fc1=000000&amp;IS2=1&amp;lt1=_blank&amp;m=amazon&amp;lc1=0000FF&amp;bc1=000000&amp;bg1=FFFFFF&amp;f=ifr" style="width:120px;height:240px;" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"></iframe>
+
+
+</div>
+<div class="step" data-x="2400" data-y="0">
+
+<h2>テストデータ、作ってますか？</h2>
+
+</div>
+<div class="step" data-x="3600" data-y="0">
+
+
+<h2>めんどくさいですよね？</h2>
+
+<ul>
+<li>項目が決まっている所は、普通に正しいデータを入れれば良い</li>
+<li>「何でも良いけど、NULLはダメ」みたいなやつがめんどくさい
+
+<ul>
+<li>「あああああ」とか入れるのも微妙だし</li>
+</ul>
+</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="4800" data-y="0">
+
+
+<h2>そんな中、Ruby の世界に奇才が現れた</h2>
+
+<ul>
+<li>id:sue445氏(<a href="https://twitter.com/sue445">@sue445</a>)</li>
+<li><a href="http://sue445.hatenablog.com/entry/2014/04/23/101433">Faker::Precureというgemを作りました - くりにっき</a></li>
+</ul>
+<pre><code>業務で堂々と rubicure を使いたくなったのでプリキュアでテストデータを作るためのgemを作りました。所要時間2時間くらい
+</code></pre>
+
+
+</div>
+<div class="step" data-x="0" data-y="800">
+
+<h2>なるほど、これは良い</h2>
+
+</div>
+<div class="step" data-x="1200" data-y="800">
+
+
+<h2>ところで</h2>
+
+<ul>
+<li>プリキュアでテストデータを作るのもなかなか良いと思いますが、最高のテストデータとは何だろう？</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="2400" data-y="800">
+
+<h2>三段論法で考えてみよう</h2>
+
+</div>
+<div class="step" data-x="3600" data-y="800">
+
+
+<h2>三段論法</h2>
+
+<ul>
+<li><code>ミルキィホームズは最高である</code></li>
+</ul>
+
+
+</div>
+<div class="step" data-x="4800" data-y="800">
+
+
+<h2>三段論法</h2>
+
+<ul>
+<li>ミルキィホームズは最高である</li>
+<li><code>ミルキィホームズを使ってテストデータを作る事は可能である</code></li>
+</ul>
+
+
+</div>
+<div class="step" data-x="0" data-y="1600">
+
+
+<h2>三段論法</h2>
+
+<ul>
+<li>ミルキィホームズは最高である</li>
+<li>ミルキィホームズを使ってテストデータを作る事は可能である</li>
+<li><code>ミルキィホームズを作ってテストデータを作れば最高である</code></li>
+</ul>
+
+
+</div>
+<div class="step" data-x="1200" data-y="1600">
+
+
+<h2>問☆題☆解☆決</h2>
+
+<p><img src="./mondaikaiketsu.jpg" width="50%" height="50%"></p>
+
+
+</div>
+<div class="step" data-x="2400" data-y="1600">
+
+
+<h2>Data::Faker</h2>
+
+<ul>
+<li>Perl にはそもそもこういう用途のデータを作るための、Data::Faker というモジュールがある</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="3600" data-y="1600">
+
+<h2>よし、Data::Faker::MilkyHolmes を作ろう！</h2>
+
+</div>
+<div class="step" data-x="4800" data-y="1600">
+
+
+<h2>そのために Acme::MilkyHolmes を作ろう(イマココ)</h2>
+
+<ul>
+<li><a href="https://github.com/tsucchi/p5-Acme-MilkyHolmes">https://github.com/tsucchi/p5-Acme-MilkyHolmes</a></li>
+<li>本当は今日 shipit したかったけど、まだクォリティ微妙なので近日リリース予定</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="0" data-y="2400">
+
+
+<h2>Acme::MilkyHolmes</h2>
+
+<ul>
+<li>members()メソッド</li>
+<li>ミルキィホームズのメンバーが取得できて便利</li>
+</ul>
+<div class="highlight"><pre><span class="k">use</span> <span class="nn">Acme::</span><span class="n">MilkyHolmes</span><span class="p">;</span>
+<span class="k">my</span> <span class="p">(</span><span class="nv">$sherlock</span><span class="p">,</span> <span class="nv">$nero</span><span class="p">,</span> <span class="nv">$elly</span><span class="p">,</span> <span class="nv">$cordelia</span><span class="p">)</span> <span class="o">=</span> <span class="nn">Acme::</span><span class="n">MilkyHolmes</span><span class="o">-&gt;</span><span class="n">members</span><span class="p">();</span>
+</pre></div>
+
+
+</div>
+<div class="step" data-x="1200" data-y="2400">
+
+
+<h2>Acme::MilkyHolmes</h2>
+
+<ul>
+<li>キャラクター毎のインスタンス</li>
+<li>各キャラクター(ここではシャロ)の色々な情報が取れて便利</li>
+</ul>
+<div class="highlight"><pre><span class="k">my</span> <span class="nv">$sherlock</span> <span class="o">=</span> <span class="nn">Acme::MilkyHolmes::Character::</span><span class="n">SherlockShellingford</span><span class="o">-&gt;</span><span class="k">new</span><span class="p">();</span>
+<span class="nv">$sherlock</span><span class="o">-&gt;</span><span class="n">name</span><span class="p">;</span> <span class="c1"># =&gt; 'シャーロック・シェリンフォード'</span>
+<span class="nv">$sherlock</span><span class="o">-&gt;</span><span class="n">nickname</span><span class="p">;</span> <span class="c1"># =&gt; 'シャロ'</span>
+<span class="nv">$sherlock</span><span class="o">-&gt;</span><span class="n">birthday</span><span class="p">;</span> <span class="c1"># =&gt; '3/31'</span>
+<span class="nv">$sherlock</span><span class="o">-&gt;</span><span class="n">voiced_by</span><span class="p">;</span> <span class="c1"># =&gt; '三森 すずこ'</span>
+<span class="nv">$sherlock</span><span class="o">-&gt;</span><span class="n">toys</span><span class="p">;</span> <span class="c1"># =&gt; 'サイコキネシス'</span>
+</pre></div>
+
+
+</div>
+<div class="step" data-x="2400" data-y="2400">
+
+
+<h2>Acme::MilkyHolmes</h2>
+
+<ul>
+<li>say()メソッド</li>
+<li>いつもの小芝居ができて便利</li>
+</ul>
+<div class="highlight"><pre><span class="k">my</span> <span class="p">(</span><span class="nv">$sherlock</span><span class="p">,</span> <span class="nv">$nero</span><span class="p">,</span> <span class="nv">$elly</span><span class="p">,</span> <span class="nv">$cordelia</span><span class="p">)</span> <span class="o">=</span> <span class="nn">Acme::</span><span class="n">MilkyHolmes</span><span class="o">-&gt;</span><span class="n">members</span><span class="p">();</span>
+<span class="nv">$sherlock</span><span class="o">-&gt;</span><span class="n">say</span><span class="p">(</span><span class="s">'ってなんでですかー'</span><span class="p">);</span>
+<span class="nv">$nero</span><span class="o">-&gt;</span><span class="n">say</span><span class="p">(</span><span class="s">'僕のうまうま棒〜'</span><span class="p">);</span>
+<span class="nv">$elly</span><span class="o">-&gt;</span><span class="n">say</span><span class="p">(</span><span class="s">'恥ずかしい...'</span><span class="p">);</span>
+<span class="nv">$cordelia</span><span class="o">-&gt;</span><span class="n">say</span><span class="p">(</span><span class="s">'私の...お花畑...'</span><span class="p">);</span>
+</pre></div>
+
+
+</div>
+<div class="step" data-x="3600" data-y="2400">
+
+
+<h2>まとめ</h2>
+
+<ul>
+<li>Data::Faker + Acme::MilkyHolmesで最高のテストデータが作れるようになります</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="4800" data-y="2400">
+
+<h2>乞うご期待！</h2>
+
+</div>
+<div class="step" data-x="0" data-y="3200">
+
+<h1>おしまい</h1>
+
+</div>
+
+
+    <div id="overview" class="step" data-x="3000" data-y="1500" data-scale="10">
+    </div>
+
+</div>
+
+<div class="hint">
+    <p>Use a spacebar or arrow keys to navigate</p>
+</div>
+<script>
+if ("ontouchstart" in document.documentElement) { 
+    document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";
+}
+</script>
+<script src="js/impress.js"></script>
+</body>
+</html>
+
