@@ -43,7 +43,7 @@ $cordelia->say('私の...お花畑...');
 
 実行すると、色がついてこんな感じになります。
 
-<img src="./koshibai.png">
+<img src="/assets/img/koshibai.png">
 
 
 とか大体こんな感じです。
