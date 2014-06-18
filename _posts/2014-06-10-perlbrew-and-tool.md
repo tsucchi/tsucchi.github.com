@@ -33,7 +33,7 @@ hoge
 いったん書き終えてから思いついたんだけど、
 
 ```
-alias newperl="perlbrew exec --with perl-5.20@default perl"
+alias newperl="perlbrew exec -q --with perl-5.20@default perl"
 ```
 
 こんな感じの alias 作っておけば、カレントの perl がどっちかあんまり意識しなくてもよくなって良いんじゃないかな。
