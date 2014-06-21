@@ -124,7 +124,7 @@ my $story = $pivotal->get("/projects/$project_id/stories/$story_id");# JSON resp
 ```
 
 
-Otogiri関連(?)
+Reply-Otogiri関連(?)
 ---
 + [perlbrew で Perl製ツールを使う場合](http://tsucchi.github.io/perl/2014/06/10/perlbrew-and-tool/)
 <script src="https://gist.github.com/tsucchi/7626dec9169cd1b18d4e.js"></script>
