@@ -1,0 +1,279 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>セッションのはなし(?)</title>
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
+    <link href="css/impress.css"  rel="stylesheet" />
+    <link href="css/pygments.css" rel="stylesheet" />
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+</head>
+<body>
+<div id="impress" class="impress-not-supported">
+    <div class="fallback-message">
+        <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+        <p>For the best experience please use the latest <b>Chrome</b> or <b>Safari</b> browser. Firefox 10 (to be released soon) will also handle it.</p>
+    </div>
+
+<div class="step" id="title" data-x="0" data-y="0">
+
+
+<h1>セッションのはなし(?)</h1>
+
+<p></p>
+<address><a href="http://twitter.com/tsucchi">@tsucchi</a></address>
+
+
+</div>
+<div class="step" data-x="1200" data-y="0">
+
+
+<h2>自己紹介</h2>
+
+<ul>
+<li>土田　拓也(つちだ　たくや)</li>
+<li>
+<a href="http://twitter.com/tsucchi">@tsucchi</a> とか <a href="http://tsucchi.github.io/">blog(http://tsucchi.github.io/)</a>とか</li>
+<li>普段は Perl とか SQL とか書いてます</li>
+<li>
+<img src="./icon.jpeg"> こんなかんじのアイコンです</li>
+<li>
+<code>Perl</code> と <code>ミルキィホームズ</code>が好きです</li>
+<li>今日はみもりんの新曲をご紹介
+
+<ul>
+<li>ミルキィホームズの新曲出てないので...</li>
+<li>三森すずこ「せいいっぱい、つたえたい！」2014/08/06 発売予定です！</li>
+</ul>
+</li>
+</ul>
+<iframe src="http://rcm-fe.amazon-adsystem.com/e/cm?t=tsucchisblog-22&amp;o=9&amp;p=8&amp;l=as1&amp;asins=B00KF0LDTW&amp;ref=qf_sp_asin_til&amp;fc1=000000&amp;IS2=1&amp;lt1=_blank&amp;m=amazon&amp;lc1=0000FF&amp;bc1=000000&amp;bg1=FFFFFF&amp;f=ifr" style="width:120px;height:240px;" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"></iframe>
+
+
+</div>
+<div class="step" data-x="2400" data-y="0">
+
+
+<h2>で、今回のテーマについて</h2>
+
+<ul>
+<li>何でしたっけ？</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="3600" data-y="0">
+
+<h2>セッションだっけ？</h2>
+
+</div>
+<div class="step" data-x="4800" data-y="0">
+
+
+<h2>セッションについて</h2>
+
+<ul>
+<li>何故かあんま縁がなくて、地獄も見た事がありません</li>
+<li>今はふつうにキャタリストのセッション使ってます！</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="0" data-y="800">
+
+<h2>以上！</h2>
+
+</div>
+<div class="step" data-x="1200" data-y="800">
+
+
+<h1>最近つくったものの話</h1>
+
+<p></p>
+<address><a href="http://twitter.com/tsucchi">@tsucchi</a></address>
+
+
+</div>
+<div class="step" data-x="2400" data-y="800">
+
+
+<h2>Acme::MilkyHolmes</h2>
+
+<ul>
+<li>6/7 の五反田 Perl(もくもく会)で内部実装とかPODの見直しを完了させて無事リリースしました</li>
+<li><a href="http://search.cpan.org/dist/Acme-MilkyHolmes/">Acme::MilkyHolmes - cpan</a></li>
+</ul>
+
+
+</div>
+<div class="step" data-x="3600" data-y="800">
+
+
+<h2>Acme::MilkyHolmes</h2>
+
+<h2>members()メソッド</h2>
+
+<ul>
+<li>ミルキィホームズのメンバーが取得できて便利</li>
+</ul>
+<div class="highlight"><pre><span class="k">use</span> <span class="nn">Acme::</span><span class="n">MilkyHolmes</span><span class="p">;</span>
+<span class="k">my</span> <span class="p">(</span><span class="nv">$sherlock</span><span class="p">,</span> <span class="nv">$nero</span><span class="p">,</span> <span class="nv">$elly</span><span class="p">,</span> <span class="nv">$cordelia</span><span class="p">)</span> <span class="o">=</span> <span class="nn">Acme::</span><span class="n">MilkyHolmes</span><span class="o">-&gt;</span><span class="n">members</span><span class="p">();</span>
+</pre></div>
+
+
+</div>
+<div class="step" data-x="4800" data-y="800">
+
+
+<h2>Acme::MilkyHolmes</h2>
+
+<h2>キャラクター毎のインスタンス</h2>
+
+<ul>
+<li>各キャラクター(ここではシャロ)の色々な情報が取れて便利</li>
+</ul>
+<div class="highlight"><pre><span class="k">my</span> <span class="nv">$sherlock</span> <span class="o">=</span> <span class="nn">Acme::MilkyHolmes::Character::</span><span class="n">SherlockShellingford</span><span class="o">-&gt;</span><span class="k">new</span><span class="p">();</span>
+<span class="nv">$sherlock</span><span class="o">-&gt;</span><span class="n">name</span><span class="p">;</span> <span class="c1"># =&gt; 'シャーロック・シェリンフォード'</span>
+<span class="nv">$sherlock</span><span class="o">-&gt;</span><span class="n">nickname</span><span class="p">;</span> <span class="c1"># =&gt; 'シャロ'</span>
+<span class="nv">$sherlock</span><span class="o">-&gt;</span><span class="n">birthday</span><span class="p">;</span> <span class="c1"># =&gt; '3/31'</span>
+<span class="nv">$sherlock</span><span class="o">-&gt;</span><span class="n">voiced_by</span><span class="p">;</span> <span class="c1"># =&gt; '三森 すずこ'</span>
+<span class="nv">$sherlock</span><span class="o">-&gt;</span><span class="n">toys</span><span class="p">;</span> <span class="c1"># =&gt; 'サイコキネシス'</span>
+</pre></div>
+
+
+</div>
+<div class="step" data-x="0" data-y="1600">
+
+
+<h2>Acme::MilkyHolmes</h2>
+
+<h2>say()メソッド</h2>
+
+<ul>
+<li>いつもの小芝居ができて便利</li>
+</ul>
+<div class="highlight"><pre><span class="k">my</span> <span class="p">(</span><span class="nv">$sherlock</span><span class="p">,</span> <span class="nv">$nero</span><span class="p">,</span> <span class="nv">$elly</span><span class="p">,</span> <span class="nv">$cordelia</span><span class="p">)</span> <span class="o">=</span> <span class="nn">Acme::</span><span class="n">MilkyHolmes</span><span class="o">-&gt;</span><span class="n">members</span><span class="p">();</span>
+<span class="nv">$sherlock</span><span class="o">-&gt;</span><span class="n">say</span><span class="p">(</span><span class="s">'ってなんでですかー'</span><span class="p">);</span>
+<span class="nv">$nero</span><span class="o">-&gt;</span><span class="n">say</span><span class="p">(</span><span class="s">'僕のうまうま棒〜'</span><span class="p">);</span>
+<span class="nv">$elly</span><span class="o">-&gt;</span><span class="n">say</span><span class="p">(</span><span class="s">'恥ずかしい...'</span><span class="p">);</span>
+<span class="nv">$cordelia</span><span class="o">-&gt;</span><span class="n">say</span><span class="p">(</span><span class="s">'私の...お花畑...'</span><span class="p">);</span>
+</pre></div>
+
+<p>実行すると、こんな感じ</p>
+
+<p><img src="/assets/img/koshibai.png"></p>
+
+
+</div>
+<div class="step" data-x="1200" data-y="1600">
+
+
+<h2>Acme::MilkyHolmesの今後について</h2>
+
+<ul>
+<li>あいみんの名称変更対応</li>
+<li>何度も言ってる気がするけど Plugin システム
+
+<ul>
+<li>G4とか怪盗帝国とかカラーザファントム</li>
+</ul>
+</li>
+<li>nickname_voiced_by() とかメソッド足そうかな、とか</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="2400" data-y="1600">
+
+
+<h2>Acme::MilkyHolmesの今後について</h2>
+
+<ul>
+<li>patches welcome! なのです！</li>
+<li><a href="https://github.com/tsucchi/p5-Acme-MilkyHolmes">Acme::MilkyHolmes - github</a></li>
+</ul>
+
+
+</div>
+<div class="step" data-x="3600" data-y="1600">
+
+
+<h2>WebService::PivotalTracker</h2>
+
+<ul>
+<li>
+<a href="http://www.pivotaltracker.com/">Pivotal Tracker</a> というツールの API クライアント
+
+<ul>
+<li>アジャイル開発、とくにスクラムの進捗管理用ツール</li>
+<li>使ってる人ー？</li>
+</ul>
+</li>
+<li>
+<a href="http://www.pivotaltracker.com/help/api">API</a> は curl でサンプルが書かれてるくらいシンプルなんだけど...</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="4800" data-y="1600">
+
+<h2>シェルスクリプト書くくらいなら、Perl書きたいですからね！</h2>
+
+</div>
+<div class="step" data-x="0" data-y="2400">
+
+
+<h2>WebService::PivotalTracker</h2>
+
+<div class="highlight"><pre><span class="k">use</span> <span class="nn">WebService::</span><span class="n">PivotalTracker</span><span class="p">;</span>
+
+<span class="k">my</span> <span class="nv">$pivotal</span> <span class="o">=</span> <span class="nn">WebService::</span><span class="n">PivotalTracker</span><span class="o">-&gt;</span><span class="k">new</span><span class="p">(</span> <span class="n">token</span> <span class="o">=&gt;</span> <span class="s">'your api token'</span> <span class="p">);</span>
+<span class="k">my</span> <span class="nv">$story</span> <span class="o">=</span> <span class="nv">$pivotal</span><span class="o">-&gt;</span><span class="n">get</span><span class="p">(</span><span class="s">"/projects/$project_id/stories/$story_id"</span><span class="p">);</span><span class="c1"># JSON response が返ってくる</span>
+</pre></div>
+
+
+</div>
+<div class="step" data-x="1200" data-y="2400">
+
+
+<h2>Otogiri関連(?)</h2>
+
+<ul>
+<li>
+<a href="http://tsucchi.github.io/perl/2014/06/10/perlbrew-and-tool/">perlbrew で Perl製ツールを使う場合</a>
+<script src="https://gist.github.com/tsucchi/7626dec9169cd1b18d4e.js"></script>
+</li>
+</ul>
+<p>わりと便利なので、System Perl 使ってる人はやってみると良いです</p>
+
+
+</div>
+<div class="step" data-x="2400" data-y="2400">
+
+<h1>ネタがきれたのでこのへんで</h1>
+
+</div>
+
+
+    <div id="overview" class="step" data-x="3000" data-y="1500" data-scale="10">
+    </div>
+
+</div>
+
+<div class="hint">
+    <p>Use a spacebar or arrow keys to navigate</p>
+</div>
+<script>
+if ("ontouchstart" in document.documentElement) { 
+    document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";
+}
+</script>
+<script>
+jQuery(function($){
+  $("a[href^='http']").attr('target', '_blank');
+});
+</script>
+<script src="js/impress.js"></script>
+</body>
+</html>
+
