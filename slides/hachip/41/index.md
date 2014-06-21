@@ -134,3 +134,15 @@ Reply-Otogiri関連(?)
 
 ネタがきれたのでこのへんで
 ===
+
+の前に
+---
+
+One More Thing
+---
++ [YAPC::Asia 2014](http://yapcasia.org/2014/) で、あずまさんと Otogiri の話をしたいです！
++ [これはORMですか？いいえOtogiriです](http://yapcasia.org/2014/talk/show/d42c9d9e-ec91-11e3-b82e-98666aeab6a4)
++ ソーシャルボタン押して、ついったあたりに「これ聞きたい」とか流してもらえると、僕とあずまさんがハッピーになれるのでよろしくです
+
+こんどこそおしまい
+===
