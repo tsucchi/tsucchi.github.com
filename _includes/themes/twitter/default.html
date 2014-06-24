@@ -21,6 +21,7 @@
     <link href="{{ ASSET_PATH }}/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="{{ ASSET_PATH }}/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
     <link href="{{ ASSET_PATH }}/css/syntax.css" rel="stylesheet" type="text/css" media="screen">
+	<script type="text/javascript" src="/assets/js/jquery-2.1.1.min.js"></script>
 	<style type="text/css">
       .sidebar {
         padding: 0 5px;
@@ -106,5 +107,10 @@
 	  </div>
     </div> <!-- /container -->
     {% include JB/analytics %}
+    <script>
+      jQuery(function($){
+        $("a[href^='http']").attr('target', '_blank');
+      });
+    </script>
   </body>
 </html>
