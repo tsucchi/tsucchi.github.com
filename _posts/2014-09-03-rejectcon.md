@@ -1,7 +1,7 @@
 ---
 layout: post
 category: perl
-tags: perl yapcasia yapcasoa2014 orm Otogiri
+tags: perl yapcasia yapcasia2014 orm Otogiri
 title: Rejectcon で Otogiri の話をしてきました
 ---
 {% include JB/setup %}
