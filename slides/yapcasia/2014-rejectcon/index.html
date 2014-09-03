@@ -1,0 +1,426 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Otogiri の話 応用(?)編</title>
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
+    <link href="css/impress.css"  rel="stylesheet" />
+    <link href="css/pygments.css" rel="stylesheet" />
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+</head>
+<body>
+<div id="impress" class="impress-not-supported">
+    <div class="fallback-message">
+        <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+        <p>For the best experience please use the latest <b>Chrome</b> or <b>Safari</b> browser. Firefox 10 (to be released soon) will also handle it.</p>
+    </div>
+
+<div class="step" id="title" data-x="0" data-y="0">
+
+
+<h1>Otogiri の話 応用(?)編</h1>
+
+<p></p>
+<address><a href="http://twitter.com/tsucchi">@tsucchi</a></address>
+
+
+</div>
+<div class="step" data-x="1200" data-y="0">
+
+
+<h2>自己紹介</h2>
+
+<ul>
+<li>土田　拓也(つちだ　たくや)</li>
+<li>
+<a href="http://twitter.com/tsucchi">@tsucchi</a> とか <a href="http://tsucchi.github.io/">blog(http://tsucchi.github.io/)</a>とか</li>
+<li>普段は Perl とか SQL とか書いてます</li>
+<li>
+<img src="./icon.jpeg"> こんなかんじのアイコンです</li>
+<li>
+<code>Perl</code> と <code>ミルキィホームズ</code>が好きです</li>
+<li>いつもはココでミルキィホームズの新曲とか紹介してるのですが
+
+<ul>
+<li>今日は時間ないし、新発売なモノが無いので省略で</li>
+</ul>
+</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="2400" data-y="0">
+
+<h2>Otogiri について</h2>
+
+</div>
+<div class="step" data-x="3600" data-y="0">
+
+
+<h2>Otogiri について</h2>
+
+<ul>
+<li>僕も昔似たようなやつを作ってた
+
+<ul>
+<li><a href="http://search.cpan.org/dist/SQL-Executor/">SQL::Executor</a></li>
+</ul>
+</li>
+<li>出来る事は結構似ている
+
+<ul>
+<li>SQL::Maker ベースで insert/update/select/delete を簡単にできる感じの物体</li>
+<li>自作の ORM のベースクラスにしていたので、無駄に複雑だったりする</li>
+<li>DBIx::Sunny ベースじゃない</li>
+</ul>
+</li>
+<li>SQL::Executor を拡張するのを頑張ってもよかったのだけど、Otogiri 良さそうだったから乗っかってみた</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="4800" data-y="0">
+
+<h2>Otogiri::Plugin について</h2>
+
+</div>
+<div class="step" data-x="0" data-y="800">
+
+
+<h2>Otogiri::Plugin</h2>
+
+<ul>
+<li>コアが小さいのが Otogiri の良さだと思う</li>
+<li>けど、機能が足りないのはやっぱつらい</li>
+<li>足りないものは足せばよい</li>
+<li>よし、プラグインだ！</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="1200" data-y="800">
+
+
+<h2>プラグインについて</h2>
+
+<ul>
+<li>例) <a href="http://search.cpan.org/dist/Otogiri-Plugin-DeleteCascade">Otogiri::Plugin::DeleteCascade</a>
+
+<ul>
+<li>FK をたどって、親を消すと子も一緒に削除する <code>delete_cascade()</code> というメソッドが使えるようになる</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><pre><span class="k">use</span> <span class="n">Otogiri</span><span class="p">;</span>
+<span class="k">use</span> <span class="nn">Otogiri::</span><span class="n">Plugin</span><span class="p">;</span>
+
+<span class="k">my</span> <span class="nv">$db</span> <span class="o">=</span> <span class="n">Otogiri</span><span class="o">-&gt;</span><span class="k">new</span><span class="p">(</span> <span class="n">connect_info</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="s">"dbi:SQLite:dbname=$dbfile"</span><span class="p">,</span> <span class="s">''</span><span class="p">,</span> <span class="s">''</span><span class="p">,</span> <span class="p">{</span> <span class="n">RaiseError</span> <span class="o">=&gt;</span> <span class="mi">1</span><span class="p">,</span> <span class="n">PrintError</span> <span class="o">=&gt;</span> <span class="mi">0</span> <span class="p">}]</span> <span class="p">);</span>
+<span class="nv">$db</span><span class="o">-&gt;</span><span class="n">load_plugin</span><span class="p">(</span><span class="s">'DeleteCascade'</span><span class="p">);</span>
+
+<span class="nv">$db</span><span class="o">-&gt;</span><span class="n">delete_cascade</span><span class="p">(</span><span class="s">'person'</span><span class="p">,</span> <span class="p">{</span> <span class="n">id</span> <span class="o">=&gt;</span> <span class="nv">$person_id</span> <span class="p">});</span> <span class="c1"># delete_cascade が使えるようになる</span>
+</pre></div>
+
+
+</div>
+<div class="step" data-x="2400" data-y="800">
+
+
+<h2>プラグインの仕組み</h2>
+
+<ul>
+<li>Teng 等と同じように、Otogiri のネームスペースにメソッドが生える仕組み</li>
+<li>Plugin の書き方は Teng とか SQL::Maker と同じ</li>
+<li>というか、Teng とか SQL::Maker の実装をパク(ry</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="3600" data-y="800">
+
+
+<h2>プラグインの書き方</h2>
+
+<ul>
+<li>実際のプラグインを見た方がよいかも</li>
+<li><a href="https://metacpan.org/source/TSUCCHI/Otogiri-Plugin-DeleteCascade-0.04/lib/Otogiri/Plugin/DeleteCascade.pm">Otogiri::Plugin::DeleteCascade</a></li>
+<li>
+<code>use Otogiri::Plugin;</code> して、@EXPORT に提供したいメソッド名を書いて、それを実装するだけ</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="4800" data-y="800">
+
+
+<h2>便利な Plugin とか</h2>
+
+<ul>
+<li>
+<a href="https://metacpan.org/pod/Otogiri::Plugin::DeleteCascade">Otogiri::Plugin::DeleteCascade</a>
+
+<ul>
+<li>さっき紹介したやつ</li>
+<li>FK をたどって親からデータ削除ができる</li>
+</ul>
+</li>
+<li>
+<a href="https://metacpan.org/pod/Otogiri::Plugin::TableInfo">Otogiri::Plugin::TableInfo</a>
+
+<ul>
+<li>MySQL で言う所の、show create table とか show tables みたいなやつ</li>
+<li>PostgreSQL の実装が大変で泣いた =&gt; <a href="http://tsucchi.github.io/slides/hachip/40/">hachioji.pm のスライド</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="https://metacpan.org/pod/Otogiri::Plugin::BulkInsert">Otogiri::Plugin::BulkInsert</a>
+
+<ul>
+<li>バルクインサートができるやつ</li>
+</ul>
+</li>
+<li>
+<a href="https://github.com/tsucchi/p5-Otogiri-Plugin-QueryWithNamedPlaceholder">Otogiri::Plugin::QueryWithNamedPlaceholder</a>
+
+<ul>
+<li>名前付きプレースホルダを使って、SQL を投げれるやつ(<code>search_named</code>/<code>do_named</code>)</li>
+<li>作ってみたけど、使ってないので github 止まりになっている</li>
+</ul>
+</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="0" data-y="1600">
+
+<h2>Otogiri と Reply との組み合わせ</h2>
+
+</div>
+<div class="step" data-x="1200" data-y="1600">
+
+
+<h2>Reply との組み合わせ</h2>
+
+<ul>
+<li>Reply(REPL)と組み合わせると、めっちゃ便利です</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="2400" data-y="1600">
+
+
+<h2>Reply について</h2>
+
+<ul>
+<li><a href="http://blog.64p.org/entry/2013/06/07/180316">Reply is awesome!</a></li>
+<li>知らない方のために簡単に説明すると、「irbみたいなやつ」です</li>
+</ul>
+<pre><code>tsucchi@surreal[620]$ reply
+reply@surreal.local[0]&gt; 
+reply@surreal.local[1]&gt; 1 + 1
+$res[0] = '2'
+
+reply@surreal.local[2]&gt; $a = 123
+$res[1] = '123'
+
+reply@surreal.local[3]&gt; $b = 456
+$res[2] = '456'
+
+reply@surreal.local[4]&gt; $a + $b
+$res[3] = '579'
+
+reply@surreal.local[5]&gt; rand()
+$res[4] = '0.0647113826862586'
+
+reply@surreal.local[6]&gt; exit
+</code></pre>
+
+
+</div>
+<div class="step" data-x="3600" data-y="1600">
+
+
+<h2>Reply is 便利</h2>
+
+<ul>
+<li>結構便利
+
+<ul>
+<li>「a.pl 書いてお試し」、みたいなのが減った</li>
+</ul>
+</li>
+<li>ORM と組み合わせると最高便利っぽい
+
+<ul>
+<li><a href="http://tsucchi.github.io/perl/2014/03/14/repl-and-otogiri/">REPLでORMを使えるようにすると、めっちゃ便利だ、という話</a></li>
+</ul>
+</li>
+</ul>
+<pre><code>% reply-service1
+1&gt; Select('detective', { id =&gt; 1 });
+$res[1] = {
+    id =&gt; 1,
+    name =&gt; 'シャーロック・シェリンフォード',
+    age =&gt; 15,
+    toys =&gt; 'サイコキネシス',
+    birthday =&gt; '3/31',
+}
+</code></pre>
+
+
+</div>
+<div class="step" data-x="4800" data-y="1600">
+
+
+<h2>ORM との組み合わせの前に、ちょっと紹介</h2>
+
+<ul>
+<li><a href="https://metacpan.org/pod/Reply::Plugin::DataDumperAutoEncode">Reply::Plugin::DataDumperAutoEncode</a></li>
+<li><a href="http://tsucchi.github.io/perl/2014/04/04/reply-plugin-datadumper-autoencode/">Reply::Plugin::DataDumperAutoEncode ってのを書いてみた</a></li>
+</ul>
+
+
+</div>
+<div class="step" data-x="0" data-y="2400">
+
+
+<h2>DataDumperAutoEncode</h2>
+
+<p>こういうのが...</p>
+
+<pre><code>1&gt; Select('detective', { id =&gt; 1 });
+$res[1] = {
+    id =&gt; 1,
+    name =&gt; "\x{30b7}\x{30e3}\x{30fc}\x{30ed}\x{30c3}\x{30af}\x{30fb}\x{30b7}\x{30a7}\x{30ea}\x{30f3}\x{30d5}\x{30a9}\x{30fc}\x{30c9}",
+    age =&gt; 15,
+    toys =&gt; "\x{30b5}\x{30a4}\x{30b3}\x{30ad}\x{30cd}\x{30b7}\x{30b9}",
+    birthday =&gt; '3/31',
+}
+</code></pre>
+
+
+</div>
+<div class="step" data-x="1200" data-y="2400">
+
+
+<h2>DataDumperAutoEncode</h2>
+
+<p>こうなる。超便利！</p>
+
+<pre><code>1&gt; Select('detective', { id =&gt; 1 });
+$res[1] = {
+    id =&gt; 1,
+    name =&gt; 'シャーロック・シェリンフォード',
+    age =&gt; 15,
+    toys =&gt; 'サイコキネシス',
+    birthday =&gt; '3/31',
+}
+</code></pre>
+
+
+</div>
+<div class="step" data-x="2400" data-y="2400">
+
+
+<h2>Reply::Plugin::ORM</h2>
+
+<ul>
+<li>この人がつくったやつ</li>
+</ul>
+<p><img src="./papix.jpg" width="50%" height="50%"></p>
+
+
+</div>
+<div class="step" data-x="3600" data-y="2400">
+
+
+<h2>Reply::Plugin::ORM</h2>
+
+<ul>
+<li>Reply の環境で、Otogiri や Teng が使えるようになるプラグイン</li>
+<li>Demo</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="4800" data-y="2400">
+
+
+<h2>便利な所</h2>
+
+<ul>
+<li>Oracle みたいにデフォルトの CLI がつらい場合(僕は Oracle 使ってないけど)</li>
+<li>delete_cascade で開発環境の変なデータを掃除したり</li>
+<li>inflate を定義して、base64 とかバイナリとか、DB から見づらいデータを見えるようにしたり</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="0" data-y="3200">
+
+
+<h2>Otogiri::Plugin の良くない所</h2>
+
+<ul>
+<li>どのメソッドがどこに定義されてるか分からなくなる</li>
+<li>Otogiri の内部を知っていないと書けない</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="1200" data-y="3200">
+
+
+<h2>僕が考える Otogiri の今後</h2>
+
+<ol>
+<li>Plugin からコアに引き上げれるものが出てくると、いい感じかなぁ、と思う</li>
+<li>「Web アプリではこの Plugin」、「DBA が使うのはこの Plugin」みたいな感じでグルーピングできるとよさそう</li>
+<li>良いものなので、ユーザが増えるといいなぁ</li>
+</ol>
+
+
+</div>
+<div class="step" data-x="2400" data-y="3200">
+
+
+<h2>まとめ</h2>
+
+<ul>
+<li>Otogiri::Plugin を使うといい感じに拡張できます</li>
+<li>拡張しなくても Otogiri 自体が結構便利なので、使うと良いです</li>
+<li>Reply と組み合わせるとめっちゃ便利なので、試してみると良いです</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="3600" data-y="3200">
+
+<h1>おしまい</h1>
+
+</div>
+
+
+    <div id="overview" class="step" data-x="3000" data-y="1500" data-scale="10">
+    </div>
+
+</div>
+
+<div class="hint">
+    <p>Use a spacebar or arrow keys to navigate</p>
+</div>
+<script>
+if ("ontouchstart" in document.documentElement) { 
+    document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";
+}
+</script>
+<script>
+jQuery(function($){
+  $("a[href^='http']").attr('target', '_blank');
+});
+</script>
+<script src="js/impress.js"></script>
+</body>
+</html>
+
