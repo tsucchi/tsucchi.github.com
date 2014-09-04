@@ -26,3 +26,7 @@ Reject con めっちゃ楽しかった。てつじさんのやつとか、門松
 
 と、言うわけで、僕の YAPC::Asia 2014 は完全に終了ですね。
 お疲れ様でした。
+
+### 追記(2014-09-04)
+デモに使ったもの一式を置いておきました。
+https://github.com/tsucchi/tsucchi.github.com/tree/master/slides/yapcasia/2014-rejectcon/demo
