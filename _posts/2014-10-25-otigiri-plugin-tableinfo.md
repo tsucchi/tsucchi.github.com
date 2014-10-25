@@ -14,6 +14,6 @@ MySQL でいうところの、`show tables` とか `show create table` っぽい
 
 今回のリリースでは、`show_create_view`というメソッドを足しています。名前の通り、View の定義が見れる感じになっております。
 
-[Otogiri::Plugin::TableInfo](http://search.cpan.org/~tsucchi/Otogiri-Plugin-TableInfo-0.02/lib/Otogiri/Plugin/TableInfo.pm)
+CPAN はこちら -> [Otogiri::Plugin::TableInfo](http://search.cpan.org/~tsucchi/Otogiri-Plugin-TableInfo-0.02/lib/Otogiri/Plugin/TableInfo.pm)
 
 Enjoy!
