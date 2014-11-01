@@ -1,0 +1,213 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>○○のはなし</title>
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
+    <link href="css/impress.css"  rel="stylesheet" />
+    <link href="css/pygments.css" rel="stylesheet" />
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+</head>
+<body>
+<div id="impress" class="impress-not-supported">
+    <div class="fallback-message">
+        <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+        <p>For the best experience please use the latest <b>Chrome</b> or <b>Safari</b> browser. Firefox 10 (to be released soon) will also handle it.</p>
+    </div>
+
+<div class="step" id="title" data-x="0" data-y="0">
+
+
+<h1>○○のはなし</h1>
+
+<p></p>
+<address><a href="http://twitter.com/tsucchi">@tsucchi</a></address>
+
+
+</div>
+<div class="step" data-x="1200" data-y="0">
+
+
+<h2>自己紹介</h2>
+
+<ul>
+<li>土田　拓也(つちだ　たくや)</li>
+<li>
+<a href="http://twitter.com/tsucchi">@tsucchi</a> とか <a href="http://tsucchi.github.io/">blog(http://tsucchi.github.io/)</a>とか</li>
+<li>普段は Perl とか SQL とか書いてます</li>
+<li>
+<img src="./icon.jpeg"> こんなかんじのアイコンです</li>
+<li>
+<code>Perl</code> と <code>ミルキィホームズ</code>が好きです</li>
+<li>ニューシングル「オーバードライブ！」11/23 発売です！</li>
+</ul>
+<iframe src="http://rcm-fe.amazon-adsystem.com/e/cm?t=tsucchisblog-22&amp;o=9&amp;p=8&amp;l=as1&amp;asins=B00NODGU0E&amp;ref=qf_sp_asin_til&amp;fc1=000000&amp;IS2=1&amp;lt1=_blank&amp;m=amazon&amp;lc1=0000FF&amp;bc1=000000&amp;bg1=FFFFFF&amp;f=ifr" style="width:120px;height:240px;" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"></iframe>
+
+
+</div>
+<div class="step" data-x="2400" data-y="0">
+
+
+<h2>で、今回のテーマについて</h2>
+
+<ul>
+<li>何でしたっけ？</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="3600" data-y="0">
+
+<h2>本当になんでしたっけ？</h2>
+
+</div>
+<div class="step" data-x="4800" data-y="0">
+
+<h2>実はあんまりネタないんだよね...つーことで</h2>
+
+</div>
+<div class="step" data-x="0" data-y="800">
+
+
+<h1>雑談</h1>
+
+<p>さいきん作ったものとかの話をします</p>
+
+<p></p>
+<address><a href="http://twitter.com/tsucchi">@tsucchi</a></address>
+
+
+</div>
+<div class="step" data-x="1200" data-y="800">
+
+
+<h2>Otogiri::Plugin::TableInfo</h2>
+
+<ul>
+<li>こんな感じでテーブルの一覧とか、テーブル定義とか見れる物体</li>
+</ul>
+<div class="highlight"><pre><span class="k">use</span> <span class="nn">Otogiri::Plugin::</span><span class="n">TableInfo</span><span class="p">;</span>
+<span class="k">my</span> <span class="nv">$db</span> <span class="o">=</span> <span class="n">Otogiri</span><span class="o">-&gt;</span><span class="k">new</span><span class="p">(</span> <span class="n">connect_info</span> <span class="o">=&gt;</span> <span class="p">[</span> <span class="o">...</span> <span class="p">]</span> <span class="p">);</span>
+<span class="nv">$db</span><span class="o">-&gt;</span><span class="n">load_plugin</span><span class="p">(</span><span class="s">'TableInfo'</span><span class="p">);</span>
+<span class="k">my</span> <span class="nv">@table_names</span> <span class="o">=</span> <span class="nv">$db</span><span class="o">-&gt;</span><span class="n">show_tables</span><span class="p">();</span>
+</pre></div>
+
+
+</div>
+<div class="step" data-x="2400" data-y="800">
+
+
+<h2>Otogiri::Plugin::TableInfo</h2>
+
+<ul>
+<li>Viewは？</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="3600" data-y="800">
+
+
+<h2>Otogiri::Plugin::TableInfo</h2>
+
+<ul>
+<li>見れませんでした...</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="4800" data-y="800">
+
+
+<h2>Otogiri::Plugin::TableInfo</h2>
+
+<ul>
+<li>0.02 で show_create_view() (View 定義を一覧するメソッド)をサポート</li>
+<li>0.03 で show_views() (View の一覧を見るメソッド)をサポート</li>
+</ul>
+<p>View は Pg でも<a href="https://github.com/tsucchi/p5-Otogiri-Plugin-TableInfo/blob/master/lib/Otogiri/Plugin/TableInfo/Pg.pm#L21-L31">地獄は無かった</a>。</p>
+
+
+</div>
+<div class="step" data-x="0" data-y="1600">
+
+
+<h2>Otogiri::Plugin::TengPluginBridge</h2>
+
+<ul>
+<li><a href="https://github.com/tsucchi/p5-Otogiri-Plugin-TengPluginBridge">Teng のプラグインを Otogiri で使えるようにするプラグイン</a></li>
+<li>Count しか動かない</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="1200" data-y="1600">
+
+
+<h2>Otogiri::Plugin::TengPluginBridge</h2>
+
+<ul>
+<li>大失敗</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="2400" data-y="1600">
+
+
+<h2>Otogiri::Plugin::TengPluginBridge</h2>
+
+<ul>
+<li>どうせプラグインがちゃんと動くかテストコード書くから意味なかった</li>
+<li>Teng のほうが機能が多いから大変
+
+<ul>
+<li>Row Object のケアとか</li>
+<li>内部のメソッド数も多いし</li>
+</ul>
+</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="3600" data-y="1600">
+
+
+<h2>Otogiri::Plugin::TengPluginBridge</h2>
+
+<ul>
+<li>やるなら逆だった</li>
+<li>つーことで、Teng::Plugin::OtogiriPluginBridge を作るかも</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="4800" data-y="1600">
+
+<h1>おしまい</h1>
+
+</div>
+
+
+    <div id="overview" class="step" data-x="3000" data-y="1500" data-scale="10">
+    </div>
+
+</div>
+
+<div class="hint">
+    <p>Use a spacebar or arrow keys to navigate</p>
+</div>
+<script>
+if ("ontouchstart" in document.documentElement) { 
+    document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";
+}
+</script>
+<script>
+jQuery(function($){
+  $("a[href^='http']").attr('target', '_blank');
+});
+</script>
+<script src="js/impress.js"></script>
+</body>
+</html>
+
