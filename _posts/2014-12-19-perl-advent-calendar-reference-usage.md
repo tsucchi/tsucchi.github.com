@@ -185,8 +185,7 @@ to_upper_items(@people); #これで中身が全部大文字になってほしい
 ```perl
 sub to_upper_items {
     my ($array_ref) = @_;
-	my @array = @{ $array_ref };
-    for my $item ( @array ) {
+    for my $item ( @{ $array_ref } ) {
         $item = uc($item);
     }
 }
