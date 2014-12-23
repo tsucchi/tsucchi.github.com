@@ -1,0 +1,212 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>DBの自動再接続の話</title>
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
+    <link href="css/impress.css"  rel="stylesheet" />
+    <link href="css/pygments.css" rel="stylesheet" />
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+</head>
+<body>
+<div id="impress" class="impress-not-supported">
+    <div class="fallback-message">
+        <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+        <p>For the best experience please use the latest <b>Chrome</b> or <b>Safari</b> browser. Firefox 10 (to be released soon) will also handle it.</p>
+    </div>
+
+<div class="step" id="title" data-x="0" data-y="0">
+
+
+<h1>DBの自動再接続の話</h1>
+
+<p></p>
+<address><a href="http://twitter.com/tsucchi">@tsucchi</a></address>
+
+
+</div>
+<div class="step" data-x="1200" data-y="0">
+
+
+<h2>自己紹介</h2>
+
+<ul>
+<li>土田　拓也(つちだ　たくや)</li>
+<li>
+<a href="http://twitter.com/tsucchi">@tsucchi</a> とか <a href="http://tsucchi.github.io/">blog(http://tsucchi.github.io/)</a>とか</li>
+<li>普段は Perl とか SQL とか書いてます</li>
+<li>
+<img src="./icon.jpeg"> こんなかんじのアイコンです</li>
+<li>
+<code>Perl</code> と <code>ミルキィホームズ</code>が好きです</li>
+<li>ニューシングル「オーバードライブ！」好評発売中です！</li>
+</ul>
+<iframe src="http://rcm-fe.amazon-adsystem.com/e/cm?t=tsucchisblog-22&amp;o=9&amp;p=8&amp;l=as1&amp;asins=B00NODGU0E&amp;ref=qf_sp_asin_til&amp;fc1=000000&amp;IS2=1&amp;lt1=_blank&amp;m=amazon&amp;lc1=0000FF&amp;bc1=000000&amp;bg1=FFFFFF&amp;f=ifr" style="width:120px;height:240px;" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"></iframe>
+
+
+</div>
+<div class="step" data-x="2400" data-y="0">
+
+
+<h2>DB の自動再接続とは</h2>
+
+<ul>
+<li>DB とアプリの接続が切れてしまうことがあるので、その場合に ORM やアプリ側で DB をつなぎ直すこと</li>
+<li>
+<a href="http://search.cpan.org/dist/Teng/">Teng</a> とか、よくできた ORM を使っている場合はあまり気にしなくて良い</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="3600" data-y="0">
+
+
+<h2>DB の自動再接続時の主な問題</h2>
+
+<ul>
+<li>トランザクションの途中で接続が切れたらどうするか</li>
+<li>prefork 型の Web サーバだと、親子で同じ接続を使うわけにいかない
+
+<ul>
+<li>接続は一応使えるが、非常にややこしいバグが出るので使ってはいけない</li>
+<li>子側で再接続する</li>
+</ul>
+</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="4800" data-y="0">
+
+
+<h2>背景(1)</h2>
+
+<ul>
+<li>
+<a href="https://github.com/tsucchi/p5-Otogiri-Plugin-AutoReconnect">Otogiri::Plugin::AutoReconnect</a> というものを作っている
+
+<ul>
+<li>現状は接続が切れていたら、つなぎ直すだけの単純な実装</li>
+<li>先ほど説明したような問題点がありそうだ、というのはなんとなく分かっていた</li>
+<li>細かい所がよく分からないので、困っていたら...</li>
+</ul>
+</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="0" data-y="800">
+
+
+<h2>背景(2)</h2>
+
+<ul>
+<li>
+<a href="http://yancha.hachiojipm.org:3000/quot?id=401835,401836,401837,401838,401839,401840,401841,401842,401843,401844,401845,401846,401847,401848,401849,401850,401851,401852,401853,401854,401855,401856,401857,401858,401859,401860,401861,401862,401863,401864,401865,401866,401868,401870,401871,401872,401873,401874,401875,401876,401877,401878,401879,401880">songmu さんが色々教えてくれた</a>ので、そのへんの知見を共有したい</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="1200" data-y="800">
+
+
+<h2>トランザクション</h2>
+
+<ul>
+<li>トランザクション中では再接続せず、例外を投げる</li>
+</ul>
+<div class="highlight"><pre><span class="nv">$db</span><span class="o">-&gt;</span><span class="n">txn_begin</span><span class="p">();</span>
+<span class="nv">$db</span><span class="o">-&gt;</span><span class="n">insert</span><span class="p">(</span><span class="s">'people'</span><span class="p">,</span> <span class="p">{</span> <span class="o">...</span> <span class="p">});</span>
+<span class="o">...</span> <span class="c1">#ここで接続が切れたとする</span>
+<span class="nv">$db</span><span class="o">-&gt;</span><span class="n">insert</span><span class="p">(</span><span class="s">'item'</span><span class="p">,</span> <span class="p">{</span> <span class="o">...</span> <span class="p">});</span> <span class="c1">#この insert が再接続で有効になったら困る</span>
+<span class="nv">$db</span><span class="o">-&gt;</span><span class="n">txn_commit</span><span class="p">();</span>
+</pre></div>
+
+
+</div>
+<div class="step" data-x="2400" data-y="800">
+
+
+<h2>prefork 型のサーバへの対応</h2>
+
+<ul>
+<li><a href="http://nihen.hatenablog.com/entry/2011/11/17/102557">http://nihen.hatenablog.com/entry/2011/11/17/102557</a></li>
+<li>親側で <code>$dbh-&gt;{AutoInactiveDestroy} = 1;</code> を設定する
+
+<ul>
+<li>DBI 1.6.14 以上が必要</li>
+<li>Otogiri は <a href="http://search.cpan.org/dist/DBIx-Sunny/">DBIx::Sunny</a> ベースなので問題ない</li>
+<li>上記バージョンが使えない場合は子側で InactiveDestroy というパラメータをうまく設定してやる(ちょっとめんどい)</li>
+</ul>
+</li>
+<li>pid をチェックして、親でない場合は再接続(<code>$dbh-&gt;clone()</code>)する
+
+<ul>
+<li>上記のオプションが指定してあれば、これでうまく動く
+
+<ul>
+<li>...はず(まだ実際に試してない)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="3600" data-y="800">
+
+
+<h2>結論</h2>
+
+<ul>
+<li>ちゃんとやるのは結構難しそうなので、 Teng や DBIx::Class を使いましょう</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="4800" data-y="800">
+
+<h2>あるいは</h2>
+
+</div>
+<div class="step" data-x="0" data-y="1600">
+
+
+<h2>結論</h2>
+
+<ul>
+<li>以上の事を踏まえて、Teng のコードを読んでみると勉強になって良いのではないか、と思います</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="1200" data-y="1600">
+
+<h1>おしまい</h1>
+
+</div>
+
+
+    <div id="overview" class="step" data-x="3000" data-y="1500" data-scale="10">
+    </div>
+
+</div>
+
+<div class="hint">
+    <p>Use a spacebar or arrow keys to navigate</p>
+</div>
+<script>
+if ("ontouchstart" in document.documentElement) { 
+    document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";
+}
+</script>
+<script>
+jQuery(function($){
+  $("a[href^='http']").attr('target', '_blank');
+});
+</script>
+<script src="js/impress.js"></script>
+</body>
+</html>
+
