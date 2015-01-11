@@ -25,3 +25,24 @@ title: TravisCI で pg_dump が使えないっぽい
 travis って CPAN モジュールだけじゃなくて、ふつうにパッケージ入れたりできるみたいですね。なので、変な入れ方してるとダメな場合があるのだと思います。
 `.travis.yml` に頑張って色々書いても良いのかもですが、それもそれでどうなのよ？って感じに思えたので、pg_dump がおかしかったらテストを skip するように
 書き換えました。
+
+### 2015-01-11 追記2
+いつ対応したのか忘れましたが、pg_dump のインストール状態に応じてカバレッジ、というか流れるテストが変わってしまうのは良くないと思い、頑張ってインストールするようにしました。今のところ、これで問題なく動いているみたいです。
+
+https://github.com/tsucchi/p5-Otogiri-Plugin-TableInfo/blob/master/.travis.yml
+
+```yaml
+language: perl
+perl:
+  - 5.16
+  - 5.18
+  - "5.20"
+before_install:
+  - sudo apt-get remove postgresql-client
+  - sudo apt-get install postgresql-client
+  - cpanm --force Test::mysqld Test::PostgreSQL
+  - cpanm -n Devel::Cover::Report::Coveralls
+  - cover -delete 
+script:
+  perl Build.PL && ./Build build && cover -test -report coveralls
+```
