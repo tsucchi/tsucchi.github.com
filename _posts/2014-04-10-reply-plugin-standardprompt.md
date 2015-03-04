@@ -2,7 +2,7 @@
 layout: post
 category: perl
 tags: perl
-title: Reply::Plugin::StandardPrompt ってのを書いてみた
+title: Reply::Plugin::StandardPrompt あらため Reply::Plugin::ConfigurablePrompt ってのをリリースしました
 ---
 {% include JB/setup %}
 
@@ -15,7 +15,7 @@ title: Reply::Plugin::StandardPrompt ってのを書いてみた
 + [Reply::Plugin::DataDumperAutoEncode ってのを書いてみた](http://tsucchi.github.io/perl/2014/04/04/reply-plugin-datadumper-autoencode)
 
 
-表記の通り、[Reply::Plugin::StandardPrompt](https://github.com/tsucchi/p5-Reply-Plugin-StandardPrompt) という Reply のプラグインを書きました。
+表記の通り、[Reply::Plugin::ConfigurablePrompt](https://github.com/tsucchi/p5-Reply-Plugin-ConfigurablePrompt) という Reply のプラグインを書きました。
 
 シェルみたいな、カスタマイズ可能なプロンプトを提供するプラグインです。
 
@@ -35,7 +35,7 @@ export PS1="\!> "
 cpanm とかでインストールしてから、FancyPrompt や他のプロンプト系のプラグインの設定を消して、代わりに
 
 ```
-[StandardPrompt]
+[ConfigurablePrompt]
 prompt='reply@' . Show_dbname() . "[$history_count]> "
 ```
 
@@ -49,7 +49,14 @@ reply@myservice[10]>
 
 みたいな感じのプロンプトになります。(DB の設定名が myservice でコマンド実行回数が10回目とした場合)
 
-ちょっと名前が強気すぎるかなぁ、とか他のプロンプトと共存できない(つーかそもそも出来るのか？実装上できるようになってるのだが、現実的に無理な気がする)とか、
-諸々の問題があるので、とりあえず github 止まりにしてます。気が向いたら CPAN に上げるかも、です。
+<del>ちょっと名前が強気すぎるかなぁ、とか他のプロンプトと共存できない(つーかそもそも出来るのか？実装上できるようになってるのだが、現実的に無理な気がする)とか、諸々の問題があるので、とりあえず github 止まりにしてます。気が向いたら CPAN に上げるかも、です。</del>  
 
-+ [Reply::Plugin::StandardPrompt](https://github.com/tsucchi/p5-Reply-Plugin-StandardPrompt)
+
+CPAN にも上がっておりますので、よろしくご利用ください。
+
++ [Reply::Plugin::ConfigurablePrompt - cpan](http://search.cpan.org/dist/Reply-Plugin-ConfigurablePrompt/)
++ [Reply::Plugin::ConfigurablePrompt - github](https://github.com/tsucchi/p5-Reply-Plugin-ConfigurablePrompt)
+
+### 2015-03-04 追記
+酔った勢いで、本家 FancyPrompt に p-r するかー、とか CPAN にあげてもいいかもー、とかいろいろ考え始めたのですが、実装上黒魔っぽいところが若干あるので、本家へ p-r は厳しいかなーってのと、
+やっぱ名前が強気すぎて良くない、と思って、rename して CPAN にあげました。それに伴い、加筆・訂正しております。
