@@ -1,0 +1,381 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>ゆるふわデータマッパーの話</title>
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
+    <link href="css/impress.css"  rel="stylesheet" />
+    <link href="css/pygments.css" rel="stylesheet" />
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+</head>
+<body>
+<div id="impress" class="impress-not-supported">
+    <div class="fallback-message">
+        <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+        <p>For the best experience please use the latest <b>Chrome</b> or <b>Safari</b> browser. Firefox 10 (to be released soon) will also handle it.</p>
+    </div>
+
+<div class="step" id="title" data-x="0" data-y="0">
+
+
+<h1>ゆるふわデータマッパーの話</h1>
+
+<p></p>
+<address><a href="http://twitter.com/tsucchi">@tsucchi</a></address>
+
+
+</div>
+<div class="step" data-x="1200" data-y="0">
+
+
+<h2>自己紹介</h2>
+
+<ul>
+<li>土田　拓也(つちだ　たくや)</li>
+<li>
+<a href="http://twitter.com/tsucchi">@tsucchi</a> とか <a href="http://tsucchi.github.io/">blog(http://tsucchi.github.io/)</a>とか</li>
+<li>普段は Perl とか SQL とか書いてます</li>
+<li>
+<img src="./icon.jpeg"> こんなかんじのアイコンです</li>
+<li>
+<code>Perl</code> と <code>ミルキィホームズ</code>が好きです
+
+<ul>
+<li>
+<a href="http://milky-holmes-anime.com/">探偵歌劇ミルキィホームズTD</a>が放送終了で悲しい難民です</li>
+<li>
+<a href="http://milky-holmes.com/unit/mirumiru/">みるみるミルキィ</a>は好評放送中なので、見ましょう！</li>
+<li>挿入歌CD「Treasure Disc」が好評発売中なので、買うと良いです</li>
+</ul>
+</li>
+</ul>
+<iframe src="http://rcm-fe.amazon-adsystem.com/e/cm?t=tsucchisblog-22&amp;o=9&amp;p=8&amp;l=as1&amp;asins=B00T1WXA00&amp;ref=qf_sp_asin_til&amp;fc1=000000&amp;IS2=1&amp;lt1=_blank&amp;m=amazon&amp;lc1=0000FF&amp;bc1=000000&amp;bg1=FFFFFF&amp;f=ifr" style="width:120px;height:240px;" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"></iframe>
+
+
+</div>
+<div class="step" data-x="2400" data-y="0">
+
+
+<h2>背景</h2>
+
+<ul>
+<li>最近お仕事作ったクラス設計がいい感じだったのでその共有</li>
+<li>昔こういうの見たことあるんだけど...
+
+<ul>
+<li>Hibernate とか流行り始める前の Java とかこんな感じだったような記憶</li>
+</ul>
+</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="3600" data-y="0">
+
+
+<h2>データマッパー</h2>
+
+<ul>
+<li><a href="http://d.hatena.ne.jp/asakichy/20120622/1340316281">こんな感じの仕組みらしい</a></li>
+<li>真面目に作るとすごく面倒くさそう、という印象</li>
+<li>金融系とか面倒くさい基幹系システムだとこういうの、必要なのかもね...</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="4800" data-y="0">
+
+
+<h2>Web アプリのDB層について(主にコンシューマ向け?)</h2>
+
+<ul>
+<li>Teng とか DBIC とか、下手すると生SQLのほうが取り回しが良くて便利だったりとか</li>
+<li>ロジックの複雑さはあまり考慮する必要がない
+
+<ul>
+<li>諸説あります(複雑なのも、もちろんある)</li>
+</ul>
+</li>
+<li>どちらかというとパフォーマンス重視</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="0" data-y="800">
+
+
+<h2>業務系とか、業務系っぽい Web アプリのDB層について</h2>
+
+<ul>
+<li>パフォーマンスはあんまりいらない
+
+<ul>
+<li>諸説あります(必要なのも、もちろんある)</li>
+</ul>
+</li>
+<li>ロジックは複雑になりがち
+
+<ul>
+<li>10年モノとかザラですし...</li>
+</ul>
+</li>
+<li>複雑なロジックに立ち向かう仕組みがある程度必要</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="1200" data-y="800">
+
+
+<h2>良くある O/R Mapper を使ってて困ること</h2>
+
+<ul>
+<li>
+<a href="http://d.hatena.ne.jp/asakichy/20120806/1344204583">クラステーブル継承</a>みたいな構造を作りたいのだけど、これができない
+
+<ul>
+<li>できないわけじゃないんだけど、いろいろ不便</li>
+<li>ORM のクラスを継承しちゃっていいのかよくわからない、というかダメな気がする</li>
+</ul>
+</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="2400" data-y="800">
+
+
+<h2>サンプル</h2>
+
+<ul>
+<li>みなさんご存知のテーブルを使いましょう</li>
+</ul>
+<div class="highlight"><pre><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">person</span> <span class="p">(</span> <span class="cm">/* 人間 */</span>
+  <span class="n">id</span>   <span class="nb">INTEGER</span> <span class="k">PRIMARY</span> <span class="k">KEY</span> <span class="n">AUTOINCREMENT</span><span class="p">,</span>
+  <span class="n">name</span> <span class="nb">TEXT</span>    <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
+<span class="p">);</span>
+
+<span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">detective</span> <span class="p">(</span> <span class="cm">/* 探偵 */</span>
+  <span class="n">id</span>        <span class="nb">INTEGER</span> <span class="k">PRIMARY</span> <span class="k">KEY</span> <span class="n">AUTOINCREMENT</span><span class="p">,</span>
+  <span class="n">person_id</span> <span class="nb">INTEGER</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
+  <span class="n">toys</span>      <span class="nb">TEXT</span>  <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
+  <span class="k">FOREIGN</span> <span class="k">KEY</span><span class="p">(</span><span class="n">person_id</span><span class="p">)</span> <span class="k">REFERENCES</span> <span class="n">person</span><span class="p">(</span><span class="n">id</span><span class="p">)</span>
+<span class="p">);</span>
+
+<span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">police</span> <span class="p">(</span> <span class="cm">/* 警察 */</span>
+  <span class="n">id</span>        <span class="nb">INTEGER</span> <span class="k">PRIMARY</span> <span class="k">KEY</span> <span class="n">AUTOINCREMENT</span><span class="p">,</span>
+  <span class="n">person_id</span> <span class="nb">INTEGER</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
+  <span class="n">iq</span>        <span class="nb">INTEGER</span><span class="p">,</span>
+  <span class="k">FOREIGN</span> <span class="k">KEY</span><span class="p">(</span><span class="n">person_id</span><span class="p">)</span> <span class="k">REFERENCES</span> <span class="n">person</span><span class="p">(</span><span class="n">id</span><span class="p">)</span>
+<span class="p">);</span>
+</pre></div>
+
+
+</div>
+<div class="step" data-x="3600" data-y="800">
+
+
+<h2>テーブルとふつうにマッピングすると困ること(1)</h2>
+
+<ul>
+<li>なにも考えてないと、親の情報が取れない</li>
+</ul>
+<div class="highlight"><pre><span class="k">my</span> <span class="nv">$row</span> <span class="o">=</span> <span class="nv">$db</span><span class="o">-&gt;</span><span class="n">single</span><span class="p">(</span><span class="s">'detective'</span><span class="p">,</span> <span class="p">{</span> <span class="n">person_id</span> <span class="o">=&gt;</span> <span class="mi">100</span> <span class="p">});</span>
+<span class="nv">$row</span><span class="o">-&gt;</span><span class="n">name</span><span class="p">;</span> <span class="c1">#これは無理(name は親テーブル person にあるから)</span>
+</pre></div>
+
+
+</div>
+<div class="step" data-x="4800" data-y="800">
+
+
+<h2>テーブルとふつうにマッピングすると困ること(2)</h2>
+
+<ul>
+<li>Factory とかでちょっと凝った生成とかできない
+
+<ul>
+<li>できなくもないのかも、だけどあんまやらない</li>
+</ul>
+</li>
+<li>ので、ポリモーフィズムが使えない
+
+<ul>
+<li>使えるのかもだけど、あんまやらない</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><pre><span class="k">my</span> <span class="nv">$row</span> <span class="o">=</span> <span class="nv">$db</span><span class="o">-&gt;</span><span class="n">create</span><span class="p">({</span> <span class="n">id</span> <span class="o">=&gt;</span> <span class="mi">100</span> <span class="p">});</span> <span class="c1"># id=100が探偵さんだとして</span>
+<span class="nv">$row</span><span class="o">-&gt;</span><span class="n">toys</span><span class="p">;</span> <span class="c1">#これができない(あるいはちょっとめんどい)</span>
+</pre></div>
+
+
+</div>
+<div class="step" data-x="0" data-y="1600">
+
+<h2>解決策</h2>
+
+</div>
+<div class="step" data-x="1200" data-y="1600">
+
+<h2>ゆるふわデータマッパー</h2>
+
+</div>
+<div class="step" data-x="2400" data-y="1600">
+
+
+<h2>やりかた</h2>
+
+<ul>
+<li>テーブルと対になるクラスを用意する
+
+<ul>
+<li>基本はこれだけ</li>
+</ul>
+</li>
+<li>ロジックが複雑じゃなければ、作らなくてもいい</li>
+<li>逆に複雑な場合は別の中間層が必要になることもある
+
+<ul>
+<li>あるいはそれが必要になって、「テーブル足りなくね？」みたいなことに気づくことも</li>
+</ul>
+</li>
+<li>例) 「探偵チーム」が必要になって、クラスかテーブルを追加する</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="3600" data-y="1600">
+
+
+<h2>こんな感じ(1)</h2>
+
+<ul>
+<li>DB 層のクラスからは独立してるので、Mouse とか使うのもアリ</li>
+<li>継承するのも自由(というか、それが一番やりたい)</li>
+</ul>
+<div class="highlight"><pre><span class="nb">package</span> <span class="n">Detective</span><span class="p">;</span>
+<span class="k">use</span> <span class="n">Mouse</span><span class="p">;</span>
+<span class="n">extends</span> <span class="s">'Person'</span><span class="p">;</span>
+<span class="o">...</span>
+</pre></div>
+
+
+</div>
+<div class="step" data-x="4800" data-y="1600">
+
+
+<h2>こんな感じ(2)</h2>
+
+<ul>
+<li>コンストラクタ(new)は単純にフィールドに値をセットするだけにしておく</li>
+<li>ファクトリメソッド(create)を別途作成する
+
+<ul>
+<li>ファクトリメソッドの時は DB を引く</li>
+<li>必要に応じて、サブクラスを返す仕組みにしたりとか</li>
+</ul>
+</li>
+<li>テストコードでは、基本 new を使うようにしておくと楽</li>
+<li>子でも使用する親クラスの情報は渡しておくと楽</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="0" data-y="2400">
+
+
+<h2>こんな感じ(3)</h2>
+
+<div class="highlight"><pre><span class="nb">package</span> <span class="n">Person</span>
+<span class="k">use</span> <span class="n">Mouse</span><span class="p">;</span>
+<span class="o">...</span>
+<span class="k">sub </span><span class="nf">create</span> <span class="p">{</span>
+    <span class="k">my</span> <span class="p">(</span><span class="nv">$class</span><span class="p">,</span> <span class="nv">$id</span><span class="p">)</span> <span class="o">=</span> <span class="nv">@_</span><span class="p">;</span>
+    <span class="c1"># 区分を親側で持っておいて、親の$row を子に渡して、</span>
+    <span class="c1"># 子側で自分のテーブルを引く方が使いやすくてオススメではあります。下記のは説明用</span>
+    <span class="k">my</span> <span class="nv">$person_row</span> <span class="o">=</span> <span class="n">db</span><span class="o">-&gt;</span><span class="n">single</span><span class="p">(</span><span class="s">'person'</span><span class="p">,</span> <span class="p">{</span> <span class="n">id</span> <span class="o">=&gt;</span> <span class="nv">$id</span> <span class="p">});</span>
+    <span class="k">my</span> <span class="nv">$detective_row</span> <span class="o">=</span> <span class="n">db</span><span class="o">-&gt;</span><span class="n">single</span><span class="p">(</span><span class="s">'detective'</span><span class="p">,</span> <span class="p">{</span> <span class="n">person_id</span> <span class="o">=&gt;</span> <span class="nv">$id</span> <span class="p">});</span>
+    <span class="k">if</span> <span class="p">(</span> <span class="nb">defined</span> <span class="nv">$detective_row</span> <span class="p">)</span> <span class="p">{</span> <span class="c1">#探偵が返る。name も引ける</span>
+        <span class="k">return</span> <span class="n">Detective</span><span class="o">-&gt;</span><span class="n">create</span><span class="p">(</span><span class="nv">$person_row</span><span class="o">-&gt;</span><span class="n">name</span><span class="p">,</span> <span class="nv">$detective_row</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="k">my</span> <span class="nv">$police_row</span> <span class="o">=</span> <span class="n">db</span><span class="o">-&gt;</span><span class="n">single</span><span class="p">(</span><span class="s">'police'</span><span class="p">,</span> <span class="p">{</span> <span class="n">person_id</span> <span class="o">=&gt;</span> <span class="nv">$id</span> <span class="p">});</span>
+    <span class="k">if</span> <span class="p">(</span> <span class="nb">defined</span> <span class="nv">$police_row</span> <span class="p">)</span> <span class="p">{</span> <span class="c1">#警察が返る</span>
+        <span class="k">return</span> <span class="n">Police</span><span class="o">-&gt;</span><span class="n">create</span><span class="p">(</span><span class="nv">$person_row</span><span class="o">-&gt;</span><span class="n">name</span><span class="p">,</span> <span class="nv">$police_row</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="nb">die</span> <span class="s">"探偵でも警察でもないのはダメダメですー"</span>
+<span class="p">}</span>
+</pre></div>
+
+
+</div>
+<div class="step" data-x="1200" data-y="2400">
+
+
+<h2>更新とか</h2>
+
+<ul>
+<li>適当にメソッド生やして随時やる</li>
+<li>トランザクションも随時</li>
+<li>それゆえの「ゆるふわ」</li>
+<li>全体的にきちんと管理したいなら、それなりの仕組みを用意したほうがよさそう</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="2400" data-y="2400">
+
+
+<h2>結論</h2>
+
+<ul>
+<li>割と使いやすくて、実装も面倒ではなくていい感じです</li>
+<li>これの名称知ってる方います？</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="3600" data-y="2400">
+
+<h1>おしまい</h1>
+
+</div>
+
+
+    <div id="overview" class="step" data-x="3000" data-y="1500" data-scale="10">
+    </div>
+
+</div>
+
+<div class="hint">
+    <p>Use a spacebar or arrow keys to navigate</p>
+</div>
+<script>
+if ("ontouchstart" in document.documentElement) { 
+    document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";
+}
+</script>
+<script>
+jQuery(function($){
+  $("a[href^='http']").attr('target', '_blank');
+});
+</script>
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-2083680-7']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+<script src="js/impress.js"></script>
+</body>
+</html>
+
