@@ -47,10 +47,10 @@ Perl とアジャイル開発
 
 アジャイル開発と Perl(2 of 3)
 ---
-+ ツール間連携に Perl のスクリプトを使っている
-+ bugzilla <-> Pivotal Tracker 間
-    + バグのチケットを bugzilla できったときに Pivotal で見れるようにしている
++ bugzilla <-> Pivotal Tracker
+    + バグのチケットを bugzilla で切ったときに Pivotal で見れるようにしている
     + ステータス管理は全部 bugzilla で
+	    + bugzilla で close すると Pivotal で finish 扱いになる
 	    + 連携方向を単方向にするため
 
 アジャイル開発と Perl(3 of 3)
@@ -60,11 +60,12 @@ Perl とアジャイル開発
 + Pivotal Tracker は REST な API があるので、それを使う
     + [REST API v5](https://www.pivotaltracker.com/help/api/rest/v5#top)
 
+Pivotal Tracker は REST な API があるので、それを使う
 ---
-+ Pivotal Tracker は REST な API があるので、それを使う
 
+使う??? 
 ---
-+ 使う???
+
 
 REST API について
 ---
@@ -75,9 +76,9 @@ REST API について
 ---
 + [cpan search](http://search.cpan.org/search?q=Pivotal+Tracker;s=1)
 
-
+なんかイマイチ... 
 ---
-+ なんかイマイチ...
+
 
 WebService::PivotalTracker
 ---
@@ -110,7 +111,7 @@ REST API について(再)
 バーンダウンチャート(2 of 2)
 ---
 + Google Spreadsheet にいくつかの値を入れて、グラフを書いてる
-+ 予定線を2つ入れてるのがちょっと珍しいかも
++ 予定線と実績線を2つずつ入れてるのがちょっと珍しいかも
     + プロジェクト開始当初と現在の予算・スケジュールでそれぞれ線を入れてる
 
 おまけ(2)
@@ -119,12 +120,14 @@ REST API について(再)
 
 バーンダウンチャート(再)
 ---
-+ <img src="./chart.png">
+<img src="./chart2.png">
+
 + 順調なところは「新規で作ったところ」
 + そうでない所は、「既存部分の改修」や「作ったやつを組み込むところ」
 
+レガシーシステムのつらさが可視化されて、なんともいえない気持ちになった
 ---
-+ レガシーシステムのつらさが可視化されて、なんともいえない気持ちになった
+
 
 まとめ
 ---

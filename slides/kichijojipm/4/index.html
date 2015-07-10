@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <title>最近の話(ほぼポエム)</title>
+    <title>Perl とアジャイル開発</title>
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
     <link href="css/impress.css"  rel="stylesheet" />
     <link href="css/pygments.css" rel="stylesheet" />
@@ -18,7 +18,7 @@
 <div class="step" id="title" data-x="0" data-y="0">
 
 
-<h1>最近の話(ほぼポエム)</h1>
+<h1>Perl とアジャイル開発</h1>
 
 <p></p>
 <address><a href="http://twitter.com/tsucchi">@tsucchi</a></address>
@@ -34,34 +34,39 @@
 <li>土田　拓也(つちだ　たくや)</li>
 <li>
 <a href="http://twitter.com/tsucchi">@tsucchi</a> とか <a href="http://tsucchi.github.io/">blog(http://tsucchi.github.io/)</a>とか</li>
-<li>普段は Perl とか SQL とか書いてます</li>
+<li>シャノンという会社で、Perl とか SQL とか書いてます</li>
 <li>
 <img src="./icon.jpeg"> こんなかんじのアイコンです</li>
 <li>
 <code>Perl</code> と <code>ミルキィホームズ</code>が好きです
 
 <ul>
-<li>
-<a href="http://milky-holmes-anime.com/">探偵歌劇ミルキィホームズTD</a>が放送終了で悲しい難民です</li>
-<li>
-<a href="http://milky-holmes.com/unit/mirumiru/">みるみるミルキィ</a>は好評放送中なので、見ましょう！</li>
-<li>挿入歌CD「Treasure Disc」が好評発売中なので、買うと良いです</li>
-<li>9/9 に新曲とライブBD がでるらしいぞ！</li>
+<li>ミルキィ好きすぎて、最近 <code>teito.yokohama</code>(偵都ヨコハマ)というドメインをとりました</li>
 </ul>
 </li>
 </ul>
-<iframe src="http://rcm-fe.amazon-adsystem.com/e/cm?t=tsucchisblog-22&amp;o=9&amp;p=8&amp;l=as1&amp;asins=B00T1WXA00&amp;ref=qf_sp_asin_til&amp;fc1=000000&amp;IS2=1&amp;lt1=_blank&amp;m=amazon&amp;lc1=0000FF&amp;bc1=000000&amp;bg1=FFFFFF&amp;f=ifr" style="width:120px;height:240px;" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"></iframe>
 
 
 </div>
 <div class="step" data-x="2400" data-y="0">
 
 
-<h2>どうでもいいやつ</h2>
+<h2>シャノンのアジャイル開発(チームについて)</h2>
 
 <ul>
-<li>最近、<code>teito.yokohama</code>(偵都ヨコハマ)というドメインをとりました</li>
-<li>これで <a href="mailto:milkyholmes@teito.yokohama">milkyholmes@teito.yokohama</a> っていう面白メールアドレスが使えて最高だ(まだメル鯖設定してませんが)</li>
+<li>スクラムで開発しています</li>
+<li>1週間のスプリント</li>
+<li>現在僕のチーム
+
+<ul>
+<li>開発 x 2</li>
+<li>QA x 1</li>
+<li>プロダクトオーナー</li>
+<li>スクラムマスタは僕(開発)が兼任</li>
+</ul>
+</li>
+<li>もっと大きなチームでやりたい気持ちもあるけど、とりあえず現状はそんな感じ</li>
+<li>現在スクラムをまわしてるチームは 4つくらい</li>
 </ul>
 
 
@@ -69,10 +74,24 @@
 <div class="step" data-x="3600" data-y="0">
 
 
-<h2>最近考えてること</h2>
+<h2>シャノンのアジャイル開発(ツールについて)</h2>
 
 <ul>
-<li>よくある話だとおもうのだけど...</li>
+<li>バックログは <a href="https://www.pivotaltracker.com/">Pivotal Tracker</a> で管理
+
+<ul>
+<li>プロダクトバックログ・スプリントバックログ共に</li>
+<li>僕のチームはバックログを 2 つに分けている</li>
+<li>1個でやってるチームもある</li>
+</ul>
+</li>
+<li>バグは bugzilla で管理
+
+<ul>
+<li>QA は bugzilla のほうが慣れてる</li>
+<li>Pivotal Tracker だと量が多いと埋もれてしまうことがある</li>
+</ul>
+</li>
 </ul>
 
 
@@ -80,108 +99,235 @@
 <div class="step" data-x="4800" data-y="0">
 
 
-<h2>レガシーアプリケーションについて</h2>
+<h2>アジャイル開発と Perl(1 of 3)</h2>
 
 <ul>
-<li>年代モノは、まあいろいろひどい</li>
-<li>ひどさは色々あるけど、簡略化すると結局は「コードの汚さ」と「設計のまずさ」にいきつく</li>
-<li>と、いうわけで...</li>
+<li>ツール間連携に Perl のスクリプトを使っている</li>
+<li>Pivotal Tracker 間
+
+<ul>
+<li>プロダクトバックログ -&gt; スプリントバックログにコピー
+
+<ul>
+<li>今は Pivotal 本体にコピー機能ができてしまったので、あまり意味なくなってしまった...</li>
+</ul>
+</li>
+<li>スプリントバックログで
+
+<ul>
+<li>ストーリーをタスクに分ける</li>
+<li>分けたタスクも1つのチケット(chore)にしている</li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 
 
 </div>
 <div class="step" data-x="0" data-y="800">
 
-<h2>リファクタリングしたい</h2>
+
+<h2>アジャイル開発と Perl(2 of 3)</h2>
+
+<ul>
+<li>bugzilla &lt;-&gt; Pivotal Tracker
+
+<ul>
+<li>バグのチケットを bugzilla で切ったときに Pivotal で見れるようにしている</li>
+<li>ステータス管理は全部 bugzilla で
+
+<ul>
+<li>bugzilla で close すると Pivotal で finish 扱いになる</li>
+<li>連携方向を単方向にするため</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
 
 </div>
 <div class="step" data-x="1200" data-y="800">
 
-<h2>リファクタリング?</h2>
+
+<h2>アジャイル開発と Perl(3 of 3)</h2>
+
+<ul>
+<li>bugzilla は XML-RPC ベースの API があるので、それを使う
+
+<ul>
+<li><a href="http://search.cpan.org/dist/XML-RPC/lib/XML/RPC.pm">XML::RPC</a></li>
+</ul>
+</li>
+<li>Pivotal Tracker は REST な API があるので、それを使う
+
+<ul>
+<li><a href="https://www.pivotaltracker.com/help/api/rest/v5#top">REST API v5</a></li>
+</ul>
+</li>
+</ul>
+
 
 </div>
 <div class="step" data-x="2400" data-y="800">
 
-
-<h2>リファクタリング?</h2>
-
-<ul>
-<li>いろいろひどいので、リファクタリングしたい</li>
-<li>でも、何をもって「よくなった」とすればよい？</li>
-</ul>
-
+<h2>Pivotal Tracker は REST な API があるので、それを使う</h2>
 
 </div>
 <div class="step" data-x="3600" data-y="800">
 
-
-<h2>いろいろ考えた</h2>
-
-<ul>
-<li>自分がどういうコードをきれいと考えてるか、とか</li>
-<li>社内でブレストしてみたりとか...</li>
-</ul>
-
+<h2>使う??? </h2>
 
 </div>
 <div class="step" data-x="4800" data-y="800">
 
-<h2>結局ベタな結論にたどりつく</h2>
+
+<h2>REST API について</h2>
+
+<ul>
+<li>サンプルは wget とか curl とかで、実際そういうツールでもカジュアルに呼べて便利</li>
+<li>とはいえ、API から帰ってきたデータを弄り回すときは Perl とかでやりたい</li>
+</ul>
+
 
 </div>
 <div class="step" data-x="0" data-y="1600">
 
 
-<h2>そのベタな結論</h2>
+<h2>モジュールを探してみる</h2>
 
 <ul>
-<li>リファクタリングの前後でこれらの指標がよくなればいいのでは？というやつ
-
-<ul>
-<li>複雑度</li>
-<li>行数</li>
-<li>カバレッジ</li>
-</ul>
-</li>
+<li><a href="http://search.cpan.org/search?q=Pivotal+Tracker;s=1">cpan search</a></li>
 </ul>
 
 
 </div>
 <div class="step" data-x="1200" data-y="1600">
 
-
-<h2>あるといいかも的なやつ</h2>
-
-<ul>
-<li>類似度(コピペの検出)</li>
-<li>クラス間の依存度
-
-<ul>
-<li>これはホントはめっちゃ欲しいのだけど、とるのが大変そうなので、優先度下げ気味になった</li>
-</ul>
-</li>
-<li>
-<a href="http://shanon-tech.blogspot.jp/2015/02/google-bugspots.html">bugspots のスコア</a>
-
-<ul>
-<li>コミットログを見るので、ルールの整備が必要</li>
-<li>長期的に見ないと意味ないので、リファクタリング後しばらくたってから見る必要がある</li>
-</ul>
-</li>
-</ul>
-
+<h2>なんかイマイチ... </h2>
 
 </div>
 <div class="step" data-x="2400" data-y="1600">
 
 
-<h2>結論ではないけど、結論っぽいなにか</h2>
+<h2>WebService::PivotalTracker</h2>
 
-<p>このへんの指標を pull request フックで表示したり、プロジェクトの前後で見れるようにするといいかも的なことを今考えてます。いくつかは OSS としてフィードバックできるかも。</p>
+<ul>
+<li><a href="https://github.com/tsucchi/p5-WebService-PivotalTracker">WebService::PivotalTracker</a></li>
+<li>作ってみた</li>
+<li>REST API の薄いラッパーで、ほとんど何もしていない</li>
+<li>github どまり</li>
+</ul>
 
 
 </div>
 <div class="step" data-x="3600" data-y="1600">
+
+
+<h2>REST API について(再)</h2>
+
+<ul>
+<li>こういうシンプルな REST API の CPAN モジュールは意外と無かったりする</li>
+<li>GitHub とかも無い</li>
+<li>みんなどうしてるんだろ？ってちょっと気になった</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="4800" data-y="1600">
+
+
+<h2>おまけ(1)</h2>
+
+<ul>
+<li>進捗の管理について</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="0" data-y="2400">
+
+
+<h2>進捗の管理について</h2>
+
+<ul>
+<li>色々なメトリクスを取ってみたけど、結局ベロシティを測るのが一番よい</li>
+<li>色々検討したけど、やっぱりバーンダウンチャートが一番強い</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="1200" data-y="2400">
+
+
+<h2>バーンダウンチャート(1 of 2)</h2>
+
+<p><img src="./chart.png"></p>
+
+
+</div>
+<div class="step" data-x="2400" data-y="2400">
+
+
+<h2>バーンダウンチャート(2 of 2)</h2>
+
+<ul>
+<li>Google Spreadsheet にいくつかの値を入れて、グラフを書いてる</li>
+<li>予定線と実績線を2つずつ入れてるのがちょっと珍しいかも
+
+<ul>
+<li>プロジェクト開始当初と現在の予算・スケジュールでそれぞれ線を入れてる</li>
+</ul>
+</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="3600" data-y="2400">
+
+
+<h2>おまけ(2)</h2>
+
+<ul>
+<li>みんな大好き技術的負債の話</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="4800" data-y="2400">
+
+
+<h2>バーンダウンチャート(再)</h2>
+
+<p><img src="./chart2.png"></p>
+
+<ul>
+<li>順調なところは「新規で作ったところ」</li>
+<li>そうでない所は、「既存部分の改修」や「作ったやつを組み込むところ」</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="0" data-y="3200">
+
+<h2>レガシーシステムのつらさが可視化されて、なんともいえない気持ちになった</h2>
+
+</div>
+<div class="step" data-x="1200" data-y="3200">
+
+
+<h2>まとめ</h2>
+
+<ul>
+<li>スクラムで開発してます</li>
+<li>ツールはいくつか使い分けてます</li>
+<li>ツール間連携は Perl でやってます</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="2400" data-y="3200">
 
 <h1>おしまい</h1>
 
