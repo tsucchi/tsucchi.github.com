@@ -24,6 +24,13 @@ Perl プログラムのコピペの検出といえば、まず最初に候補に
 
 ところが、、インストールは問題なくできたのだけれども、動かしてみたら、アプリのディレクトリの外のモジュールを use しているところで死んでしまい、「？？？？」となった。へーしゃのプロダクトの構成が変すぎるせいなのだろうけど、これじゃあ動かせないし、動きが分からなすぎて怖いな、と思って使用を断念した。
 
+さらに追記:
+<blockquote class="twitter-tweet" lang="ja"><p lang="ja" dir="ltr"><a href="https://twitter.com/tsucchi">@tsucchi</a> なんと、モジュール動かなかったんですね…！&#10;もしよろしければIssueを頂ければサクッと直せると思います！</p>&mdash; Masaaki Goshima (@goccy54) <a href="https://twitter.com/goccy54/status/635429892859953152">2015, 8月 23</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+とのことで、作者の [@goccy54](https://twitter.com/goccy54)さんから連絡いただきましたので、こっちも再度試してみますです。
+
+
 ### 候補1: 特徴ベクトルとコサイン類似度 (ダメだった)
 既存のツールがダメなので、自分で書くしか無い。(一応調べたけど、他の事例とかプロダクトは無いハズ)
 
