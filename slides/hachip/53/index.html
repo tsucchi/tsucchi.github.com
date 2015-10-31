@@ -1,0 +1,297 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Perl6 最速学習法</title>
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
+    <link href="css/impress.css"  rel="stylesheet" />
+    <link href="css/pygments.css" rel="stylesheet" />
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+</head>
+<body>
+<div id="impress" class="impress-not-supported">
+    <div class="fallback-message">
+        <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+        <p>For the best experience please use the latest <b>Chrome</b> or <b>Safari</b> browser. Firefox 10 (to be released soon) will also handle it.</p>
+    </div>
+
+<div class="step" id="title" data-x="0" data-y="0">
+
+
+<h1>Perl6 最速学習法</h1>
+
+<p><a href="http://twitter.com/tsucchi">@tsucchi</a></p>
+
+
+</div>
+<div class="step" data-x="1200" data-y="0">
+
+
+<h2>自己紹介</h2>
+
+<ul>
+<li>土田　拓也(つちだ　たくや)</li>
+<li>
+<a href="http://twitter.com/tsucchi">@tsucchi</a> とか <a href="http://tsucchi.github.io/">blog(http://tsucchi.github.io/)</a>とか</li>
+<li>普段は Perl とか SQL とか書いてます</li>
+<li>
+<img src="./icon.jpeg"> こんなかんじのアイコンです</li>
+<li>
+<code>Perl</code> と <code>ミルキィホームズ</code>が好きです
+
+<ul>
+<li>2月に映画公開！
+
+<ul>
+<li><a href="http://mh-movie.com/">劇場版 探偵オペラ ミルキィホームズ 〜逆襲のミルキィホームズ〜</a></li>
+</ul>
+</li>
+<li>BD Box も出るらしいので買うといいです
+
+<ul>
+<li><a href="http://mh-movie.com/news/161.html">【劇場版公開記念】「ミルキィホームズ Blu-ray BOX」全3タイトルが発売決定！</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="2400" data-y="0">
+
+
+<h2>最近思ったこと</h2>
+
+<ul>
+<li>Perl6流行り始めているなぁ。。。</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="3600" data-y="0">
+
+
+<h2>やってみる</h2>
+
+<p>とりあえずこの辺ざっと読んでみた</p>
+
+<ul>
+<li><a href="https://github.com/kazhiramatsu/perl6-entrance/blob/master/slide.md">Perl6入学式資料(日本語)</a></li>
+<li><a href="https://dl.dropboxusercontent.com/u/877032/UsingPerl6_JA.html">Using Perl6日本語版</a></li>
+<li><a href="http://doc.perl6.org/">公式doc(英語)</a></li>
+</ul>
+
+
+</div>
+<div class="step" data-x="4800" data-y="0">
+
+
+<h2>よし、だいたい分かった</h2>
+
+
+</div>
+<div class="step" data-x="0" data-y="800">
+
+
+<h2>本当か？？？</h2>
+
+
+</div>
+<div class="step" data-x="1200" data-y="800">
+
+
+<h2>そんなはず無い</h2>
+
+
+</div>
+<div class="step" data-x="2400" data-y="800">
+
+
+<h2>そんなはず無い</h2>
+
+<ul>
+<li>何か作ってみないとちゃんと頭に入らない</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="3600" data-y="800">
+
+
+<h2>と、いうわけで</h2>
+
+<ul>
+<li>作ってみた
+
+<ul>
+<li><a href="https://github.com/tsucchi/p6-Acme-MilkyHolmes">p6-Acme-MilkyHolmes</a></li>
+</ul>
+</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="4800" data-y="800">
+
+
+<h2>p6-Acme-MilkyHolmes</h2>
+
+<ul>
+<li>
+<a href="https://github.com/tsucchi/p5-Acme-MilkyHolmes">Perl5版</a>の完全な移植(を目指している)</li>
+<li>まだ途中だけど、実際にやってみたらとても良い題材だと思った</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="0" data-y="1600">
+
+
+<h2>Acme::MilkyHolmes が学習にちょうど良い理由</h2>
+
+<ul>
+<li>テストコードがそこそこある</li>
+<li>クラス階層が一応ある</li>
+<li>微妙に変なことをしている
+
+<ul>
+<li>時刻を見て値を変えたり</li>
+<li>
+<code>__DATA__</code> セクションから値を引いたり</li>
+</ul>
+</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="1200" data-y="1600">
+
+
+<h2>Acme::MilkyHolmes が学習にちょうど良い理由</h2>
+
+<ul>
+<li>「これ、どうやるんだろ？」みたいなのが色々あってちょうど良い</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="2400" data-y="1600">
+
+
+<h2>はまったところ(1)</h2>
+
+<ul>
+<li>POD 変数が使えない
+
+<ul>
+<li><a href="https://gist.github.com/tsucchi/835a0da930031de4c177">まじか！</a></li>
+<li>p5版は <code>__DATA__</code> セクションからデータを引いてたので割と困る</li>
+</ul>
+</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="3600" data-y="1600">
+
+
+<h2>はまったところ(2)</h2>
+
+<ul>
+<li>YAML が読めない
+
+<ul>
+<li><a href="https://github.com/perl6-community-modules/yaml-pm6/blob/master/lib/YAML.pm#L16-L18">まじか！</a></li>
+<li>p5版は <code>__DATA__</code>セクションの YAML からデータを引いていたので、割と困る</li>
+</ul>
+</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="4800" data-y="1600">
+
+
+<h2>はまったところ(3)</h2>
+
+<ul>
+<li>コンストラクタから別のコンストラクタを呼ぶのがイマイチ良く分からない
+
+<ul>
+<li>引数無しのコンストラクタから親の引数アリのコンストラクタを呼びたい
+
+<ul>
+<li><a href="https://github.com/tsucchi/p6-Acme-MilkyHolmes/blob/master/lib/Acme/MilkyHolmes/Character/SherlockShellingford.pm6#L7">ココで怪しい setterを呼んでるのをやめたい</a></li>
+</ul>
+</li>
+<li>Constant Method (というかクラス)なので、筋が悪いのは承知の上だけど、できないのこれ？？</li>
+</ul>
+</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="0" data-y="2400">
+
+
+<h2>まとめ</h2>
+
+<ul>
+<li>クラス周りの機能はなんとなく分かった気がする
+
+<ul>
+<li>まだ Role 使ってないので、これからやる(p5版もやってるし)</li>
+</ul>
+</li>
+<li>他の機能(非同期とか)は分からん</li>
+<li>悪くない題材なので、皆さんもお気に入りの Acme モジュールを移植すると良いと思います</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="1200" data-y="2400">
+
+
+<h1>おしまい</h1>
+
+
+</div>
+
+
+    <div id="overview" class="step" data-x="3000" data-y="1500" data-scale="10">
+    </div>
+
+</div>
+
+<div class="hint">
+    <p>Use a spacebar or arrow keys to navigate</p>
+</div>
+<script>
+if ("ontouchstart" in document.documentElement) { 
+    document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";
+}
+</script>
+<script>
+jQuery(function($){
+  $("a[href^='http']").attr('target', '_blank');
+});
+</script>
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-2083680-7']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+<script src="js/impress.js"></script>
+</body>
+</html>
+
