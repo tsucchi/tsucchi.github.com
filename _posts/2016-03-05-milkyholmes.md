@@ -1,7 +1,7 @@
 ---
 layout: post
 category: milkyholmes
-tags: ミルキィホームズ
+tags: ミルキィホームズ 劇場ミルキィ
 title: ミルキィはいいぞ
 ---
 {% include JB/setup %}

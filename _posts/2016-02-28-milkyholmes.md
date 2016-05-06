@@ -1,7 +1,7 @@
 ---
 layout: post
 category: milkyholmes
-tags: ミルキィホームズ
+tags: ミルキィホームズ 劇場ミルキィ
 title: (注意ネタバレ有り)「劇場版 探偵オペラ ミルキィホームズ 〜逆襲のミルキィホームズ〜」が最高に良かった件
 ---
 {% include JB/setup %}
