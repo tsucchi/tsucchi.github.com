@@ -52,6 +52,11 @@ fatpack とか大変なので、一枚スクリプトを実行したタイミン
 
 ## LT4:PerlでBDD(dokechin)
 
+(2016/05/06追記)
+資料アップされてたみたいです。(当日に上がってたみたいだけど見逃してた...すいませんすいません)
+[PerlでBDD](http://www.slideshare.net/dokechin/perlbdd)
+(2016/05/06追記ここまで)
+
 Perl で Cucumber 使って BDD する話。最近僕も Selenium WebDriver 使ってテスト書いてたので、なるほどと思いながら聞いてたけど、BDD はやっぱり大変そうだなー。
 
 ## LT5:LT about Moosex-App (https://metacpan.org/release/MooseX-App) in English(Maroš Kollár)
