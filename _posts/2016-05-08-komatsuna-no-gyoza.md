@@ -27,6 +27,13 @@ title: 小松菜の水餃子
 <blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">ネギの残りと、ちょっと残った餡にモヤシを足して炒め物にしたら結構いける感じだった。ネギ捨てちゃもったいないよね <a href="https://twitter.com/hashtag/%E6%9C%AC%E6%97%A5%E3%82%82%E9%A4%83%E5%AD%90%E6%97%A5%E5%92%8C?src=hash">#本日も餃子日和</a> (番外編) <a href="https://t.co/1f27IAgDq6">pic.twitter.com/1f27IAgDq6</a></p>&mdash; tsucchi (@tsucchi) <a href="https://twitter.com/tsucchi/status/729286389846564864">2016年5月8日</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
+なお公式見解、
+
+<blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">《このネギは具材に入れちゃって大丈夫ですよ！私は勿体ないからこれでネギ餃子を作ります(*^-^*)》<br><br>ネギ汁と絞りカス <a href="https://twitter.com/hashtag/%E6%9C%AC%E6%97%A5%E3%82%82%E9%A4%83%E5%AD%90%E6%97%A5%E5%92%8C?src=hash">#本日も餃子日和</a> <a href="https://t.co/5RTZzhb2SD">pic.twitter.com/5RTZzhb2SD</a></p>&mdash; 橘田いずみ@餃子声優 (@izugyoza) <a href="https://twitter.com/izugyoza/status/729309083233226752">2016年5月8日</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+ネギ餃子を作る、という手があるらしい。
+
 <blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">ネギ汁足すだけでこれだけ美味しくなるの、はっきり言って衝撃レベルだし、他にもこういう素材があるのかもしれない、と思うと冗談ではなく本当に無限の可能性を感じました</p>&mdash; tsucchi (@tsucchi) <a href="https://twitter.com/tsucchi/status/729290045211824128">2016年5月8日</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
