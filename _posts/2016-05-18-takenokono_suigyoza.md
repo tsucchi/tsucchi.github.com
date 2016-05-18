@@ -1,7 +1,7 @@
 ---
 layout: post
 category: gyoza
-tags: 料理 本日も餃子日和
+tags: 料理 餃子 本日も餃子日和
 title: たけのこの水餃子
 ---
 {% include JB/setup %}
