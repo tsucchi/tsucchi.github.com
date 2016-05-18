@@ -20,5 +20,6 @@ title: たけのこの水餃子
 
 これ、レシピにも書いてある通り、たけのこ大き目な方が絶対美味しいです。だけど、大き目にすると皮が破れやすくて難しい。厚めの皮を自作するといいのかもしれないですね。上のツイートにもある通り、レシピに載っているタレも色々試したいのだけど、レシピ通りに作ると結構味がちゃんとついてて、僕的にはタレなくても大丈夫なので、ちょっと薄めにアレンジした方がいいのかなー、とか考え始めています。
 
+この本の餃子、本当に美味しいので、気になった方は今すぐ↓をクリッククリック！
 
 <iframe src="http://rcm-fe.amazon-adsystem.com/e/cm?t=tsucchisblog-22&o=9&p=8&l=as1&asins=439114834X&ref=qf_sp_asin_til&fc1=000000&IS2=1&lt1=_blank&m=amazon&lc1=0000FF&bc1=000000&bg1=FFFFFF&f=ifr" style="width:120px;height:240px;" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"></iframe>
