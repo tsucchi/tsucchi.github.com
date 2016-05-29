@@ -21,6 +21,8 @@ title: ネギの水餃子
 <blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">三角包みはだいぶ慣れた <a href="https://t.co/asy2IUrkAn">pic.twitter.com/asy2IUrkAn</a></p>&mdash; tsucchi (@tsucchi) <a href="https://twitter.com/tsucchi/status/736894191402262528">2016年5月29日</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
+水餃子にしようと思ったので、手慣れた三角包みで。
+
 <blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">茹で中の様子 <a href="https://t.co/WPdK4uzgSk">pic.twitter.com/WPdK4uzgSk</a></p>&mdash; tsucchi (@tsucchi) <a href="https://twitter.com/tsucchi/status/736894301758623746">2016年5月29日</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
