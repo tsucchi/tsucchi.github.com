@@ -40,8 +40,8 @@ Perl の引数の制約がなければ(あるいは知らなければ)こうい�
 ```perl
 # @array1 と @array2 が同じなら真を返す
 sub is_same_array {
-	my (@array1, @array2) = @_;
-	...
+    my (@array1, @array2) = @_;
+    ...
 }
 ```
 
@@ -67,8 +67,8 @@ Perl のサブルーチンの引数は配列として取り扱うため、is_sam
 ```perl
 # $array_ref1 と $array_ref2 が同じなら真を返す
 sub is_same_array {
-	my ($array_ref1, $array_ref2) = @_;
-	...
+    my ($array_ref1, $array_ref2) = @_;
+    ...
 }
 ```
 
@@ -108,8 +108,8 @@ else {
 ```perl
 my %row = (
     id   => 1,
-	name => 'Sherlock Shellingford',
-	age  => 15,
+    name => 'Sherlock Shellingford',
+    age  => 15,
 );
 print $row{name}; # => Sherlock Shellingford
 ```
@@ -124,23 +124,23 @@ print $row{name}; # => Sherlock Shellingford
 my @rows = (
     {
         id   => 1,
-    	name => 'Sherlock Shellingford',
-	    age  => 15,
+        name => 'Sherlock Shellingford',
+        age  => 15,
     },
     {
         id   => 2,
-    	name => 'Nero Yuzurizaki',
-	    age  => 15,
+        name => 'Nero Yuzurizaki',
+        age  => 15,
     },
     {
         id   => 3,
-    	name => 'Hercule Barton',
-	    age  => 16,
+        name => 'Hercule Barton',
+        age  => 16,
     },
     {
         id   => 4,
-    	name => 'Cordelia Glauca',
-	    age  => 17,
+        name => 'Cordelia Glauca',
+        age  => 17,
     },
 );
 print $row[0]->{name}; # => Sherlock Shellingford
@@ -155,10 +155,10 @@ print $row[0]->{name}; # => Sherlock Shellingford
 ```perl
 my @people = (
     'tsucchi',
-	'xtetsuji',
-	'papix',
-	'ytnobody',
-	...
+    'xtetsuji',
+    'papix',
+    'ytnobody',
+    ...
 );
 ```
 
