@@ -4,3 +4,7 @@ _theme_packages/*
 .rvmrc
 *~
 .DS_Store
+Thumbs.db
+!.gitkeep
+
+
