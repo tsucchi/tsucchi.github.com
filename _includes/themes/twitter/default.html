@@ -11,34 +11,35 @@
     <title>{{ page.title }} - {{ site.title }}</title>
     {% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
     <meta name="author" content="{{ site.author.name }}">
-
+    <!-- Enable responsive viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
     <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
     <!-- Le styles -->
-    <link href="{{ ASSET_PATH }}/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="{{ ASSET_PATH }}/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
     <link href="{{ ASSET_PATH }}/css/syntax.css" rel="stylesheet" type="text/css" media="screen">
+    <link href="{{ ASSET_PATH }}/bootstrap/css/bootstrap.2.2.2.min.css" rel="stylesheet">
 	<script type="text/javascript" src="/assets/js/jquery-2.1.1.min.js"></script>
 	<style type="text/css">
       .sidebar {
         padding: 0 5px;
       }
-	  div.content > h1 {
+	  div.content .span12 h1 {
 	    border-left: 15px solid #5279E7;
 	    margin-top: 9px;
 	    margin-bottom: 9px;
   	    padding-left: 9px;
 	  }
-	  div.content > h2 {
+	  div.content .span12 h2 {
 	    border-left: 12px solid #5279E7;
 	    margin-top: 8px;
 	    margin-bottom: 8px;
   	    padding-left: 8px;
 	  }
-	  div.content > h3 {
+	  div.content .span12 h3 {
 	    border-left: 10px solid #5279E7;
 	    margin-top: 5px;
 	    margin-bottom: 5px;
@@ -64,7 +65,15 @@
       body .content table th a{
         color: #4259BC;
       }
+      body {
+        background-color: #eee;
+      }
+      .content {
+	    background-color: #ffffff;
+      }
     </style>
+
+
     <!-- Le fav and touch icons -->
   <!-- Update these with your own images
     <link rel="shortcut icon" href="images/favicon.ico">
@@ -72,8 +81,11 @@
     <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
     <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
   -->
-  <link rel="alternate" type="application/rss+xml" title="RSS" href="http://tsucchi.github.io/feed.xml">
-  </head>
+  <!-- atom & rss feed -->
+  <link href="{{ BASE_PATH }}{{ site.JB.atom_path }}" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
+  <link href="{{ BASE_PATH }}{{ site.JB.rss_path }}" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
+
+</head>
 
   <body>
 	<div id="fb-root"></div>
@@ -93,12 +105,6 @@
 		<div class="page-title">
 		  <h1><a href="{{ HOME_PATH }}">{{ site.title }}</a></h1>
 		</div>
-		<br>
-		<br>
-		<div class="page-header">
-		  <h1>{{ page.date | date: "%Y-%m-%d" }}</h1>
-		  <h1>{{ page.title }}</h1> {% if page.tagline %} <small>{{ page.tagline }}</small>{% endif %}
-		</div>
 	  </div>
 	  <div class="span3">
 		&nbsp;
@@ -112,12 +118,12 @@
 		<div class="content">
           {{ content }}
 		</div>
-	  <footer>
-		<p>&copy; {{ site.author.name }} 2012 
-		  with help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
-		  and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>
-		</p>
-	  </footer>
+		<footer>
+          <p>&copy; {{ site.time | date: '%Y' }} {{ site.author.name }}
+			with help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
+			and <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>
+          </p>
+		</footer>
 	  </div>
 	  <div class="span3">
 		{% include themes/twitter/sidebar.html %}
