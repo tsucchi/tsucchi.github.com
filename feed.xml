@@ -14,7 +14,7 @@ layout:
 				<title>{{ post.title }}</title>
 				<description>{{ post.content | xml_escape }}</description>
 				<published>{{ post.date }}</published>
-				<link>http://tsucchi.github.io{{ site.url }}{{ post.url }}</link>
+				<link>{{ site.url }}{{ post.url }}</link>
 			</item>
 		{% endfor %}
 	</channel>
