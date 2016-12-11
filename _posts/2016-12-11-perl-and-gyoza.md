@@ -1,7 +1,7 @@
 ---
 layout: post
 category: perl
-tags: perl 本日も餃子日和
+tags: perl 本日も餃子日和 ミルキィホームズ
 title: Perlと餃子とPerl入学式と橘田いずみさんの餃子教室
 ---
 {% include JB/setup %}
@@ -9,7 +9,7 @@ title: Perlと餃子とPerl入学式と橘田いずみさんの餃子教室
 ## はじめに
 これは[Perl入学式 Advent Calendar 2016](http://qiita.com/advent-calendar/2016/perl-entrance) の 11日目の記事です。昨日は[codehex さんの YAPC::Hokkaido のレポートでした](http://codehex.hateblo.jp/entry/yapc2016hokkaido)。いいなぁ、僕も行きたかったなぁ。
 
-こんばんは、東京で Perl入学式のサポーターをやっております、[@tsucchi](https://twitter.com/tsucchi) です。
+こんばんは、東京で [Perl入学式](http://www.perl-entrance.org/)のサポーターをやっております、[@tsucchi](https://twitter.com/tsucchi) です。
 
 昨年、一昨年と比較的マジメに、入学式の参加者やプログラミング初心者が比較的つまづきやすいリファレンスの記事を頑張って書いたので、だいぶネタ切れ気味で今年書くネタが思いつかなかったのですが、
 
