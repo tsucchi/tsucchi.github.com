@@ -1,6 +1,7 @@
 _site/*
 _theme_packages/*
 .rbenv-version
+.ruby-version
 .rvmrc
 *~
 .DS_Store
