@@ -186,7 +186,7 @@ WebUIの話
 + WebUI も作った
 + SQL を叩いて状況を見ることも多いけど、傾向がわかるのはやっぱり便利
 
-<img src="./webui.png">
+<img src="./webui.png" width="400" height="360">
 
 移行してわかったこと / よかったこと
 ---
