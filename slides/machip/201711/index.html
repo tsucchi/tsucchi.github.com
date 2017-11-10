@@ -1,0 +1,717 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>おしまい</title>
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
+    <link href="css/impress.css"  rel="stylesheet" />
+    <link href="css/pygments.css" rel="stylesheet" />
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+</head>
+<body>
+<div id="impress" class="impress-not-supported">
+    <div class="fallback-message">
+        <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+        <p>For the best experience please use the latest <b>Chrome</b> or <b>Safari</b> browser. Firefox 10 (to be released soon) will also handle it.</p>
+    </div>
+
+<div class="step" id="title" data-x="0" data-y="0">
+
+
+<h2>今までの(名状しがたい)ジョブキュー(のようなもの)と、これからのジョブキュー</h2>
+
+<ul>
+<li>まちぴーバージョン</li>
+</ul>
+
+<p><a href="http://twitter.com/tsucchi">@tsucchi</a></p>
+
+
+</div>
+<div class="step" data-x="1200" data-y="0">
+
+
+<h2>自己紹介</h2>
+
+<ul>
+<li>土田　拓也(つちだ　たくや)</li>
+<li>
+<p><a href="http://twitter.com/tsucchi">@tsucchi</a> とか <a href="http://tsucchi.github.io/">blog(http://tsucchi.github.io/)</a>とか</p>
+
+<ul>
+<li>
+<img src="./icon.jpeg"> こんなかんじのアイコンです</li>
+<li>
+<code>Perl</code> と <code>ミルキィホームズ</code>が好きです</li>
+</ul>
+</li>
+<li>
+<p><a href="http://shanon-tech.blogspot.jp/">株式会社シャノン</a>というところで、エンジニアやってます</p>
+
+<ul>
+<li>Perl とか SQL とか書いたり</li>
+<li>パフォーマンスとかセキュリティのこと考えたり</li>
+<li>たまにスクラムっぽいことやってたり、そんな感じ</li>
+</ul>
+</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="2400" data-y="0">
+
+
+<h2>今回の内容</h2>
+
+<ul>
+<li>
+<a href="https://kichijojipm.connpass.com/event/64456/">吉祥寺.pm12</a> で発表したやつの加筆・修正版です</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="3600" data-y="0">
+
+
+<h2>名状しがたいジョブキューのようなもの</h2>
+
+<ul>
+<li>かつて存在した、<code>「謎のジョブキュー的な何か」</code>について紹介します</li>
+<li>これは考古学と、そこから得られる反省の話</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="4800" data-y="0">
+
+
+<h2>アプリケーションとジョブキューについて</h2>
+
+<ul>
+<li>普通の Web アプリケーションはこんな感じ</li>
+</ul>
+
+<p><img src="./jobqueue1.png"></p>
+
+
+</div>
+<div class="step" data-x="0" data-y="800">
+
+
+<h2>なぜジョブキューが必要なのか</h2>
+
+<ul>
+<li><a href="http://gihyo.jp/dev/serial/01/perl-hackers-hub/001001">なぜジョブキューを使うのか - 第10回　ジョブキューで後回し大作戦―TheSchwartz，Qudo，Q4M（1） - Perl Hackers Hub</a></li>
+</ul>
+
+<pre><code>ジョブキューを使う主な理由は，Webアプリケーションで処理するには重く，リアルタイム性が必要ない処理をWebのサイクルから切り離して処理を行うためです。Webアプリケーションとは物理的にサーバを分けることも可能となるので，サービスが大きくなったときなどにスケールアウトさせやすくなります。
+</code></pre>
+
+
+</div>
+<div class="step" data-x="1200" data-y="800">
+
+
+<h2>なぜジョブキューが必要なのか</h2>
+
+<ul>
+<li>Webの1リクエストにやるには、ちょっと重い処理はジョブキューに回すのが良くあるやり方</li>
+<li>典型的にはメール送信とか</li>
+<li>Perl だと TheSchwartz とか Qudo とか使います</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="2400" data-y="800">
+
+
+<h2>今までのジョブキュー</h2>
+
+<ul>
+<li>普通はこういう感じなのですが</li>
+</ul>
+
+<p><img src="./jobqueue1.png"></p>
+
+
+</div>
+<div class="step" data-x="3600" data-y="800">
+
+
+<h2>今までのジョブキュー</h2>
+
+<ul>
+<li>なんかこんな感じになってた</li>
+</ul>
+
+<p><img src="./jobqueue2.png"></p>
+
+
+</div>
+<div class="step" data-x="4800" data-y="800">
+
+
+<h2>名状しがたいやつ1号</h2>
+
+<p><img src="./nyaruko.jpg" width="160" height="160"></p>
+
+<ul>
+<li> 2006年くらいからあるやつ
+
+<ul>
+<li>TheSchwartz も2007年ごろみたいなので、微妙っちゃ微妙</li>
+</ul>
+</li>
+<li>指定時間になると、指定されたURLを叩く物体</li>
+<li>API もあって、API でジョブ登録できるので、当時としては割と先進的だったのかも</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="0" data-y="1600">
+
+
+<h2>名状しがたいやつ2号</h2>
+
+<p><img src="./kuko.jpg" width="200" height="160"></p>
+
+<ul>
+<li>2010年ごろからあるやつ</li>
+<li>DB バックエンドの独自実装で、即時実行で指定された URL を叩く物体</li>
+<li>1号と2号は合体できなかったのですかね。。。(困惑)</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="1200" data-y="1600">
+
+
+<h2>名状しがたいやつ3号</h2>
+
+<p><img src="./hasuta.jpeg" width="160" height="160"></p>
+
+<ul>
+<li>2012年ごろからあるやつ</li>
+<li>Gearman をバックエンドにした割と普通っぽいやつ</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="2400" data-y="1600">
+
+
+<h2>名状しがたいやつ3号</h2>
+
+<p><img src="./hasuta.jpeg" width="160" height="160"></p>
+
+<ul>
+<li>2012年ごろからあるやつ</li>
+<li>Gearman をバックエンドにした割と普通っぽいやつ
+
+<ul>
+<li>なのだが、(なぜか) Gearman から溢れた場合を想定していて、その場合は TheSchwartz に流す
+
+<ul>
+<li>何がしたいのか、正直良くわからない</li>
+</ul>
+</li>
+<li>時間指定もできて、その場合は TheSchwartz に流す
+
+<ul>
+<li>何がしたいのか、正直良くわからない</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="3600" data-y="1600">
+
+
+<h2>名状しがたいやつ3号</h2>
+
+<p><img src="./hasuta.jpeg" width="160" height="160"></p>
+
+<ul>
+<li>TheSchwartz (みたいな普通のジョブキュー)があれば全部やりたいことできたのでは？</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="4800" data-y="1600">
+
+
+<h2>なんかこういうの見たことある</h2>
+
+<p><img src="https://images-na.ssl-images-amazon.com/images/I/51JVJ4JCJSL._SY445_.jpg"></p>
+
+
+</div>
+<div class="step" data-x="0" data-y="2400">
+
+
+<h2>とてもつらい...</h2>
+
+<ul>
+<li>どこで何が動いてるのか良くわからない</li>
+<li>TheSchwartz と Gearman 両方使ってもいいけど、行ったり来たりする併用はまじで意味がわからないのでやめて欲しい</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="1200" data-y="2400">
+
+
+<h2>どうしてこうなった...</h2>
+
+
+</div>
+<div class="step" data-x="2400" data-y="2400">
+
+
+<h2>どうしてこうなった...</h2>
+
+<ul>
+<li>(当時でも)TheSchwartz (みたいな普通のジョブキュー)があれば全部やりたいことできたのでは？</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="3600" data-y="2400">
+
+
+<h2>どうしてこうなった...</h2>
+
+<ul>
+<li>TheSchwartz のメモリリークの話
+
+<ul>
+<li><a href="http://sfujiwara.hatenablog.com/entry/20080626/1214474049">TheSchwartz を PostgreSQL / SQLite で使うと worker プロセスが太る(のは解決済) - 酒日記 はてな支店
+</a></li>
+</ul>
+</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="4800" data-y="2400">
+
+
+<h2>どうしてこうなった...</h2>
+
+<ul>
+<li>メモリリークを追いきれなかったのかな？
+
+<ul>
+<li>このメモリリークは僕も踏んで、DBD::Pg のアップグレードをやった</li>
+</ul>
+</li>
+<li>ワーカーの作りにもよるけど、TheSchwartz のワーカー結構メモリ使うので、そのせいかも</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="0" data-y="3200">
+
+
+<h2>これからのジョブキュー</h2>
+
+<ul>
+<li>
+<del>顧客</del>僕らが本当に求めていたもの</li>
+</ul>
+
+<p><img src="http://dic.nicovideo.jp/oekaki/510580.png"></p>
+
+
+</div>
+<div class="step" data-x="1200" data-y="3200">
+
+
+<h2>僕らが本当に求めていたもの</h2>
+
+<ul>
+<li>「普通の」ジョブキュー
+
+<ul>
+<li>時間指定ができて</li>
+<li>良くわからないことしない
+
+<ul>
+<li>(必要ないのに) HTTP 叩くとかしない</li>
+<li>(必要ないのに) Schwartz と Gearman を併用するとかしない</li>
+</ul>
+</li>
+<li>普通にワーカーとして動くもの</li>
+</ul>
+</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="2400" data-y="3200">
+
+
+<h2>ジョブキュー</h2>
+
+<ul>
+<li>
+<a href="http://search.cpan.org/%7Esri/Minion-7.07/lib/Minion.pm">Minion</a> の採用
+
+<ul>
+<li>時間指定ができて</li>
+<li>普通に使えて</li>
+<li>ちゃんとメンテされてる</li>
+</ul>
+</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="3600" data-y="3200">
+
+
+<h2>移行について</h2>
+
+<ul>
+<li>データ移行などが少し大変だったけど、移行自体はスムーズに終わった</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="4800" data-y="3200">
+
+
+<h2>WebUIの話</h2>
+
+<ul>
+<li>WebUI も作った</li>
+<li>SQL を叩いて状況を見ることも多いけど、傾向がわかるのはやっぱり便利</li>
+</ul>
+
+<p><img src="./webui.png" width="400" height="360"></p>
+
+
+</div>
+<div class="step" data-x="0" data-y="4000">
+
+
+<h2>移行してわかったこと / よかったこと</h2>
+
+<ul>
+<li>謎の仕組みを卒業できたのはよかった
+
+<ul>
+<li>
+<code>名状しがたい奴ら</code>がいなくなった
+
+<ul>
+<li>「普通のWebアプリのアーキテクチャ」になった</li>
+</ul>
+</li>
+<li>非同期処理を入れやすくなった</li>
+<li>特に時間指定のジョブが実装しやすくなった</li>
+</ul>
+</li>
+</ul>
+
+<p>当たり前のことがのことが、当たり前にできるようになった</p>
+
+
+</div>
+<div class="step" data-x="1200" data-y="4000">
+
+
+<h2>移行してわかったこと / 困ったこと</h2>
+
+<ul>
+<li>結構データベースの CPU を食う
+
+<ul>
+<li>割ときっちりロックかけるため</li>
+<li>PostgreSQL の新しい機能を上手く使ってる</li>
+</ul>
+</li>
+<li>PostgreSQL の話を少し</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="2400" data-y="4000">
+
+
+<h2>Minion で使ってる PostgreSQL の機能(1)</h2>
+
+<ul>
+<li>
+<a href="https://wiki.postgresql.org/wiki/What%27s_new_in_PostgreSQL_9.5#SKIP_LOCKED">SKIP LOCKED</a>(&gt;=9.5)
+
+<ul>
+<li>ロックしている行は飛ばして、ロックされてない次のレコードを取ってきて、ロック
+
+<ul>
+<li>「余計な行をロックせず」</li>
+<li>「取りたい行だけロックしながら取る」</li>
+<li>まさにジョブキューのためにあるような機能</li>
+</ul>
+</li>
+<li>
+<a href="https://github.com/kraih/minion/blob/master/lib/Minion/Backend/Pg.pm#L242-L256">この辺</a>
+
+<ul>
+<li>
+<code>UPDATE ... RETURNING</code> も使ってる</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="3600" data-y="4000">
+
+
+<h2>で、これが重い...</h2>
+
+<ul>
+<li>とはいえ、ちゃんとロックかけて、上から順に欲しいレコードを取ってくれるのはありがたい</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="4800" data-y="4000">
+
+
+<h2>Minion で使ってる PostgreSQL の機能(2)</h2>
+
+<ul>
+<li>
+<a href="https://www.postgresql.jp/document/9.6/html/sql-notify.html">NOTIFY</a>
+
+<ul>
+<li>PUBSUB っぽいことができる</li>
+<li>結構前からあるらしい(&gt;=9.0)</li>
+<li>ジョブの INSERT 時に <code>minion.job</code> というイベントを PUBLISH
+
+<ul>
+<li><a href="https://github.com/kraih/minion/blob/master/lib/Minion/Backend/Pg.pm#L922">発信側</a></li>
+</ul>
+</li>
+<li>ワーカー側は Mojo のイベントループで待機しているが、イベントを受信すると待機をやめてジョブを実行
+
+<ul>
+<li><a href="https://github.com/kraih/minion/blob/master/lib/Minion/Backend/Pg.pm#L26">受信側</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="0" data-y="4800">
+
+
+<h2>よくできてる</h2>
+
+<ul>
+<li>ジョブがないときは sleep しつつ、ジョブがあるときはすぐに実行してくれる</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="1200" data-y="4800">
+
+
+<h2>以上、ポスグレの話</h2>
+
+
+</div>
+<div class="step" data-x="2400" data-y="4800">
+
+
+<h2>マルチテナントの話</h2>
+
+<ul>
+<li>弊社のサービスはマルチテナント</li>
+<li>ジョブキューは全体で1つのDB</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="3600" data-y="4800">
+
+
+<h2>マルチテナントで困ること</h2>
+
+<ul>
+<li>時々めっちゃリソースを使う顧客がいる
+
+<ul>
+<li>大量のCSVアップロードとか</li>
+<li>大量のメール配信とか</li>
+</ul>
+</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="4800" data-y="4800">
+
+
+<h2>マルチテナントで困ること</h2>
+
+<ul>
+<li>で、さっきも見た<a href="https://github.com/kraih/minion/blob/master/lib/Minion/Backend/Pg.pm#L242-L256">この辺</a>
+</li>
+<li>プライオリティが同一ならID順なので、メール20万通とか詰め込まれると、ジョブキューが占有されてしまう</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="0" data-y="5600">
+
+
+<h2>解決策</h2>
+
+
+</div>
+<div class="step" data-x="1200" data-y="5600">
+
+
+<h2>解決策(？)</h2>
+
+
+</div>
+<div class="step" data-x="2400" data-y="5600">
+
+
+<h2>解決策(？)</h2>
+
+<ul>
+<li>そもそも ID 順をやめてしまえば良い
+
+<ul>
+<li><a href="https://gist.github.com/tsucchi/eee4f18e254634c53a485f8b15f066e4#file-id-L25">魔改造 ランダム抽出</a></li>
+<li>これだけだと、量の多いドメインにひきづられる問題がある</li>
+</ul>
+</li>
+<li>大量に詰め込むのは悪いので無視(多少遅くなっても仕方ない)</li>
+<li>件数の少ないジョブは適宜プライオリティを上げる
+
+<ul>
+<li><a href="https://gist.github.com/tsucchi/22533296d7314076cd7c7d648e9f482e">闇のツール 優先度調整くん1号</a></li>
+</ul>
+</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="3600" data-y="5600">
+
+
+<h2>闇のツールや魔改造の成果</h2>
+
+<ul>
+<li>ジョブの平均実行待ち時間が 1/10 以下に(10secくらいになった)
+
+<ul>
+<li>優先度低いやつは多く待つので、普通のジョブは長くても数秒以内に実行されていい感じ</li>
+</ul>
+</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="4800" data-y="5600">
+
+
+<h2>まとめの前に...</h2>
+
+
+</div>
+<div class="step" data-x="0" data-y="6400">
+
+
+<h2>レガシー、もしくは名状しがたいものについて</h2>
+
+<ul>
+<li>歴史的経緯でひどい仕組みが出来上がってしまうのは、多分良くあること</li>
+<li>ひどい仕組みでも、過去・現在の僕たちの給料の源泉になっていたのは事実</li>
+<li>敬意を持って異界に送って、未来を戦えるアーキテクチャを作るのが大事</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="1200" data-y="6400">
+
+
+<h2>まとめ</h2>
+
+<ul>
+<li>謎のジョブキューを Minion に移行した
+
+<ul>
+<li>普通に非同期処理ができる、普通の環境になってよかった</li>
+<li>PostgreSQL の新しい機能とか独自機能とか使ってて、結構面白い</li>
+</ul>
+</li>
+<li>違法改築みたいな事はしない
+
+<ul>
+<li>ちゃんと調査して、こじらせる前に直すのが大事</li>
+<li>とはいえ、マルチテナントの問題で魔改造や闇のツールができてしまったのは反省</li>
+</ul>
+</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="2400" data-y="6400">
+
+
+<h1>おしまい</h1>
+
+
+</div>
+
+
+    <div id="overview" class="step" data-x="3000" data-y="1500" data-scale="10">
+    </div>
+
+</div>
+
+<div class="hint">
+    <p>Use a spacebar or arrow keys to navigate</p>
+</div>
+<script>
+if ("ontouchstart" in document.documentElement) { 
+    document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";
+}
+</script>
+<script>
+jQuery(function($){
+  $("a[href^='http']").attr('target', '_blank');
+});
+</script>
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-2083680-7']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+<script src="js/impress.js"></script>
+</body>
+</html>
+
