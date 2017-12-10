@@ -27,7 +27,7 @@ check process hoge_service with pidfile /var/run/hoge_service.pid
   if 5 restarts within 5 cycles then stop
 ```
 
-`hoge_service.pl` を最初から daemonize しておけば良いのでは？と言われると、全くその通りなのですが、ただ、このスクリプトは元々 docker で動かす予定で、一部環境では docker で動かしています。
+`hoge_service.pl` を最初から daemonize しておけば良いのでは？と言われると、全くその通りなのですが、ただ、このスクリプトは元々 docker で動かす予定で、一部環境では docker で動かしています。docker で動かすぶんには foreground で起動できれば十分で、pid ファイルなども特に必要ありません。
 
 ただ、一部では docker に載せられなかった環境もあって、そこでは普通に起動する必要があり、`monit` + `start-stop-daemon` で動かすことになった、という背景です。
 
