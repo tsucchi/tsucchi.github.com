@@ -14,4 +14,13 @@ title: 食事制限をしている
 明日はどうしようかな。。。
 
 
+<blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">食事制限で野菜食えなくてつらい。まだ1日目だけどすでに限界感ある...</p>&mdash; tsucchi (@tsucchi) <a href="https://twitter.com/tsucchi/status/973422574590808065?ref_src=twsrc%5Etfw">2018年3月13日</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">朝夜のご飯は自分でコントロールできるからいいんだけど、昼は野菜入ってない食事探すの完全にめんどいしこれあと2回やるのつらすぎ</p>&mdash; tsucchi (@tsucchi) <a href="https://twitter.com/tsucchi/status/973425803189866496?ref_src=twsrc%5Etfw">2018年3月13日</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">仕方ないので、そば(薬味・海苔を入れない）、ローストチキン、パンを食べたけど、味気なさすぎ...</p>&mdash; tsucchi (@tsucchi) <a href="https://twitter.com/tsucchi/status/973426089119776768?ref_src=twsrc%5Etfw">2018年3月13日</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
 
