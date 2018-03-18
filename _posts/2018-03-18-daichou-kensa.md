@@ -79,7 +79,7 @@ title: 大腸の精密検査をしてきました
 <blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">検査後の注意に「油物や生ものは避けましょう」、ってあったので「よし、書いてないならいけるな。昨日は飲めなかったし」というわけで、クズをやっています(「何の」とは言わない)</p>&mdash; tsucchi (@tsucchi) <a href="https://twitter.com/tsucchi/status/974499743513526273?ref_src=twsrc%5Etfw">2018年3月16日</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-ちなみに油や生もの以外に炭酸も避けろとあったので、本当のところは微妙ですね。(でも飲んじまったからしょうがない)
+ちなみに油や生もの以外に炭酸も避けろとあったので、本当のところは微妙ですね。(でも飲んじまったからしょうがない。あと、ポリープとかあって、切除した人は食事制限があるらしい。)
 
 というわけで、大腸の検査の話でした。
 
