@@ -21,13 +21,15 @@ title: 劇場ミルキィの復刻上映に行ってきました
 
 そして先週末、5/19 に復刻上映が開催されたのでありました。
 
-この日は仕事もあって、あまり元気ではなかったのですが、まあこんな感じの感想でした。やっぱりミルキィホームズは最高だな！
+この日は仕事もあって、あまり元気ではなかったのですが...
 
 <blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">面白かった。やっぱりミルキィホームズは最高だな</p>&mdash; tsucchi (@tsucchi) <a href="https://twitter.com/tsucchi/status/997768800014495744?ref_src=twsrc%5Etfw">2018年5月19日</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 <blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">上映前「最近忙しくて疲れが酷いし、10回目位だし、そろそろ冷静に観ることができるのではないか」上映後「ミルキィ良かった。最高かよ。。。(また泣いてる)」なぜなのか</p>&mdash; tsucchi (@tsucchi) <a href="https://twitter.com/tsucchi/status/997771061553840129?ref_src=twsrc%5Etfw">2018年5月19日</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+まあこんな感じの感想でした。やっぱりミルキィホームズは最高だな！
 
 映画そのものの感想につきましては、以前山ほど書いたので、気になる方はこちら見ていただけると幸いであります(↓）
 
