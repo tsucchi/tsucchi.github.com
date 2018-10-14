@@ -12,6 +12,8 @@ title: カスタムキャストをやってみた
 
 ## 作った子その1
 
+<img src="https://lh3.googleusercontent.com/MPF_76_e9pNyWUu7-Z3NZXxKQ8LGQ5AxUHA-4cXKkPrxqEClexhLkdEW3Mm0neDtwBVmWCrj_yz1NcsTWviTYik5UX74WMjRiZiA1Pts0Mfx7AIuTvTUcqc94uN47FXqly9jBpMEhkP6mqw8Vhjrl5LibphWFgEEwVAjnLPcahO_Ut5wPl_5VYBhYmMy6r778v_EiHjc7sfhaT-xUyaEpU8L1vrpSejmLwLc4j2QfQCbdLEReJCYPjTTRfKcPTjsWbcSrck6Drn39vPWz-H71-qO8YJPHXq6ZeF6vfDFO9QxPRqU0pFw0TDBpH7pt8TqDkUkLXG9VVIJjzOiLSVsoJWCN6uccA69LZmBGN8k62iEKxT94MpVQgSaUfqoT0dfW5DkwR1q5XNPURgmcjg1UZb3sB1trftV_-_ckSr9InHLSfUmu1WYYA6mDrOBHtB86l0vW3BS5atUUw1qo-jJvibj3Uy7FOIeZ82lFPf5zOjUyUiSBDWHgVoSTR4_pXQATWtqNB36E_EPcfpwkoNGbhwQYILd0NMBCJyCNU8afTU2ebdH8JJpgFgIDs_WhfaSqDPPeCpMrldHrJLHd80bbgdHJlMHyMCbJVO2_AZY2_CclYGShfdagzGs33EFaDqwA5onYK5rl-8bq9aA-mCNL5YS1auclIj2ToP1jz7nTSjkbrHxbriSh5xF=w300-h534-no">
+
 <blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">こういう子ができた<a href="https://twitter.com/hashtag/%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%A0%E3%82%AD%E3%83%A3%E3%82%B9%E3%83%88?src=hash&amp;ref_src=twsrc%5Etfw">#カスタムキャスト</a> <a href="https://t.co/izsXoImIpr">pic.twitter.com/izsXoImIpr</a></p>&mdash; tsucchi (@tsucchi) <a href="https://twitter.com/tsucchi/status/1049129329173487616?ref_src=twsrc%5Etfw">2018年10月8日</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
@@ -24,7 +26,7 @@ title: カスタムキャストをやってみた
 <blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">二人目も作ってみた<a href="https://twitter.com/hashtag/%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%A0%E3%82%AD%E3%83%A3%E3%82%B9%E3%83%88?src=hash&amp;ref_src=twsrc%5Etfw">#カスタムキャスト</a> <a href="https://t.co/MCO8hHkxho">pic.twitter.com/MCO8hHkxho</a></p>&mdash; tsucchi (@tsucchi) <a href="https://twitter.com/tsucchi/status/1050979594533199872?ref_src=twsrc%5Etfw">2018年10月13日</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-僕が好きな萌え属性(?)の中で、かなり上位に来るのが「姫様」なので、某姫様二人をイメージしつつ、ちょっと大人っぽくした感じで作った。パーツのチョイスは割と全体的なバランスを見つつ趣味を入れている感じだと思う。
+僕が好きな萌え属性の中で、かなり上位に来るのが「姫様」(?だと思う)なので、某姫様二人をイメージしつつ、ちょっと大人っぽくした感じで作った。パーツのチョイスは割と全体的なバランスを見つつ趣味を入れている感じだと思う。
 
 # 思ったこと
 
