@@ -15,7 +15,7 @@ title: ミルキィホームズ Road to Final in SENDAI に行ってきました
 <blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">よっしゃいくぞー <a href="https://t.co/pWEFgVPVJR">pic.twitter.com/pWEFgVPVJR</a></p>&mdash; tsucchi (@tsucchi) <a href="https://twitter.com/tsucchi/status/1045850162008973312?ref_src=twsrc%5Etfw">2018年9月29日</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-今回は前日が仕事で深夜メンテのひの翌日で、夜勤明けの状態で、新幹線に乗ることになりました。なかなかのエクストリーム退社だな、と我ながら思いました。
+今回は前日が仕事で深夜メンテの翌日で、夜勤明けの状態で、新幹線に乗ることになりました。なかなかのエクストリーム退社だな、と我ながら思いました。
 
 <blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">【Road to Final in SENDAI】かまぼこのかまぼこは特製の旗とのれんが目印。老舗蒲鉾店、松澤蒲鉾店とのコラボ商品なのでぜひお土産にどうぞ。配送も受け付けております。 <a href="https://twitter.com/hashtag/milkyholmes?src=hash&amp;ref_src=twsrc%5Etfw">#milkyholmes</a> <a href="https://t.co/Lqd8CK0vgx">pic.twitter.com/Lqd8CK0vgx</a></p>&mdash; ミルキィホームズ (@milkyholmes) <a href="https://twitter.com/milkyholmes/status/1045878117561061377?ref_src=twsrc%5Etfw">2018年9月29日</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
