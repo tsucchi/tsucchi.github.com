@@ -53,4 +53,4 @@ title: ミルキィホームズ Road to Final in SENDAI に行ってきました
 <blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">災害対策として枕元に置いた <a href="https://t.co/OTs2eHttxD">pic.twitter.com/OTs2eHttxD</a></p>&mdash; tsucchi (@tsucchi) <a href="https://twitter.com/tsucchi/status/1046417369105489921?ref_src=twsrc%5Etfw">2018年9月30日</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-翌日台風が来たのでそのままペンライトを枕元に起きましたとさ。
+翌日台風が来たのでそのままペンライトを枕元に起きましたとさ。使わずに済んでよかった。
