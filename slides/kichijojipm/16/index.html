@@ -1,0 +1,456 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>おしまい</title>
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
+    <link href="css/impress.css"  rel="stylesheet" />
+    <link href="css/pygments.css" rel="stylesheet" />
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+</head>
+<body>
+<div id="impress" class="impress-not-supported">
+    <div class="fallback-message">
+        <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+        <p>For the best experience please use the latest <b>Chrome</b> or <b>Safari</b> browser. Firefox 10 (to be released soon) will also handle it.</p>
+    </div>
+
+<div class="step" id="title" data-x="0" data-y="0">
+
+
+<h2>プロキシサーバを作って覚えるHTTP</h2>
+
+<p><a href="http://twitter.com/tsucchi">@tsucchi</a></p>
+
+
+</div>
+<div class="step" data-x="1200" data-y="0">
+
+
+<h2>自己紹介</h2>
+
+<ul>
+<li>土田　拓也(つちだ　たくや)</li>
+<li>
+<p><a href="http://twitter.com/tsucchi">@tsucchi</a> とか <a href="http://tsucchi.github.io/">blog(http://tsucchi.github.io/)</a>とか</p>
+
+<ul>
+<li>
+<img src="./icon.jpeg"> こんなかんじのアイコンです</li>
+<li>
+<code>Perl</code> と <code>ミルキィホームズ</code>が好きです</li>
+</ul>
+</li>
+<li>
+<p><a href="http://shanon-tech.blogspot.jp/">株式会社シャノン</a>というところで、エンジニアやってます</p>
+
+<ul>
+<li>Perl とか SQL とか書いたり</li>
+<li>パフォーマンスとかセキュリティのこと考えたり</li>
+<li>たまにスクラムっぽいことやってたり、そんな感じ</li>
+</ul>
+</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="2400" data-y="0">
+
+
+<h2>今回のテーマ</h2>
+
+<ul>
+<li>「エンジニアとして何を考え、何をみて、どんな行動をしているか？」 又は、「エンジニア以外の立場から視たエンジニアについて」</li>
+<li>で、今日のタイトル</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="3600" data-y="0">
+
+
+<h2>プロキシサーバを作って覚えるHTTP</h2>
+
+<p><a href="http://twitter.com/tsucchi">@tsucchi</a></p>
+
+
+</div>
+<div class="step" data-x="4800" data-y="0">
+
+
+<h2>今回のテーマ</h2>
+
+<ul>
+<li>すいません。あんまり関係なかったかも...</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="0" data-y="800">
+
+
+<h2>背景</h2>
+
+<ul>
+<li>昨今のWebアプリケーションは、複数のサービスを組み合わせて動かしています</li>
+<li>一方で、サービスのドメインは単一だったりします
+
+<ul>
+<li>顧客から見ると、ワンストップの方が安心感があるから(?)</li>
+<li>そもそもモノリシックだったものを管理性のためにマイクロサービス化してたりとか</li>
+</ul>
+</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="1200" data-y="800">
+
+
+<h2>例</h2>
+
+<ul>
+<li>/static 以下の画像, CSS, JSなどは CDN(CloudFrontとかAkamaiとかFastly etc)に</li>
+<li>/aaa 以下は「サービスAに」</li>
+<li>/bbb 以下は「サービスBに」</li>
+</ul>
+
+<p>...みたいな</p>
+
+
+</div>
+<div class="step" data-x="2400" data-y="800">
+
+
+<h2>困っていること</h2>
+
+<ul>
+<li>開発時に複数のサービスを立てたい</li>
+<li>本番と同じように、複数のサービスに振り分けるやつが欲しい</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="3600" data-y="800">
+
+
+<h2>困っていること</h2>
+
+<ul>
+<li>開発時に複数のサービスを立てたい
+
+<ul>
+<li>foreman(Ruby) とか Proclet(Perl)とか使えば可能</li>
+</ul>
+</li>
+<li>本番と同じように、複数のサービスに振り分けるやつが欲しい
+
+<ul>
+<li>プロキシサーバを立てれば可能</li>
+</ul>
+</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="4800" data-y="800">
+
+
+<h2>プロキシサーバを立てれば可能</h2>
+
+
+</div>
+<div class="step" data-x="0" data-y="1600">
+
+
+<h2>プロキシサーバを立てれば可能</h2>
+
+<ul>
+<li>そうなんだけど、割と面倒くさい
+
+<ul>
+<li>最近は docker あるので、nginx か apache のイメージ配ればいいんだけど...
+
+<ul>
+<li>ので他のメンバーはそうしてもらっている</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>僕は開発用のプロキシを分けたかった
+
+<ul>
+<li>次回のメンテで実施する為の設定を試してたりする</li>
+<li>設定を頻繁に変えてるので、開発環境の想定と齟齬が出て割と困る</li>
+</ul>
+</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="1200" data-y="1600">
+
+
+<h2>そうだ、プロキシサーバを作ろう</h2>
+
+
+</div>
+<div class="step" data-x="2400" data-y="1600">
+
+
+<h2>今回のテーマ</h2>
+
+<ul>
+<li>「エンジニアとして何を考え、何をみて、どんな行動をしているか？」 又は、「エンジニア以外の立場から視たエンジニアについて」</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="3600" data-y="1600">
+
+
+<h2>よかった。テーマっぽい話ができた(本当か？)</h2>
+
+
+</div>
+<div class="step" data-x="4800" data-y="1600">
+
+
+<h2>そうだ、プロキシサーバを作ろう</h2>
+
+<ul>
+<li>実際にプロキシサーバを作ってみると、色々ハマりどころがあって、HTTP の理解が進みます</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="0" data-y="2400">
+
+
+<h2>本質的な部分</h2>
+
+<ul>
+<li><a href="https://gist.github.com/tsucchi/582f2b5eb0cea09236348b95d15e5e9e">https://gist.github.com/tsucchi/582f2b5eb0cea09236348b95d15e5e9e</a></li>
+<li>このくらいの短いコードでだいたい動く</li>
+<li>基本的には
+
+<ul>
+<li>ブラウザからもらったパラメータで Furl を叩く</li>
+<li>帰って来た結果をブラウザに返す</li>
+</ul>
+</li>
+</ul>
+
+<p>だけ</p>
+
+
+</div>
+<div class="step" data-x="1200" data-y="2400">
+
+
+<h2>ハマりどころ1(リダイレクト)</h2>
+
+<ul>
+<li><a href="https://gist.github.com/tsucchi/582f2b5eb0cea09236348b95d15e5e9e#file-reproxy-pl-L16">https://gist.github.com/tsucchi/582f2b5eb0cea09236348b95d15e5e9e#file-reproxy-pl-L16</a></li>
+<li>Furl などの HTTP クライアントは「いい感じに」リダイレクトを処理してくれる</li>
+<li>一方、プロキシサーバは勝手にリダイレクトされると困る
+
+<ul>
+<li>リダイレクト前にブラウザに渡している色々な情報が欠落して訳分からない動作になる</li>
+<li>その辺を処理してあげてもいいかもだけど、リダイレクトをやめてブラウザにやらせる方が楽</li>
+</ul>
+</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="2400" data-y="2400">
+
+
+<h2>ハマりどころ2(ヘッダ)</h2>
+
+<ul>
+<li><a href="https://gist.github.com/tsucchi/582f2b5eb0cea09236348b95d15e5e9e#file-reproxy-pl-L22-L23">https://gist.github.com/tsucchi/582f2b5eb0cea09236348b95d15e5e9e#file-reproxy-pl-L22-L23</a></li>
+<li>Cookie や Content-Length はちゃんと渡そう</li>
+<li>突然ログアウトしたり、クエリパラメータをうまく渡せなくて、訳分からない動作になります</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="3600" data-y="2400">
+
+
+<h2>ハマりどころ3(レスポンスの圧縮)</h2>
+
+<ul>
+<li><a href="https://gist.github.com/tsucchi/582f2b5eb0cea09236348b95d15e5e9e#file-reproxy-pl-L27-L29">https://gist.github.com/tsucchi/582f2b5eb0cea09236348b95d15e5e9e#file-reproxy-pl-L27-L29</a></li>
+<li>アプリが gzip 圧縮したレスポンスを返すことがある
+<a href="https://developer.mozilla.org/ja/docs/Web/HTTP/Headers/Content-Encoding">https://developer.mozilla.org/ja/docs/Web/HTTP/Headers/Content-Encoding</a>
+</li>
+<li>gzip 圧縮は「なかったことにする」(or 圧縮しなおして返す)
+
+<ul>
+<li>Furl(などのHTTPクライアント)が自動で gzip 圧縮レスポンスをほどいてしまう為</li>
+</ul>
+</li>
+<li>そうしないとレスポンスの Content-Length 合わなくて訳分からない動作になります</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="4800" data-y="2400">
+
+
+<h2>ハマりどころ4(body)</h2>
+
+<ul>
+<li><a href="https://gist.github.com/tsucchi/582f2b5eb0cea09236348b95d15e5e9e#file-reproxy-pl-L19">https://gist.github.com/tsucchi/582f2b5eb0cea09236348b95d15e5e9e#file-reproxy-pl-L19</a></li>
+<li>すいません。ごまかしました。ここに色々あります
+
+<ul>
+<li><a href="https://gist.github.com/tsucchi/52fd6354f496da65212670fdfc013093">https://gist.github.com/tsucchi/52fd6354f496da65212670fdfc013093</a></li>
+<li>ざっくりこのくらい</li>
+</ul>
+</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="0" data-y="3200">
+
+
+<h2>ハマりどころ4(body)</h2>
+
+<div class="highlight"><pre><span></span><span class="k">my</span> <span class="nv">$uri_for_body</span> <span class="o">=</span> <span class="nn">URI</span><span class="o">-&gt;</span><span class="k">new</span><span class="p">();</span>
+<span class="nv">$uri_for_body</span><span class="o">-&gt;</span><span class="n">query_form</span><span class="p">(</span> <span class="nv">$c</span><span class="o">-&gt;</span><span class="nn">req</span><span class="o">-&gt;</span><span class="n">body_parameters</span> <span class="p">);</span>
+<span class="p">(</span><span class="k">my</span> <span class="nv">$body</span> <span class="o">=</span> <span class="nv">$uri_for_body</span><span class="o">-&gt;</span><span class="n">as_string</span><span class="p">)</span> <span class="o">=~</span> <span class="sr">s{\A\?}{}</span><span class="p">;</span>
+<span class="k">return</span> <span class="nv">$body</span>
+</pre></div>
+
+<ul>
+<li>とはいえ、POSTパラメータだけでしょ？
+
+<ul>
+<li>そうなんだけど、そうじゃない</li>
+</ul>
+</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="1200" data-y="3200">
+
+
+<h2>ハマりどころ4(body)</h2>
+
+<ul>
+<li>ファイルアップロード</li>
+<li><a href="https://gist.github.com/tsucchi/52fd6354f496da65212670fdfc013093#file-create_body-pl-L10-L19">https://gist.github.com/tsucchi/52fd6354f496da65212670fdfc013093#file-create_body-pl-L10-L19</a></li>
+<li>
+<code>$c-&gt;req-&gt;{_body}-&gt;upload</code>(Catalystの場合)に色々入っているので、これを使ってファイル名と実体を取り出します</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="2400" data-y="3200">
+
+
+<h2>ハマりどころ4(body)</h2>
+
+<ul>
+<li>multipart/form-data</li>
+<li><a href="https://gist.github.com/tsucchi/52fd6354f496da65212670fdfc013093#file-create_body-pl-L22-L33">https://gist.github.com/tsucchi/52fd6354f496da65212670fdfc013093#file-create_body-pl-L22-L33</a></li>
+<li><a href="https://developer.mozilla.org/ja/docs/Web/HTTP/Headers/Content-Disposition">https://developer.mozilla.org/ja/docs/Web/HTTP/Headers/Content-Disposition</a></li>
+<li>ブラウザはこの形式で投げている
+
+<ul>
+<li>シンプルな、「クエリパラメータをそのまま body に書いたやつ」は投げない</li>
+<li>URLエンコードとか考えなくて良くなるので、こちらの方が楽なんだと思う</li>
+</ul>
+</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="3600" data-y="3200">
+
+
+<h2>That's all?</h2>
+
+<ul>
+<li>この辺の対応を入れたら、ほぼそれっぽく動くようになった</li>
+<li>完璧かどうか、と言われると微妙</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="4800" data-y="3200">
+
+
+<h2>まとめ</h2>
+
+<ul>
+<li>プロキシサーバを作ってみました</li>
+<li>シンプルだけど、微妙にハマりどころがある
+
+<ul>
+<li>ブラウザからもらった値をサーバに渡す</li>
+<li>サーバから返った値をブラウザに返す</li>
+<li>...だけなんだけど、だけじゃない</li>
+</ul>
+</li>
+<li>作ってみると、HTTP の知らなかったことが知れて結構楽しい
+
+<ul>
+<li>multipart/form-data のパラメータ渡しとか、知らなかった</li>
+</ul>
+</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="0" data-y="4000">
+
+
+<h1>おしまい</h1>
+
+
+</div>
+
+
+    <div id="overview" class="step" data-x="3000" data-y="1500" data-scale="10">
+    </div>
+
+</div>
+
+<div class="hint">
+    <p>Use a spacebar or arrow keys to navigate</p>
+</div>
+<script>
+if ("ontouchstart" in document.documentElement) { 
+    document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";
+}
+</script>
+<script>
+jQuery(function($){
+  $("a[href^='http']").attr('target', '_blank');
+});
+</script>
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-2083680-7']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+<script src="js/impress.js"></script>
+</body>
+</html>
+
