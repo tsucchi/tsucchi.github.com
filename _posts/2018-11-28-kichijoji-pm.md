@@ -12,7 +12,7 @@ title: 吉祥寺.pm16 に行って来た。発表して来た
 
 + [プロキシサーバを作って覚えるHTTP](http://tsucchi.github.io/slides/kichijojipm/16/index.html#/title)
 
-[元ネタの Markdown](https://github.com/tsucchi/tsucchi.github.com/blob/master/slides/kichijojipm/16/index.md) の方が見やすいかもしれません。(↓)
+[元ネタの Markdown](https://github.com/tsucchi/tsucchi.github.com/blob/master/slides/kichijojipm/16/index.md) の方が見やすいかもしれません。
 
 ちょっと前置きを丁寧に喋りすぎて時間オーバーしてしまったのは反省。プロキシサーバを作ってみたら、色々とハマりどころがあって、HTTPクライアント、サーバ、プロトコルそのもの、などなど、色々問題やら知らなかったことがあって興味深かったよ、というお話でした。
 
