@@ -15,15 +15,15 @@ twitter を発掘したところ、当時の状況はこんな感じだったっ
 <blockquote class="twitter-tweet"><p lang="ja" dir="ltr">充電のUSB指したときのビープは鳴るので、息はしてるのかもしれんけど、とにかく応答しないので、意識不明の重体といった感じ</p>&mdash; tsucchi (@tsucchi) <a href="https://twitter.com/tsucchi/status/1084802175438446593?ref_src=twsrc%5Etfw">January 14, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 しばらくは電源も入らず、完全に死んでいるっぽい状態でしたが、しばらくしたら電源は入るようになりました。
-しかしキーボードはおかしいし、タッチパッドは全く動かない状態。。。
+しかしキーボードはおかしいし、トラックパッドは全く動かない状態。。。
 
 <blockquote class="twitter-tweet"><p lang="ja" dir="ltr">キーボードがだいぶ怪しくて、タッチパッドが死んでしまった模様...乾いたら治るかな。。。治るといいな。。。</p>&mdash; tsucchi (@tsucchi) <a href="https://twitter.com/tsucchi/status/1084814348634091520?ref_src=twsrc%5Etfw">January 14, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-翌日以降はキーボードはだいたい動くように、タッチパッドは完全に怪しい。
+翌日以降はキーボードはだいたい動くように、トラックパッドは完全に怪しい。
 
 <blockquote class="twitter-tweet"><p lang="ja" dir="ltr">s/まとお/まとも/ やっぱグリッチしてるw</p>&mdash; tsucchi (@tsucchi) <a href="https://twitter.com/tsucchi/status/1085005307695194113?ref_src=twsrc%5Etfw">January 15, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-そのあとも、騙し騙し使って来て、キーボードはエアダスター吹いたら、ほぼ問題無くなりました。タッチパッドは相変らず怪しくて、カーソルが勝手に動いたり、そうかと思えば全く動かなくなったり。エアダスター吹いてみても、構造的に意味なさそうだし、実際に意味無かったです。
+そのあとも、騙し騙し使って来て、キーボードはエアダスター吹いたら、ほぼ問題無くなりました。トラックパッドは相変らず怪しくて、カーソルが勝手に動いたり、そうかと思えば全く動かなくなったり。エアダスター吹いてみても、構造的に意味なさそうだし、実際に意味無かったです。
 
 Bluetooth のマウス使ってしのぐも、カーソルが勝手に動いてしまうのが致命的で、とにかく使いにくいので、修理しよう、と思いました。
 
