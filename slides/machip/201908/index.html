@@ -1,0 +1,246 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>おしまい</title>
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
+    <link href="css/impress.css"  rel="stylesheet" />
+    <link href="css/pygments.css" rel="stylesheet" />
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+</head>
+<body>
+<div id="impress" class="impress-not-supported">
+    <div class="fallback-message">
+        <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+        <p>For the best experience please use the latest <b>Chrome</b> or <b>Safari</b> browser. Firefox 10 (to be released soon) will also handle it.</p>
+    </div>
+
+<div class="step" id="title" data-x="0" data-y="0">
+
+
+<h2>最近のお話</h2>
+
+<p><a href="http://twitter.com/tsucchi">@tsucchi</a></p>
+
+
+</div>
+<div class="step" data-x="1200" data-y="0">
+
+
+<h2>自己紹介</h2>
+
+<ul>
+<li>土田　拓也(つちだ　たくや)</li>
+<li>
+<p><a href="http://twitter.com/tsucchi">@tsucchi</a> とか <a href="http://tsucchi.github.io/">blog(http://tsucchi.github.io/)</a>とか</p>
+
+<ul>
+<li>
+<img src="./icon.jpeg"> こんなかんじのアイコンです</li>
+<li>
+<code>Perl</code> と <code>ミルキィホームズ</code>が好きです。最近は <a href="https://rst-anime.com/">Re:ステージ！</a>にハマっています</li>
+</ul>
+</li>
+<li>
+<p><a href="http://shanon-tech.blogspot.jp/">株式会社シャノン</a>というところで、エンジニアやってます</p>
+
+<ul>
+<li>2019年5月から正式にSREグループに</li>
+<li>稼働率とかパフォーマンスとかセキュリティのこと考えたり</li>
+<li>Perl とか SQL とか書いたり</li>
+</ul>
+</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="2400" data-y="0">
+
+
+<h2>今回の内容</h2>
+
+<ul>
+<li>最近のお話</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="3600" data-y="0">
+
+
+<h2>SRE</h2>
+
+<ul>
+<li>稼働率</li>
+<li>パフォーマンス</li>
+<li>セキュリティ</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="4800" data-y="0">
+
+
+<h2>稼働率</h2>
+
+<ul>
+<li>稼働率のある程度は運
+
+<ul>
+<li>機器障害の発生率はコントロールできない</li>
+<li>コントロール可能なのは、障害検知と復旧だけ</li>
+</ul>
+</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="0" data-y="800">
+
+
+<h2>障害検知</h2>
+
+<ul>
+<li>監視の強化
+
+<ul>
+<li>サービス、ホスト、ミドルウェア、傾向監視</li>
+</ul>
+</li>
+<li>通知の改善
+
+<ul>
+<li>メール -&gt; slackに。severity が高いものはメンションつけたりとか</li>
+</ul>
+</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="1200" data-y="800">
+
+
+<h2>復旧</h2>
+
+<ul>
+<li>RDSのバックアップなどを整える</li>
+<li>実際の復旧訓練はこれから...</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="2400" data-y="800">
+
+
+<h2>その他</h2>
+
+<ul>
+<li>アプリ的に弱い部分を直す(のをこれからやらないと...)
+
+<ul>
+<li>例) API叩きまくってるのをバルク化するとかサーキットブレーカー入れるとか...</li>
+</ul>
+</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="3600" data-y="800">
+
+
+<h2>パフォーマンス</h2>
+
+<ul>
+<li>レスポンス時間や遅いSQLなどから地道にログを見てバグ登録</li>
+<li>パフォーマンスバグを地道に修正</li>
+<li>最近はキャッシュできそうなものを一通り memcached にぶち込んでいる感じ</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="4800" data-y="800">
+
+
+<h2>セキュリティ</h2>
+
+<ul>
+<li>AWS Inspector の結果を見てパッチ当て運用(を始める)</li>
+<li>AWS GuardDuty から通知(怪しいことしたらすぐに見つける)</li>
+<li>脆弱性スキャナの運用とか</li>
+<li>セキュリティバグの修正</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="0" data-y="1600">
+
+
+<h2>その他</h2>
+
+<ul>
+<li>「ヒヤリハット」みたいなのがまあまああるので、直したり監視増やしたり...</li>
+<li>他にも色々やってた気もするのだけど、忘れました...</li>
+<li><a href="https://support.shanon.co.jp/hc/ja/articles/360034095113-2019-08-07-%E5%BE%A9%E6%97%A7-%E6%96%AD%E7%B6%9A%E7%9A%84%E3%81%AB%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%81%B8%E3%81%AE%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B9%E3%81%8C%E4%B8%8D%E5%AE%89%E5%AE%9A%E3%81%AA%E7%8F%BE%E8%B1%A1%E3%81%8C%E7%99%BA%E7%94%9F%E3%81%99%E3%82%8B%E5%8F%AF%E8%83%BD%E6%80%A7%E3%81%8C%E3%81%82%E3%82%8A%E3%81%BE%E3%81%97%E3%81%9F-">こいつのせい</a></li>
+</ul>
+
+
+</div>
+<div class="step" data-x="1200" data-y="1600">
+
+
+<h2>まとめ</h2>
+
+<ul>
+<li>難しいことは一つもやってないと思う</li>
+<li>監視もパフォーマンスバグの修正も一応やってはいた</li>
+<li>けど、今までは片手間にしかやってなくて、ちゃんとやり切れてなかった</li>
+<li>専門の組織を作るってのは時には必要なんだな、と思った</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="2400" data-y="1600">
+
+
+<h1>おしまい</h1>
+
+
+</div>
+
+
+    <div id="overview" class="step" data-x="3000" data-y="1500" data-scale="10">
+    </div>
+
+</div>
+
+<div class="hint">
+    <p>Use a spacebar or arrow keys to navigate</p>
+</div>
+<script>
+if ("ontouchstart" in document.documentElement) { 
+    document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";
+}
+</script>
+<script>
+jQuery(function($){
+  $("a[href^='http']").attr('target', '_blank');
+});
+</script>
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-2083680-7']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+<script src="js/impress.js"></script>
+</body>
+</html>
+
