@@ -1,7 +1,7 @@
 ---
 layout: post
 category: misc
-tags: misc
+tags: 雑談
 title: 2021年振り返り
 ---
 {% include JB/setup %}
