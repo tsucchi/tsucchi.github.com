@@ -101,7 +101,7 @@ OPPOのスマートウォッチです。正直アプリの出来があまり良�
 [NEC Aterm 無線LAN WiFi ルーター Wi-Fi 6(11ax) AX5400HP](https://amzn.to/3GLi77F)
 
 ## ドギーマン おるすばんサポートフィーダー(自動給餌器)
-犬猫用の自動給餌器です。時間と量を指定して、決められた時間にフードを出すことができます。在宅勤務なので、昼ごはんも夜遅いことも基本的には無いので、1泊旅行とかあれば必要かなー、と思って買ったものです。ウチの阪本さんはウェットのフードの方が好きみたいでココから出てくるやつはあんまり食べてくれませんが。。。まあ留守中に役に立ってくれればいいな、といった感じです。
+犬猫用の自動給餌器です。時間と量を指定して、決められた時間にフードを出すことができます。在宅勤務なので、昼ごはんの時に不在なことも夜遅いことも基本的には無いので、1泊旅行とかあれば必要かなー、と思って買ったものです。ウチの阪本さんはウェットのフードの方が好きみたいでココから出てくるやつはあんまり食べてくれませんが。。。まあ留守中に役に立ってくれればいいな、といった感じです。
 
 <iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=tsucchisblog-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=B09RMMXXW2&linkId=1fbfe382ac05c69217e31c6009568179"></iframe>
 [ドギーマン おるすばんサポートフィーダー(自動給餌器)](https://amzn.to/3NtjPhM)
