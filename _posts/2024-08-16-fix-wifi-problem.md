@@ -16,7 +16,7 @@ title: 家の wifi の 2.4GHzが不安定だったのを直した
 
 + [本機を使用すると無線LANやBluetoothの接続が不安定なのですが？](https://www.iodata.jp/support/qanda/answer/s20339.htm)
 
-ハードディスク(というかUSB3?)とwifi 2.4GHzが干渉する事例が色々あるらしい。シールドされたケーブルを使うといいとかあるけど、そんなの持ってないし、とりあえず1mくらい離してみた。そしたら治った。なんなんだこれ。。。
+ハードディスク(というかUSB3?)とwifi 2.4GHzが干渉する事例が色々あるらしい。他のサイトも色々調べると、シールドされたケーブルを使うといいとかあるけど、そんなの持ってないし、とりあえず1mくらい離してみた。そしたら治った。なんなんだこれ。。。
 
 <blockquote class="twitter-tweet"><p lang="ja" dir="ltr">ウチのwifiの2.4GHz帯が落ちまくるのついに解決した。マジで分からなかった。。。timemachineのバックアップが走るとNASとそのJBODのディスクアクセスが発生するけど、それが干渉してたっぽい。物理的に1mくらい離したら発生しなくなった。</p>&mdash; tsucchi (@tsucchi) <a href="https://twitter.com/tsucchi/status/1823330482282729617?ref_src=twsrc%5Etfw">August 13, 2024</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
