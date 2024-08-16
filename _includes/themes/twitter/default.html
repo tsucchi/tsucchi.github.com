@@ -93,56 +93,56 @@
 
   </head>
 <body>
-  <div id="fb-root"></div>
-  <script>(function(d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return;
-      js = d.createElement(s); js.id = id;
-      js.src = "//connect.facebook.net/ja_JP/all.js#xfbml=1";
-      fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));
-  </script>
-  <div class="container">
-    <div class="row">
-      <div class="col">
-        &nbsp;
-      </div>
-      <div class="col-8">
-        <div class="page-title">
-          <h1><a href="{{ HOME_PATH }}">{{ site.title }}</a></h1>
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/ja_JP/all.js#xfbml=1";
+        fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          &nbsp;
+        </div>
+        <div class="col-8">
+          <div class="page-title">
+            <h1><a href="{{ HOME_PATH }}">{{ site.title }}</a></h1>
+          </div>
+        </div>
+        <div class="col-3">
+          &nbsp;
         </div>
       </div>
-      <div class="col-3">
-        &nbsp;
-      </div>
-    </div>
-    <div class="row">
-      <div class="col">
-        &nbsp;
-      </div>
-      <div class="col-8">
-        <div class="content">
-          {{ content }}
+      <div class="row">
+        <div class="col">
+          &nbsp;
         </div>
-        <footer>
-          <p>&copy; {{ site.time | date: '%Y' }} {{ site.author.name }}
-            with help from Jekyll Bootstrap and <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>
-          </p>
-        </footer>
+        <div class="col-8">
+          <div class="content">
+            {{ content }}
+          </div>
+          <footer>
+            <p>&copy; {{ site.time | date: '%Y' }} {{ site.author.name }}
+              with help from Jekyll Bootstrap and <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>
+            </p>
+          </footer>
+        </div>
+        <div class="col-3">
+          {% include themes/twitter/sidebar.html %}
+        </div>
       </div>
-      <div class="col-3">
-        {% include themes/twitter/sidebar.html %}
-      </div>
-    </div>
-  </div><!-- /container -->
-  {% include JB/analytics %}
-  <script>
-    jQuery(function($){
-      $("a[href^='http']").attr('target', '_blank');
-      $("a[href*='/slides/']").attr('target', '_blank');
-    });
-  </script>
-  <script type="text/javascript" src="/assets/js/tag_sort.js"></script>
-  <script type="text/javascript" src="/assets/js/bootstrap.bundle.min.js"></script>
+    </div><!-- /container -->
+    {% include JB/analytics %}
+    <script>
+      jQuery(function($){
+        $("a[href^='http']").attr('target', '_blank');
+        $("a[href*='/slides/']").attr('target', '_blank');
+      });
+    </script>
+    <script type="text/javascript" src="/assets/js/tag_sort.js"></script>
+    <script type="text/javascript" src="/assets/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
