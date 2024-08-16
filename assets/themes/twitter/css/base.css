@@ -1,0 +1,59 @@
+.sidebar {
+  padding: 0 5px;
+}
+div.content .span12 h1 {
+  border-left: 15px solid #5279E7;
+  margin-top: 9px;
+  margin-bottom: 9px;
+  padding-left: 9px;
+}
+div.page-header h1 {
+  border-left: 15px solid #5279E7;
+}
+div.content .span12 h2 {
+  border-left: 12px solid #5279E7;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  padding-left: 8px;
+}
+div.content .span12 h3 {
+  border-left: 10px solid #5279E7;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding-left: 5px;
+}
+div.span12 p {
+  margin: 5px;
+}
+div.sidebar_box {
+  background-color: #F5F5F5;
+}
+div.twitter-button {
+  margin: 2px;
+}
+div.fb-like {
+  margin: 2px;
+}
+table td, table th {
+  border: 1px solid #CAD4E6;
+}
+body .content table {
+  border: 1px solid #C4D0E8;
+  border-collapse: collapse;
+  margin: 1em 0;
+}
+body .content table th {
+  background: #D6E3F7;
+  font-weight: normal;
+  color: #4259BC;
+  border-bottom: 1px solid #CAD4E6;
+}
+body .content table th a {
+  color: #4259BC;
+}
+body {
+  background-color: #eee;
+}
+.content {
+  background-color: #ffffff;
+}
