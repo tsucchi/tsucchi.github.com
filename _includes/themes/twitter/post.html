@@ -10,24 +10,15 @@
     </div>
 
   {% unless page.categories == empty %}
-    <ul class="tag_box inline">
+    <ul class="tag_box d-inline">
       <li><i class="icon-folder-open"></i></li>
       {% assign categories_list = page.categories %}
       {% include JB/categories_list %}
     </ul>
   {% endunless %}  
 
-  {% unless page.tags == empty %}
-    <ul class="inline">
-      <li><i class="icon-tags"></i></li>
-      {% assign tags_list = page.tags %}
-      {% include JB/tags_list %}
-    </ul>
-  {% endunless %}  
-
-    <hr>
+  <hr>
 	<div class="fb-like" data-href="http://tsucchi.github.io{{ page.url }}" data-send="true" data-width="450" data-show-faces="true"></div>
-  <br>
   <div class="twitter-button">
     <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
   </div>
