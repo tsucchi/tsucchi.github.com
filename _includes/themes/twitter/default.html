@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-  <meta charset="utf-8">
-  <meta property="og:title" content="tsucchi の日記 2nd season" />
+    <meta charset="utf-8">
+    <meta property="og:title" content="{{ page.title }} - {{ site.title }}" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="http://tsucchi.github.io/" />
+    <meta property="og:url" content="{{ site.production_url }}{{ page.url }}" />
     <meta property="og:image" content="" />
-    <meta property="og:site_name" content="tsucchi の日記 2nd season" />
+    <meta property="og:site_name" content="{{ site.title }}" />
     <meta property="fb:admins" content="699059896" />
     <title>{{ page.title }} - {{ site.title }}</title>
     {% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
@@ -92,7 +92,7 @@
   <link href="{{ BASE_PATH }}{{ site.JB.rss_path }}" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
 
   </head>
-<body>
+  <body>
     <div id="fb-root"></div>
     <script>(function(d, s, id) {
         var js, fjs = d.getElementsByTagName(s)[0];
