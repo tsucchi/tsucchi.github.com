@@ -11,11 +11,15 @@
 
   {% unless page.categories == empty %}
     <ul class="tag_box d-inline">
-      <li><i class="icon-folder-open"></i></li>
-      {% assign categories_list = page.categories %}
-      {% include JB/categories_list %}
+    {% assign categories_list = page.categories %}
+    {% include JB/categories_list %}
     </ul>
-  {% endunless %}  
+  {% endunless %}
+
+  {% unless page.tags == empty %}
+    {% assign tags_list = page.tags %}
+    {% include JB/tags_list %}
+  {% endunless %}
 
   <hr>
 	<div class="fb-like" data-href="{{ site.production_url }}{{ page.url }}" data-send="true" data-width="450" data-show-faces="true"></div>
