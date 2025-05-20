@@ -26,8 +26,6 @@ title: 「Re:ステージ！ジョイントLIVE!! -Unending PARTY!!-」に行っ
 
 2部、あっという間に「ラストの曲」って言われて、マジで？！って思ったら。。。
 
-<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">unending(終わらない)ので。。。<br>1部:時を戻します<br>2部:無限アンコールします<br><br>アホでしょ、ここの運営(たのしかったです)</p>&mdash; tsucchi (@tsucchi) <a href="https://twitter.com/tsucchi/status/1923713511512998075?ref_src=twsrc%5Etfw">May 17, 2025</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
 無限アンコールが始まって、なんなんだこれは。。。と言う感じでした。アンコール前含めてカバー曲もたくさんあったけど、ちゃんとやってて本当にすごい。。。吉武さんと小宮山さんはトロワアンジュでもやれるな。。。って思った。
 
 Prominenceよかった。和泉風花さんも吉武千颯さんも、普段わりと可愛い系のキャラクターだから可愛らしい歌い方が多いけど、ここだけはめっちゃかっこよくやってて、こういうのもいいな、って思った。
