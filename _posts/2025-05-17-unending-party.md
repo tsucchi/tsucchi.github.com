@@ -1,7 +1,7 @@
 ---
 layout: post
 category: misc
-tags: Re:ステージ！
+tags: Re:ステージ！ イベント
 title: 「Re:ステージ！ジョイントLIVE!! -Unending PARTY!!-」に行ってきました
 ---
 {% include JB/setup %}
