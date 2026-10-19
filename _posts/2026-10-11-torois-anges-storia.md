@@ -63,4 +63,10 @@ Dears... の requiem バージョンをまた聞けて良かった。せっか�
 
 (金額的に何度もやられてしまうと破産してしまいますが、)今回これなかった方もたくさんいるみたいなので、ぜひまたやって欲しいな、と思いました。
 
-あと、セトリ公開してください。。。
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">╭━━━━━━━━━━━━━━━╮
+　#Rst_STORIA セットリストですわ～
+╰━ｖ━━━━━━━━━━━━━╯
+*ଘ(੭*ˊᵕˋ)੭*  Ξ[ｾｯﾄﾘｽﾄ!]))Д´) ﾊﾟｰﾝ
+
+#リステ #リステップ #日岡なつみ #阿部里果 #長妻樹里 https://t.co/vBCtcY9txX</p>&mdash; Re:ステージ！公式 (@rst_project) <a href="https://x.com/rst_project/status/2109889074714870252?ref_src=twsrc%5Etfw">October 13, 2026</a></blockquote>
+<script async src="https://platform.x.com/widgets.js" charset="utf-8"></script>
